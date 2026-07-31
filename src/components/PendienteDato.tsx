@@ -5,7 +5,7 @@
  */
 export default function PendienteDato({ campo, nota }: { campo: string; nota: string }) {
   return (
-    <p className="mt-8 rounded-md border border-dashed border-line px-4 py-3 font-data text-[11.5px] tracking-[.06em] text-mute">
+    <p className="mt-8 rounded-md border border-dashed border-line px-4 py-3 font-data text-[11px] tracking-[.06em] text-mute">
       DATO PENDIENTE · {campo.toUpperCase()} — {nota}
     </p>
   );

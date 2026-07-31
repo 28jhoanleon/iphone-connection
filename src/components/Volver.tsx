@@ -17,7 +17,7 @@ export default function Volver({ href, texto = "Volver" }: { href: string; texto
   return (
     <button
       onClick={atras}
-      className="mt-4 inline-flex items-center gap-1.5 text-[13px] text-mute transition hover:text-ink"
+      className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] text-mute transition hover:text-ink"
     >
       <span aria-hidden="true">←</span> {texto}
     </button>

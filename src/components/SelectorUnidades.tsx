@@ -24,7 +24,7 @@ export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: n
   );
 
   const chip = (activo: boolean) =>
-    `rounded-full border px-4 py-2 text-[13.5px] transition ${
+    `rounded-full border px-4 py-2.5 text-[13.5px] leading-none transition ${
       activo ? "border-ink bg-ink text-paper" : "border-line text-mute hover:border-ink hover:text-ink"
     }`;
 
@@ -33,7 +33,7 @@ export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: n
       <h1 className="mb-1.5 text-[clamp(28px,4vw,40px)] font-semibold leading-[1.06] tracking-[-.035em]">
         {modelo.nombre}
       </h1>
-      <p className="mb-7 text-[15px] text-mute">
+      <p className="mb-6 text-[15px] text-mute">
         {modelo.unidades.length} unidad{modelo.unidades.length > 1 ? "es" : ""} · desde{" "}
         {precio(Math.min(...modelo.unidades.map((u) => precioARS(u, tc))))}
       </p>
@@ -81,7 +81,7 @@ export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: n
               className="flex items-center justify-between gap-4 rounded-lg border border-line p-4 transition hover:border-ink"
             >
               <div className="min-w-0">
-                <p className="font-data text-[13px] font-medium">
+                <p className="font-data text-[13.5px] font-medium">
                   {u.bateria ? `Batería ${u.bateria}%` : "Nuevo sellado"}
                 </p>
                 <p className="text-[12.5px] text-mute">

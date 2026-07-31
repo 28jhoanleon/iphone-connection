@@ -10,7 +10,7 @@ export default {
         paper: "#FAFAFA",
         surface: "#F1F1F0",
         line: "#DFDEDC",
-        mute: "#86868B",
+        mute: "#6E6E73",
       },
       fontFamily: {
         sans: ["Instrument Sans", "system-ui", "sans-serif"],

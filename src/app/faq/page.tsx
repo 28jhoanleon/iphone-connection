@@ -19,11 +19,11 @@ const jsonLd = {
 
 export default function FAQ() {
   return (
-    <div className="contenedor max-w-[760px] py-16">
+    <div className="contenedor max-w-[760px] py-10 sm:py-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <p className="etiqueta mb-5">Preguntas frecuentes</p>
-      <h1 className="text-[clamp(30px,5vw,52px)] font-semibold leading-[1.02] tracking-[-.04em]">
+      <h1 className="text-balance text-[clamp(27px,7vw,50px)] font-semibold leading-[1.06] tracking-[-.035em] sm:leading-[1.02]">
         Lo que conviene saber antes de comprar.
       </h1>
 

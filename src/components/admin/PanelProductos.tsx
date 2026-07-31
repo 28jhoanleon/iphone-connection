@@ -166,7 +166,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
 
       <div className="overflow-x-auto rounded-lg border border-line">
         <table className="w-full min-w-[860px] text-sm">
-          <thead className="bg-surface font-data text-[10px] uppercase tracking-[.1em] text-mute">
+          <thead className="bg-surface font-data text-[10.5px] uppercase tracking-[.1em] text-mute">
             <tr>
               {["Ref", "Producto", "Estado", "Batería", "Precio", "Disponibilidad", "Publicado"].map((h) => (
                 <th key={h} className="px-3 py-2.5 text-left font-medium">{h}</th>
@@ -176,10 +176,10 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
           <tbody>
             {visibles.map((u) => (
               <tr key={u.ref} className="border-t border-line align-middle">
-                <td className="px-3 py-2 font-data text-[12px]">#{u.ref}</td>
+                <td className="px-3 py-2 font-data text-[12.5px]">#{u.ref}</td>
                 <td className="px-3 py-2">{u.nombre}</td>
                 <td className="px-3 py-2 text-mute">{u.estadoEtiqueta}</td>
-                <td className="px-3 py-2 font-data text-[12px]">{u.bateria ?? "—"}</td>
+                <td className="px-3 py-2 font-data text-[12.5px]">{u.bateria ?? "—"}</td>
                 <td className="w-36 px-3 py-2">
                   <input
                     type="number"
@@ -187,7 +187,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
                     value={Math.round(u.precioCentavos / 100)}
                     onChange={(e) => editar(u.ref, { precioCentavos: Number(e.target.value) * 100 })}
                   />
-                  <span className="font-data text-[10px] text-mute">{precio(u.precioCentavos)}</span>
+                  <span className="font-data text-[10.5px] text-mute">{precio(u.precioCentavos)}</span>
                 </td>
                 <td className="px-3 py-2">
                   <select

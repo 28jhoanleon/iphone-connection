@@ -45,7 +45,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
         ]}
       />
       <Volver href={`/modelo/${u.modeloSlug}`} texto={`Volver a ${u.modelo}`} />
-      <div className="grid gap-10 py-4 pb-20 md:grid-cols-2 md:gap-14">
+      <div className="grid gap-10 py-4 pb-16 md:grid-cols-2 md:pb-20 md:gap-14">
         <div className="grid grid-cols-2 gap-2">
           <div className="col-span-2 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg bg-surface">
             <img src={rutaImagen(u.ref)} alt={u.nombre} className="h-full w-full object-contain" />
@@ -66,8 +66,8 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
             {u.estadoEtiqueta} · {ETIQUETA_DISPONIBILIDAD[u.disponibilidad]}
           </p>
 
-          <p className="text-[33px] font-semibold tracking-[-.03em]">{precio(precioARS(u, tc.valor))}</p>
-          <p className="mt-1.5 font-data text-[11px] tracking-[.06em] text-mute">
+          <p className="text-[clamp(28px,7.4vw,33px)] font-semibold tracking-[-.03em]">{precio(precioARS(u, tc.valor))}</p>
+          <p className="mt-1.5 font-data text-[11px] tracking-[.06em] text-mute-soft">
             {tc.fuente === "api"
               ? `${tc.nombre.toUpperCase()} $${tc.valor} · ${fechaLegible(tc)}`
               : "COTIZACIÓN DE RESPALDO · CONSULTAR ANTES DE COMPRAR"}

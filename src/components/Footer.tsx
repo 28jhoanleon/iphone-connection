@@ -17,7 +17,7 @@ export default async function Footer() {
             <p className="max-w-[34ch]">Tecnología revisada, documentada y con garantía escrita.</p>
           </div>
           <div>
-            <h5 className="mb-3 text-[13px] font-semibold text-ink">Catálogo</h5>
+            <h5 className="mb-3 text-[13.5px] font-semibold text-ink">Catálogo</h5>
             <ul className="space-y-2">
               {fams.map((f) => (
                 <li key={f.slug}>
@@ -27,7 +27,7 @@ export default async function Footer() {
             </ul>
           </div>
           <div>
-            <h5 className="mb-3 text-[13px] font-semibold text-ink">Empresa</h5>
+            <h5 className="mb-3 text-[13.5px] font-semibold text-ink">Empresa</h5>
             <ul className="space-y-2">
               <li><Link href="/nosotros" className="hover:text-ink">Nosotros</Link></li>
               <li><Link href="/garantia" className="hover:text-ink">Garantía</Link></li>
@@ -35,7 +35,7 @@ export default async function Footer() {
             </ul>
           </div>
           <div>
-            <h5 className="mb-3 text-[13px] font-semibold text-ink">Contacto</h5>
+            <h5 className="mb-3 text-[13.5px] font-semibold text-ink">Contacto</h5>
             <ul className="space-y-2">
               <li><Link href="/contacto" className="hover:text-ink">Contacto</Link></li>
               {tiene("instagram") && <li>{empresa.instagram}</li>}

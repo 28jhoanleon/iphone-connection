@@ -36,7 +36,7 @@ export default async function ModeloPage({ params }: { params: Promise<{ slug: s
         ]}
       />
       <Volver href={`/catalogo/${slugFamilia(m.categoria)}`} texto={`Volver a ${m.categoria}`} />
-      <div className="grid gap-10 py-4 pb-20 md:grid-cols-2 md:gap-14">
+      <div className="grid gap-10 py-4 pb-16 md:grid-cols-2 md:pb-20 md:gap-14">
         <div className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-surface">
           <img src={rutaImagen(m.unidades[0].ref)} alt={m.nombre} className="h-full w-full object-contain" />
         </div>

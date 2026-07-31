@@ -11,19 +11,19 @@ export default function Nosotros() {
   const total = todasLasUnidades().length;
 
   return (
-    <div className="contenedor max-w-[760px] py-16">
+    <div className="contenedor max-w-[760px] py-10 sm:py-16">
       <p className="etiqueta mb-5">Nosotros</p>
-      <h1 className="text-[clamp(30px,5vw,52px)] font-semibold leading-[1.02] tracking-[-.04em]">
+      <h1 className="text-balance text-[clamp(27px,7vw,50px)] font-semibold leading-[1.06] tracking-[-.035em] sm:leading-[1.02]">
         Dos hermanos vendiendo tecnología con confianza.
       </h1>
 
-      <p className="mt-8 text-[17px] leading-relaxed text-mute">
+      <p className="mt-6 text-[16.5px] leading-relaxed text-mute">
         iPhone Connection nació vendiendo iPhone y ese sigue siendo su corazón. Hoy es una
         empresa de tecnología que aplica el mismo estándar a todo lo que vende. El nombre no
         describe el catálogo: describe el nivel de exigencia con el que empezamos.
       </p>
 
-      <h2 className="mt-14 mb-4 text-2xl font-semibold tracking-[-.025em]">Por qué existimos</h2>
+      <h2 className="mt-10 mb-4 text-2xl font-semibold tracking-[-.025em]">Por qué existimos</h2>
       <p className="text-mute">
         Comprar un usado en Argentina suele ser una apuesta. No sabés de dónde viene el equipo,
         nadie te dice cuánta batería le queda, no hay comprobante y, cuando aparece un problema,
@@ -36,7 +36,7 @@ export default function Nosotros() {
         que preguntes.
       </p>
 
-      <h2 className="mt-14 mb-4 text-2xl font-semibold tracking-[-.025em]">Cómo elegimos qué vender</h2>
+      <h2 className="mt-10 mb-4 text-2xl font-semibold tracking-[-.025em]">Cómo elegimos qué vender</h2>
       <p className="text-mute">
         Un equipo entra al catálogo solo si se cumplen cinco condiciones: que sepamos asesorarte
         sobre él, que podamos respaldarlo con garantía escrita, que podamos fotografiarlo
@@ -44,7 +44,7 @@ export default function Nosotros() {
         entra solo por ser barato.
       </p>
 
-      <h2 className="mt-14 mb-4 text-2xl font-semibold tracking-[-.025em]">Nuestra misión</h2>
+      <h2 className="mt-10 mb-4 text-2xl font-semibold tracking-[-.025em]">Nuestra misión</h2>
       <p className="text-mute">
         Vender tecnología con confianza. Y nuestra meta a largo plazo es que iPhone Connection sea
         una de las marcas de referencia en Argentina para comprar productos Apple.

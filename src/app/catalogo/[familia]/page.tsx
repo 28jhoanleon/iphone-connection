@@ -30,13 +30,13 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
     <div className="contenedor">
       <Migas items={[["INICIO", "/"], [f.nombre.toUpperCase(), null]]} />
       <Volver href="/" texto="Volver al inicio" />
-      <div className="py-6 pb-8">
-        <h1 className="text-[clamp(30px,5vw,48px)] font-semibold tracking-[-.04em]">{f.nombre}</h1>
+      <div className="pb-6 pt-5 sm:pb-8 sm:pt-6">
+        <h1 className="text-balance text-[clamp(28px,6.5vw,48px)] font-semibold leading-[1.06] tracking-[-.035em]">{f.nombre}</h1>
         <p className="mt-1.5 font-data text-xs tracking-[.06em] text-mute">
           {f.totalUnidades} {f.totalUnidades === 1 ? "UNIDAD" : "UNIDADES"} · {f.modelos.length} {f.modelos.length === 1 ? "MODELO" : "MODELOS"}
         </p>
       </div>
-      <div className="grid gap-4 pb-20 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-3.5 pb-16 sm:gap-4 sm:pb-20 sm:grid-cols-2 lg:grid-cols-3">
         {f.modelos.map((m) => (
           <Link key={m.slug} href={`/modelo/${m.slug}`} className="tarjeta flex items-center gap-3.5 p-4">
             <img src={rutaImagen(m.unidades[0].ref)} alt="" className="h-20 w-16 flex-none object-contain" />
