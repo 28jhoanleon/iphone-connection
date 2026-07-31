@@ -25,28 +25,6 @@ export function capacidad(gb: number | null): string {
   return gb >= 1024 && gb % 1024 === 0 ? `${gb / 1024} TB` : `${gb} GB`;
 }
 
-/**
- * Financiación. Los coeficientes salen de data/precios.json.
- * Se devuelve SIEMPRE el total y el recargo, no solo el valor de la cuota:
- * mostrar "6 cuotas de $X" sin el total es la forma más común de ocultar el costo real.
- */
-export interface Plan {
-  cuotas: number;
-  valorCuota: number;
-  total: number;
-  recargo: number;
-}
-
-export function planes(precioContadoCentavos: number): Plan[] {
-  return Object.entries(cfg.cuotas as Record<string, number>)
-    .map(([n, coef]) => {
-      const cuotas = Number(n);
-      const total = Math.round(precioContadoCentavos * coef);
-      return { cuotas, valorCuota: Math.round(total / cuotas), total, recargo: coef - 1 };
-    })
-    .sort((a, b) => a.cuotas - b.cuotas);
-}
-
 export const ETIQUETA_DISPONIBILIDAD: Record<string, string> = {
   disponible: "Disponible",
   por_encargo: "Por encargo · 7 a 10 días",

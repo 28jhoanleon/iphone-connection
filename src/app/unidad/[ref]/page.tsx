@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { todasLasUnidades, unidadPorRef, slugFamilia } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
-import { precio, precioARS, planes, capacidad, garantia, linkWhatsApp, ETIQUETA_DISPONIBILIDAD } from "@/lib/formato";
+import { precio, precioARS, capacidad, garantia, linkWhatsApp, ETIQUETA_DISPONIBILIDAD } from "@/lib/formato";
 import Migas from "@/components/Migas";
 import Volver from "@/components/Volver";
 import { tipoCambio, fechaLegible } from "@/lib/dolar";
@@ -87,24 +87,6 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
               {u.defecto}. Está contemplado en el precio y lo revisás antes de comprar.
             </div>
           )}
-
-          <div className="my-6 rounded-md border border-line p-5">
-            <h4 className="etiqueta mb-3.5">Financiación</h4>
-            {planes(precioARS(u, tc.valor)).map((p) => (
-              <div key={p.cuotas} className="flex items-baseline justify-between gap-4 border-b border-line py-2.5 last:border-0">
-                <span className="text-sm">
-                  <b className="font-medium">{p.cuotas} cuotas de {precio(p.valorCuota)}</b>
-                  <span className="mt-0.5 block font-data text-[10.5px] text-mute">
-                    TOTAL {precio(p.total)} · RECARGO {(p.recargo * 100).toFixed(0)}%
-                  </span>
-                </span>
-              </div>
-            ))}
-            <p className="mt-3 text-[12px] text-mute">
-              El total financiado siempre está a la vista. Pagando de contado, el precio es{" "}
-              {precio(precioARS(u, tc.valor))}.
-            </p>
-          </div>
 
           <div className="my-6 rounded-md border border-line p-5">
             <h4 className="etiqueta mb-3.5">Estado de esta unidad</h4>

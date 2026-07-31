@@ -1,0 +1,89 @@
+Fila 30: batería en rango «75 78» -> se declara 75%.
+Fila 31: batería en rango «77 78» -> se declara 77%.
+Fila 32: batería en rango «81 83» -> se declara 81%.
+Fila 62: batería en rango «87/88» -> se declara 87%.
+Fila 74: batería en rango «92 93» -> se declara 92%.
+Fila 75: batería en rango «94 95» -> se declara 94%.
+Fila 102: «16E» sin precio en dólares. No se importa.
+Fila 104: «16» sin precio en dólares. No se importa.
+Fila 132: «Macbook AIR chip M1 8/256gb caja abierta» sin precio en dólares. No se importa.
+Fila 137: «Macbook AIR M2 16/256GB» sin precio en dólares. No se importa.
+Fila 138: «MACBOOK AIR M2 8/512GB» sin precio en dólares. No se importa.
+Fila 139: «MACBOOK PRO M2 13' 8/512GB» sin precio en dólares. No se importa.
+Fila 142: «MACBOOK AIR 13" M4 16GB 256GB» sin precio en dólares. No se importa.
+Fila 143: «-MACBOOK AIR 15" M4 16 GB 256GB» sin precio en dólares. No se importa.
+Fila 144: «-MACBOOK AIR 13" M4 24 GB 512GB» sin precio en dólares. No se importa.
+Fila 148: «MACBOOK AIR 13,6 M5 24/ 1TB» sin precio en dólares. No se importa.
+Fila 151: «MACBOOK AIR 15,3 M5 16/ 1TB» sin precio en dólares. No se importa.
+Fila 198: «demas modelos consultar» sin precio en dólares. No se importa.
+Fila 202: «PENCIL RELICA» sin precio en dólares. No se importa.
+Fila 203: «TECLADO + MOUSE bluetooth» sin precio en dólares. No se importa.
+Fila 221: «airtag PACK X1 AAA» sin precio en dólares. No se importa.
+Fila 233: «se2» sin precio en dólares. No se importa.
+Fila 240: «ultra 2» sin precio en dólares. No se importa.
+Fila 251: «Amazfit T rex 3» sin precio en dólares. No se importa.
+Fila 253: «GARMIN VIVO ACTIVE 6» sin precio en dólares. No se importa.
+Fila 256: «AMAZFIT BIP 6» sin precio en dólares. No se importa.
+Fila 258: «POCO WATCH» sin precio en dólares. No se importa.
+Fila 263: «X VIEW Q5» sin precio en dólares. No se importa.
+Fila 275: «S26 ULTRA» sin precio en dólares. No se importa.
+Fila 285: «A57 5G 12 ram» sin precio en dólares. No se importa.
+Fila 286: «A57 5G 12 ram» sin precio en dólares. No se importa.
+Fila 287: «A57 5G» sin precio en dólares. No se importa.
+Fila 289: «A56» sin precio en dólares. No se importa.
+Fila 319: «POCO M8 8RAM» sin precio en dólares. No se importa.
+Fila 321: «17» sin precio en dólares. No se importa.
+Fila 332: «REDMI 15 8RAM» sin precio en dólares. No se importa.
+Fila 354: «MOTO G17 POWER 8RAM» sin precio en dólares. No se importa.
+Fila 389: «PS5 PORTAL» sin precio en dólares. No se importa.
+Fila 391: «Nintendo Switch 2 256 GB LCD» sin precio en dólares. No se importa.
+Fila 406: «Partybox 310» sin precio en dólares. No se importa.
+Fila 408: «Bomboox 3» sin precio en dólares. No se importa.
+Fila 409: «Extreme 4» sin precio en dólares. No se importa.
+Fila 417: «PULSE AAA» sin precio en dólares. No se importa.
+Fila 418: «GO4 AAA» sin precio en dólares. No se importa.
+Fila 419: «FLIP 6 AAA» sin precio en dólares. No se importa.
+Fila 420: «CHARGE 4 AAA» sin precio en dólares. No se importa.
+Fila 429: «Cargadores magsaffe IPHONE CERTIFICADO» sin precio en dólares. No se importa.
+Fila 430: «Cargadores magsaffe IPHONE ORIGINAL» sin precio en dólares. No se importa.
+Fila 431: «battery pack» sin precio en dólares. No se importa.
+Fila 437: «cargador inalámbrico 3 en 1» sin precio en dólares. No se importa.
+Fila 445: «STANLEY CLASSIC» sin precio en dólares. No se importa.
+Fila 462: «LENOVO IDEA TAB 11 4/128GB CON PEN Y FUNDA» sin precio en dólares. No se importa.
+Fila 463: «Tablet Xiaomi pad 7 11.2" 12/256GB WIFI» sin precio en dólares. No se importa.
+Fila 468: «tablet xioami pad SE 8.7" 4/64 GB LTE» sin precio en dólares. No se importa.
+Fila 479: «monopatines y aspiradoras xioami» sin precio en dólares. No se importa.
+Fila 483: «MONOPATIN XIOAMI 6 PRO» sin precio en dólares. No se importa.
+Fila 484: «MONOPATIN XIOAMI 6 LITE» sin precio en dólares. No se importa.
+Fila 485: «MONOPATIN XIOAMI 4GO» sin precio en dólares. No se importa.
+Fila 486: «freidora ingresando» sin precio en dólares. No se importa.
+Fila 487: «XIAOMI robot aspirador s40c» sin precio en dólares. No se importa.
+Fila 489: «STARLINK MINI ingresando» sin precio en dólares. No se importa.
+Fila 492: «AMAZON KINDLE SIGNATURE EDITION 12TH GEN 32GB $265» sin precio en dólares. No se importa.
+Fila 494: «RAYBAN META GEN 1 U$399» sin precio en dólares. No se importa.
+Fila 497: «RAYBAN META GEN 2 U$480» sin precio en dólares. No se importa.
+Fila 499: «RAYBAN META GEN 2 TRANSITIONS U$520» sin precio en dólares. No se importa.
+Fila 502: «TELEVISOR SMARTIFY 32' SMART TV HD U$145» sin precio en dólares. No se importa.
+Fila 505: «BICICLETAS RIENMAX RODADO 29 CON FRENOS A DISCO Y CAMBIOS $219,000 - PEDIR FOTOS» sin precio en dólares. No se importa.
+Fila 507: «BICICLETAS ALPINE RODADO 29 CON FRENOS A DISCO Y CAMBIOS SHIMANO $255,000 - PEDIR FOTOS» sin precio en dólares. No se importa.
+Fila 510: «MOCHILAS IMPERMEABLES $18,000 - PEDIR FOTOS» sin precio en dólares. No se importa.
+Fila 513: «HIDROLAVADORAS PORTATILES CON 2 BATERIAS $43,000 - PEDIR FOTOS» sin precio en dólares. No se importa.
+Fila 516: «CASCOS PRO TORK SEMI ABIERTOS $79,999 - PEDIR FOTOS» sin precio en dólares. No se importa.
+
+==========================================================
+Productos importados:      263
+Sin precio (no importados): 65
+
+  iPhone         94
+  Android        62
+  Mac            16
+  Accesorios     15
+  Tablets        14
+  iPad           12
+  Relojes        12
+  Audio          9
+  Apple Watch    8
+  AirPods        7
+  Consolas       7
+  Notebooks      6
+  Cámaras        1

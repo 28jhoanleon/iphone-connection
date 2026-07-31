@@ -36,6 +36,27 @@ FUENTES: dict[str, list[str]] = {
     "iPhone 16 Pro Max":  [f"1000745399/1000745399-{i:02d}.webp" for i in (26, 27, 28, 29)],
     "Apple Watch Ultra 2 49MM": ["1000745414/1000745414-14.webp"],
     "Joystick PS5":       ["1000745395/1000745395-27.webp"],
+    # sellados y resto del ecosistema (láminas 414 y 413)
+    "iPhone 14 Plus":     ["1000745399/1000745399-00.webp"],
+    "iPhone 15 Plus":     [f"1000745399/1000745399-{i:02d}.webp" for i in (6, 7, 8)],
+    "iPhone 15 Pro Max":  [f"1000745399/1000745399-{i:02d}.webp" for i in (12, 13, 14, 15)],
+    "iPhone 16 Plus":     [f"1000745399/1000745399-{i:02d}.webp" for i in (20, 21, 22)],
+    "iPad 11":            ["1000745414/1000745414-01.webp"],
+    "iPad Mini A17 Pro":  ["1000745414/1000745414-00.webp"],
+    "iPad Air 11' M4":    ["1000745414/1000745414-03.webp"],
+    "iPad Air 13' M4":    ["1000745414/1000745414-03.webp"],
+    "iPad Pro 11'' M5":   ["1000745414/1000745414-04.webp"],
+    'iPad Pro 13" M5':    ["1000745414/1000745414-05.webp"],
+    "Apple Watch SE 2 + Cellular": ["1000745414/1000745414-12.webp"],
+    "Apple Watch SE 3":   ["1000745414/1000745414-12.webp"],
+    "Apple Watch Serie 11": ["1000745414/1000745414-13.webp"],
+    "Apple Watch Serie 11 + Cellular": ["1000745414/1000745414-13.webp"],
+    "Apple Watch Ultra 3": ["1000745414/1000745414-14.webp"],
+    "Airpods Pro 3":      ["1000745414/1000745414-17.webp"],
+    "Airpods 4Ta":        ["1000745414/1000745414-16.webp"],
+    "Airpods 4Ta Noise Cancel": ["1000745414/1000745414-16.webp"],
+    "Airpods Max Aaa":    ["1000745414/1000745414-18.webp"],
+    "Airpods Pro 2 Aaa":  ["1000745414/1000745414-17.webp"],
 }
 
 # color declarado -> objetivo en HSV.
@@ -96,12 +117,15 @@ def elegir(candidatos: list[str], color_declarado: str | None) -> str:
     return min(candidatos, key=lambda c: puntaje(color_dominante(os.path.join(RECORTES, c)), clave))
 
 
+FUENTES_LOWER = {k.lower(): v for k, v in FUENTES.items()}
+
+
 def main() -> None:
     catalogo = json.load(open("data/catalogo.json", encoding="utf-8"))
     asignadas, sin_foto, detalle = 0, [], []
 
     for u in catalogo:
-        cands = FUENTES.get(u["modelo"])
+        cands = FUENTES.get(u["modelo"]) or FUENTES_LOWER.get(u["modelo"].lower())
         if not cands:
             sin_foto.append(u["modelo"])
             continue

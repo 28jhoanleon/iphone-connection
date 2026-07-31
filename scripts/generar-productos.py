@@ -8,14 +8,14 @@ Una imagen por unidad del catálogo, con:
 - el COLOR real declarado en la planilla
 
 Sistema de reemplazo (requisito del fundador):
-El sitio resuelve la imagen así -> public/img/productos/{REF}.jpg  (fotografía propia)
-                               -> public/img/productos/{REF}.svg  (generada, fallback)
+El sitio resuelve la imagen así -> public/productos/{REF}.jpg  (fotografía propia)
+                               -> public/productos/{REF}.svg  (generada, fallback)
 Dejar caer un JPG con el nombre de la referencia reemplaza la imagen. Cero código.
 """
 import json, os, re
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEST = os.path.join(RAIZ, "public/img/productos")
+DEST = os.path.join(RAIZ, "public/productos")
 
 BG = "#F1F1F0"
 
@@ -54,6 +54,8 @@ def generacion(nombre):
 def telefono(p):
     """Dibuja el iPhone con la geometría de su generación."""
     n = generacion(p["nombre"])
+    if n is None:
+        n = 15  # forma genérica moderna para modelos que no son iPhone
     pro = "pro" in p["nombre"].lower()
     maxi = "max" in p["nombre"].lower()
     c = color_de(p); bd = sombra(c)
@@ -98,6 +100,25 @@ def reloj(p):
             f'<rect x="{x+12}" y="{y+12}" width="{w-32}" height="{h-32}" rx="{44}" fill="#101012"/>'
             f'<rect x="{x+w-2}" y="{y+80}" width="15" height="54" rx="7.5" fill="{bd}"/>')
 
+def tablet(p):
+    c = color_de(p); bd = sombra(c)
+    w, h = 330, 452
+    x, y = 400 - w / 2, 400 - h / 2
+    return (f'<ellipse cx="400" cy="{400+h/2+26}" rx="{w*0.46}" ry="15" fill="#000" opacity=".07"/>'
+            f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="26" fill="{c}" stroke="{bd}" stroke-width="2"/>'
+            f'<rect x="{x+14}" y="{y+14}" width="{w-28}" height="{h-28}" rx="16" fill="#EDECEA"/>'
+            f'<circle cx="{x+40}" cy="{y+40}" r="12" fill="{bd}" opacity=".5"/>')
+
+
+def notebook(p):
+    c = color_de(p); bd = sombra(c)
+    return (f'<ellipse cx="400" cy="520" rx="230" ry="14" fill="#000" opacity=".07"/>'
+            f'<rect x="228" y="228" width="344" height="230" rx="12" fill="{c}" stroke="{bd}" stroke-width="2"/>'
+            f'<rect x="242" y="242" width="316" height="202" rx="6" fill="#EDECEA"/>'
+            f'<path d="M196 458 h408 l28 44 h-464 z" fill="{bd}" opacity=".75"/>'
+            f'<rect x="362" y="474" width="76" height="7" rx="3.5" fill="{c}"/>')
+
+
 def accesorio(p):
     c = color_de(p); bd = sombra(c)
     return (f'<path d="M300 340 q-34 60 -14 120 q22 62 68 44 q46 -20 92 -20 q46 0 92 20 q46 18 68 -44 '
@@ -107,10 +128,15 @@ def accesorio(p):
             f'<circle cx="470" cy="392" r="26" fill="{bd}" opacity=".4"/>')
 
 def svg(p):
-    if p["categoria"] == "iPhone":
+    arq = p.get("arquetipo", "accesorio")
+    if arq == "telefono":
         cuerpo = telefono(p)
-    elif p["categoria"] == "Apple Watch":
+    elif arq == "reloj":
         cuerpo = reloj(p)
+    elif arq == "tablet":
+        cuerpo = tablet(p)
+    elif arq == "notebook":
+        cuerpo = notebook(p)
     else:
         cuerpo = accesorio(p)
     sombra_piso = ('<ellipse cx="400" cy="726" rx="176" ry="17" fill="#000" opacity=".055"/>'
@@ -121,11 +147,11 @@ def svg(p):
 
 def main():
     os.makedirs(DEST, exist_ok=True)
-    catalogo = json.load(open(os.path.join(RAIZ, "catalogo.json"), encoding="utf-8"))
+    catalogo = json.load(open(os.path.join(RAIZ, "data/catalogo.json"), encoding="utf-8"))
     for p in catalogo:
         with open(os.path.join(DEST, f'{p["ref"]}.svg'), "w", encoding="utf-8") as f:
             f.write(svg(p))
-    print(f"✓ {len(catalogo)} imágenes generadas en public/img/productos/")
+    print(f"✓ {len(catalogo)} imágenes generadas en public/productos/")
 
 if __name__ == "__main__":
     main()

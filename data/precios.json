@@ -3,9 +3,5 @@
   "margen": 0.15,
   "redondeoPesos": 1000,
   "tcRespaldo": 1520,
-  "revalidarSegundos": 21600,
-  "cuotas": {
-    "6": 1.57,
-    "12": 1.91
-  }
+  "revalidarSegundos": 21600
 }
