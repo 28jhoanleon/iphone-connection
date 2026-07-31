@@ -17,9 +17,16 @@ export default function Header() {
           <Buscador indice={indice} />
         </div>
 
+        <nav className="order-2 hidden gap-5 text-[13.5px] text-mute lg:flex">
+          <Link href="/nosotros" className="hover:text-ink">Nosotros</Link>
+          <Link href="/garantia" className="hover:text-ink">Garantía</Link>
+          <Link href="/faq" className="hover:text-ink">FAQ</Link>
+          <Link href="/contacto" className="hover:text-ink">Contacto</Link>
+        </nav>
+
         <a
           href={linkWhatsApp()}
-          className="order-2 whitespace-nowrap rounded-full border border-ink px-4 py-2 text-[13px] transition hover:bg-ink hover:text-paper sm:order-3"
+          className="order-2 whitespace-nowrap rounded-full border border-ink px-4 py-2 text-[13px] transition hover:bg-ink hover:text-paper sm:order-4"
         >
           WhatsApp
         </a>

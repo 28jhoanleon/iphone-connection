@@ -1,0 +1,42 @@
+[
+  {
+    "p": "¿Qué significa Seleccionado A, B y C?",
+    "r": "Es nuestra escala de estado y está definida por números, no por adjetivos. Seleccionado A: sin marcas visibles a 30 cm y batería igual o mayor al 85%. Seleccionado B: marcas leves de uso, declaradas, y batería igual o mayor al 80%. Seleccionado C: batería entre 70% y 79%, siempre declarada. Preferimos una escala clara antes que decir 'como nuevo', que no significa nada."
+  },
+  {
+    "p": "¿Por qué publican la salud de la batería?",
+    "r": "Porque es el dato que más determina la experiencia de uso de un equipo usado y el que casi nadie muestra. Cuando una unidad tiene batería baja lo decís vos con el número a la vista, no lo descubre el cliente a la semana."
+  },
+  {
+    "p": "¿Qué pasa si un equipo tiene un detalle?",
+    "r": "Lo publicamos. Si un equipo tiene una marca en la tapa, un detalle en pantalla o le falta el vidrio de la cámara, está escrito en la ficha y contemplado en el precio. Un detalle declarado no está cubierto por la garantía justamente porque ya lo sabías antes de comprar."
+  },
+  {
+    "p": "¿Cuánta garantía tienen los equipos?",
+    "r": "Los nuevos sellados tienen 12 meses. Los seleccionados, 6 meses. Los accesorios, 3 meses. Las condiciones se entregan por escrito con la compra y las que rigen son las vigentes el día de esa compra."
+  },
+  {
+    "p": "¿Los precios están actualizados?",
+    "r": "Sí, y cada ficha muestra la fecha exacta de actualización. Trabajamos con precio en dólares y tipo de cambio, así que cuando el dólar se mueve el catálogo se recalcula entero. Nunca vas a consultar por un precio y escuchar que ya no es ese."
+  },
+  {
+    "p": "¿Qué quiere decir Por encargo?",
+    "r": "Que el equipo no está en nuestro poder en este momento pero lo conseguimos. La entrega estimada es de 7 a 10 días hábiles. Lo aclaramos siempre: preferimos decirte que hay que esperar antes que prometerte una entrega que no controlamos."
+  },
+  {
+    "p": "¿Toman mi equipo usado en parte de pago?",
+    "r": "Sí. La cotización se hace sobre el modelo, la capacidad y el estado real del equipo, incluida la salud de la batería. Te pasamos el valor antes de que traigas nada."
+  },
+  {
+    "p": "¿Cómo sé que el equipo no es robado?",
+    "r": "Todos los equipos se verifican antes de entrar al catálogo y se entregan con comprobante. Podés verificar el IMEI vos mismo en el momento de la compra, y te acompañamos a hacerlo si no sabés cómo."
+  },
+  {
+    "p": "¿Por qué tienen menos modelos que otras tiendas?",
+    "r": "Porque no publicamos nada que no podamos respaldar. Un equipo entra al catálogo solo si podemos asesorarte sobre él, darle garantía y fotografiarlo nosotros. Vas a ver menos opciones, y podemos responder por todas."
+  },
+  {
+    "p": "¿Puedo ver el equipo antes de comprarlo?",
+    "r": "Sí. Coordinamos por WhatsApp y lo revisás con nosotros: batería, pantalla, cámaras y funciones principales. Si algo no coincide con lo publicado, no hay venta."
+  }
+]

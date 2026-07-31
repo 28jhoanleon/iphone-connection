@@ -1,4 +1,5 @@
 import type { Unidad } from "./tipos";
+import { empresa } from "./empresa";
 
 /** Dinero: siempre centavos enteros en el dato, formateo solo en la vista (Doc 02 §7). */
 export function precio(centavos: number): string {
@@ -22,7 +23,10 @@ export function garantia(u: Unidad): string {
 
 /** Mensaje precargado de WhatsApp · Doc 00 §9 */
 export function linkWhatsApp(u?: Unidad): string {
-  const base = "https://wa.me/5493401410734";
+  // El número vive en data/empresa.json. Si falta, el enlace no se arma:
+  // preferible un botón inerte antes que mandar un cliente a un número equivocado.
+  if (!empresa.whatsapp) return "#";
+  const base = `https://wa.me/${empresa.whatsapp.replace(/\D/g, "")}`;
   if (!u) return `${base}?text=${encodeURIComponent("Hola, quería hacer una consulta.")}`;
   return `${base}?text=${encodeURIComponent(`Hola, me interesa el ${u.nombreCompleto} — ref. #${u.ref}`)}`;
 }

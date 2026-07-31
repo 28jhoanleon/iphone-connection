@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { empresa, tiene } from "@/lib/empresa";
 
 export default function Footer() {
   return (
@@ -21,11 +22,19 @@ export default function Footer() {
           </div>
           <div>
             <h5 className="mb-3 text-[13px] font-semibold text-ink">Empresa</h5>
-            <ul className="space-y-2"><li>Nosotros</li><li>Garantía</li><li>Preguntas frecuentes</li></ul>
+            <ul className="space-y-2">
+              <li><Link href="/nosotros" className="hover:text-ink">Nosotros</Link></li>
+              <li><Link href="/garantia" className="hover:text-ink">Garantía</Link></li>
+              <li><Link href="/faq" className="hover:text-ink">Preguntas frecuentes</Link></li>
+            </ul>
           </div>
           <div>
             <h5 className="mb-3 text-[13px] font-semibold text-ink">Contacto</h5>
-            <ul className="space-y-2"><li>WhatsApp</li><li>Instagram</li><li>Lun a Sáb · 10 a 19 h</li></ul>
+            <ul className="space-y-2">
+              <li><Link href="/contacto" className="hover:text-ink">Contacto</Link></li>
+              {tiene("instagram") && <li>{empresa.instagram}</li>}
+              {tiene("horarios") && <li>{empresa.horarios}</li>}
+            </ul>
           </div>
         </div>
         <div className="mt-10 flex flex-wrap justify-between gap-3 border-t border-line pt-5 text-xs">

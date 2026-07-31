@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "datos": "python3 scripts/importar-lista.py && python3 scripts/generar-productos.py"
+    "datos": "python3 scripts/importar-lista.py && python3 scripts/generar-productos.py",
+    "verificar": "python3 scripts/verificar-datos.py",
+    "predeploy": "python3 scripts/verificar-datos.py && next build"
   },
   "dependencies": {
     "next": "15.1.6",
