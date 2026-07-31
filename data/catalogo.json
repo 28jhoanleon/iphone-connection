@@ -22,7 +22,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A102",
@@ -47,7 +48,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A103",
@@ -75,7 +77,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A104",
@@ -103,7 +106,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A105",
@@ -128,7 +132,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A106",
@@ -156,7 +161,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A107",
@@ -181,7 +187,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A108",
@@ -209,7 +216,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A109",
@@ -234,7 +242,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A110",
@@ -259,7 +268,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A111",
@@ -284,7 +294,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A112",
@@ -309,7 +320,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A113",
@@ -337,7 +349,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A114",
@@ -362,7 +375,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A115",
@@ -387,7 +401,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A116",
@@ -415,7 +430,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A117",
@@ -440,7 +456,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A118",
@@ -465,7 +482,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A119",
@@ -490,7 +508,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A120",
@@ -518,7 +537,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A121",
@@ -543,7 +563,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A122",
@@ -568,7 +589,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A123",
@@ -593,7 +615,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A124",
@@ -618,7 +641,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A125",
@@ -646,7 +670,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A126",
@@ -676,7 +701,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A127",
@@ -705,7 +731,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A128",
@@ -730,7 +757,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A129",
@@ -758,7 +786,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A130",
@@ -788,7 +817,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A131",
@@ -813,7 +843,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A132",
@@ -838,7 +869,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A133",
@@ -863,7 +895,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A134",
@@ -891,7 +924,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A135",
@@ -921,7 +955,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A136",
@@ -946,7 +981,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A137",
@@ -971,7 +1007,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A138",
@@ -996,7 +1033,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A139",
@@ -1021,7 +1059,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A140",
@@ -1046,7 +1085,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A141",
@@ -1071,7 +1111,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A142",
@@ -1099,7 +1140,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A143",
@@ -1124,7 +1166,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A144",
@@ -1149,7 +1192,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A145",
@@ -1174,7 +1218,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A146",
@@ -1199,7 +1244,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A147",
@@ -1228,7 +1274,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A148",
@@ -1256,7 +1303,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A149",
@@ -1284,7 +1332,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A150",
@@ -1309,7 +1358,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A151",
@@ -1334,7 +1384,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A152",
@@ -1359,7 +1410,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A153",
@@ -1387,7 +1439,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A154",
@@ -1417,7 +1470,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A155",
@@ -1445,7 +1499,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A156",
@@ -1470,7 +1525,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A157",
@@ -1495,7 +1551,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A158",
@@ -1520,7 +1577,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A159",
@@ -1545,7 +1603,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A160",
@@ -1573,7 +1632,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A161",
@@ -1598,7 +1658,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A162",
@@ -1623,7 +1684,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A163",
@@ -1648,7 +1710,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A164",
@@ -1676,7 +1739,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A165",
@@ -1705,7 +1769,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A166",
@@ -1730,7 +1795,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A167",
@@ -1755,7 +1821,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A168",
@@ -1783,7 +1850,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A169",
@@ -1808,7 +1876,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A170",
@@ -1833,7 +1902,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A171",
@@ -1858,7 +1928,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A172",
@@ -1886,7 +1957,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A173",
@@ -1911,7 +1983,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A174",
@@ -1936,7 +2009,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A175",
@@ -1964,7 +2038,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A176",
@@ -1989,7 +2064,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": true
   },
   {
     "ref": "A177",
@@ -2014,7 +2090,8 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   },
   {
     "ref": "A178",
@@ -2039,6 +2116,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-07-31",
+    "bateriaPosibleReemplazo": false
   }
 ]

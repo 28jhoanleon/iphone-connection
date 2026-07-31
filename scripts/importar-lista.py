@@ -103,6 +103,9 @@ def main():
             "colores": colores if multi else None,
             "estado": estado, "estadoEtiqueta": etiqueta,
             "bateria": bateria,
+            # Nota de la planilla (fila 4): "EQUIPOS AL 100% consultar batería cambiada".
+            # Una batería al 100% en un usado suele significar reemplazo. Se declara.
+            "bateriaPosibleReemplazo": bool(bateria == 100 and estado != "nuevo_sellado"),
             "defecto": defecto or None,
             "costoCentavos": costo_c,
             "precioCentavos": precio_c,
