@@ -78,7 +78,7 @@ export default async function Home() {
               href={`/catalogo/${f.slug}`}
               className="group flex flex-col rounded-lg border border-line bg-paper p-3 transition duration-200 hover:-translate-y-0.5 hover:border-ink sm:p-4"
             >
-              <div className="mb-3 aspect-[4/3] overflow-hidden rounded-md bg-surface">
+              <div className="mb-3 aspect-[4/3] overflow-hidden rounded-md bg-white">
                 <img
                   src={rutaImagen(f.modelos[0].unidades[0].ref)}
                   alt=""

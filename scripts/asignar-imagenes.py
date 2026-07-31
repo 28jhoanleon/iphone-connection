@@ -46,7 +46,6 @@ FUENTES: dict[str, list[str]] = {
     "iPad 11":            ["1000745414/1000745414-01.webp"],
     "iPad Mini A17 Pro":  ["1000745414/1000745414-00.webp"],
     "iPad Air 11' M4":    ["1000745414/1000745414-03.webp"],
-    "iPad Air 13' M4":    ["1000745414/1000745414-03.webp"],
     "iPad Pro 11'' M5":   ["1000745414/1000745414-04.webp"],
     'iPad Pro 13" M5':    ["1000745414/1000745414-05.webp"],
     "Apple Watch SE 2 + Cellular": ["1000745414/1000745414-12.webp"],
@@ -151,6 +150,35 @@ def puntaje(rgb, clave: str) -> float:
     return 999.0
 
 
+TOLERANCIA_TONO = 55      # grados de diferencia de tono aceptables
+TOLERANCIA_LUZ = 0.42     # diferencia de luminosidad aceptable en neutros
+
+
+def color_coincide(ruta: str, color_declarado: str | None) -> bool:
+    """
+    ¿La foto muestra el color que declara la unidad?
+
+    Una foto del modelo correcto en el color equivocado es una imagen incorrecta:
+    el cliente compra por lo que ve. Si no hay candidato del color declarado,
+    es preferible la imagen generada, que sí se pinta del color real.
+    """
+    if not color_declarado:
+        return True
+    clave = color_declarado.strip().lower()
+    rgb = color_dominante(ruta)
+    h, s_, v = _hsv(rgb)
+    for k, obj_v in NEUTROS.items():
+        if k in clave:
+            return abs(v - obj_v) <= TOLERANCIA_LUZ
+    for k, obj_h in TONOS.items():
+        if k in clave:
+            if s_ < 0.10:
+                return False          # la foto es acromática y se pidió un color
+            d = abs(h * 360 - obj_h)
+            return min(d, 360 - d) <= TOLERANCIA_TONO
+    return True
+
+
 def elegir(candidatos: list[str], color_declarado: str | None) -> str:
     if len(candidatos) == 1 or not color_declarado:
         return candidatos[0]
@@ -166,6 +194,7 @@ FUENTES_LOWER = {k.lower(): v for k, v in FUENTES.items()}
 def main() -> None:
     catalogo = json.load(open("data/catalogo.json", encoding="utf-8"))
     asignadas, sin_foto, detalle = 0, [], []
+    descartes_color = []
 
     for u in catalogo:
         cands = FUENTES.get(u["modelo"]) or FUENTES_LOWER.get(u["modelo"].lower())
@@ -183,9 +212,17 @@ def main() -> None:
         if not v["ok"]:
             sin_foto.append(f'{u["modelo"]} (recorte descartado: {v["motivo"]})')
             continue
+        if not color_coincide(origen, color):
+            descartes_color.append(f'{u["ref"]} {u["nombre"]} · no hay foto en {color}')
+            continue
         shutil.copy(origen, os.path.join(DESTINO, f'{u["ref"]}.webp'))
         asignadas += 1
         detalle.append(f'{u["ref"]:>5}  {u["modelo"]:<22} {str(color or "-"):<10} <- {os.path.basename(elegido)}')
+
+    if descartes_color:
+        print(f"\nSin foto del color declarado ({len(descartes_color)}) -> usan imagen generada:")
+        for d in descartes_color[:14]:
+            print(f"   · {d}")
 
     faltantes = sorted(set(sin_foto))
     print(f"Imágenes asignadas:      {asignadas} / {len(catalogo)}")

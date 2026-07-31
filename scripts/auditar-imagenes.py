@@ -8,7 +8,7 @@ siempre existe. Sale con error si queda algún producto sin imagen.
 
 Uso:  python3 scripts/auditar-imagenes.py [--borrar]
 """
-import csv, json, os, sys
+import csv, hashlib, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validar_imagen import analizar
 
@@ -50,6 +50,15 @@ for p in catalogo:
         })
         if not generada:
             sin_imagen.append(ref)
+
+# firma de lo aprobado: el build de Vercel la verifica sin necesitar Python
+firmadas = {}
+for p in catalogo:
+    ref = p["ref"]
+    real = next((f"{DIR}/{ref}{e}" for e in REALES if os.path.exists(f"{DIR}/{ref}{e}")), None)
+    if real and analizar(real)["ok"]:
+        firmadas[ref] = hashlib.sha1(open(real, "rb").read()).hexdigest()[:16]
+json.dump(firmadas, open("data/imagenes-validadas.json", "w"), indent=0, sort_keys=True)
 
 campos = ["referencia", "producto", "categoria", "archivo", "ocupacion_pct",
           "texto_detectado", "resolucion", "estado", "motivo"]

@@ -97,7 +97,7 @@ export default function Buscador({ indice: inicial }: { indice: ItemBusqueda[] }
                   height={44}
                   loading="lazy"
                   decoding="async"
-                  className="h-11 w-11 shrink-0 rounded bg-surface object-contain"
+                  className="h-11 w-11 shrink-0 rounded bg-white object-contain"
                 />
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-[13.5px] font-medium leading-tight">{r.titulo}</span>

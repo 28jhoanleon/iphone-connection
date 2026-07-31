@@ -101,7 +101,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
 
       <div className="grid gap-8 py-3 pb-14 sm:gap-10 sm:py-4 md:grid-cols-2 md:gap-14">
         <div className="grid grid-cols-2 gap-2">
-          <div className="col-span-2 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg bg-surface">
+          <div className="col-span-2 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg bg-white">
             <img
               src={rutaImagen(u.ref)} alt={u.nombre} width={1000} height={750}
               fetchPriority="high" decoding="async"
@@ -109,7 +109,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
             />
           </div>
           {[0, 1].map((i) => (
-            <div key={i} className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-surface">
+            <div key={i} className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-white">
               <img
                 src={rutaImagen(u.ref)} alt="" width={500} height={500}
                 loading="lazy" decoding="async"

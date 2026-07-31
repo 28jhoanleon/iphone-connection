@@ -17,7 +17,7 @@ import json, os, re
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEST = os.path.join(RAIZ, "public/productos")
 
-BG = "#F1F1F0"
+BG = "#FFFFFF"   # mismo fondo que los recortes de lámina: estudio único
 
 COLORES = {
     "negro": "#1D1D1F", "black": "#1D1D1F", "negros": "#1D1D1F",
