@@ -1,14 +1,19 @@
 import type { NextConfig } from "next";
 
 /**
- * Export estático: el sitio se publica en GitHub Pages sin servidor.
- * Cuando migremos a Supabase y el panel necesite servidor, se quita `output`
- * y el mismo repo se despliega en Vercel sin cambiar una línea de la app.
+ * Dos modos de despliegue con la misma base de código:
+ *
+ * - Vercel (por defecto): runtime completo. Habilita optimización de imágenes,
+ *   rutas de API, revalidación por evento y, más adelante, el panel con Supabase.
+ * - Export estático (STATIC_EXPORT=1): genera /out para GitHub Pages.
+ *   Se mantiene como salida de respaldo, no como destino final.
  */
+const estatico = process.env.STATIC_EXPORT === "1";
+
 const nextConfig: NextConfig = {
-  output: "export",
-  images: { unoptimized: true },
-  trailingSlash: true,
+  ...(estatico
+    ? { output: "export" as const, images: { unoptimized: true }, trailingSlash: true }
+    : { images: { formats: ["image/avif", "image/webp"] as const } }),
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
 };
 
