@@ -7,5 +7,19 @@
   "horarios": "",
   "socios": [],
   "anioFundacion": "",
-  "dominio": ""
+  "dominio": "",
+  "envios": {
+    "hace": false,
+    "alcance": "",
+    "costo": "",
+    "plazo": ""
+  },
+  "pagos": {
+    "medios": [],
+    "nota": ""
+  },
+  "incluyeCaja": {
+    "nuevo_sellado": ["Equipo", "Cable de carga", "Documentación original", "Caja sellada"],
+    "usado": ["Equipo", "Cable de carga"]
+  }
 }

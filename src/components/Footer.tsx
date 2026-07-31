@@ -1,53 +1,96 @@
 import Link from "next/link";
-import { empresa, tiene } from "@/lib/empresa";
-import { tipoCambio, fechaLegible } from "@/lib/dolar";
+import { empresa, tiene, hayEnvios, hayPagos } from "@/lib/empresa";
 import { familiasVisibles } from "@/lib/catalogo";
+import { tipoCambio, fechaLegible } from "@/lib/dolar";
+import { linkWhatsApp } from "@/lib/formato";
 
 export default async function Footer() {
   const tc = await tipoCambio();
-  const fams = familiasVisibles().slice(0, 5);
+  const fams = familiasVisibles().slice(0, 6);
+
   return (
-    <footer className="mt-12 border-t border-line py-10 sm:mt-16 sm:py-12 text-sm text-mute">
-      <div className="mx-auto max-w-site px-5">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-          <div>
+    <footer className="mt-12 border-t border-line pt-10 text-[13.5px] text-mute sm:mt-16 sm:pt-12">
+      <div className="contenedor">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-4">
+          <div className="col-span-2 lg:col-span-1">
             <p className="mb-3 text-[17px] font-bold tracking-[-.03em] text-ink">
               iPhone<span className="font-medium text-mute">Connection</span>
             </p>
-            <p className="max-w-[34ch]">Tecnología revisada, documentada y con garantía escrita.</p>
+            <p className="max-w-[34ch] leading-relaxed">
+              Tecnología revisada, documentada y con garantía escrita.
+            </p>
           </div>
+
           <div>
-            <h5 className="mb-3 text-[13.5px] font-semibold text-ink">Catálogo</h5>
+            <h2 className="mb-3 text-[13.5px] font-semibold text-ink">Catálogo</h2>
             <ul className="space-y-2">
               {fams.map((f) => (
                 <li key={f.slug}>
-                  <Link href={`/catalogo/${f.slug}`} className="hover:text-ink">{f.nombre}</Link>
+                  <Link href={`/catalogo/${f.slug}`} className="transition-colors hover:text-ink">
+                    {f.nombre}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
+
           <div>
-            <h5 className="mb-3 text-[13.5px] font-semibold text-ink">Empresa</h5>
+            <h2 className="mb-3 text-[13.5px] font-semibold text-ink">Empresa</h2>
             <ul className="space-y-2">
-              <li><Link href="/nosotros" className="hover:text-ink">Nosotros</Link></li>
-              <li><Link href="/garantia" className="hover:text-ink">Garantía</Link></li>
-              <li><Link href="/faq" className="hover:text-ink">Preguntas frecuentes</Link></li>
+              <li><Link href="/nosotros" className="transition-colors hover:text-ink">Nosotros</Link></li>
+              <li><Link href="/garantia" className="transition-colors hover:text-ink">Garantía</Link></li>
+              <li><Link href="/faq" className="transition-colors hover:text-ink">Preguntas frecuentes</Link></li>
+              <li><Link href="/privacidad" className="transition-colors hover:text-ink">Política de privacidad</Link></li>
             </ul>
           </div>
+
           <div>
-            <h5 className="mb-3 text-[13.5px] font-semibold text-ink">Contacto</h5>
+            <h2 className="mb-3 text-[13.5px] font-semibold text-ink">Contacto</h2>
             <ul className="space-y-2">
-              <li><Link href="/contacto" className="hover:text-ink">Contacto</Link></li>
-              {tiene("instagram") && <li>{empresa.instagram}</li>}
+              <li><Link href="/contacto" className="transition-colors hover:text-ink">Contacto</Link></li>
+              {tiene("whatsapp") && (
+                <li><a href={linkWhatsApp()} className="transition-colors hover:text-ink">WhatsApp</a></li>
+              )}
+              {tiene("instagram") && (
+                <li>
+                  <a
+                    href={`https://instagram.com/${empresa.instagram.replace("@", "")}`}
+                    className="transition-colors hover:text-ink"
+                  >
+                    {empresa.instagram}
+                  </a>
+                </li>
+              )}
               {tiene("horarios") && <li>{empresa.horarios}</li>}
+              {tiene("zona") && <li>{empresa.zona}</li>}
             </ul>
           </div>
         </div>
-        <div className="mt-10 flex flex-wrap justify-between gap-3 border-t border-line pt-5 text-xs">
-          <span className="whitespace-nowrap">© 2026 iPhone Connection</span>
-          <span className="font-data text-[11px]">
+
+        {(hayPagos() || hayEnvios()) && (
+          <div className="mt-10 grid gap-6 border-t border-line pt-8 sm:grid-cols-2">
+            {hayPagos() && (
+              <div>
+                <h2 className="mb-2 text-[13.5px] font-semibold text-ink">Formas de pago</h2>
+                <p>{empresa.pagos.medios.join(" · ")}</p>
+                {empresa.pagos.nota && <p className="mt-1 text-[12.5px]">{empresa.pagos.nota}</p>}
+              </div>
+            )}
+            {hayEnvios() && (
+              <div>
+                <h2 className="mb-2 text-[13.5px] font-semibold text-ink">Envíos</h2>
+                <p>{empresa.envios.alcance}</p>
+                {empresa.envios.plazo && <p className="mt-1 text-[12.5px]">{empresa.envios.plazo}</p>}
+              </div>
+            )}
+          </div>
+        )}
+
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-line py-6 text-[12.5px]">
+          <span>© {new Date().getFullYear()} iPhone Connection</span>
+          <span className="font-data text-[11px] text-mute-soft">
             {tc.fuente === "api"
-              ? `${tc.nombre} $${tc.valor} · actualizado ${fechaLegible(tc)}`
+              ? `${tc.nombre} $${tc.valor} · ${fechaLegible(tc)}`
               : "Cotización de respaldo · precios sujetos a confirmación"}
           </span>
         </div>

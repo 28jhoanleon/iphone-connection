@@ -8,15 +8,18 @@
   @media (min-width: 640px) { body { padding-bottom: 0; } }
   html { -webkit-font-smoothing: antialiased; }
   body { @apply bg-paper text-ink; }
-  :focus-visible { outline: 2px solid #0A0A0A; outline-offset: 3px; }
+  :focus-visible { outline: 2px solid #0A0A0A; outline-offset: 3px; border-radius: 4px; }
+  /* el foco nunca queda escondido detrás del header pegajoso */
+  [id], a, button { scroll-margin-top: 84px; }
 }
 
 @layer components {
   .contenedor { @apply mx-auto max-w-site px-4 sm:px-5; }
   .btn-solido { @apply inline-block rounded-full border border-ink bg-ink px-7 py-3.5 text-[15px] font-medium leading-none text-paper transition hover:-translate-y-px; }
-  .btn-linea  { @apply inline-block rounded-full border border-ink px-7 py-3.5 text-[15px] font-medium leading-none transition hover:bg-surface; }
   .etiqueta   { @apply font-data text-[10.5px] uppercase tracking-[.14em] text-mute; }
   .seccion    { @apply py-12 sm:py-16; }
+  /* título que ordena la jerarquía para lectores de pantalla sin alterar el diseño */
+  .solo-lector { @apply absolute h-px w-px overflow-hidden whitespace-nowrap border-0 p-0; clip: rect(0 0 0 0); }
   .titulo-sec { @apply text-[clamp(23px,5.4vw,34px)] font-semibold leading-[1.12] tracking-[-.03em]; }
   .tarjeta    { @apply rounded-lg border border-line bg-paper transition hover:-translate-y-0.5 hover:border-ink; }
 }

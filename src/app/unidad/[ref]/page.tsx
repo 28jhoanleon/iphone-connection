@@ -1,10 +1,22 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { todasLasUnidades, unidadPorRef, slugFamilia } from "@/lib/catalogo";
+import {
+  todasLasUnidades, unidadPorRef, slugFamilia,
+  mismasUnidades, relacionados, accesoriosCompatibles, esUltimasUnidades,
+} from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
-import { precio, precioARS, capacidad, garantia, linkWhatsApp, ETIQUETA_DISPONIBILIDAD } from "@/lib/formato";
+import {
+  precio, precioARS, capacidad, garantia, linkWhatsApp, ETIQUETA_DISPONIBILIDAD,
+} from "@/lib/formato";
+import { tipoCambio, fechaLegible } from "@/lib/dolar";
+import { empresa, hayEnvios, hayPagos } from "@/lib/empresa";
+import { SITIO } from "@/lib/seo";
 import Migas from "@/components/Migas";
 import Volver from "@/components/Volver";
-import { tipoCambio, fechaLegible } from "@/lib/dolar";
+import TarjetaUnidad from "@/components/TarjetaUnidad";
+import EtiquetaEstado from "@/components/EtiquetaEstado";
+import BloqueFicha from "@/components/BloqueFicha";
+import FilaDato from "@/components/FilaDato";
 
 export function generateStaticParams() {
   return todasLasUnidades().map((u) => ({ ref: u.ref }));
@@ -13,9 +25,23 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ ref: string }> }) {
   const { ref } = await params;
   const u = unidadPorRef(ref);
+  if (!u) return { title: "Unidad no encontrada" };
+
+  const titulo = `${u.nombre} ${u.estadoEtiqueta} — iPhone Connection`;
+  const desc = `${u.nombreCompleto}. ${u.bateria ? `Salud de batería ${u.bateria}%. ` : ""}Garantía ${garantia(u)}. Estado declarado antes de comprar.`;
+  const url = `${SITIO}/unidad/${u.ref}`;
+  const img = `${SITIO}${rutaImagen(u.ref)}`;
+
   return {
-    title: u ? `${u.nombre} ${u.estadoEtiqueta} — iPhone Connection` : "Unidad",
-    description: u ? `${u.nombreCompleto}. Batería ${u.bateria ?? 100}%. Garantía ${garantia(u)}.` : undefined,
+    title: titulo,
+    description: desc,
+    alternates: { canonical: url },
+    openGraph: {
+      title: titulo, description: desc, url, type: "website",
+      locale: "es_AR", siteName: "iPhone Connection",
+      images: [{ url: img, width: 1000, height: 1000, alt: u.nombre }],
+    },
+    twitter: { card: "summary_large_image", title: titulo, description: desc, images: [img] },
   };
 }
 
@@ -23,19 +49,46 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
   const { ref } = await params;
   const u = unidadPorRef(ref);
   if (!u) notFound();
-  const tc = await tipoCambio();
 
-  const filas: [string, string][] = [
-    ["Salud de batería", u.bateria ? `${u.bateria} %` : "—"],
-    ["Grado", u.estadoEtiqueta.toUpperCase()],
-    ["Capacidad", capacidad(u.capacidadGb)],
-    ["Color", (u.color ?? u.colores?.join(" / ") ?? "—").toUpperCase()],
-    ["Garantía", garantia(u).toUpperCase()],
-    ["Referencia", `#${u.ref}`],
-  ];
+  const tc = await tipoCambio();
+  const p = precioARS(u, tc.valor);
+  const otras = mismasUnidades(u);
+  const similares = relacionados(u);
+  const accesorios = accesoriosCompatibles(u);
+  const sellado = u.estado === "nuevo_sellado";
+  const caja = sellado ? empresa.incluyeCaja.nuevo_sellado : empresa.incluyeCaja.usado;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: u.nombreCompleto,
+    sku: u.ref,
+    brand: { "@type": "Brand", name: u.marca },
+    category: u.categoria,
+    image: [`${SITIO}${rutaImagen(u.ref)}`],
+    description: `${u.nombre}. ${u.estadoEtiqueta}.${u.bateria ? ` Salud de batería ${u.bateria}%.` : ""}`,
+    itemCondition: sellado
+      ? "https://schema.org/NewCondition"
+      : "https://schema.org/UsedCondition",
+    offers: {
+      "@type": "Offer",
+      url: `${SITIO}/unidad/${u.ref}`,
+      priceCurrency: "ARS",
+      price: (p / 100).toFixed(0),
+      availability:
+        u.disponibilidad === "disponible"
+          ? "https://schema.org/InStock"
+          : u.disponibilidad === "por_encargo"
+            ? "https://schema.org/PreOrder"
+            : "https://schema.org/OutOfStock",
+      seller: { "@type": "Organization", name: "iPhone Connection" },
+    },
+  };
 
   return (
     <div className="contenedor">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       <Migas
         items={[
           ["INICIO", "/"],
@@ -45,63 +98,154 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
         ]}
       />
       <Volver href={`/modelo/${u.modeloSlug}`} texto={`Volver a ${u.modelo}`} />
-      <div className="grid gap-10 py-4 pb-16 md:grid-cols-2 md:pb-20 md:gap-14">
+
+      <div className="grid gap-8 py-3 pb-14 sm:gap-10 sm:py-4 md:grid-cols-2 md:gap-14">
         <div className="grid grid-cols-2 gap-2">
           <div className="col-span-2 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg bg-surface">
-            <img src={rutaImagen(u.ref)} alt={u.nombre} className="h-full w-full object-contain" />
+            <img
+              src={rutaImagen(u.ref)} alt={u.nombre} width={1000} height={750}
+              fetchPriority="high" decoding="async"
+              className="h-full w-full object-contain"
+            />
           </div>
-          <div className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-surface">
-            <img src={rutaImagen(u.ref)} alt="" className="h-full w-full object-contain" />
-          </div>
-          <div className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-surface">
-            <img src={rutaImagen(u.ref)} alt="" className="h-full w-full object-contain" />
-          </div>
+          {[0, 1].map((i) => (
+            <div key={i} className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-surface">
+              <img
+                src={rutaImagen(u.ref)} alt="" width={500} height={500}
+                loading="lazy" decoding="async"
+                className="h-full w-full object-contain"
+              />
+            </div>
+          ))}
         </div>
 
         <div>
-          <h1 className="mb-1.5 text-[clamp(26px,3.6vw,36px)] font-semibold leading-[1.08] tracking-[-.035em]">
+          <EtiquetaEstado unidad={u} ultimas={esUltimasUnidades(u)} />
+          <h1 className="mb-1.5 mt-3 text-[clamp(26px,5.6vw,36px)] font-semibold leading-[1.08] tracking-[-.035em]">
             {u.nombre}
           </h1>
           <p className="mb-6 text-[15px] text-mute">
             {u.estadoEtiqueta} · {ETIQUETA_DISPONIBILIDAD[u.disponibilidad]}
           </p>
 
-          <p className="text-[clamp(28px,7.4vw,33px)] font-semibold tracking-[-.03em]">{precio(precioARS(u, tc.valor))}</p>
-          <p className="mt-1.5 font-data text-[11px] tracking-[.06em] text-mute-soft">
+          <p className="text-[clamp(28px,7.4vw,33px)] font-semibold leading-none tracking-[-.03em]">
+            {precio(p)}
+          </p>
+          <p className="mt-2 font-data text-[11px] tracking-[.06em] text-mute-soft">
             {tc.fuente === "api"
               ? `${tc.nombre.toUpperCase()} $${tc.valor} · ${fechaLegible(tc)}`
               : "COTIZACIÓN DE RESPALDO · CONSULTAR ANTES DE COMPRAR"}
           </p>
 
-          {u.bateriaPosibleReemplazo && (
-        <div className="my-5 rounded-md border border-line bg-surface px-4 py-3.5 text-[13.5px]">
-          <b className="mb-1 block text-[11px] uppercase tracking-[.1em]">Sobre la batería al 100%</b>
-          Una batería al 100% en un equipo usado normalmente significa que fue reemplazada.
-          Consultanos si es original o de recambio antes de comprar: te lo confirmamos por escrito.
-        </div>
-      )}
-
-      {u.defecto && (
-            <div className="my-5 rounded-md border border-[#E6D8B0] bg-[#FBF6E8] px-4 py-3.5 text-[13.5px]">
-              <b className="mb-1 block text-[11px] uppercase tracking-[.1em]">Detalle declarado</b>
+          {u.defecto && (
+            <div className="my-5 rounded-lg border border-aviso-linea bg-aviso-fondo px-4 py-3.5 text-[14.5px]">
+              <b className="mb-1 block font-data text-[10.5px] uppercase tracking-[.1em]">Detalle declarado</b>
               {u.defecto}. Está contemplado en el precio y lo revisás antes de comprar.
             </div>
           )}
 
-          <div className="my-6 rounded-md border border-line p-5">
-            <h4 className="etiqueta mb-3.5">Estado de esta unidad</h4>
-            {filas.map(([k, v]) => (
-              <div key={k} className="flex justify-between gap-4 border-b border-line py-2.5 text-sm last:border-0">
-                <span className="text-mute">{k}</span>
-                <b className="text-right font-data text-[12.5px] font-medium">{v}</b>
-              </div>
-            ))}
-          </div>
+          {u.bateriaPosibleReemplazo && (
+            <div className="my-5 rounded-lg border border-line bg-surface px-4 py-3.5 text-[14.5px]">
+              <b className="mb-1 block font-data text-[10.5px] uppercase tracking-[.1em]">Sobre la batería al 100%</b>
+              En un equipo usado suele significar que fue reemplazada. Consultanos si es original
+              o de recambio: te lo confirmamos por escrito.
+            </div>
+          )}
 
-          <a href={linkWhatsApp(u)} className="btn-solido w-full text-center">Consultar por WhatsApp</a>
-          <p className="mt-3 text-center text-[12.5px] text-mute">El mensaje se envía con la referencia incluida</p>
+          <a href={linkWhatsApp(u)} className="btn-solido my-6 w-full">Consultar por WhatsApp</a>
+
+          <div className="space-y-4">
+            <BloqueFicha titulo="Estado de esta unidad">
+              <FilaDato k="Salud de batería" v={u.bateria ? `${u.bateria} %` : "—"} />
+              <FilaDato k="Grado" v={u.estadoEtiqueta.toUpperCase()} />
+              <FilaDato k="Capacidad" v={capacidad(u.capacidadGb)} />
+              <FilaDato k="Color" v={(u.color ?? u.colores?.join(" / ") ?? "—").toUpperCase()} />
+              <FilaDato k="Garantía" v={garantia(u).toUpperCase()} />
+              <FilaDato k="Referencia" v={`#${u.ref}`} />
+            </BloqueFicha>
+
+            <BloqueFicha titulo="Qué incluye">
+              <ul className="space-y-1.5 text-[14.5px] text-mute">
+                {caja.map((x) => (
+                  <li key={x} className="flex gap-2">
+                    <span className="text-ink" aria-hidden="true">·</span>{x}
+                  </li>
+                ))}
+                <li className="flex gap-2">
+                  <span className="text-ink" aria-hidden="true">·</span>
+                  Comprobante de compra y garantía por escrito
+                </li>
+              </ul>
+              {!sellado && (
+                <p className="mt-3 text-[12.5px] text-mute-soft">
+                  Los equipos seleccionados no incluyen la caja original salvo que se aclare.
+                </p>
+              )}
+            </BloqueFicha>
+
+            {hayPagos() && (
+              <BloqueFicha titulo="Formas de pago">
+                <p className="text-[14.5px] text-mute">{empresa.pagos.medios.join(" · ")}</p>
+                {empresa.pagos.nota && (
+                  <p className="mt-1.5 text-[12.5px] text-mute-soft">{empresa.pagos.nota}</p>
+                )}
+              </BloqueFicha>
+            )}
+
+            {hayEnvios() && (
+              <BloqueFicha titulo="Envíos">
+                <p className="text-[14.5px] text-mute">{empresa.envios.alcance}</p>
+                {empresa.envios.plazo && <p className="mt-1.5 text-[12.5px] text-mute-soft">{empresa.envios.plazo}</p>}
+                {empresa.envios.costo && <p className="mt-1 text-[12.5px] text-mute-soft">{empresa.envios.costo}</p>}
+              </BloqueFicha>
+            )}
+
+            <BloqueFicha titulo="Preguntas sobre este equipo">
+              <dl className="divide-y divide-line">
+                {[
+                  ["¿Puedo revisarlo antes de pagar?", "Sí. Coordinamos y lo probás con nosotros: batería, pantalla, cámaras y funciones principales. Si algo no coincide con lo publicado, no hay venta."],
+                  [sellado ? "¿Viene sellado de fábrica?" : "¿Qué significa este grado?",
+                   sellado ? "Sí, con la caja cerrada y la documentación original." : `${u.estadoEtiqueta} indica el estado estético y la salud de batería declarada arriba, verificada antes de publicar.`],
+                  ["¿Cómo verifico el IMEI?", "Te lo mostramos en el momento de la compra y te acompañamos a verificarlo si no sabés cómo."],
+                ].map(([q, a]) => (
+                  <div key={q} className="py-3 first:pt-0 last:pb-0">
+                    <dt className="text-[14.5px] font-medium">{q}</dt>
+                    <dd className="mt-1 text-[14.5px] leading-relaxed text-mute">{a}</dd>
+                  </div>
+                ))}
+              </dl>
+              <Link href="/faq" className="btn-texto mt-3">Ver todas las preguntas →</Link>
+            </BloqueFicha>
+          </div>
         </div>
       </div>
+
+      {otras.length > 0 && (
+        <section className="border-t border-line py-10 sm:py-12">
+          <h2 className="titulo-sec mb-6">Otras unidades del {u.modelo}</h2>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {otras.map((x) => <TarjetaUnidad key={x.ref} u={x} tc={tc.valor} />)}
+          </div>
+        </section>
+      )}
+
+      {accesorios.length > 0 && (
+        <section className="border-t border-line py-10 sm:py-12">
+          <h2 className="titulo-sec mb-6">Accesorios compatibles</h2>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {accesorios.map((x) => <TarjetaUnidad key={x.ref} u={x} tc={tc.valor} />)}
+          </div>
+        </section>
+      )}
+
+      {similares.length > 0 && (
+        <section className="border-t border-line py-10 pb-14 sm:py-12 sm:pb-20">
+          <h2 className="titulo-sec mb-6">También te puede interesar</h2>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {similares.map((x) => <TarjetaUnidad key={x.ref} u={x} tc={tc.valor} />)}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

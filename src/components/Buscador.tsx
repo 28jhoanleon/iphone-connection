@@ -101,7 +101,7 @@ export default function Buscador({ indice: inicial }: { indice: ItemBusqueda[] }
                 />
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-[13.5px] font-medium leading-tight">{r.titulo}</span>
-                  <span className="mt-0.5 block truncate font-data text-[10.5px] tracking-[.05em] text-mute-soft">
+                  <span className="mt-0.5 block truncate font-data text-[10.5px] tracking-[.06em] text-mute-soft">
                     {r.estado}
                   </span>
                 </span>

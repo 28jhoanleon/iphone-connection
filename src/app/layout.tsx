@@ -2,17 +2,32 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
+import { SITIO } from "@/lib/seo";
 import "./globals.css";
 
+
 export const metadata: Metadata = {
-  title: "iPhone Connection — Tecnología con respaldo",
+  metadataBase: new URL(SITIO),
+  title: {
+    default: "iPhone Connection — Tecnología con respaldo",
+    template: "%s",
+  },
   description:
     "Tecnología revisada, documentada y con garantía escrita. Sabés exactamente qué estás comprando.",
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "iPhone Connection",
+    title: "iPhone Connection — Tecnología con respaldo",
     description: "Sabés exactamente qué estás comprando.",
+    url: SITIO,
+    siteName: "iPhone Connection",
     locale: "es_AR",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iPhone Connection",
+    description: "Sabés exactamente qué estás comprando.",
   },
 };
 

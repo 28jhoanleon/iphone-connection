@@ -13,11 +13,11 @@ export default async function Header() {
       <div className="mx-auto max-w-site px-4 sm:px-5">
         {/* fila 1: marca, navegación y contacto, todo centrado verticalmente */}
         <div className="flex h-14 items-center justify-between gap-4 sm:h-16">
-          <Link href="/" className="shrink-0 text-[17px] font-bold leading-none tracking-[-.03em]">
+          <Link href="/" aria-label="iPhone Connection · ir al inicio" className="shrink-0 text-[17px] font-bold leading-none tracking-[-.03em]">
             iPhone<span className="font-medium text-mute">Connection</span>
           </Link>
 
-          <nav className="hidden items-center gap-6 text-[13.5px] leading-none text-mute lg:flex">
+          <nav aria-label="Principal" className="hidden items-center gap-6 text-[13.5px] leading-none text-mute lg:flex">
             <Link href="/nosotros" className="hover:text-ink">Nosotros</Link>
             <Link href="/garantia" className="hover:text-ink">Garantía</Link>
             <Link href="/faq" className="hover:text-ink">FAQ</Link>

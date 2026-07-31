@@ -46,7 +46,7 @@ export default function TarjetaUnidad({
         {u.nombre}
       </h3>
 
-      <p className="mt-auto pt-3 text-[21px] font-semibold leading-none tracking-[-.025em] sm:text-[22px]">
+      <p className="mt-auto pt-3 text-[21px] font-semibold leading-none tracking-[-.02em] sm:text-[22px]">
         {precio(precioARS(u, tc))}
       </p>
       <p className="mt-1.5 text-[12.5px] text-mute">{u.estadoEtiqueta}</p>

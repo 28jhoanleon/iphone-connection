@@ -31,7 +31,7 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
       <Migas items={[["INICIO", "/"], [f.nombre.toUpperCase(), null]]} />
       <Volver href="/" texto="Volver al inicio" />
       <div className="pb-6 pt-5 sm:pb-8 sm:pt-6">
-        <h1 className="text-balance text-[clamp(28px,6.5vw,48px)] font-semibold leading-[1.06] tracking-[-.035em]">{f.nombre}</h1>
+        <h1 className="text-balance text-[clamp(28px,6.5vw,48px)] font-semibold leading-[1.06] tracking-[-.03em]">{f.nombre}</h1>
         <p className="mt-1.5 font-data text-xs tracking-[.06em] text-mute">
           {f.totalUnidades} {f.totalUnidades === 1 ? "UNIDAD" : "UNIDADES"} · {f.modelos.length} {f.modelos.length === 1 ? "MODELO" : "MODELOS"}
         </p>
@@ -60,7 +60,7 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
             <h3 className="mt-1 line-clamp-2 min-h-[2.6em] text-[14.5px] font-medium leading-[1.3] tracking-[-.01em]">
               {m.nombre}
             </h3>
-            <p className="mt-auto pt-3 text-[21px] font-semibold leading-none tracking-[-.025em] sm:text-[22px]">
+            <p className="mt-auto pt-3 text-[21px] font-semibold leading-none tracking-[-.02em] sm:text-[22px]">
               {precio(Math.min(...m.unidades.map((u) => precioARS(u, tc.valor))))}
             </p>
             <p className="mt-1.5 text-[12.5px] text-mute">

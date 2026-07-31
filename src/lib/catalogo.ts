@@ -109,6 +109,58 @@ export function destacadas(n = 4): Unidad[] {
   return elegidas;
 }
 
+/** Marcas con presencia real, ordenadas por cantidad de unidades. Apple siempre primera. */
+export function marcasPrincipales(min = 3): string[] {
+  const conteo = new Map<string, number>();
+  for (const u of todasLasUnidades()) {
+    if (u.marca === "Sin marca" || u.marca === "Genérico") continue;
+    conteo.set(u.marca, (conteo.get(u.marca) ?? 0) + 1);
+  }
+  return [...conteo.entries()]
+    .filter(([, n]) => n >= min)
+    .sort((a, b) => (a[0] === "Apple" ? -1 : b[0] === "Apple" ? 1 : b[1] - a[1]))
+    .map(([m]) => m);
+}
+
+/** Otras unidades del mismo modelo, para comparar sin volver atrás. */
+export function mismasUnidades(u: Unidad, n = 4): Unidad[] {
+  return todasLasUnidades()
+    .filter((x) => x.modeloSlug === u.modeloSlug && x.ref !== u.ref)
+    .sort((a, b) => a.precioCentavos - b.precioCentavos)
+    .slice(0, n);
+}
+
+/** Alternativas de la misma familia en un rango de precio parecido. */
+export function relacionados(u: Unidad, n = 4): Unidad[] {
+  return todasLasUnidades()
+    .filter((x) => x.categoria === u.categoria && x.modeloSlug !== u.modeloSlug)
+    .sort(
+      (a, b) =>
+        Math.abs(a.precioCentavos - u.precioCentavos) - Math.abs(b.precioCentavos - u.precioCentavos),
+    )
+    .slice(0, n);
+}
+
+/** Accesorios compatibles según la familia del equipo. Se resuelve por datos, no por IA. */
+export function accesoriosCompatibles(u: Unidad, n = 4): Unidad[] {
+  const familia = u.categoria;
+  const pistas: Record<string, RegExp> = {
+    iPhone: /cargador|cable|wallet|magsafe|airtag/i,
+    Android: /cargador|cable/i,
+    iPad: /pencil|teclado|cargador|cable/i,
+    Tablets: /pencil|teclado|cargador|cable/i,
+    Relojes: /malla|cargador/i,
+    Consolas: /joystick|volante/i,
+  };
+  const pat = pistas[familia];
+  if (!pat) return [];
+  const marca = u.marca;
+  return todasLasUnidades()
+    .filter((x) => x.categoria === "Accesorios" && pat.test(x.nombre))
+    .sort((a, b) => (a.marca === marca ? -1 : b.marca === marca ? 1 : 0))
+    .slice(0, n);
+}
+
 export function fechaActualizacion(): string {
   const u = todasLasUnidades()[0];
   return u ? u.actualizado.split("-").reverse().join("/") : "";

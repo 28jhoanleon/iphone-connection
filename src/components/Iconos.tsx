@@ -35,3 +35,14 @@ export function IconoAsesoramiento() {
     </svg>
   );
 }
+
+export function IconoEnvio() {
+  return (
+    <svg {...base} aria-hidden="true">
+      <path d="M2.8 7.5h9.4v9H2.8z" />
+      <path d="M12.2 10.2h4l3 3v3.3h-7z" />
+      <circle cx="6.4" cy="18.4" r="1.9" />
+      <circle cx="16.6" cy="18.4" r="1.9" />
+    </svg>
+  );
+}

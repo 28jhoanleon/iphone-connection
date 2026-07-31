@@ -30,7 +30,7 @@ export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: n
 
   return (
     <div>
-      <h1 className="mb-1.5 text-[clamp(28px,4vw,40px)] font-semibold leading-[1.06] tracking-[-.035em]">
+      <h1 className="mb-1.5 text-[clamp(28px,4vw,40px)] font-semibold leading-[1.06] tracking-[-.03em]">
         {modelo.nombre}
       </h1>
       <p className="mb-6 text-[15px] text-mute">
@@ -69,7 +69,7 @@ export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: n
       <p className="etiqueta mb-3">Unidades que coinciden · {visibles.length}</p>
 
       {visibles.length === 0 ? (
-        <p className="py-8 text-mute">
+        <p className="py-10 text-mute">
           No hay unidades con esa combinación. Probá con otra capacidad o color.
         </p>
       ) : (
@@ -88,7 +88,7 @@ export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: n
                   {u.estadoEtiqueta}
                   {u.color ? ` · ${u.color}` : u.colores ? ` · ${u.colores.join(" / ")}` : ""}
                 </p>
-                {u.defecto && <p className="mt-0.5 text-[11px] text-[#8A6A2A]">Detalle declarado: {u.defecto}</p>}
+                {u.defecto && <p className="mt-0.5 text-[11px] text-aviso-texto">Detalle declarado: {u.defecto}</p>}
               </div>
               <span className="whitespace-nowrap text-[17px] font-semibold tracking-[-.02em]">
                 {precio(precioARS(u, tc))}

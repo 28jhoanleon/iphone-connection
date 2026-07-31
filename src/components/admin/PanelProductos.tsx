@@ -129,7 +129,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
           <input type="file" accept=".csv,text/csv" className="hidden"
                  onChange={(e) => e.target.files?.[0] && importar(e.target.files[0])} />
         </label>
-        {sucio && <span className="font-data text-[11px] text-[#8A6A2A]">CAMBIOS SIN EXPORTAR</span>}
+        {sucio && <span className="font-data text-[11px] text-aviso-texto">CAMBIOS SIN EXPORTAR</span>}
       </div>
 
       {aviso && (

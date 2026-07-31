@@ -1,16 +1,19 @@
 import Link from "next/link";
-import { familiasVisibles, destacadas, fechaActualizacion, todasLasUnidades, esUltimasUnidades } from "@/lib/catalogo";
+import { familiasVisibles, destacadas, fechaActualizacion, todasLasUnidades, esUltimasUnidades, marcasPrincipales } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
 import { precio, precioARS, linkWhatsApp } from "@/lib/formato";
 import { tipoCambio } from "@/lib/dolar";
 import TarjetaUnidad from "@/components/TarjetaUnidad";
+import BadgesConfianza from "@/components/BadgesConfianza";
+import Marcas from "@/components/Marcas";
 import { IconoRevision, IconoGarantia, IconoAsesoramiento } from "@/components/Iconos";
 import Icono from "@/components/Icono";
 
 export default async function Home() {
   const tc = await tipoCambio();
   const fams = familiasVisibles();
-  const dest = destacadas(4);
+  const dest = destacadas(8);
+  const marcasDestacadas = marcasPrincipales();
   const total = todasLasUnidades().length;
 
   return (
@@ -24,9 +27,9 @@ export default async function Home() {
           <h1 className="max-w-[16ch] text-balance text-[clamp(31px,8.6vw,74px)] font-semibold leading-[1.03] tracking-[-.04em]">
             Sabés exactamente qué estás comprando.
           </h1>
-          <p className="mt-4 max-w-[46ch] text-[16.5px] leading-relaxed text-mute sm:mt-6 sm:text-[19px]">
-            iPhone, Samsung, Xiaomi y más. Cada equipo revisado, con su estado y su
-            salud de batería declarados antes de que preguntes.
+          <p className="mt-4 max-w-[50ch] text-[16.5px] leading-relaxed text-mute sm:mt-6 sm:text-[19px]">
+            iPhone, Samsung, Xiaomi, notebooks, tablets, consolas y accesorios. Cada equipo
+            revisado, con su estado y su salud de batería declarados antes de que preguntes.
           </p>
           <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 sm:mt-9">
             <Link href="/catalogo/iphone" className="btn-solido w-full sm:w-auto">
@@ -36,11 +39,15 @@ export default async function Home() {
               Cómo funciona la garantía <span aria-hidden="true">→</span>
             </Link>
           </div>
+          <BadgesConfianza />
         </div>
       </section>
 
+      <Marcas marcas={marcasDestacadas} />
+
       {/* BENEFICIOS */}
       <section className="contenedor">
+        <h2 className="solo-lector">Por qué comprar en iPhone Connection</h2>
         <div className="grid border-b border-line sm:grid-cols-3">
           {[
             [<IconoRevision key="r" />, "Revisión técnica", "Cada equipo se prueba antes de publicarse. Lo que no pasa la revisión, no entra."],
@@ -49,7 +56,7 @@ export default async function Home() {
           ].map(([icono, t, d], i) => (
             <div
               key={t as string}
-              className={`flex gap-3.5 py-6 sm:block sm:py-9 ${i > 0 ? "border-t border-line sm:border-l sm:border-t-0 sm:pl-7" : ""} ${i < 2 ? "sm:pr-7" : ""}`}
+              className={`flex gap-3.5 py-6 sm:block sm:py-10 ${i > 0 ? "border-t border-line sm:border-l sm:border-t-0 sm:pl-7" : ""} ${i < 2 ? "sm:pr-7" : ""}`}
             >
               <span className="mt-0.5 shrink-0 text-ink sm:mb-3 sm:block">{icono}</span>
               <div>
@@ -109,11 +116,11 @@ export default async function Home() {
       {/* CÓMO TRABAJAMOS */}
       <section className="bg-ink text-paper">
         <div className="contenedor py-14 sm:py-20">
-          <p className="etiqueta mb-6 text-[#6E6E6E]">Cómo trabajamos</p>
+          <p className="etiqueta mb-6 text-sobre-ink-soft">Cómo trabajamos</p>
           <h2 className="max-w-[20ch] text-[clamp(26px,4vw,44px)] font-semibold leading-[1.08] tracking-[-.04em]">
             No vendemos todo lo que se puede vender.
           </h2>
-          <p className="mt-6 max-w-[52ch] text-[16.5px] text-[#9E9E9E]">
+          <p className="mt-6 max-w-[52ch] text-[16.5px] text-sobre-ink">
             Un equipo entra al catálogo solo si podemos asesorarte sobre él, respaldarlo con
             garantía y fotografiarlo nosotros mismos. Por eso vas a ver menos opciones que en
             otros lados, y por eso podemos responder por todas.
@@ -126,9 +133,9 @@ export default async function Home() {
               ["04", "Acompañamos", "Garantía escrita y alguien que responde después de la venta."],
             ].map(([n, t, d]) => (
               <div key={n}>
-                <p className="mb-2 font-data text-[11px] tracking-[.14em] text-[#6E6E6E]">{n}</p>
+                <p className="mb-2 font-data text-[11px] tracking-[.14em] text-sobre-ink-soft">{n}</p>
                 <h3 className="mb-1.5 text-[16.5px] font-semibold">{t}</h3>
-                <p className="text-[14.5px] text-[#9E9E9E]">{d}</p>
+                <p className="text-[14.5px] text-sobre-ink">{d}</p>
               </div>
             ))}
           </div>
@@ -140,7 +147,7 @@ export default async function Home() {
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <p className="etiqueta mb-5">Garantía</p>
-            <h2 className="text-[clamp(22px,3.4vw,34px)] font-semibold tracking-[-.035em]">
+            <h2 className="text-[clamp(22px,3.4vw,34px)] font-semibold tracking-[-.03em]">
               Por escrito, desde el día uno.
             </h2>
             <p className="mt-5 max-w-[46ch] text-mute">
@@ -150,7 +157,7 @@ export default async function Home() {
             </p>
           </div>
           <div className="rounded-lg border border-line p-6">
-            <h4 className="etiqueta mb-4">Qué cubre</h4>
+            <h3 className="etiqueta mb-4">Qué cubre</h3>
             {[
               ["Fallas de funcionamiento", "SÍ"],
               ["Batería por debajo de lo declarado", "SÍ"],
@@ -180,7 +187,7 @@ export default async function Home() {
       {/* CTA */}
       <section className="contenedor pb-16 sm:pb-20">
         <div className="rounded-lg bg-surface px-8 py-14 text-center">
-          <h2 className="mx-auto max-w-[18ch] text-[clamp(24px,3.4vw,36px)] font-semibold leading-[1.1] tracking-[-.035em]">
+          <h2 className="mx-auto max-w-[18ch] text-[clamp(24px,3.4vw,36px)] font-semibold leading-[1.1] tracking-[-.03em]">
             ¿No sabés cuál te conviene?
           </h2>
           <p className="mx-auto mt-4 max-w-[44ch] text-mute">

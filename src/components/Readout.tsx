@@ -13,7 +13,7 @@ export default function Readout({ u }: { u: Unidad }) {
     ["REF", `#${u.ref}`],
   ];
   return (
-    <dl className="mt-3 flex border-t border-line font-data text-[11px] tracking-[.04em]">
+    <dl className="mt-3 flex border-t border-line font-data text-[11px] tracking-[.06em]">
       {celdas.map(([k, v], i) => (
         <div key={k} className={`flex-1 min-w-0 pt-2.5 pr-1.5 ${i < 3 ? "border-r border-line" : ""}`}>
           <dt className="text-[10.5px] text-mute mb-0.5">{k}</dt>

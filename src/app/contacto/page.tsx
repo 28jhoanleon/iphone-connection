@@ -19,7 +19,7 @@ export default function Contacto() {
   return (
     <div className="contenedor max-w-[760px] py-10 sm:py-16">
       <p className="etiqueta mb-5">Contacto</p>
-      <h1 className="text-balance text-[clamp(27px,7vw,50px)] font-semibold leading-[1.06] tracking-[-.035em] sm:leading-[1.02]">
+      <h1 className="text-balance text-[clamp(27px,7vw,50px)] font-semibold leading-[1.06] tracking-[-.03em] sm:leading-[1.02]">
         Escribinos antes de comprar.
       </h1>
       <p className="mt-6 max-w-[48ch] text-[17px] text-mute">
@@ -51,7 +51,7 @@ export default function Contacto() {
         />
       )}
 
-      <h2 className="mt-10 mb-3 text-2xl font-semibold tracking-[-.025em]">Qué te vamos a preguntar</h2>
+      <h2 className="mt-10 mb-3 text-2xl font-semibold tracking-[-.02em]">Qué te vamos a preguntar</h2>
       <ul className="space-y-2 text-mute">
         <li>· Para qué usás el equipo: fotos, trabajo, juegos, uso básico.</li>
         <li>· Si venís de Android o de iPhone.</li>

@@ -5,6 +5,9 @@
  */
 import datos from "@/data/empresa.json";
 
+export interface Envios { hace: boolean; alcance: string; costo: string; plazo: string }
+export interface Pagos { medios: string[]; nota: string }
+
 export interface Empresa {
   nombre: string;
   whatsapp: string;
@@ -15,23 +18,22 @@ export interface Empresa {
   socios: string[];
   anioFundacion: string;
   dominio: string;
+  envios: Envios;
+  pagos: Pagos;
+  incluyeCaja: { nuevo_sellado: string[]; usado: string[] };
 }
 
 export const empresa = datos as Empresa;
 
-/** Campos obligatorios para poder publicar. */
-export const OBLIGATORIOS: (keyof Empresa)[] = [
-  "whatsapp", "instagram", "zona", "horarios", "socios",
-];
-
-export function faltantes(): string[] {
-  return OBLIGATORIOS.filter((k) => {
-    const v = empresa[k];
-    return Array.isArray(v) ? v.length === 0 : !v;
-  });
-}
 
 export function tiene(campo: keyof Empresa): boolean {
   const v = empresa[campo];
   return Array.isArray(v) ? v.length > 0 : Boolean(v);
 }
+
+/**
+ * Regla del proyecto: no hay textos "PENDIENTE" en el sitio público, pero tampoco
+ * se inventan datos. Un bloque sin información real sencillamente no se renderiza.
+ */
+export const hayEnvios = () => empresa.envios.hace && Boolean(empresa.envios.alcance);
+export const hayPagos = () => empresa.pagos.medios.length > 0;

@@ -4,7 +4,7 @@ export default function Garantia() {
   return (
     <div className="contenedor max-w-[720px] py-10 sm:py-16">
       <p className="etiqueta mb-5">Garantía</p>
-      <h1 className="text-balance text-[clamp(27px,7vw,46px)] font-semibold leading-[1.06] tracking-[-.035em]">
+      <h1 className="text-balance text-[clamp(27px,7vw,46px)] font-semibold leading-[1.06] tracking-[-.03em]">
         Por escrito, desde el día uno.
       </h1>
       <p className="mt-6 text-mute">

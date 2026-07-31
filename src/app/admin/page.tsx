@@ -9,7 +9,7 @@ export default function Admin() {
   return (
     <div className="contenedor py-10">
       <p className="etiqueta mb-3">Panel interno</p>
-      <h1 className="mb-1 text-3xl font-semibold tracking-[-.035em]">Productos</h1>
+      <h1 className="mb-1 text-3xl font-semibold tracking-[-.03em]">Productos</h1>
       <p className="mb-8 text-sm text-mute">
         {unidades.length} unidades publicadas · {fotografiasPropias()} con fotografía propia
       </p>
