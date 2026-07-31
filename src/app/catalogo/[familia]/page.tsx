@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { familias, familiaPorSlug } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
-import { precio } from "@/lib/formato";
+import { precio, precioARS } from "@/lib/formato";
+import { tipoCambio } from "@/lib/dolar";
 import Migas from "@/components/Migas";
 import Volver from "@/components/Volver";
 
@@ -23,6 +24,7 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
   const { familia } = await params;
   const f = familiaPorSlug(familia);
   if (!f) notFound();
+  const tc = await tipoCambio();
 
   return (
     <div className="contenedor">
@@ -40,7 +42,7 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
             <img src={rutaImagen(m.unidades[0].ref)} alt="" className="h-20 w-16 flex-none object-contain" />
             <div className="min-w-0">
               <h3 className="mb-0.5 truncate text-base font-semibold tracking-[-.02em]">{m.nombre}</h3>
-              <p className="text-[15px] font-semibold tracking-[-.01em]">desde {precio(m.desdeCentavos)}</p>
+              <p className="text-[15px] font-semibold tracking-[-.01em]">desde {precio(Math.min(...m.unidades.map((u) => precioARS(u, tc.valor))))}</p>
               <p className="font-data text-[11px] tracking-[.05em] text-mute">
                 {m.unidades.length} UNIDAD{m.unidades.length > 1 ? "ES" : ""}
               </p>

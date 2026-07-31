@@ -1,5 +1,19 @@
 import type { Unidad } from "./tipos";
 import { empresa } from "./empresa";
+import cfg from "@/data/precios.json";
+
+/**
+ * Precio en pesos a partir del costo en dólares.
+ *   ARS = costo USD x tipo de cambio x (1 + margen), redondeado.
+ * El redondeo es intencional: $ 926.000 se lee como precio, $ 926.440 como resultado
+ * de una cuenta. Si una unidad no tiene costo cargado se usa su precio almacenado.
+ */
+export function precioARS(u: { costoCentavos: number | null; precioCentavos: number }, tc: number): number {
+  if (!u.costoCentavos) return u.precioCentavos;
+  const bruto = u.costoCentavos * tc * (1 + cfg.margen);
+  const paso = cfg.redondeoPesos * 100;
+  return Math.round(bruto / paso) * paso;
+}
 
 /** Dinero: siempre centavos enteros en el dato, formateo solo en la vista (Doc 02 §7). */
 export function precio(centavos: number): string {

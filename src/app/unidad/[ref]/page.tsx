@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
 import { todasLasUnidades, unidadPorRef, slugFamilia } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
-import { precio, capacidad, garantia, linkWhatsApp, ETIQUETA_DISPONIBILIDAD } from "@/lib/formato";
+import { precio, precioARS, capacidad, garantia, linkWhatsApp, ETIQUETA_DISPONIBILIDAD } from "@/lib/formato";
 import Migas from "@/components/Migas";
 import Volver from "@/components/Volver";
+import { tipoCambio, fechaLegible } from "@/lib/dolar";
 
 export function generateStaticParams() {
   return todasLasUnidades().map((u) => ({ ref: u.ref }));
@@ -22,6 +23,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
   const { ref } = await params;
   const u = unidadPorRef(ref);
   if (!u) notFound();
+  const tc = await tipoCambio();
 
   const filas: [string, string][] = [
     ["Salud de batería", u.bateria ? `${u.bateria} %` : "—"],
@@ -64,9 +66,11 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
             {u.estadoEtiqueta} · {ETIQUETA_DISPONIBILIDAD[u.disponibilidad]}
           </p>
 
-          <p className="text-[33px] font-semibold tracking-[-.03em]">{precio(u.precioCentavos)}</p>
+          <p className="text-[33px] font-semibold tracking-[-.03em]">{precio(precioARS(u, tc.valor))}</p>
           <p className="mt-1.5 font-data text-[11px] tracking-[.06em] text-mute">
-            PRECIO ACTUALIZADO EL {u.actualizado.split("-").reverse().join("/")}
+            {tc.fuente === "api"
+              ? `${tc.nombre.toUpperCase()} $${tc.valor} · ${fechaLegible(tc)}`
+              : "COTIZACIÓN DE RESPALDO · CONSULTAR ANTES DE COMPRAR"}
           </p>
 
           {u.defecto && (

@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Buscador from "./Buscador";
 import { indiceBusqueda } from "@/lib/catalogo";
+import { tipoCambio } from "@/lib/dolar";
 import { linkWhatsApp } from "@/lib/formato";
 
-export default function Header() {
-  const indice = indiceBusqueda();
+export default async function Header() {
+  const tc = await tipoCambio();
+  const indice = indiceBusqueda(tc.valor);
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-lg">

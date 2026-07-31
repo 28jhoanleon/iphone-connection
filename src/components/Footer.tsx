@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { empresa, tiene } from "@/lib/empresa";
+import { tipoCambio, fechaLegible } from "@/lib/dolar";
 
-export default function Footer() {
+export default async function Footer() {
+  const tc = await tipoCambio();
   return (
     <footer className="mt-16 border-t border-line py-12 text-sm text-mute">
       <div className="mx-auto max-w-site px-5">
@@ -39,7 +41,11 @@ export default function Footer() {
         </div>
         <div className="mt-10 flex flex-wrap justify-between gap-3 border-t border-line pt-5 text-xs">
           <span>© 2026 iPhone Connection</span>
-          <span>V1 · Next.js</span>
+          <span className="font-data text-[11px]">
+            {tc.fuente === "api"
+              ? `${tc.nombre} $${tc.valor} · actualizado ${fechaLegible(tc)}`
+              : "Cotización de respaldo · precios sujetos a confirmación"}
+          </span>
         </div>
       </div>
     </footer>

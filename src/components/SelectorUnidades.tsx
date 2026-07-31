@@ -3,13 +3,13 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import type { Modelo, Unidad } from "@/lib/tipos";
-import { precio, capacidad } from "@/lib/formato";
+import { precio, precioARS, capacidad } from "@/lib/formato";
 
 /**
  * Núcleo de la navegación aprobada (opción A · wireframe 30/07/2026):
  * capacidad y color son SELECTORES dentro del modelo, no pantallas separadas.
  */
-export default function SelectorUnidades({ modelo }: { modelo: Modelo }) {
+export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: number }) {
   const [cap, setCap] = useState<number | null>(null);
   const [color, setColor] = useState<string | null>(null);
 
@@ -35,7 +35,7 @@ export default function SelectorUnidades({ modelo }: { modelo: Modelo }) {
       </h1>
       <p className="mb-7 text-[15px] text-mute">
         {modelo.unidades.length} unidad{modelo.unidades.length > 1 ? "es" : ""} · desde{" "}
-        {precio(modelo.desdeCentavos)}
+        {precio(Math.min(...modelo.unidades.map((u) => precioARS(u, tc))))}
       </p>
 
       {modelo.capacidades.length > 1 && (
@@ -91,7 +91,7 @@ export default function SelectorUnidades({ modelo }: { modelo: Modelo }) {
                 {u.defecto && <p className="mt-0.5 text-[11px] text-[#8A6A2A]">Detalle declarado: {u.defecto}</p>}
               </div>
               <span className="whitespace-nowrap text-[17px] font-semibold tracking-[-.02em]">
-                {precio(u.precioCentavos)}
+                {precio(precioARS(u, tc))}
               </span>
             </Link>
           ))}

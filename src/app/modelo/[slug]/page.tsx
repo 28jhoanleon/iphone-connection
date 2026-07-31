@@ -5,6 +5,7 @@ import Migas from "@/components/Migas";
 import SelectorUnidades from "@/components/SelectorUnidades";
 import Volver from "@/components/Volver";
 import { precio } from "@/lib/formato";
+import { tipoCambio } from "@/lib/dolar";
 
 export function generateStaticParams() {
   return modelos().map((m) => ({ slug: m.slug }));
@@ -23,6 +24,7 @@ export default async function ModeloPage({ params }: { params: Promise<{ slug: s
   const { slug } = await params;
   const m = modeloPorSlug(slug);
   if (!m) notFound();
+  const tc = await tipoCambio();
 
   return (
     <div className="contenedor">
@@ -38,7 +40,7 @@ export default async function ModeloPage({ params }: { params: Promise<{ slug: s
         <div className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-surface">
           <img src={rutaImagen(m.unidades[0].ref)} alt={m.nombre} className="h-full w-full object-contain" />
         </div>
-        <SelectorUnidades modelo={m} />
+        <SelectorUnidades modelo={m} tc={tc.valor} />
       </div>
     </div>
   );

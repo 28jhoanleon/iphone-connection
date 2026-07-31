@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { familias, destacadas, fechaActualizacion, todasLasUnidades } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
-import { precio, linkWhatsApp } from "@/lib/formato";
+import { precio, precioARS, linkWhatsApp } from "@/lib/formato";
+import { tipoCambio } from "@/lib/dolar";
 import Readout from "@/components/Readout";
 
-export default function Home() {
+export default async function Home() {
+  const tc = await tipoCambio();
   const fams = familias();
   const dest = destacadas(4);
   const total = todasLasUnidades().length;
@@ -84,7 +86,7 @@ export default function Home() {
               </div>
               <h4 className="text-[15px] font-semibold tracking-[-.01em]">{u.nombre}</h4>
               <p className="mb-2.5 text-[13px] text-mute">{u.estadoEtiqueta}</p>
-              <p className="text-[19px] font-semibold tracking-[-.02em]">{precio(u.precioCentavos)}</p>
+              <p className="text-[19px] font-semibold tracking-[-.02em]">{precio(precioARS(u, tc.valor))}</p>
               <Readout u={u} />
             </Link>
           ))}

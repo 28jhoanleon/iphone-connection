@@ -5,6 +5,7 @@
  */
 import datos from "@/data/catalogo.json";
 import type { Familia, Modelo, Unidad } from "./tipos";
+import { precioARS } from "./formato";
 
 const SLUG_FAMILIA: Record<string, string> = {
   iPhone: "iphone",
@@ -100,7 +101,7 @@ function normalizar(s: string): string {
   return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
-export function indiceBusqueda(): ItemBusqueda[] {
+export function indiceBusqueda(tc: number): ItemBusqueda[] {
   const items: ItemBusqueda[] = [];
 
   for (const m of modelos()) {
@@ -109,7 +110,7 @@ export function indiceBusqueda(): ItemBusqueda[] {
       titulo: m.nombre,
       detalle: `${m.unidades.length} unidad${m.unidades.length > 1 ? "es" : ""} · ${m.categoria}`,
       href: `/modelo/${m.slug}`,
-      precioCentavos: m.desdeCentavos,
+      precioCentavos: Math.min(...m.unidades.map((u) => precioARS(u, tc))),
       clave: normalizar([m.nombre, m.categoria, m.marca].join(" ")),
     });
   }
@@ -121,7 +122,7 @@ export function indiceBusqueda(): ItemBusqueda[] {
       titulo: u.nombre,
       detalle: `${u.estadoEtiqueta}${u.bateria ? ` · batería ${u.bateria}%` : ""} · #${u.ref}`,
       href: `/unidad/${u.ref}`,
-      precioCentavos: u.precioCentavos,
+      precioCentavos: precioARS(u, tc),
       clave: normalizar(
         [u.nombre, u.ref, u.estadoEtiqueta, colores, u.capacidadGb ? `${u.capacidadGb}gb` : ""].join(" "),
       ),
