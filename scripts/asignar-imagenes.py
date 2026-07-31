@@ -12,9 +12,11 @@ Así no hay que asignar unidad por unidad.
 
 Los modelos sin foto disponible conservan la imagen generada (.svg).
 """
-import json, os, shutil
+import json, os, shutil, sys
 import numpy as np
 from PIL import Image
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from validar_imagen import analizar
 
 RECORTES = "/tmp/seg"
 DESTINO = "public/productos"
@@ -175,6 +177,11 @@ def main() -> None:
         origen = os.path.join(RECORTES, elegido)
         if not os.path.exists(origen):
             sin_foto.append(u["modelo"])
+            continue
+        # Ningún recorte se copia al catálogo sin validarse.
+        v = analizar(origen)
+        if not v["ok"]:
+            sin_foto.append(f'{u["modelo"]} (recorte descartado: {v["motivo"]})')
             continue
         shutil.copy(origen, os.path.join(DESTINO, f'{u["ref"]}.webp'))
         asignadas += 1

@@ -14,6 +14,8 @@ Método:
 4. Bounding box del producto -> recorte cuadrado centrado con margen.
 """
 import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from validar_imagen import analizar
 import numpy as np
 from PIL import Image
 from scipy import ndimage
@@ -56,7 +58,7 @@ def celdas(m: np.ndarray) -> list[tuple[int, int, int, int]]:
     return res
 
 
-def producto_en_celda(m: np.ndarray, celda) -> tuple[int, int, int, int] | None:
+def producto_en_celda(m: np.ndarray, celda, im_color: Image.Image) -> tuple[int, int, int, int] | None:
     """Aísla el producto descartando los componentes de texto."""
     x0, y0, x1, y1 = celda
     sub = m[y0:y1, x0:x1]
@@ -117,12 +119,22 @@ def producto_en_celda(m: np.ndarray, celda) -> tuple[int, int, int, int] | None:
         mejor_ini, mejor_largo = ini, len(vacias) - ini
 
     if mejor_largo > (ty1 - ty0) * 0.04:
-        arriba = perfil[:mejor_ini].sum()
-        abajo = perfil[mejor_ini + mejor_largo:].sum()
-        if arriba >= abajo:
+        # Elegir por masa era el error: en etiquetas de dos líneas el texto pesa
+        # más que el producto. Se elige por TIPO de contenido.
+        corte = ty0 + mejor_ini
+        reinicio = ty0 + mejor_ini + mejor_largo
+        t_arriba = _parece_texto(im_color, x0 + tx0, y0 + ty0, x0 + tx1, y0 + corte)
+        t_abajo = _parece_texto(im_color, x0 + tx0, y0 + reinicio, x0 + tx1, y0 + ty1)
+        if t_arriba and not t_abajo:
+            ty0 = ty0 + mejor_ini + mejor_largo
+        elif t_abajo and not t_arriba:
             ty1 = ty0 + mejor_ini
         else:
-            ty0 = ty0 + mejor_ini + mejor_largo
+            # ninguno o ambos parecen texto: se queda el bloque más alto
+            if mejor_ini >= (ty1 - ty0) - (mejor_ini + mejor_largo):
+                ty1 = ty0 + mejor_ini
+            else:
+                ty0 = ty0 + mejor_ini + mejor_largo
 
     if (ty1 - ty0) < h * 0.12:
         return None
@@ -131,6 +143,23 @@ def producto_en_celda(m: np.ndarray, celda) -> tuple[int, int, int, int] | None:
 
 TINTA_OBJETIVO = 0.30   # proporción del lienzo que debe cubrir el producto
 LADO_MAXIMO = 0.88      # ningún producto puede superar esta fracción del lienzo
+
+
+def _parece_texto(im: Image.Image, x0: int, y0: int, x1: int, y1: int) -> bool:
+    """Trazo de texto: sin color, tinta oscura y mucho gris de antialias."""
+    if x1 - x0 < 4 or y1 - y0 < 4:
+        return True
+    a = np.asarray(im.crop((x0, y0, x1, y1)).convert("RGB")).astype(float)
+    lum = a.mean(axis=2)
+    m = lum < UMBRAL_BLANCO
+    if m.sum() < 40:
+        return True
+    px = lum[m]
+    mx, mn = a.max(axis=2), a.min(axis=2)
+    sat = float(np.where(mx > 0, (mx - mn) / np.maximum(mx, 1), 0)[m].mean())
+    medios = float(((px >= 70) & (px < 210)).mean())
+    oscuro = float((px < 70).mean())
+    return sat < 0.045 and medios > 0.18 and oscuro > 0.30
 
 
 def exportar(im: Image.Image, caja, destino: str) -> None:
@@ -167,14 +196,28 @@ def segmentar(ruta: str, prefijo: str, destino: str) -> list[str]:
     im = Image.open(ruta)
     m = mascara(im)
     os.makedirs(destino, exist_ok=True)
-    generados = []
+    generados, descartados = [], []
     for i, c in enumerate(celdas(m)):
-        caja = producto_en_celda(m, c)
+        caja = producto_en_celda(m, c, im)
         if not caja:
             continue
         nombre = f"{prefijo}-{len(generados):02d}.webp"
-        exportar(im, caja, os.path.join(destino, nombre))
+        ruta = os.path.join(destino, nombre)
+        exportar(im, caja, ruta)
+
+        # Ningún recorte se publica sin validarse. Si no pasa, se borra:
+        # el catálogo cae solo a la imagen generada.
+        v = analizar(ruta)
+        if not v["ok"]:
+            os.remove(ruta)
+            descartados.append((f"{prefijo}-celda-{i}", v["motivo"]))
+            continue
         generados.append(nombre)
+
+    if descartados:
+        print(f"  descartados {len(descartados)}:")
+        for n, motivo in descartados:
+            print(f"    · {n}: {motivo}")
     return generados
 
 
