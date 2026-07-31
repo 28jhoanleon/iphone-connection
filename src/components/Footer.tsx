@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { empresa, tiene } from "@/lib/empresa";
 import { tipoCambio, fechaLegible } from "@/lib/dolar";
+import { familiasVisibles } from "@/lib/catalogo";
 
 export default async function Footer() {
   const tc = await tipoCambio();
+  const fams = familiasVisibles().slice(0, 5);
   return (
-    <footer className="mt-16 border-t border-line py-12 text-sm text-mute">
+    <footer className="mt-12 border-t border-line py-10 sm:mt-16 sm:py-12 text-sm text-mute">
       <div className="mx-auto max-w-site px-5">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div>
@@ -17,9 +19,11 @@ export default async function Footer() {
           <div>
             <h5 className="mb-3 text-[13px] font-semibold text-ink">Catálogo</h5>
             <ul className="space-y-2">
-              <li><Link href="/catalogo/iphone" className="hover:text-ink">iPhone</Link></li>
-              <li><Link href="/catalogo/apple-watch" className="hover:text-ink">Apple Watch</Link></li>
-              <li><Link href="/catalogo/accesorios" className="hover:text-ink">Accesorios</Link></li>
+              {fams.map((f) => (
+                <li key={f.slug}>
+                  <Link href={`/catalogo/${f.slug}`} className="hover:text-ink">{f.nombre}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
@@ -40,7 +44,7 @@ export default async function Footer() {
           </div>
         </div>
         <div className="mt-10 flex flex-wrap justify-between gap-3 border-t border-line pt-5 text-xs">
-          <span>© 2026 iPhone Connection</span>
+          <span className="whitespace-nowrap">© 2026 iPhone Connection</span>
           <span className="font-data text-[11px]">
             {tc.fuente === "api"
               ? `${tc.nombre} $${tc.valor} · actualizado ${fechaLegible(tc)}`

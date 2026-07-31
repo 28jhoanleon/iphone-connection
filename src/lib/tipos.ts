@@ -8,6 +8,7 @@ export interface Unidad {
   ref: string;
   modelo: string;
   modeloSlug: string;
+  config: string | null;
   nombre: string;
   nombreCompleto: string;
   marca: string;

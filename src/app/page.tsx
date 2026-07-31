@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { familias, destacadas, fechaActualizacion, todasLasUnidades } from "@/lib/catalogo";
+import { familiasVisibles, destacadas, fechaActualizacion, todasLasUnidades } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
 import { precio, precioARS, linkWhatsApp } from "@/lib/formato";
 import { tipoCambio } from "@/lib/dolar";
@@ -7,7 +7,7 @@ import Readout from "@/components/Readout";
 
 export default async function Home() {
   const tc = await tipoCambio();
-  const fams = familias();
+  const fams = familiasVisibles();
   const dest = destacadas(4);
   const total = todasLasUnidades().length;
 
@@ -62,7 +62,7 @@ export default async function Home() {
               <div>
                 <h3 className="text-lg font-semibold tracking-[-.02em]">{f.nombre}</h3>
                 <p className="mt-0.5 font-data text-[12px] tracking-[.04em] text-mute">
-                  {f.totalUnidades} UNIDADES · {f.modelos.length} MODELOS
+                  {f.totalUnidades} {f.totalUnidades === 1 ? "UNIDAD" : "UNIDADES"} · {f.modelos.length} {f.modelos.length === 1 ? "MODELO" : "MODELOS"}
                 </p>
               </div>
             </Link>
@@ -82,7 +82,7 @@ export default async function Home() {
           {dest.map((u) => (
             <Link key={u.ref} href={`/unidad/${u.ref}`} className="group">
               <div className="mb-3.5 aspect-square overflow-hidden rounded-md bg-surface">
-                <img src={rutaImagen(u.ref)} alt={u.nombre} className="h-full w-full object-contain transition group-hover:scale-[1.03]" />
+                <img src={rutaImagen(u.ref)} alt="" className="h-full w-full object-contain transition group-hover:scale-[1.03]" />
               </div>
               <h4 className="text-[15px] font-semibold tracking-[-.01em]">{u.nombre}</h4>
               <p className="mb-2.5 text-[13px] text-mute">{u.estadoEtiqueta}</p>

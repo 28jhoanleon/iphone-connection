@@ -58,7 +58,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
     const n = items.length + 101;
 
     const nueva: Unidad = {
-      ref: `A${n}`, modelo, modeloSlug: modelo.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+      ref: `A${n}`, modelo, config: null, modeloSlug: modelo.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
       nombre, nombreCompleto: `${nombre} — ${etiquetas[estado]}`,
       marca: String(f.get("marca") || "Apple"), categoria: String(f.get("categoria") || "iPhone"),
       arquetipo: "telefono", capacidadGb: capacidad, color, colores: null,
@@ -94,7 +94,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
       if (!modelo || !precioNum) continue;
       n++;
       nuevos.push({
-        ref: `I${items.length + n}`, modelo, modeloSlug: modelo.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+        ref: `I${items.length + n}`, modelo, config: null, modeloSlug: modelo.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
         nombre: modelo, nombreCompleto: `${modelo} — Nuevo sellado`, marca: "Apple", categoria: "iPhone",
         arquetipo: "telefono", capacidadGb: null, color: null, colores: null,
         estado: "nuevo_sellado", estadoEtiqueta: "Nuevo sellado", bateria: 100,

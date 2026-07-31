@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  /* el botón flotante de WhatsApp no debe tapar el final del contenido */
+  body { padding-bottom: 76px; }
+  @media (min-width: 640px) { body { padding-bottom: 0; } }
   html { -webkit-font-smoothing: antialiased; }
   body { @apply bg-paper text-ink; }
   :focus-visible { outline: 2px solid #0A0A0A; outline-offset: 3px; }
 }
 
 @layer components {
-  .contenedor { @apply mx-auto max-w-site px-5; }
+  .contenedor { @apply mx-auto max-w-site px-4 sm:px-5; }
   .btn-solido { @apply inline-block rounded-full border border-ink bg-ink px-7 py-3.5 text-[15px] font-medium text-paper transition hover:-translate-y-px; }
   .btn-linea  { @apply inline-block rounded-full border border-ink px-7 py-3.5 text-[15px] font-medium transition hover:bg-surface; }
   .etiqueta   { @apply font-data text-[10.5px] uppercase tracking-[.14em] text-mute; }

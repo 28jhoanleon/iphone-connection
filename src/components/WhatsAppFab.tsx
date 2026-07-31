@@ -4,7 +4,7 @@ export default function WhatsAppFab() {
   return (
     <a
       href={linkWhatsApp()}
-      className="fixed bottom-5 right-5 z-50 rounded-full bg-ink px-5 py-3.5 text-sm font-medium text-paper shadow-[0_6px_26px_rgba(0,0,0,.16)] transition hover:-translate-y-0.5"
+      className="fixed bottom-4 right-4 z-40 rounded-full bg-ink px-5 py-3.5 text-sm font-medium text-paper shadow-[0_6px_26px_rgba(0,0,0,.16)] transition hover:-translate-y-0.5 sm:bottom-5 sm:right-5"
     >
       WhatsApp
     </a>

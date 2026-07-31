@@ -33,7 +33,7 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
       <div className="py-6 pb-8">
         <h1 className="text-[clamp(30px,5vw,48px)] font-semibold tracking-[-.04em]">{f.nombre}</h1>
         <p className="mt-1.5 font-data text-xs tracking-[.06em] text-mute">
-          {f.totalUnidades} UNIDADES · {f.modelos.length} MODELOS
+          {f.totalUnidades} {f.totalUnidades === 1 ? "UNIDAD" : "UNIDADES"} · {f.modelos.length} {f.modelos.length === 1 ? "MODELO" : "MODELOS"}
         </p>
       </div>
       <div className="grid gap-4 pb-20 sm:grid-cols-2 lg:grid-cols-3">

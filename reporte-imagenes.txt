@@ -22,6 +22,8 @@
  A128  iPhone 13              Verde      <- 1000745398-06.webp
  A135  iPhone 14              Negro      <- 1000745398-09.webp
  A136  iPhone 14              Celeste    <- 1000745398-09.webp
+ A137  iPhone 14 Plus         Blanco     <- 1000745399-00.webp
+ A138  iPhone 14 Plus         Blanco     <- 1000745399-00.webp
  A139  iPhone 14 Pro          Lila       <- 1000745399-01.webp
  A140  iPhone 14 Pro          Negro      <- 1000745399-01.webp
  A141  iPhone 14 Pro          Lila       <- 1000745399-01.webp
@@ -31,24 +33,34 @@
  A145  iPhone 14 Pro          Negro      <- 1000745399-01.webp
  A147  iPhone 15              Amarillo   <- 1000745399-03.webp
  A148  iPhone 15              Rosa       <- 1000745399-03.webp
- A149  iPhone 15 Pro          Natural    <- 1000745399-09.webp
- A150  iPhone 15 Pro          Blanco/Natural/Azul <- 1000745399-11.webp
- A151  iPhone 15 Pro          Blanco/Natural/Azul <- 1000745399-11.webp
+ A149  iPhone 15 Pro          Titanio Natural <- 1000745399-09.webp
+ A150  iPhone 15 Pro          Blanco     <- 1000745399-11.webp
+ A151  iPhone 15 Pro          Blanco     <- 1000745399-11.webp
  A152  iPhone 15 Pro          Blanco     <- 1000745399-11.webp
  A153  iPhone 15 Pro          Negro      <- 1000745399-10.webp
  A154  iPhone 15 Pro          Negro      <- 1000745399-10.webp
  A155  iPhone 15 Pro          Negro      <- 1000745399-10.webp
+ A156  iPhone 15 Pro Max      -          <- 1000745399-12.webp
  A157  iPhone 16 Pro          Blanco     <- 1000745399-24.webp
- A158  iPhone 16 Pro          Desert     <- 1000745399-23.webp
+ A158  iPhone 16 Pro          Titanio Desert <- 1000745399-23.webp
  A159  iPhone 16 Pro          Blanco     <- 1000745399-24.webp
- A160  iPhone 16 Pro Max      Natural    <- 1000745399-26.webp
+ A160  iPhone 16 Pro Max      Titanio Natural <- 1000745399-26.webp
  A161  iPhone 16 Pro Max      Blanco     <- 1000745399-28.webp
- A162  iPhone 16 Pro Max      Desert     <- 1000745399-26.webp
- A163  iPhone 16 Pro Max      Natural    <- 1000745399-26.webp
+ A162  iPhone 16 Pro Max      Titanio Desert <- 1000745399-26.webp
+ A163  iPhone 16 Pro Max      Titanio Natural <- 1000745399-26.webp
  A171  iPhone 13              -          <- 1000745398-04.webp
  A172  iPhone 14              -          <- 1000745398-08.webp
  A173  iPhone 15              -          <- 1000745399-03.webp
  A174  iPhone 15              -          <- 1000745399-03.webp
  A175  iPhone 15              -          <- 1000745399-03.webp
+ A176  iPhone 15 Plus         -          <- 1000745399-06.webp
  A177  iPhone 16              -          <- 1000745399-16.webp
+ A178  iPhone 16 Plus         -          <- 1000745399-20.webp
  A179  iPhone 16 Pro Max      -          <- 1000745399-26.webp
+ A211  iPad Mini A17 Pro      -          <- 1000745414-00.webp
+ A212  iPad Mini A17 Pro      -          <- 1000745414-00.webp
+ A213  iPad 11                -          <- 1000745414-01.webp
+ A214  iPad 11                -          <- 1000745414-01.webp
+ A221  iPad Pro 13" M5        -          <- 1000745414-05.webp
+ A222  iPad Pro 13" M5        -          <- 1000745414-05.webp
+ A226  AirPods Pro 3          -          <- 1000745414-17.webp

@@ -4,6 +4,11 @@ Fila 32: batería en rango «81 83» -> se declara 81%.
 Fila 62: batería en rango «87/88» -> se declara 87%.
 Fila 74: batería en rango «92 93» -> se declara 92%.
 Fila 75: batería en rango «94 95» -> se declara 94%.
+Fila 82: «galaxy s22» es usado y no declara batería. Queda en borrador.
+Fila 82: «galaxy s22» estaba en la sección de iPhone pero es de otra marca. Reclasificado a Android.
+Fila 83: «Apple Watch SERIE 10» estaba en la sección de iPhone pero es un Apple Watch. Reclasificado.
+Fila 84: «Apple Watch ultra 3» estaba en la sección de iPhone pero es un Apple Watch. Reclasificado.
+Fila 85: «jostick ps5 usados» es usado y no declara batería. Queda en borrador.
 Fila 102: «16E» sin precio en dólares. No se importa.
 Fila 104: «16» sin precio en dólares. No se importa.
 Fila 132: «Macbook AIR chip M1 8/256gb caja abierta» sin precio en dólares. No se importa.
@@ -18,7 +23,11 @@ Fila 151: «MACBOOK AIR 15,3 M5 16/ 1TB» sin precio en dólares. No se importa.
 Fila 198: «demas modelos consultar» sin precio en dólares. No se importa.
 Fila 202: «PENCIL RELICA» sin precio en dólares. No se importa.
 Fila 203: «TECLADO + MOUSE bluetooth» sin precio en dólares. No se importa.
+Fila 216: «Airpods max AAA» es réplica (AAA). No se importa.
+Fila 217: «Airpods pro 2 AAA» es réplica (AAA). No se importa.
+Fila 218: «Airpods 3ERA AAA» es réplica (AAA). No se importa.
 Fila 221: «airtag PACK X1 AAA» sin precio en dólares. No se importa.
+Fila 222: «auriculares ultra pods economicos» es réplica (AAA). No se importa.
 Fila 233: «se2» sin precio en dólares. No se importa.
 Fila 240: «ultra 2» sin precio en dólares. No se importa.
 Fila 251: «Amazfit T rex 3» sin precio en dólares. No se importa.
@@ -37,6 +46,7 @@ Fila 332: «REDMI 15 8RAM» sin precio en dólares. No se importa.
 Fila 354: «MOTO G17 POWER 8RAM» sin precio en dólares. No se importa.
 Fila 389: «PS5 PORTAL» sin precio en dólares. No se importa.
 Fila 391: «Nintendo Switch 2 256 GB LCD» sin precio en dólares. No se importa.
+Fila 396: «JOYSTICK PS4 AAA» es réplica (AAA). No se importa.
 Fila 406: «Partybox 310» sin precio en dólares. No se importa.
 Fila 408: «Bomboox 3» sin precio en dólares. No se importa.
 Fila 409: «Extreme 4» sin precio en dólares. No se importa.
@@ -71,19 +81,14 @@ Fila 513: «HIDROLAVADORAS PORTATILES CON 2 BATERIAS $43,000 - PEDIR FOTOS» sin
 Fila 516: «CASCOS PRO TORK SEMI ABIERTOS $79,999 - PEDIR FOTOS» sin precio en dólares. No se importa.
 
 ==========================================================
-Productos importados:      263
-Sin precio (no importados): 65
+Productos importados:      258
+Sin precio (no importados): 70
 
-  iPhone         94
+  iPhone         90
   Android        62
-  Mac            16
-  Accesorios     15
-  Tablets        14
-  iPad           12
-  Relojes        12
-  Audio          9
-  Apple Watch    8
-  AirPods        7
+  Tablets        26
+  Relojes        22
+  Notebooks      22
+  Accesorios     16
+  Audio          13
   Consolas       7
-  Notebooks      6
-  Cámaras        1

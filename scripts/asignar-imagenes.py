@@ -57,6 +57,28 @@ FUENTES: dict[str, list[str]] = {
     "Airpods 4Ta Noise Cancel": ["1000745414/1000745414-16.webp"],
     "Airpods Max Aaa":    ["1000745414/1000745414-18.webp"],
     "Airpods Pro 2 Aaa":  ["1000745414/1000745414-17.webp"],
+
+    # Etapa 1 · lámina de los 10 modelos de iPhone que faltaban (2 filas x 5)
+    "iPhone 12 Mini":     ["ip10/ip10-00.webp"],
+    "iPhone 13 Mini":     ["ip10/ip10-01.webp"],
+    "iPhone 13 Pro":      ["ip10/ip10-02.webp"],
+    "iPhone 13 Pro Max":  ["ip10/ip10-03.webp"],
+    "iPhone 14 Pro Max":  ["ip10/ip10-04.webp"],
+    "iPhone 17":          ["ip10/ip10-05.webp"],
+    "iPhone 17 Air":      ["ip10/ip10-06.webp"],
+    "iPhone 17 Pro":      ["ip10/ip10-07.webp"],
+    "iPhone 17 Pro Max":  ["ip10/ip10-08.webp"],
+    "iPhone 17e":         ["ip10/ip10-09.webp"],
+
+    # Etapa 2 · Samsung. Solo coincidencias EXACTAS de modelo.
+    # La lámina trae S25+/S25/S24/Z Fold/Z Flip y la serie A anterior (A56/A36/A06),
+    # que no están en la lista de precios: no se usan como reemplazo.
+    "Samsung Galaxy S26 Ultra": ["sam/sam-00.webp"],
+    "Samsung Galaxy S26 Plus":  ["sam/sam-01.webp"],
+    "Samsung Galaxy S26":       ["sam/sam-02.webp"],
+    "Samsung Galaxy S25 Ultra": ["sam/sam-03.webp"],
+    "Samsung Galaxy A26":       ["sam/sam-15.webp"],
+    "Samsung Galaxy A16":       ["sam/sam-16.webp"],
 }
 
 # color declarado -> objetivo en HSV.

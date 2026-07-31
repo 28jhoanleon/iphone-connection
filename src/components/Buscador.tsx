@@ -52,7 +52,7 @@ export default function Buscador({ indice }: { indice: ItemBusqueda[] }) {
   }
 
   return (
-    <div ref={caja} className="relative w-full max-w-[260px]">
+    <div ref={caja} className="relative w-full sm:max-w-[280px]">
       <input
         value={q}
         onChange={(e) => { setQ(e.target.value); setAbierto(true); }}
@@ -60,11 +60,11 @@ export default function Buscador({ indice }: { indice: ItemBusqueda[] }) {
         onKeyDown={teclas}
         placeholder="Buscar modelo o referencia…"
         aria-label="Buscar en el catálogo"
-        className="w-full rounded-full border border-line bg-paper px-4 py-2 text-[13px] outline-none transition placeholder:text-mute focus:border-ink"
+        className="w-full rounded-full border border-line bg-paper px-4 py-2.5 text-[16px] outline-none sm:py-2 sm:text-[13px] transition placeholder:text-mute focus:border-ink"
       />
 
       {abierto && q.trim().length >= 2 && (
-        <div className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 overflow-hidden rounded-lg border border-line bg-paper shadow-[0_12px_40px_rgba(0,0,0,.10)]">
+        <div className="absolute left-0 right-0 top-[calc(100%+8px)] max-h-[70vh] overflow-y-auto z-50 overflow-hidden rounded-lg border border-line bg-paper shadow-[0_12px_40px_rgba(0,0,0,.10)]">
           {resultados.length === 0 ? (
             <p className="px-4 py-4 text-[13px] text-mute">
               Sin resultados. Escribinos y te lo conseguimos.

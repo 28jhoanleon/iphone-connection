@@ -14,8 +14,11 @@ Reglas (Doc 00 + ADR-001):
 - Los detalles declarados se publican.
 - Las columnas de cuotas se ignoran: hoy no se ofrece financiación.
 """
-import csv, json, re, unicodedata
+import csv, json, re, sys, unicodedata
 from datetime import date
+sys.path.insert(0, "scripts")
+from normalizar import (CATEGORIA_FINAL, ORDEN_CATEGORIA, normalizar_colores,
+                        detectar_marca, limpiar_nombre, separar_modelo, es_replica)
 
 ORIGEN = "datos/lista-completa.csv"
 TC_PLANILLA = 1520
@@ -38,7 +41,7 @@ SECCIONES = {
     "JBL":                     ("Audio", "auriculares-over", "JBL"),
     "ACCESORIOS":              ("Accesorios", "accesorio", None),
     "TERMO":                   ("Accesorios", "accesorio", "Stanley"),
-    "CAMARA":                  ("Cámaras", "accesorio", None),
+    "CAMARA":                  ("Accesorios", "camara", None),   # 1 solo producto: no justifica categoría propia
     "TABLET":                  ("Tablets", "tablet", None),
 }
 
@@ -58,6 +61,8 @@ MARCAS_TEXTO = {
     "nintendo": "Nintendo", "ps5": "Sony", "ps4": "Sony", "go pro": "GoPro",
     "stanley": "Stanley", "x view": "X View", "apple": "Apple", "anker": "Anker",
 }
+
+MENUDAS = {"para", "de", "del", "con", "y", "a", "en", "por"}
 
 ETIQUETA_ESTADO = {
     "nuevo_sellado": "Nuevo sellado", "seleccionado_a": "Seleccionado A",
@@ -95,14 +100,6 @@ def grado(bat, defecto):
     if bat >= 80:
         return "seleccionado_b"
     return "seleccionado_c"
-
-
-def detectar_marca(texto, defecto):
-    t = texto.lower()
-    for k, v in MARCAS_TEXTO.items():
-        if k in t:
-            return v
-    return defecto or "Sin marca"
 
 
 def main():
@@ -159,15 +156,17 @@ def main():
 
         categoria, arquetipo, marca_def = SECCIONES[seccion]
 
-        # correcciones puntuales de categoría por contenido
         low = modelo.lower()
         ACCESORIO_PROPIO = ("airtag", "malla", "pencil", "pencul", "teclado", "joystick",
                             "volante", "cable", "cargador", "wallet", "battery pack", "mouse")
-        # "PS5 LECTORA 1TB 1 JOYSTICK" es una consola, no un joystick: el accesorio
-        # solo manda cuando encabeza el nombre.
-        if any(low.startswith(k) for k in ACCESORIO_PROPIO) or low.startswith("auriculares"):
-            if not low.startswith("auriculares"):
-                categoria, arquetipo = "Accesorios", "accesorio"
+        if any(low.startswith(k) for k in ACCESORIO_PROPIO):
+            categoria, arquetipo = "Accesorios", "accesorio"
+
+        # réplicas fuera del catálogo
+        if es_replica(modelo):
+            saltados += 1
+            reporte.append(f"Fila {n}: «{modelo}» es réplica (AAA). No se importa.")
+            continue
 
         bats = re.findall(r"\d+", col("bateria"))
         if len(bats) > 1:
@@ -180,59 +179,178 @@ def main():
 
         detalle = col("detalle").lower()
         detalle = "" if detalle in ("semi nuevos", "usado") else detalle
+        # Un usado sin batería declarada no se puede publicar (Doc 00 §7.3).
+        sin_bateria = seccion == "SELECCION USADOS" and bateria is None
+        if sin_bateria:
+            reporte.append(f"Fila {n}: «{modelo}» es usado y no declara batería. Queda en borrador.")
         estado = grado(bateria, detalle) if seccion == "SELECCION USADOS" else "nuevo_sellado"
         if estado == "nuevo_sellado":
             bateria = None
 
         cap_txt = col("capacidad")
         m = re.search(r"(\d+)\s*(tb|gb|mm)?", cap_txt.lower())
-        capacidad = None
+        capacidad, medida_mm = None, None
         if m:
-            v = int(m.group(1))
-            u = m.group(2) or ""
-            capacidad = v * 1024 if u == "tb" else (None if u == "mm" else v)
+            v, u = int(m.group(1)), (m.group(2) or "")
+            if u == "mm":
+                medida_mm = v
+            else:
+                capacidad = v * 1024 if u == "tb" else v
+        # capacidad escrita dentro del nombre (ej. "8/256gb")
+        if capacidad is None:
+            m2 = re.search(r"(?i)(\d+)\s*/\s*(\d+)\s*(gb|tb)", modelo)
+            if m2:
+                capacidad = int(m2.group(2)) * (1024 if m2.group(3).lower() == "tb" else 1)
 
-        colores = [x.strip().title() for x in col("color").split() if x.strip()]
-        colores = [x for x in colores if x.lower() not in ("consultar", "o")]
+        # --- Correcciones de auditoría (30/07/2026) -----------------------
+        # Productos que aparecen dentro de una sección pero NO son de esa familia:
+        # un joystick listado bajo iPhone no es un iPhone.
+        NO_ES_DE_LA_SECCION = ("jostick", "joystick", "volante", "airtag", "malla",
+                               "pencil", "pencul", "teclado", "mouse", "cable",
+                               "cargador", "wallet", "battery pack", "funda", "vidrio")
+        es_ajeno = any(k in modelo.lower() for k in NO_ES_DE_LA_SECCION)
 
-        # nombre visible
-        PREFIJO = {"iPhone": "iPhone", "Apple Watch": "Apple Watch", "iPad": "iPad"}
-        pref = PREFIJO.get(categoria)
-        base = f"{pref} {modelo}" if pref and not modelo.lower().startswith(pref.lower()) else modelo
-        base = re.sub(r"(?i)^(iphone|ipad|apple watch)\s+\1", r"\1", base)
-        base = re.sub(r"(?i)\bse(\d)\b", r"SE \1", base)
-        base = re.sub(r"(?i)\bserie\b", "Serie", base)
-        base = re.sub(r"(?i)\bultra\b", "Ultra", base)
-        base = re.sub(r"(?i)\b11th\b", "11", base)
-        base = re.sub(r"(?i)\bnew air\b", "Air", base)
-        base = re.sub(r"(?i)\bpencul\b", "Pencil", base)
-        base = re.sub(r"(?i)\+ cell\b", "+ Cellular", base)
-        # capitalización consistente (Doc 00 §7.4)
-        MENOR = {"pro", "max", "mini", "plus", "air", "ultra", "e"}
-        base = " ".join(
-            w.capitalize() if w.lower() in MENOR else w
-            for w in base.split()
-        )
-        base = base.replace("Iphone", "iPhone").replace("Ipad", "iPad")
-        # la medida del Watch va en el nombre, no en capacidad
-        if categoria == "Apple Watch" and cap_txt:
-            base = f"{base} {cap_txt.lower().replace(' ', '')}"
-        nombre = " ".join(
-            x for x in [base,
-                        f"{capacidad} GB" if capacidad and capacidad < 1024 else (f"{capacidad // 1024} TB" if capacidad else ""),
-                        colores[0] if len(colores) == 1 else ""]
-            if x
-        )
+        # La sección de usados no es sólo Apple: hay un Galaxy S22 suelto adentro.
+        # Si el nombre trae marca ajena, manda la marca y no la sección.
+        AJENAS = {"galaxy": "Android", "samsung": "Android", "xiaomi": "Android",
+                  "redmi": "Android", "poco": "Android", "moto": "Android",
+                  "motorola": "Android", "realme": "Android", "infinix": "Android"}
+        if seccion in ("SELECCION USADOS", "IPHONES NUEVOS SELLADOS"):
+            # Filas 83-84: hay Apple Watch sueltos en la sección de iPhone.
+            # Se reconocen por la medida en milímetros y por el nombre de la línea.
+            es_reloj = bool(re.search(r"\d+\s*mm", " ".join(c).lower())) or \
+                re.match(r"(?i)^(serie|ultra|se ?\d)\b", modelo.strip())
+            if es_reloj:
+                categoria, arquetipo = "Relojes", "reloj"
+                marca_def = "Apple"
+                modelo = f"Apple Watch {modelo}"
+                es_ajeno = True
+                reporte.append(f"Fila {n}: «{modelo}» estaba en la sección de iPhone pero es un Apple Watch. Reclasificado.")
+            cat_ajena = None if es_reloj else next((v for k, v in AJENAS.items() if k in modelo.lower()), None)
+            if cat_ajena:
+                categoria, arquetipo = cat_ajena, "telefono"
+                es_ajeno = True
+                reporte.append(f"Fila {n}: «{modelo}» estaba en la sección de iPhone pero es de otra marca. Reclasificado a {cat_ajena}.")
+
+        # nombres comerciales correctos en lugar de la abreviatura del proveedor
+        RENOMBRAR = [
+            (r"(?i)^jostick ps5.*",        "Joystick PS5 DualSense"),
+            (r"(?i)^joystick adicional",   "Joystick PS5 DualSense adicional"),
+            (r"(?i)^volante ps5 logitech", "Volante Logitech para PS5"),
+            (r"(?i)^airtag pack x1 gen 2", "AirTag Pack x1 (2ª generación)"),
+            (r"(?i)^airtag pack x4",       "AirTag Pack x4"),
+            (r"(?i)^airtag pack x1 aaa",   "AirTag Pack x1"),
+            (r"(?i)^mallas? nike",         "Malla Nike para Apple Watch"),
+            (r"(?i)^pencil 1$",            "Apple Pencil (1ª generación)"),
+            (r"(?i)^pencil usbc",          "Apple Pencil (USB-C)"),
+            (r"(?i)^pencul pro|^pencil pro", "Apple Pencil Pro"),
+            (r"(?i)^auriculares bt x view xpods5", "X View XPods 5"),
+            (r"(?i)^nintendo switch oled", "Nintendo Switch OLED 64 GB"),
+            (r"(?i)^auriculares jbl tune 310", "JBL Tune 310 USB-C"),
+            (r"(?i)^auriculares ultra pods economicos", "Auriculares inalámbricos"),
+            (r"(?i)^teclado \+ mouse bluetooth", "Teclado y mouse Bluetooth"),
+        ]
+        for patron, reemplazo in RENOMBRAR:
+            if re.match(patron, modelo.strip()):
+                modelo = reemplazo
+                break
+
+        # recategorización por producto real, no por sección
+        low2 = modelo.lower()
+        if any(low2.startswith(k) for k in ("joystick", "volante", "airtag", "malla", "pencil",
+                                            "apple pencil", "teclado", "cable", "cargador",
+                                            "wallet", "battery pack")):
+            categoria, arquetipo = "Accesorios", "accesorio"
+        elif any(low2.startswith(k) for k in ("xpods", "x view xpods", "auriculares", "buds")):
+            categoria, arquetipo = "Audio", "auriculares-in"
+
+        marca = detectar_marca(modelo, categoria, marca_def)
+        categoria = CATEGORIA_FINAL.get(categoria, categoria)
+        PREFIJO_SECCION = {
+            "SELECCION USADOS": "iPhone", "IPHONES NUEVOS SELLADOS": "iPhone",
+            "APPLE WATCH": "Apple Watch", "IPAD": "iPad", "MACBOOK": "MacBook",
+            "AIRPODS": "AirPods",
+        }
+        prefijo = None if es_ajeno else PREFIJO_SECCION.get(seccion)
+        nombre_limpio = limpiar_nombre(modelo, marca, categoria, prefijo)
+        # pulgadas siempre con el mismo signo: 13' / 13'' / 13 " -> 13"
+        nombre_limpio = re.sub(r"(\d+(?:[.,]\d+)?)\s*(?:''|'|\u2033|\u2032)", r'\1"', nombre_limpio)
+        # las specs largas de notebooks no van en el nombre
+        m3 = re.match(r'(?i)^(Notebook [\w ]+?\d+[.,]?\d*")\s+(.*)$', nombre_limpio)
+        cola = None
+        if m3:
+            nombre_limpio, cola = m3.group(1), m3.group(2).strip()
+
+        modelo_base, config = separar_modelo(nombre_limpio)
+        if cola:
+            config = (config + " · " + cola).strip(" ·") if config else cola
+        if medida_mm:
+            modelo_base = f"{modelo_base} {medida_mm}mm"
+        colores = normalizar_colores(col("color"))
+        # La planilla mete el color en el modelo: "17 pro orange", "17 pro max blue".
+        # El color es un atributo, no parte del nombre del modelo (Doc 00 §7.4).
+        COLOR_EN_MODELO = {"orange": "Naranja", "blue": "Azul", "silver": "Plata",
+                           "black": "Negro", "white": "Blanco", "gold": "Dorado",
+                           "green": "Verde", "pink": "Rosa"}
+        for ing, esp in COLOR_EN_MODELO.items():
+            if re.search(rf"\b{ing}\b", modelo_base, flags=re.I):
+                modelo_base = re.sub(rf"\s*\b{ing}\b", "", modelo_base, flags=re.I).strip()
+                if not colores:
+                    colores = [esp]
+                break
+        # línea "e" de Apple: siempre minúscula y pegada (16e, 17e)
+        modelo_base = re.sub(r"(?i)\b(1[5-9])\s*e\b", r"\1e", modelo_base)
+
+        cap_etq = ""
+        if capacidad:
+            cap_etq = f"{capacidad // 1024} TB" if capacidad >= 1024 and capacidad % 1024 == 0 else f"{capacidad} GB"
+        def bajar_conectores(t: str) -> str:
+            partes = t.split()
+            return " ".join(
+                w.lower() if i and w.lower() in MENUDAS else w for i, w in enumerate(partes)
+            )
+
+        modelo_base = bajar_conectores(modelo_base)
+        # siglas y nombres propios que no deben quedar en minúscula
+        for mal, bien in (("Airtag", "AirTag"), ("usb-c", "USB-C"), ("Usb", "USB"),
+                          ("Usbc", "USB-C"), ("Magsafe", "MagSafe"), ("Dualsense", "DualSense"),
+                          ("Llevando El Celular", "(llevando el equipo)"),
+                          ("Llevando El Cel", "(llevando el equipo)"),
+                          ("Oled", "OLED"), ("Lte", "LTE"), ("Lcd", "LCD"), ("Vr2", "VR2")):
+            modelo_base = modelo_base.replace(mal, bien)
+        modelo_base = re.sub(r"(?i)^samsung galaxy (cargador|cable)", r"\1 Samsung", modelo_base)
+        # RAM en formato uniforme: "8RAMB" / "12RAM" -> "8 GB RAM"
+        modelo_base = re.sub(r"(?i)\b(\d+)\s*ramb?\b", r"\1 GB RAM", modelo_base)
+        nombre = " ".join(x for x in [modelo_base, cap_etq, colores[0] if len(colores) == 1 else ""] if x)
+
+        ARQ = [
+            ("cable", "cable"), ("cargador", "cargador"), ("wallet", "accesorio"),
+            ("magsafe", "cargador"), ("battery pack", "cargador"), ("airtag", "accesorio"),
+            ("pencil", "accesorio"), ("malla", "accesorio"), ("joystick", "joystick"),
+            ("volante", "joystick"), ("partybox", "parlante"), ("boombox", "parlante"),
+            ("charge", "parlante"), ("flip", "parlante"), ("go ", "parlante"),
+            ("airpods", "auriculares-in"), ("buds", "auriculares-in"),
+            ("tune", "auriculares-over"), ("endurance", "auriculares-in"),
+            ("gopro", "camara"), ("switch", "consola"), ("ps5", "consola"),
+            ("band", "reloj"), ("watch", "reloj"), ("fit", "reloj"),
+        ]
+        nl = nombre_limpio.lower()
+        arquetipo = next((a for k, a in ARQ if k in nl), None) or {
+            "iPhone": "telefono", "Android": "telefono", "Tablets": "tablet",
+            "Notebooks": "notebook", "Relojes": "reloj", "Audio": "auriculares-over",
+            "Consolas": "consola", "Cámaras": "camara", "Accesorios": "accesorio",
+        }.get(categoria, "accesorio")
 
         ref += 1
         costo_c = int(round(usd * 100))
         catalogo.append({
             "ref": f"A{ref}",
-            "modelo": base,
-            "modeloSlug": slugify(base),
+            "modelo": modelo_base,
+            "modeloSlug": slugify(modelo_base),
+            "config": config or None,
             "nombre": nombre,
             "nombreCompleto": f"{nombre} — {ETIQUETA_ESTADO[estado]}",
-            "marca": detectar_marca(modelo, marca_def),
+            "marca": marca,
             "categoria": categoria,
             "arquetipo": arquetipo,
             "capacidadGb": capacidad,
@@ -247,7 +365,7 @@ def main():
             "precioCentavos": int(round(costo_c * TC_PLANILLA * (1 + MARGEN))),
             "origen": "proveedor",
             "disponibilidad": "por_encargo",
-            "publicado": True,
+            "publicado": not sin_bateria,
             "actualizado": hoy,
         })
 

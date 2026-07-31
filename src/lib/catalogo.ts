@@ -7,20 +7,20 @@ import datos from "@/data/catalogo.json";
 import type { Familia, Modelo, Unidad } from "./tipos";
 import { precioARS } from "./formato";
 
-const SLUG_FAMILIA: Record<string, string> = {
-  iPhone: "iphone",
-  "Apple Watch": "apple-watch",
-  Accesorios: "accesorios",
-  Mac: "mac",
-  iPad: "ipad",
-  AirPods: "airpods",
-  Android: "android",
-  Audio: "audio",
-  Consolas: "consolas",
-};
+/** Orden de las categorías. Apple primero: jerarquía de marca del Doc 00. */
+const ORDEN = ["iPhone", "Android", "Notebooks", "Tablets", "Relojes",
+               "Audio", "Consolas", "Accesorios", "Cámaras"];
+
+/** Mínimo de productos para que una categoría se publique (Doc 00 §6). */
+const MINIMO_PUBLICAR = 6;
 
 export function slugFamilia(nombre: string): string {
-  return SLUG_FAMILIA[nombre] ?? nombre.toLowerCase().replace(/\s+/g, "-");
+  return nombre
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 export function todasLasUnidades(): Unidad[] {
@@ -54,6 +54,14 @@ export function modeloPorSlug(slug: string): Modelo | undefined {
   return modelos().find((m) => m.slug === slug);
 }
 
+/** Doc 00 §6: una categoría con menos de 6 productos comunica abandono. */
+export const MINIMO_POR_CATEGORIA = 6;
+
+/** Categorías que se muestran en navegación. Las flacas siguen accesibles por buscador y URL. */
+export function familiasVisibles(): Familia[] {
+  return familias().filter((f) => f.totalUnidades >= MINIMO_POR_CATEGORIA);
+}
+
 export function familias(): Familia[] {
   const mapa = new Map<string, Modelo[]>();
   for (const m of modelos()) {
@@ -68,18 +76,30 @@ export function familias(): Familia[] {
       modelos: mods.sort((a, b) => b.desdeCentavos - a.desdeCentavos),
       totalUnidades: mods.reduce((n, m) => n + m.unidades.length, 0),
     }))
-    .sort((a, b) => b.totalUnidades - a.totalUnidades);
+    .filter((f) => f.totalUnidades >= MINIMO_PUBLICAR)
+    .sort((a, b) => {
+      const ia = ORDEN.indexOf(a.nombre), ib = ORDEN.indexOf(b.nombre);
+      if (ia !== ib) return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+      return b.totalUnidades - a.totalUnidades;
+    });
 }
 
 export function familiaPorSlug(slug: string): Familia | undefined {
   return familias().find((f) => f.slug === slug);
 }
 
+/** Destacados: uno por categoría, para que la Home muestre el ancho del catálogo. */
 export function destacadas(n = 4): Unidad[] {
-  return todasLasUnidades()
-    .filter((u) => u.estado !== "seleccionado_c" && !u.defecto)
-    .sort((a, b) => (b.bateria ?? 0) - (a.bateria ?? 0))
-    .slice(0, n);
+  const elegidas: Unidad[] = [];
+  for (const f of familias()) {
+    const mejor = f.modelos
+      .flatMap((m) => m.unidades)
+      .filter((u) => u.estado !== "seleccionado_c" && !u.defecto)
+      .sort((a, b) => b.precioCentavos - a.precioCentavos)[0];
+    if (mejor) elegidas.push(mejor);
+    if (elegidas.length === n) break;
+  }
+  return elegidas;
 }
 
 export function fechaActualizacion(): string {

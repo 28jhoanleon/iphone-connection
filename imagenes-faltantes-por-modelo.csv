@@ -1,0 +1,111 @@
+﻿prioridad,categoria,marca,modelo,unidades,referencias_a_nombrar
+2,Android,Motorola,Motorola Moto Edge 60,1,A298
+2,Android,Motorola,Motorola Moto Edge 60 Fusion,1,A299
+2,Android,Motorola,Motorola Moto Edge 70 Fusion,1,A300
+2,Android,Motorola,Motorola Moto Edge Pro,1,A297
+2,Android,Motorola,Motorola Moto G06,2,A313 A312
+2,Android,Motorola,Motorola Moto G15,3,A311 A310 A309
+2,Android,Motorola,Motorola Moto G17,1,A308
+2,Android,Motorola,Motorola Moto G35,1,A307
+2,Android,Motorola,Motorola Moto G56,1,A306
+2,Android,Motorola,Motorola Moto G57 Power,1,A304
+2,Android,Motorola,Motorola Moto G67,1,A305
+2,Android,Motorola,Motorola Moto G77,1,A303
+2,Android,Motorola,Motorola Moto G86,1,A302
+2,Android,Motorola,Motorola Moto G86 Power,1,A301
+2,Android,POCO,Poco F8 Pro,1,A274
+2,Android,POCO,Poco F8 Ultra,1,A273
+2,Android,POCO,Poco M8,1,A281
+2,Android,POCO,Poco M8 Pro,2,A280 A279
+2,Android,POCO,Poco X8 Pro,1,A276
+2,Android,POCO,Poco X8 Pro 8 GB RAM,1,A275
+2,Android,POCO,Poco X8 Pro Max,2,A277 A278
+2,Android,Samsung,Samsung Galaxy A07,2,A270 A271
+2,Android,Samsung,Samsung Galaxy A17,2,A268 A267
+2,Android,Samsung,Samsung Galaxy A27,1,A264
+2,Android,Samsung,Samsung Galaxy A37,2,A263 A262
+2,Android,Samsung,Samsung Galaxy A57,1,A261
+2,Android,Samsung,Samsung Galaxy S25FE,2,A260 A259
+2,Android,Xiaomi,Xiaomi 17 Ultra,1,A282
+2,Android,Xiaomi,Xiaomi 17T,1,A283
+2,Android,Xiaomi,Xiaomi Redmi 15,1,A293
+2,Android,Xiaomi,Xiaomi Redmi 15C,3,A296 A294 A295
+2,Android,Xiaomi,Xiaomi Redmi Note 15,3,A292 A290 A291
+2,Android,Xiaomi,Xiaomi Redmi Note 15 Pro,4,A288 A289 A286 A287
+2,Android,Xiaomi,Xiaomi Redmi Note 15 Pro +,2,A285 A284
+3,Tablets,Lenovo,Lenovo Idea Tab Pro 12.7,1,A345
+3,Tablets,Samsung,"Samsung Tab A11 8.7""",1,A357
+3,Tablets,Samsung,Samsung Tab A11+,1,A355
+3,Tablets,Samsung,"Samsung Tab A11+ 11""",1,A356
+3,Tablets,Samsung,"Samsung Tab A9+ 11""",1,A358
+3,Tablets,Samsung,Samsung Tab S10 FE + Pen,2,A353 A352
+3,Tablets,Samsung,Samsung Tab S10 Lite + Pen,1,A354
+3,Tablets,Samsung,Samsung Tab S11 14.6 + Pen,1,A351
+3,Tablets,Samsung,Samsung Tab S11 Ultra 14.6 + Pen,1,A350
+3,Tablets,Xiaomi,"Xiaomi Tablet Redmi Pad 2 SE 11""",2,A349 A348
+3,Tablets,Xiaomi,"Xiaomi Tablet Redmi Pad Pro 2 12.1""",2,A347 A346
+4,Notebooks,Apple,"MacBook Air 13,6 M5",2,A198 A197
+4,Notebooks,Apple,"MacBook Air 15,3 M5",2,A199 A200
+4,Notebooks,Apple,"MacBook Neo 13""",2,A195 A196
+4,Notebooks,Apple,"MacBook Pro M5 14""",4,A201 A202 A203 A204
+4,Notebooks,Apple,"MacBook Pro M5 Pro 14""",4,A205 A206 A207 A208
+4,Notebooks,Apple,"MacBook Pro M5 Pro 16""",2,A209 A210
+4,Notebooks,Asus,"Notebook Asus Vivobook Go 15.6""",1,A319
+4,Notebooks,Dell,"Notebook Dell 15,6""",1,A314
+4,Notebooks,HP,"Notebook HP 15,6""",1,A315
+4,Notebooks,Lenovo,"Notebook Lenovo 14""",1,A317
+4,Notebooks,Lenovo,"Notebook Lenovo 15.6""",1,A316
+4,Notebooks,Lenovo,"Notebook Lenovo Ideapad 1 15.6""",1,A318
+5,Relojes,Amazfit,Amazfit Active 3 Premium,1,A241
+5,Relojes,Amazfit,Amazfit Balance 2,1,A240
+5,Relojes,Amazfit,Amazfit Gts 4 Mini,1,A245
+5,Relojes,Apple,Apple Watch SE 2 40mm,1,A231
+5,Relojes,Apple,Apple Watch SE 3 40mm,1,A232
+5,Relojes,Apple,Apple Watch SE 3 44mm,1,A233
+5,Relojes,Apple,Apple Watch Serie 10 46mm,1,A168
+5,Relojes,Apple,Apple Watch Serie 11 42mm,2,A234 A235
+5,Relojes,Apple,Apple Watch Serie 11 46mm,2,A236 A237
+5,Relojes,Apple,Apple Watch Ultra 3 49mm,2,A169 A238
+5,Relojes,Garmin,Garmin Forerunner 165 Music,1,A243
+5,Relojes,Garmin,Garmin Instinct 2X Solar,1,A242
+5,Relojes,Genérico,Smart Watch T800 Ultra 3,1,A251
+5,Relojes,Samsung,Samsung Galaxy Fit 3,1,A249
+5,Relojes,Samsung,Samsung Galaxy Watch 7 44mm,1,A246
+5,Relojes,Samsung,Samsung Galaxy Watch 8 40mm,1,A248
+5,Relojes,Samsung,Samsung Galaxy Watch 8 44mm,1,A247
+5,Relojes,Samsung,Samsung Galaxy Watch Ultra 7 47mm LTE,1,A244
+5,Relojes,Xiaomi,Xiaomi Sport Band,1,A250
+6,Audio,Apple,AirPods 4,1,A228
+6,Audio,Apple,AirPods 4 Noise Cancel,1,A227
+6,Audio,JBL,JBL BT Endurance Run 3,1,A336
+6,Audio,JBL,JBL Boombox 4,1,A330
+6,Audio,JBL,JBL Charge 6,1,A331
+6,Audio,JBL,JBL Flip 7,1,A332
+6,Audio,JBL,JBL Go 4,1,A333
+6,Audio,JBL,JBL PartyBox 710,1,A329
+6,Audio,JBL,JBL Tune 310 USB-C,1,A337
+6,Audio,JBL,JBL Tune 520BT,1,A334
+6,Audio,JBL,JBL Tune 770NC,1,A335
+6,Audio,X View,X View Xpods 5,1,A272
+7,Accesorios,Apple,AirTag Pack X1 2ª Generación,1,A229
+7,Accesorios,Apple,AirTag Pack X4,1,A230
+7,Accesorios,Apple,Apple Pencil 1ª Generación,1,A223
+7,Accesorios,Apple,Apple Pencil Pro,1,A225
+7,Accesorios,Apple,Apple Pencil USB-C,1,A224
+7,Accesorios,Apple,Cable USB iPhone,1,A338
+7,Accesorios,Apple,Cargador 20W certificado iPhone,1,A339
+7,Accesorios,Apple,Cargador 20W original iPhone,1,A340
+7,Accesorios,Apple,Cargador 20W original iPhone (llevando el equipo),1,A341
+7,Accesorios,Apple,Malla Nike para Apple Watch,1,A239
+7,Accesorios,Apple,Wallet MagSafe,1,A343
+7,Accesorios,GoPro,GoPro Hero 13,1,A344
+7,Accesorios,Samsung,Cargador Samsung 25W original,1,A342
+7,Accesorios,Sony,Joystick PS5 DualSense Adicional,1,A327
+7,Accesorios,Sony,Volante Logitech para PS5,1,A328
+8,Consolas,Nintendo,Nintendo Switch 2 LCD,1,A324
+8,Consolas,Nintendo,Nintendo Switch Lite,1,A326
+8,Consolas,Nintendo,Nintendo Switch OLED,1,A325
+8,Consolas,Sony,PS5 Digital,1,A322
+8,Consolas,Sony,PS5 Lectora,1,A323
+8,Consolas,Sony,PS5 Pro Digital,1,A320
+8,Consolas,Sony,PS5 VR2 Lentes Realidad Virtual,1,A321

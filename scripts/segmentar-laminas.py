@@ -74,9 +74,20 @@ def producto_en_celda(m: np.ndarray, celda) -> tuple[int, int, int, int] | None:
         sy, sx = sl
         alto = sy.stop - sy.start
         area = (etiquetas[sl] == i).sum()
-        # descarta texto: componentes bajos ubicados en el tramo inferior
-        es_texto = alto < h * 0.10 and sy.start > h * 0.62
-        if es_texto or area < 40:
+        # Descarta la etiqueta de texto. Puede estar debajo del producto (láminas de
+        # catálogo) o encima (láminas con título por tarjeta): se descarta en ambos casos
+        # cuando el componente es bajo y vive en un extremo de la celda.
+        arriba = sy.stop < h * 0.34
+        abajo = sy.start > h * 0.62
+        es_texto = alto < h * 0.12 and (arriba or abajo)
+
+        # Marco de tarjeta: rectángulo fino que envuelve título y producto.
+        # Ocupa casi toda la celda pero casi no tiene píxeles rellenos.
+        ancho = sx.stop - sx.start
+        caja = max(alto * ancho, 1)
+        es_marco = alto > h * 0.85 and ancho > w * 0.85 and area / caja < 0.06
+
+        if es_texto or es_marco or area < 40:
             continue
         piezas.append((sy.start, sy.stop, sx.start, sx.stop))
 
