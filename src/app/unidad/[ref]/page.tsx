@@ -3,6 +3,7 @@ import { todasLasUnidades, unidadPorRef, slugFamilia } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
 import { precio, capacidad, garantia, linkWhatsApp, ETIQUETA_DISPONIBILIDAD } from "@/lib/formato";
 import Migas from "@/components/Migas";
+import Volver from "@/components/Volver";
 
 export function generateStaticParams() {
   return todasLasUnidades().map((u) => ({ ref: u.ref }));
@@ -41,6 +42,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
           [`#${u.ref}`, null],
         ]}
       />
+      <Volver href={`/modelo/${u.modeloSlug}`} texto={`Volver a ${u.modelo}`} />
       <div className="grid gap-10 py-4 pb-20 md:grid-cols-2 md:gap-14">
         <div className="grid grid-cols-2 gap-2">
           <div className="col-span-2 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg bg-surface">

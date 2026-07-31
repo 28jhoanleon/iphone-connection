@@ -4,6 +4,7 @@ import { familias, familiaPorSlug } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
 import { precio } from "@/lib/formato";
 import Migas from "@/components/Migas";
+import Volver from "@/components/Volver";
 
 export function generateStaticParams() {
   return familias().map((f) => ({ familia: f.slug }));
@@ -26,6 +27,7 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
   return (
     <div className="contenedor">
       <Migas items={[["INICIO", "/"], [f.nombre.toUpperCase(), null]]} />
+      <Volver href="/" texto="Volver al inicio" />
       <div className="py-6 pb-8">
         <h1 className="text-[clamp(30px,5vw,48px)] font-semibold tracking-[-.04em]">{f.nombre}</h1>
         <p className="mt-1.5 font-data text-xs tracking-[.06em] text-mute">

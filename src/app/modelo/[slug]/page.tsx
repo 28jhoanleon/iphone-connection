@@ -3,6 +3,7 @@ import { modelos, modeloPorSlug, slugFamilia } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
 import Migas from "@/components/Migas";
 import SelectorUnidades from "@/components/SelectorUnidades";
+import Volver from "@/components/Volver";
 import { precio } from "@/lib/formato";
 
 export function generateStaticParams() {
@@ -32,6 +33,7 @@ export default async function ModeloPage({ params }: { params: Promise<{ slug: s
           [m.nombre.toUpperCase(), null],
         ]}
       />
+      <Volver href={`/catalogo/${slugFamilia(m.categoria)}`} texto={`Volver a ${m.categoria}`} />
       <div className="grid gap-10 py-4 pb-20 md:grid-cols-2 md:gap-14">
         <div className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-surface">
           <img src={rutaImagen(m.unidades[0].ref)} alt={m.nombre} className="h-full w-full object-contain" />

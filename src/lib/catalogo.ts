@@ -85,3 +85,48 @@ export function fechaActualizacion(): string {
   const u = todasLasUnidades()[0];
   return u ? u.actualizado.split("-").reverse().join("/") : "";
 }
+
+/** Índice de búsqueda · se arma en build y viaja al cliente ya reducido. */
+export interface ItemBusqueda {
+  tipo: "modelo" | "unidad";
+  titulo: string;
+  detalle: string;
+  href: string;
+  precioCentavos: number;
+  clave: string;
+}
+
+function normalizar(s: string): string {
+  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+export function indiceBusqueda(): ItemBusqueda[] {
+  const items: ItemBusqueda[] = [];
+
+  for (const m of modelos()) {
+    items.push({
+      tipo: "modelo",
+      titulo: m.nombre,
+      detalle: `${m.unidades.length} unidad${m.unidades.length > 1 ? "es" : ""} · ${m.categoria}`,
+      href: `/modelo/${m.slug}`,
+      precioCentavos: m.desdeCentavos,
+      clave: normalizar([m.nombre, m.categoria, m.marca].join(" ")),
+    });
+  }
+
+  for (const u of todasLasUnidades()) {
+    const colores = u.colores?.join(" ") ?? u.color ?? "";
+    items.push({
+      tipo: "unidad",
+      titulo: u.nombre,
+      detalle: `${u.estadoEtiqueta}${u.bateria ? ` · batería ${u.bateria}%` : ""} · #${u.ref}`,
+      href: `/unidad/${u.ref}`,
+      precioCentavos: u.precioCentavos,
+      clave: normalizar(
+        [u.nombre, u.ref, u.estadoEtiqueta, colores, u.capacidadGb ? `${u.capacidadGb}gb` : ""].join(" "),
+      ),
+    });
+  }
+
+  return items;
+}
