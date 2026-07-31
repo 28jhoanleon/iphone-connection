@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { familiasVisibles, destacadas, fechaActualizacion, todasLasUnidades } from "@/lib/catalogo";
+import { familiasVisibles, destacadas, fechaActualizacion, todasLasUnidades, esUltimasUnidades } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
 import { precio, precioARS, linkWhatsApp } from "@/lib/formato";
 import { tipoCambio } from "@/lib/dolar";
-import Readout from "@/components/Readout";
+import TarjetaUnidad from "@/components/TarjetaUnidad";
 import { IconoRevision, IconoGarantia, IconoAsesoramiento } from "@/components/Iconos";
 import Icono from "@/components/Icono";
 
@@ -61,46 +61,47 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* CATEGORÍAS */}
-      <section className="contenedor py-12 sm:py-16">
-        <h2 className="mb-6 text-[clamp(22px,3.4vw,34px)] font-semibold tracking-[-.035em]">Explorar por categoría</h2>
-        <div className="grid gap-4 md:grid-cols-3">
+      {/* CATEGORÍAS · con imagen representativa */}
+      <section className="contenedor seccion">
+        <h2 className="titulo-sec mb-6">Explorar por categoría</h2>
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {fams.map((f) => (
-            <Link key={f.slug} href={`/catalogo/${f.slug}`} className="tarjeta flex items-center gap-4 p-5">
-              {f.modelos[0] && (
-                <img src={rutaImagen(f.modelos[0].unidades[0].ref)} alt="" width={76} height={76}
-                     className="h-[76px] w-[76px] flex-none rounded-md bg-surface object-contain" />
-              )}
-              <div>
-                <h3 className="text-lg font-semibold tracking-[-.02em]">{f.nombre}</h3>
-                <p className="mt-0.5 font-data text-[12.5px] tracking-[.04em] text-mute">
-                  {f.totalUnidades} {f.totalUnidades === 1 ? "UNIDAD" : "UNIDADES"} · {f.modelos.length} {f.modelos.length === 1 ? "MODELO" : "MODELOS"}
-                </p>
+            <Link
+              key={f.slug}
+              href={`/catalogo/${f.slug}`}
+              className="group flex flex-col rounded-lg border border-line bg-paper p-3 transition duration-200 hover:-translate-y-0.5 hover:border-ink sm:p-4"
+            >
+              <div className="mb-3 aspect-[4/3] overflow-hidden rounded-md bg-surface">
+                <img
+                  src={rutaImagen(f.modelos[0].unidades[0].ref)}
+                  alt=""
+                  width={600}
+                  height={450}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.05]"
+                />
               </div>
+              <h3 className="text-[15px] font-semibold leading-tight tracking-[-.02em]">{f.nombre}</h3>
+              <p className="mt-1 font-data text-[10.5px] tracking-[.06em] text-mute-soft">
+                {f.totalUnidades} EQUIPOS
+              </p>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* DESTACADOS */}
-      <section className="contenedor pb-12 sm:pb-16">
+      {/* DESTACADOS · primero, para que el primer scroll ya muestre equipos */}
+      <section className="contenedor pb-12 pt-10 sm:pb-16 sm:pt-14">
         <div className="mb-6 flex items-baseline justify-between gap-4">
-          <h2 className="text-[clamp(22px,3.4vw,34px)] font-semibold tracking-[-.035em]">Destacados</h2>
-          <Link href="/catalogo/iphone" className="border-b border-line pb-0.5 text-sm text-mute hover:border-ink hover:text-ink">
-            Ver todo el catálogo
+          <h2 className="titulo-sec">Destacados</h2>
+          <Link href="/catalogo/iphone" className="btn-texto shrink-0">
+            Ver todo <span aria-hidden="true">→</span>
           </Link>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {dest.map((u) => (
-            <Link key={u.ref} href={`/unidad/${u.ref}`} className="group">
-              <div className="mb-3.5 aspect-square overflow-hidden rounded-md bg-surface">
-                <img src={rutaImagen(u.ref)} alt="" className="h-full w-full object-contain transition group-hover:scale-[1.03]" />
-              </div>
-              <h4 className="text-[15px] font-semibold tracking-[-.01em]">{u.nombre}</h4>
-              <p className="mb-2.5 text-[13.5px] text-mute">{u.estadoEtiqueta}</p>
-              <p className="text-[19px] font-semibold tracking-[-.02em]">{precio(precioARS(u, tc.valor))}</p>
-              <Readout u={u} />
-            </Link>
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {dest.map((u, i) => (
+            <TarjetaUnidad key={u.ref} u={u} tc={tc.valor} ultimas={esUltimasUnidades(u)} prioridad={i < 2} />
           ))}
         </div>
       </section>

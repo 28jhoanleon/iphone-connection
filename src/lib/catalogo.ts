@@ -6,6 +6,7 @@
 import datos from "@/data/catalogo.json";
 import type { Familia, Modelo, Unidad } from "./tipos";
 import { precioARS } from "./formato";
+import { rutaImagen } from "./imagenes";
 
 /** Orden de las categorías. Apple primero: jerarquía de marca del Doc 00. */
 const ORDEN = ["iPhone", "Android", "Notebooks", "Tablets", "Relojes",
@@ -89,6 +90,12 @@ export function familiaPorSlug(slug: string): Familia | undefined {
 }
 
 /** Destacados: uno por categoría, para que la Home muestre el ancho del catálogo. */
+/** Un modelo con 1 o 2 unidades justifica el aviso de últimas unidades. Nunca se inventa. */
+export function esUltimasUnidades(u: Unidad): boolean {
+  const m = modelos().find((x) => x.slug === u.modeloSlug);
+  return !!m && m.unidades.length <= 2;
+}
+
 export function destacadas(n = 4): Unidad[] {
   const elegidas: Unidad[] = [];
   for (const f of familias()) {
@@ -108,11 +115,13 @@ export function fechaActualizacion(): string {
 }
 
 /** Índice de búsqueda · se arma en build y viaja al cliente ya reducido. */
+/** Viaja al cliente en cada página: se mantiene lo mínimo indispensable. */
 export interface ItemBusqueda {
   tipo: "modelo" | "unidad";
   titulo: string;
-  detalle: string;
   href: string;
+  imagen: string;
+  estado: string;
   precioCentavos: number;
   clave: string;
 }
@@ -128,8 +137,9 @@ export function indiceBusqueda(tc: number): ItemBusqueda[] {
     items.push({
       tipo: "modelo",
       titulo: m.nombre,
-      detalle: `${m.unidades.length} unidad${m.unidades.length > 1 ? "es" : ""} · ${m.categoria}`,
       href: `/modelo/${m.slug}`,
+      imagen: rutaImagen(m.unidades[0].ref),
+      estado: `${m.unidades.length} unidades`,
       precioCentavos: Math.min(...m.unidades.map((u) => precioARS(u, tc))),
       clave: normalizar([m.nombre, m.categoria, m.marca].join(" ")),
     });
@@ -140,8 +150,9 @@ export function indiceBusqueda(tc: number): ItemBusqueda[] {
     items.push({
       tipo: "unidad",
       titulo: u.nombre,
-      detalle: `${u.estadoEtiqueta}${u.bateria ? ` · batería ${u.bateria}%` : ""} · #${u.ref}`,
       href: `/unidad/${u.ref}`,
+      imagen: rutaImagen(u.ref),
+      estado: u.disponibilidad === "disponible" ? "Stock inmediato" : "Por encargo",
       precioCentavos: precioARS(u, tc),
       clave: normalizar(
         [u.nombre, u.ref, u.estadoEtiqueta, colores, u.capacidadGb ? `${u.capacidadGb}gb` : ""].join(" "),

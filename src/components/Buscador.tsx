@@ -11,7 +11,8 @@ function normalizar(s: string): string {
   return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
-export default function Buscador({ indice }: { indice: ItemBusqueda[] }) {
+export default function Buscador({ indice: inicial }: { indice: ItemBusqueda[] }) {
+  const [indice, setIndice] = useState<ItemBusqueda[]>(inicial);
   const [q, setQ] = useState("");
   const [abierto, setAbierto] = useState(false);
   const [cursor, setCursor] = useState(0);
@@ -29,6 +30,16 @@ export default function Buscador({ indice }: { indice: ItemBusqueda[] }) {
   }, [q, indice]);
 
   useEffect(() => setCursor(0), [q]);
+
+  // El índice completo se descarga recién al primer foco: no penaliza la carga
+  // inicial de ninguna página y queda listo antes de que se termine de escribir.
+  useEffect(() => {
+    if (!abierto || indice.length > inicial.length) return;
+    fetch("/indice-busqueda.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => d && setIndice(d))
+      .catch(() => {});
+  }, [abierto, indice.length, inicial.length]);
 
   useEffect(() => {
     function fuera(e: MouseEvent) {
@@ -75,14 +86,23 @@ export default function Buscador({ indice }: { indice: ItemBusqueda[] }) {
                 key={r.href}
                 onMouseEnter={() => setCursor(i)}
                 onClick={() => { router.push(r.href); setAbierto(false); setQ(""); }}
-                className={`flex w-full items-center justify-between gap-3 border-b border-line px-4 py-3 text-left last:border-0 ${
+                className={`flex w-full items-center gap-3 border-b border-line px-3 py-2.5 text-left transition-colors duration-150 last:border-0 ${
                   i === cursor ? "bg-surface" : ""
                 }`}
               >
-                <span className="min-w-0">
-                  <span className="block truncate text-[13.5px] font-medium">{r.titulo}</span>
-                  <span className="block truncate font-data text-[10.5px] tracking-[.04em] text-mute-soft">
-                    {r.detalle}
+                <img
+                  src={r.imagen}
+                  alt=""
+                  width={44}
+                  height={44}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-11 w-11 shrink-0 rounded bg-surface object-contain"
+                />
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate text-[13.5px] font-medium leading-tight">{r.titulo}</span>
+                  <span className="mt-0.5 block truncate font-data text-[10.5px] tracking-[.05em] text-mute-soft">
+                    {r.estado}
                   </span>
                 </span>
                 <span className="whitespace-nowrap text-[13.5px] font-semibold">

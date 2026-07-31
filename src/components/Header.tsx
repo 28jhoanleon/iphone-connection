@@ -6,7 +6,7 @@ import { linkWhatsApp } from "@/lib/formato";
 
 export default async function Header() {
   const tc = await tipoCambio();
-  const indice = indiceBusqueda(tc.valor);
+  const indice = indiceBusqueda(tc.valor).slice(0, 40); // muestra inicial
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-lg">

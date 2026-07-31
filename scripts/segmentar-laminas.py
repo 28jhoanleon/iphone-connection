@@ -98,16 +98,67 @@ def producto_en_celda(m: np.ndarray, celda) -> tuple[int, int, int, int] | None:
     tx0 = min(p[2] for p in piezas); tx1 = max(p[3] for p in piezas)
     if (ty1 - ty0) < h * 0.15 or (tx1 - tx0) < w * 0.10:
         return None
+
+    # Última defensa contra etiquetas de dos líneas, que superan el umbral de altura.
+    # Dentro del recorte se busca el mayor corte horizontal en blanco: si existe,
+    # se conserva el bloque con más masa (el producto) y se descarta el otro (el texto).
+    banda = sub[ty0:ty1, tx0:tx1]
+    perfil = banda.sum(axis=1)
+    vacias = perfil == 0
+    mejor_ini, mejor_largo, ini = 0, 0, None
+    for i, v in enumerate(vacias):
+        if v and ini is None:
+            ini = i
+        elif not v and ini is not None:
+            if i - ini > mejor_largo:
+                mejor_ini, mejor_largo = ini, i - ini
+            ini = None
+    if ini is not None and len(vacias) - ini > mejor_largo:
+        mejor_ini, mejor_largo = ini, len(vacias) - ini
+
+    if mejor_largo > (ty1 - ty0) * 0.04:
+        arriba = perfil[:mejor_ini].sum()
+        abajo = perfil[mejor_ini + mejor_largo:].sum()
+        if arriba >= abajo:
+            ty1 = ty0 + mejor_ini
+        else:
+            ty0 = ty0 + mejor_ini + mejor_largo
+
+    if (ty1 - ty0) < h * 0.12:
+        return None
     return (x0 + tx0, y0 + ty0, x0 + tx1, y0 + ty1)
 
 
+TINTA_OBJETIVO = 0.30   # proporción del lienzo que debe cubrir el producto
+LADO_MAXIMO = 0.88      # ningún producto puede superar esta fracción del lienzo
+
+
 def exportar(im: Image.Image, caja, destino: str) -> None:
-    """Recorta, centra sobre lienzo cuadrado blanco y guarda WebP."""
+    """
+    Recorta, normaliza la escala y centra sobre lienzo cuadrado blanco.
+
+    La escala NO se normaliza por el lado mayor: así un teléfono vertical llenaba
+    el alto y una consola apaisada quedaba diminuta. Se normaliza por SUPERFICIE
+    cubierta, que es lo que percibe el ojo, con un tope para que nada se desborde.
+    """
     recorte = im.crop(caja).convert("RGB")
     w, h = recorte.size
-    lado = int(max(w, h) * (1 + MARGEN * 2))
+
+    tinta = float((np.asarray(recorte.convert("L")) < UMBRAL_BLANCO).sum())
+    lado_base = max(w, h) * (1 + MARGEN * 2)
+    cobertura = tinta / (lado_base ** 2)
+
+    factor = (TINTA_OBJETIVO / cobertura) ** 0.5 if cobertura > 0 else 1.0
+    factor = max(1.0, min(factor, 2.4))
+    # tope: el producto nunca supera LADO_MAXIMO del lienzo
+    factor = min(factor, lado_base * LADO_MAXIMO / max(w, h))
+
+    nw, nh = int(w * factor), int(h * factor)
+    recorte = recorte.resize((nw, nh), Image.LANCZOS)
+
+    lado = int(lado_base)
     lienzo = Image.new("RGB", (lado, lado), (255, 255, 255))
-    lienzo.paste(recorte, ((lado - w) // 2, (lado - h) // 2))
+    lienzo.paste(recorte, ((lado - nw) // 2, (lado - nh) // 2))
     lienzo = lienzo.resize((SALIDA, SALIDA), Image.LANCZOS)
     lienzo.save(destino, "WEBP", quality=88, method=6)
 

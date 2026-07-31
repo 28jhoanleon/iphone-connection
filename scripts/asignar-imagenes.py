@@ -79,6 +79,25 @@ FUENTES: dict[str, list[str]] = {
     "Samsung Galaxy S25 Ultra": ["sam/sam-03.webp"],
     "Samsung Galaxy A26":       ["sam/sam-15.webp"],
     "Samsung Galaxy A16":       ["sam/sam-16.webp"],
+
+    # Lámina múltiple. Solo coincidencias exactas de modelo.
+    # Xiaomi, POCO, Motorola y JBL de la lámina son generaciones anteriores
+    # a las de la lista de precios: no se usan.
+    "Apple Watch SE 2 40mm":    ["mix/mix-40.webp"],
+    "Apple Watch Serie 10 46mm":["mix/mix-42.webp"],
+    "Apple Watch Ultra 3 49mm": ["mix/mix-44.webp"],
+    "AirPods Max":              ["mix/mix-48.webp"],
+    "PS5 Lectora":              ["mix/mix-59.webp"],
+    "PS5 Digital":              ["mix/mix-60.webp"],
+    "Joystick PS5 DualSense":   ["mix/mix-61.webp"],
+    "Joystick PS5 DualSense Adicional": ["mix/mix-61.webp"],
+    "Nintendo Switch OLED":     ["mix/mix-63.webp"],
+    "Cargador 20W original iPhone": ["mix/mix-54.webp"],
+    "Cargador 20W certificado iPhone": ["mix/mix-54.webp"],
+    "Cargador 20W original iPhone (llevando el equipo)": ["mix/mix-54.webp"],
+    "Cargador Samsung 25W original": ["mix/mix-55.webp"],
+    "Cable USB iPhone":         ["mix/mix-57.webp"],
+    "Wallet MagSafe":           ["mix/mix-58.webp"],
 }
 
 # color declarado -> objetivo en HSV.

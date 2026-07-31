@@ -25,12 +25,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es-AR">
       <head>
+        {/* preconnect + preload: la fuente empieza a bajar antes de que el CSS la pida.
+            Reduce el salto de texto (CLS) y adelanta el LCP. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
+        <meta name="theme-color" content="#FAFAFA" />
       </head>
       <body className="font-sans">
         <Header />
