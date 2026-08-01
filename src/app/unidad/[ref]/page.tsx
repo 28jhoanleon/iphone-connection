@@ -131,11 +131,11 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
           <p className="text-[clamp(28px,7.4vw,33px)] font-semibold leading-none tracking-[-.03em]">
             {precio(p)}
           </p>
-          <p className="mt-2 font-data text-[11px] tracking-[.06em] text-mute-soft">
-            {tc.fuente === "api"
-              ? `${tc.nombre.toUpperCase()} $${tc.valor} · ${fechaLegible(tc)}`
-              : "COTIZACIÓN DE RESPALDO · CONSULTAR ANTES DE COMPRAR"}
-          </p>
+          {tc.fuente === "api" && (
+            <p className="mt-2 font-data text-[11px] tracking-[.06em] text-mute-soft">
+              {tc.nombre.toUpperCase()} ${tc.valor} · {fechaLegible(tc)}
+            </p>
+          )}
 
           {u.defecto && (
             <div className="my-5 rounded-lg border border-aviso-linea bg-aviso-fondo px-4 py-3.5 text-[14.5px]">

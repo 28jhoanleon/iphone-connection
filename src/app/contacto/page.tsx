@@ -1,6 +1,5 @@
 import { empresa, tiene } from "@/lib/empresa";
 import { linkWhatsApp } from "@/lib/formato";
-import PendienteDato from "@/components/PendienteDato";
 
 export const metadata = {
   title: "Contacto — iPhone Connection",
@@ -28,14 +27,10 @@ export default function Contacto() {
       </p>
 
       <div className="mt-8 rounded-lg border border-line p-5 sm:p-6">
-        {filas.map(([k, v, ok]) => (
+        {filas.filter(([, , ok]) => ok).map(([k, v]) => (
           <div key={k} className="flex justify-between gap-4 border-b border-line py-3 text-sm last:border-0">
             <span className="text-mute">{k}</span>
-            {ok ? (
-              <b className="text-right font-data text-[12.5px] font-medium">{v}</b>
-            ) : (
-              <span className="font-data text-[11px] text-mute">PENDIENTE</span>
-            )}
+            <b className="text-right font-data text-[12.5px] font-medium">{v}</b>
           </div>
         ))}
       </div>
@@ -44,12 +39,7 @@ export default function Contacto() {
         <a href={linkWhatsApp()} className="btn-solido mt-8 w-full text-center">
           Consultar por WhatsApp
         </a>
-      ) : (
-        <PendienteDato
-          campo="whatsapp"
-          nota="Número comercial propio. Hasta cargarlo, los botones de WhatsApp del sitio no enlazan a ningún lado"
-        />
-      )}
+      ) : null}
 
       <h2 className="mt-10 mb-3 text-2xl font-semibold tracking-[-.02em]">Qué te vamos a preguntar</h2>
       <ul className="space-y-2 text-mute">

@@ -12,7 +12,17 @@
   img, svg, video { max-width: 100%; height: auto; }
   h1, h2, h3, p, li, dd, dt { overflow-wrap: anywhere; }
   body { @apply bg-paper text-ink; }
-  :focus-visible { outline: 2px solid #0A0A0A; outline-offset: 3px; border-radius: 4px; }
+  :focus-visible {
+    outline: 2px solid #0A0A0A;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  /* el foco tiene que verse también sobre fondo oscuro */
+  .bg-ink :focus-visible, .btn-solido:focus-visible {
+    outline-color: #FAFAFA;
+  }
+  /* feedback táctil: en móvil no hay hover, el estado activo es el único aviso */
+  a:active, button:active { opacity: .82; }
   /* el foco nunca queda escondido detrás del header pegajoso */
   [id], a, button { scroll-margin-top: 84px; }
 }
@@ -25,7 +35,7 @@
   /* título que ordena la jerarquía para lectores de pantalla sin alterar el diseño */
   .solo-lector { @apply absolute h-px w-px overflow-hidden whitespace-nowrap border-0 p-0; clip: rect(0 0 0 0); }
   .titulo-sec { @apply text-[clamp(23px,5.4vw,34px)] font-semibold leading-[1.12] tracking-[-.03em]; }
-  .tarjeta    { @apply rounded-lg border border-line bg-paper transition hover:-translate-y-0.5 hover:border-ink; }
+  .tarjeta    { @apply rounded-lg border border-line bg-paper transition duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[0_4px_16px_rgba(0,0,0,.06)]; }
 }
 
 /* microinteracciones · sutiles y cortas, nunca decorativas */

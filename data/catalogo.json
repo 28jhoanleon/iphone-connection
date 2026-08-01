@@ -25,7 +25,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A102",
@@ -53,7 +53,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A103",
@@ -78,7 +78,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A104",
@@ -103,7 +103,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A105",
@@ -128,7 +128,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A106",
@@ -153,7 +153,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A107",
@@ -172,13 +172,13 @@
     "estadoEtiqueta": "Seleccionado C",
     "bateria": 77,
     "bateriaPosibleReemplazo": false,
-    "defecto": "detale tapa",
+    "defecto": "Detalle tapa",
     "costoCentavos": 16000,
     "precioCentavos": 27968000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A108",
@@ -197,13 +197,13 @@
     "estadoEtiqueta": "Seleccionado B",
     "bateria": 100,
     "bateriaPosibleReemplazo": true,
-    "defecto": "detalle min. pantalla",
+    "defecto": "Detalle mínimo en pantalla",
     "costoCentavos": 22000,
     "precioCentavos": 38456000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A109",
@@ -228,7 +228,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A110",
@@ -256,7 +256,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A111",
@@ -285,7 +285,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A112",
@@ -304,13 +304,13 @@
     "estadoEtiqueta": "Seleccionado B",
     "bateria": 81,
     "bateriaPosibleReemplazo": false,
-    "defecto": "sin face id y otro con det pantalla",
+    "defecto": "Sin Face ID · detalle pantalla",
     "costoCentavos": 22000,
     "precioCentavos": 38456000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A113",
@@ -335,7 +335,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A114",
@@ -360,7 +360,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A115",
@@ -388,7 +388,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A116",
@@ -413,7 +413,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A117",
@@ -442,7 +442,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A118",
@@ -470,7 +470,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A119",
@@ -498,7 +498,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A120",
@@ -521,13 +521,13 @@
     "estadoEtiqueta": "Seleccionado C",
     "bateria": 75,
     "bateriaPosibleReemplazo": false,
-    "defecto": "detalle pantalla y otro en tapa",
+    "defecto": "Detalle pantalla",
     "costoCentavos": 22500,
     "precioCentavos": 39330000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A121",
@@ -555,7 +555,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A122",
@@ -583,7 +583,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A123",
@@ -608,7 +608,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A124",
@@ -633,7 +633,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A125",
@@ -662,7 +662,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A126",
@@ -681,13 +681,13 @@
     "estadoEtiqueta": "Seleccionado C",
     "bateria": 70,
     "bateriaPosibleReemplazo": false,
-    "defecto": "pixell",
+    "defecto": "Píxel muerto en pantalla",
     "costoCentavos": 29000,
     "precioCentavos": 50692000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A127",
@@ -712,7 +712,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A128",
@@ -737,7 +737,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A129",
@@ -762,7 +762,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A130",
@@ -787,7 +787,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A131",
@@ -812,7 +812,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A132",
@@ -837,7 +837,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A133",
@@ -862,7 +862,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A134",
@@ -887,7 +887,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A135",
@@ -912,7 +912,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A136",
@@ -940,7 +940,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A137",
@@ -965,7 +965,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A138",
@@ -990,7 +990,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A139",
@@ -1009,13 +1009,13 @@
     "estadoEtiqueta": "Seleccionado B",
     "bateria": 85,
     "bateriaPosibleReemplazo": false,
-    "defecto": "min detalle tapa",
+    "defecto": "Mínimo detalle tapa",
     "costoCentavos": 46000,
     "precioCentavos": 80408000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A140",
@@ -1043,7 +1043,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A141",
@@ -1068,7 +1068,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A142",
@@ -1096,7 +1096,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A143",
@@ -1121,7 +1121,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A144",
@@ -1146,7 +1146,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A145",
@@ -1174,7 +1174,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A146",
@@ -1199,7 +1199,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A147",
@@ -1224,7 +1224,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A148",
@@ -1249,7 +1249,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A149",
@@ -1274,7 +1274,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A150",
@@ -1303,7 +1303,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A151",
@@ -1332,7 +1332,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A152",
@@ -1357,7 +1357,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A153",
@@ -1382,7 +1382,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A154",
@@ -1407,7 +1407,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A155",
@@ -1432,7 +1432,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A156",
@@ -1457,7 +1457,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A157",
@@ -1485,7 +1485,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A158",
@@ -1513,7 +1513,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A159",
@@ -1538,7 +1538,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A160",
@@ -1563,7 +1563,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A161",
@@ -1592,7 +1592,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A162",
@@ -1620,7 +1620,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A163",
@@ -1645,7 +1645,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A164",
@@ -1664,13 +1664,13 @@
     "estadoEtiqueta": "Seleccionado B",
     "bateria": 100,
     "bateriaPosibleReemplazo": true,
-    "defecto": "nuevo sin caja",
+    "defecto": "Nuevo sin caja",
     "costoCentavos": 69000,
     "precioCentavos": 120612000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A165",
@@ -1689,13 +1689,13 @@
     "estadoEtiqueta": "Seleccionado B",
     "bateria": 100,
     "bateriaPosibleReemplazo": true,
-    "defecto": "nuevo sin caja",
+    "defecto": "Nuevo sin caja",
     "costoCentavos": 89000,
     "precioCentavos": 155572000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A166",
@@ -1714,13 +1714,13 @@
     "estadoEtiqueta": "Seleccionado B",
     "bateria": 100,
     "bateriaPosibleReemplazo": true,
-    "defecto": "nuevo sin caja",
+    "defecto": "Nuevo sin caja",
     "costoCentavos": 116000,
     "precioCentavos": 202768000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A167",
@@ -1745,7 +1745,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": false,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A168",
@@ -1770,7 +1770,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A169",
@@ -1795,7 +1795,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A170",
@@ -1820,7 +1820,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": false,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A171",
@@ -1845,7 +1845,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A172",
@@ -1870,7 +1870,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A173",
@@ -1895,7 +1895,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A174",
@@ -1920,7 +1920,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A175",
@@ -1945,7 +1945,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A176",
@@ -1970,7 +1970,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A177",
@@ -1995,7 +1995,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A178",
@@ -2020,7 +2020,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A179",
@@ -2045,7 +2045,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A180",
@@ -2070,7 +2070,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A181",
@@ -2095,7 +2095,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A182",
@@ -2120,7 +2120,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A183",
@@ -2145,7 +2145,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A184",
@@ -2170,7 +2170,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A185",
@@ -2195,7 +2195,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A186",
@@ -2220,7 +2220,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A187",
@@ -2245,7 +2245,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A188",
@@ -2270,7 +2270,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A189",
@@ -2295,7 +2295,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A190",
@@ -2320,7 +2320,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A191",
@@ -2345,7 +2345,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A192",
@@ -2370,7 +2370,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A193",
@@ -2395,7 +2395,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A194",
@@ -2420,7 +2420,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A195",
@@ -2445,7 +2445,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A196",
@@ -2470,7 +2470,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A197",
@@ -2495,7 +2495,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A198",
@@ -2520,7 +2520,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A199",
@@ -2545,7 +2545,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A200",
@@ -2570,7 +2570,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A201",
@@ -2595,7 +2595,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A202",
@@ -2620,7 +2620,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A203",
@@ -2645,7 +2645,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A204",
@@ -2670,7 +2670,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A205",
@@ -2695,7 +2695,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A206",
@@ -2720,7 +2720,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A207",
@@ -2745,7 +2745,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A208",
@@ -2770,7 +2770,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A209",
@@ -2795,7 +2795,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A210",
@@ -2820,7 +2820,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A211",
@@ -2845,7 +2845,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A212",
@@ -2870,7 +2870,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A213",
@@ -2895,7 +2895,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A214",
@@ -2920,7 +2920,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A215",
@@ -2945,7 +2945,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A216",
@@ -2970,7 +2970,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A217",
@@ -2995,7 +2995,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A218",
@@ -3020,7 +3020,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A219",
@@ -3045,7 +3045,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A220",
@@ -3070,7 +3070,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A221",
@@ -3095,7 +3095,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A222",
@@ -3120,7 +3120,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A223",
@@ -3145,7 +3145,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A224",
@@ -3170,7 +3170,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A225",
@@ -3195,7 +3195,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A226",
@@ -3220,7 +3220,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A227",
@@ -3245,7 +3245,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A228",
@@ -3270,7 +3270,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A229",
@@ -3295,7 +3295,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A230",
@@ -3320,7 +3320,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A231",
@@ -3345,7 +3345,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A232",
@@ -3370,7 +3370,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A233",
@@ -3395,7 +3395,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A234",
@@ -3420,7 +3420,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A235",
@@ -3445,7 +3445,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A236",
@@ -3470,7 +3470,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A237",
@@ -3495,7 +3495,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A238",
@@ -3520,7 +3520,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A239",
@@ -3545,7 +3545,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A240",
@@ -3570,7 +3570,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A241",
@@ -3595,7 +3595,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A242",
@@ -3620,7 +3620,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A243",
@@ -3645,7 +3645,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A244",
@@ -3670,7 +3670,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A245",
@@ -3695,7 +3695,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A246",
@@ -3720,7 +3720,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A247",
@@ -3745,7 +3745,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A248",
@@ -3770,7 +3770,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A249",
@@ -3795,7 +3795,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A250",
@@ -3820,7 +3820,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A251",
@@ -3845,7 +3845,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A252",
@@ -3870,7 +3870,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A253",
@@ -3895,7 +3895,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A254",
@@ -3920,7 +3920,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A255",
@@ -3945,7 +3945,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A256",
@@ -3970,7 +3970,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A257",
@@ -3995,7 +3995,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A258",
@@ -4020,7 +4020,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A259",
@@ -4045,7 +4045,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A260",
@@ -4070,7 +4070,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A261",
@@ -4095,7 +4095,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A262",
@@ -4120,7 +4120,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A263",
@@ -4145,7 +4145,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A264",
@@ -4170,7 +4170,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A265",
@@ -4195,7 +4195,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A266",
@@ -4220,7 +4220,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A267",
@@ -4245,7 +4245,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A268",
@@ -4270,7 +4270,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A269",
@@ -4295,7 +4295,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A270",
@@ -4320,7 +4320,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A271",
@@ -4345,7 +4345,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A272",
@@ -4370,7 +4370,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A273",
@@ -4395,7 +4395,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A274",
@@ -4420,7 +4420,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A275",
@@ -4445,7 +4445,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A276",
@@ -4470,7 +4470,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A277",
@@ -4495,7 +4495,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A278",
@@ -4520,7 +4520,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A279",
@@ -4545,7 +4545,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A280",
@@ -4570,7 +4570,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A281",
@@ -4595,7 +4595,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A282",
@@ -4620,7 +4620,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A283",
@@ -4645,7 +4645,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A284",
@@ -4670,7 +4670,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A285",
@@ -4695,7 +4695,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A286",
@@ -4720,7 +4720,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A287",
@@ -4745,7 +4745,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A288",
@@ -4770,7 +4770,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A289",
@@ -4795,7 +4795,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A290",
@@ -4820,7 +4820,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A291",
@@ -4845,7 +4845,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A292",
@@ -4870,7 +4870,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A293",
@@ -4895,7 +4895,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A294",
@@ -4920,7 +4920,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A295",
@@ -4945,7 +4945,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A296",
@@ -4970,7 +4970,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A297",
@@ -4995,7 +4995,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A298",
@@ -5020,7 +5020,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A299",
@@ -5045,7 +5045,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A300",
@@ -5070,7 +5070,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A301",
@@ -5095,7 +5095,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A302",
@@ -5120,7 +5120,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A303",
@@ -5145,7 +5145,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A304",
@@ -5170,7 +5170,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A305",
@@ -5195,7 +5195,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A306",
@@ -5220,7 +5220,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A307",
@@ -5245,7 +5245,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A308",
@@ -5270,7 +5270,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A309",
@@ -5295,7 +5295,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A310",
@@ -5320,7 +5320,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A311",
@@ -5345,7 +5345,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A312",
@@ -5370,7 +5370,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A313",
@@ -5395,7 +5395,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A314",
@@ -5420,7 +5420,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A315",
@@ -5445,7 +5445,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A316",
@@ -5470,7 +5470,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A317",
@@ -5495,7 +5495,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A318",
@@ -5520,7 +5520,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A319",
@@ -5545,7 +5545,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A320",
@@ -5570,7 +5570,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A321",
@@ -5595,7 +5595,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A322",
@@ -5620,7 +5620,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A323",
@@ -5645,7 +5645,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A324",
@@ -5670,7 +5670,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A325",
@@ -5695,7 +5695,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A326",
@@ -5720,7 +5720,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A327",
@@ -5745,7 +5745,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A328",
@@ -5770,7 +5770,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A329",
@@ -5795,7 +5795,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A330",
@@ -5820,7 +5820,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A331",
@@ -5845,7 +5845,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A332",
@@ -5870,7 +5870,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A333",
@@ -5895,7 +5895,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A334",
@@ -5920,7 +5920,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A335",
@@ -5945,7 +5945,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A336",
@@ -5970,7 +5970,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A337",
@@ -5995,7 +5995,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A338",
@@ -6020,7 +6020,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A339",
@@ -6045,7 +6045,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A340",
@@ -6070,7 +6070,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A341",
@@ -6095,7 +6095,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A342",
@@ -6120,7 +6120,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A343",
@@ -6145,7 +6145,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A344",
@@ -6170,7 +6170,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A345",
@@ -6195,7 +6195,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A346",
@@ -6220,7 +6220,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A347",
@@ -6245,7 +6245,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A348",
@@ -6270,7 +6270,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A349",
@@ -6295,7 +6295,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A350",
@@ -6320,7 +6320,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A351",
@@ -6345,7 +6345,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A352",
@@ -6370,7 +6370,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A353",
@@ -6395,7 +6395,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A354",
@@ -6420,7 +6420,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A355",
@@ -6445,7 +6445,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A356",
@@ -6470,7 +6470,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A357",
@@ -6495,7 +6495,7 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   },
   {
     "ref": "A358",
@@ -6520,6 +6520,6 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-07-31"
+    "actualizado": "2026-08-01"
   }
 ]

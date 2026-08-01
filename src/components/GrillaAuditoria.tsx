@@ -33,7 +33,7 @@ export default function GrillaAuditoria({
   }, [items, cat, tipo, q]);
 
   const chip = (activo: boolean) =>
-    `inline-flex h-9 items-center rounded-full border px-3.5 text-[13px] leading-none transition ${
+    `inline-flex h-11 items-center rounded-full border px-3.5 text-[13px] leading-none transition ${
       activo ? "border-ink bg-ink text-paper" : "border-line text-mute hover:border-ink hover:text-ink"
     }`;
 

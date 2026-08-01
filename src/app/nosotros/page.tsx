@@ -1,6 +1,5 @@
 import { empresa, tiene } from "@/lib/empresa";
 import { todasLasUnidades } from "@/lib/catalogo";
-import PendienteDato from "@/components/PendienteDato";
 
 export const metadata = {
   title: "Nosotros — iPhone Connection",
@@ -68,9 +67,7 @@ export default function Nosotros() {
           Detrás de la marca estamos {empresa.socios.join(" y ")}
           {tiene("zona") ? `, en ${empresa.zona}` : ""}.
         </p>
-      ) : (
-        <PendienteDato campo="socios" nota="Nombres de los dos socios y zona de operación" />
-      )}
+      ) : null}
     </div>
   );
 }

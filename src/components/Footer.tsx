@@ -23,10 +23,10 @@ export default async function Footer() {
 
           <div>
             <h2 className="mb-3 text-[13.5px] font-semibold text-ink">Catálogo</h2>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {fams.map((f) => (
                 <li key={f.slug}>
-                  <Link href={`/catalogo/${f.slug}`} className="transition-colors hover:text-ink">
+                  <Link href={`/catalogo/${f.slug}`} className="inline-flex min-h-[44px] items-center transition-colors hover:text-ink">
                     {f.nombre}
                   </Link>
                 </li>
@@ -36,26 +36,26 @@ export default async function Footer() {
 
           <div>
             <h2 className="mb-3 text-[13.5px] font-semibold text-ink">Empresa</h2>
-            <ul className="space-y-2">
-              <li><Link href="/nosotros" className="transition-colors hover:text-ink">Nosotros</Link></li>
-              <li><Link href="/garantia" className="transition-colors hover:text-ink">Garantía</Link></li>
-              <li><Link href="/faq" className="transition-colors hover:text-ink">Preguntas frecuentes</Link></li>
-              <li><Link href="/privacidad" className="transition-colors hover:text-ink">Política de privacidad</Link></li>
+            <ul className="space-y-1">
+              <li><Link href="/nosotros" className="inline-flex min-h-[44px] items-center transition-colors hover:text-ink">Nosotros</Link></li>
+              <li><Link href="/garantia" className="inline-flex min-h-[44px] items-center transition-colors hover:text-ink">Garantía</Link></li>
+              <li><Link href="/faq" className="inline-flex min-h-[44px] items-center transition-colors hover:text-ink">Preguntas frecuentes</Link></li>
+              <li><Link href="/privacidad" className="inline-flex min-h-[44px] items-center transition-colors hover:text-ink">Política de privacidad</Link></li>
             </ul>
           </div>
 
           <div>
             <h2 className="mb-3 text-[13.5px] font-semibold text-ink">Contacto</h2>
-            <ul className="space-y-2">
-              <li><Link href="/contacto" className="transition-colors hover:text-ink">Contacto</Link></li>
+            <ul className="space-y-1">
+              <li><Link href="/contacto" className="inline-flex min-h-[44px] items-center transition-colors hover:text-ink">Contacto</Link></li>
               {tiene("whatsapp") && (
-                <li><a href={linkWhatsApp()} className="transition-colors hover:text-ink">WhatsApp</a></li>
+                <li><a href={linkWhatsApp()} className="inline-flex min-h-[44px] items-center transition-colors hover:text-ink">WhatsApp</a></li>
               )}
               {tiene("instagram") && (
                 <li>
                   <a
                     href={`https://instagram.com/${empresa.instagram.replace("@", "")}`}
-                    className="transition-colors hover:text-ink"
+                    className="inline-flex min-h-[44px] items-center transition-colors hover:text-ink"
                   >
                     {empresa.instagram}
                   </a>

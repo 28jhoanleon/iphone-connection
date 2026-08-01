@@ -186,7 +186,12 @@ def color_coincide(ruta: str, color_declarado: str | None) -> bool:
     return True
 
 
-def elegir(candidatos: list[str], color_declarado: str | None) -> str:
+def elegir(candidatos: list[str], color_declarado: str | None) -> str | None:
+    # Los recortes viven fuera del repo: si la carpeta temporal se limpió, no hay
+    # candidatos y el catálogo cae a la imagen generada sin romper el proceso.
+    candidatos = [c for c in candidatos if os.path.exists(os.path.join(RECORTES, *c.split("/")))]
+    if not candidatos:
+        return None
     if len(candidatos) == 1 or not color_declarado:
         return candidatos[0]
     clave = color_declarado.strip().lower()
@@ -210,6 +215,9 @@ def main() -> None:
             continue
         color = u.get("color") or (u.get("colores") or [None])[0]
         elegido = elegir(cands, color)
+        if not elegido:
+            sin_foto.append(u["modelo"])
+            continue
         origen = os.path.join(RECORTES, *elegido.split("/"))
         if not os.path.exists(origen):
             sin_foto.append(u["modelo"])

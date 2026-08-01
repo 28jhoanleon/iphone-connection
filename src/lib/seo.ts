@@ -4,7 +4,7 @@
  */
 import { empresa } from "./empresa";
 import type { Unidad } from "./tipos";
-import { precioARS, garantia, capacidad } from "./formato";
+import { garantia, capacidad } from "./formato";
 
 export const SITIO =
   empresa.dominio || "https://iphone-connection.vercel.app";

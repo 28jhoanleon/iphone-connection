@@ -8,8 +8,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-lg">
       <div className="mx-auto max-w-site px-4 sm:px-5">
         {/* fila 1: marca, navegación y contacto, todo centrado verticalmente */}
-        <div className="flex h-14 items-center justify-between gap-4 sm:h-16">
-          <Link href="/" aria-label="iPhone Connection · ir al inicio" className="shrink-0 text-[17px] font-bold leading-none tracking-[-.03em]">
+        <div className="flex h-14 items-center justify-between gap-2 sm:h-16 sm:gap-4">
+          <Link
+            href="/"
+            aria-label="iPhone Connection · ir al inicio"
+            className="min-w-0 shrink text-[15.5px] font-bold leading-none tracking-[-.03em] xs:text-[17px]"
+          >
             iPhone<span className="font-medium text-mute">Connection</span>
           </Link>
 

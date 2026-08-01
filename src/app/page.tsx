@@ -173,17 +173,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* OPINIONES */}
-      <section className="contenedor pb-12 sm:pb-16">
-        <p className="etiqueta mb-5">Opiniones</p>
-        <div className="rounded-lg border border-dashed border-line p-8 text-center">
-          <p className="text-mute">
-            Todavía no publicamos opiniones. Cuando tengamos reseñas verificadas de clientes
-            reales, van a estar acá — con nombre y fecha, no inventadas.
-          </p>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="contenedor pb-16 sm:pb-20">
         <div className="rounded-lg bg-surface px-8 py-14 text-center">

@@ -32,8 +32,8 @@ export function tiene(campo: keyof Empresa): boolean {
 }
 
 /**
- * Regla del proyecto: no hay textos "PENDIENTE" en el sitio público, pero tampoco
- * se inventan datos. Un bloque sin información real sencillamente no se renderiza.
+ * Un bloque sin información real no se renderiza. No se inventan datos ni se
+ * muestran marcadores en el sitio público.
  */
 export const hayEnvios = () => empresa.envios.hace && Boolean(empresa.envios.alcance);
 export const hayPagos = () => empresa.pagos.medios.length > 0;

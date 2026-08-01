@@ -97,6 +97,34 @@ def a_usd(txt):
     return v if v > 0 else None
 
 
+# Los defectos vienen escritos a mano en la planilla, con abreviaturas y erratas.
+# Se normalizan a texto correcto: aparecen publicados en la ficha del producto.
+CORRECCIONES_DEFECTO = [
+    (r"(?i)\bdetale\b", "detalle"),
+    (r"(?i)^pixell?$", "Píxel muerto en pantalla"),
+    (r"(?i)\bpixell?\b", "píxel"),
+    (r"(?i)\bdet\b", "detalle"),
+    (r"(?i)\bmin\.?\s+pantalla\b", "mínimo en pantalla"),
+    (r"(?i)\bmin\.?\s+tapa\b", "mínimo en tapa"),
+    (r"(?i)\bmin\.?\b", "mínimo"),
+    (r"(?i)\bface id\b", "Face ID"),
+    (r"(?i)\bvidrio camara\b", "vidrio de cámara"),
+    (r"(?i)\bcamara\b", "cámara"),
+    (r"(?i)\bpantalla y otro en tapa\b", "pantalla"),
+    (r"(?i)\by otro con\b", "·"),
+]
+
+
+def normalizar_defecto(txt: str) -> str:
+    t = limpio(txt)
+    if not t or t.lower() in ("semi nuevos", "semi nuevo", "usado", "usados"):
+        return ""
+    for pat, rep in CORRECCIONES_DEFECTO:
+        t = re.sub(pat, rep, t)
+    t = re.sub(r"\s{2,}", " ", t).replace("mínimo.", "mínimo").strip(" ·-.")
+    return t[0].upper() + t[1:] if t else ""
+
+
 def grado(bat, defecto):
     if bat is None:
         return "nuevo_sellado"
@@ -182,8 +210,7 @@ def main():
         else:
             bateria = None
 
-        detalle = col("detalle").lower()
-        detalle = "" if detalle in ("semi nuevos", "usado") else detalle
+        detalle = normalizar_defecto(col("detalle"))
         # Un usado sin batería declarada no se puede publicar (Doc 00 §7.3).
         sin_bateria = seccion == "SELECCION USADOS" and bateria is None
         if sin_bateria:
