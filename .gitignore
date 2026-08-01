@@ -6,3 +6,5 @@ out/
 next-env.d.ts
 __pycache__/
 *.pyc
+auditoria-visual/
+auditoria-visual.zip

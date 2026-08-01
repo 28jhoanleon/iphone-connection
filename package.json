@@ -1,6 +1,6 @@
 {
   "name": "iphone-connection",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,9 @@
     "datos": "python3 scripts/importar-planilla.py && python3 scripts/generar-productos.py && python3 scripts/asignar-imagenes.py && python3 scripts/auditar-imagenes.py --borrar && python3 scripts/generar-indice.py",
     "verificar": "python3 scripts/verificar-datos.py && python3 scripts/auditar-catalogo.py && python3 scripts/auditar-imagenes.py",
     "predeploy": "python3 scripts/verificar-datos.py && next build",
-    "prebuild": "node scripts/verificar-imagenes.mjs"
+    "prebuild": "node scripts/limpiar-imagenes.mjs && node scripts/verificar-imagenes.mjs",
+    "audit:visual": "node scripts/auditar-visual.mjs",
+    "limpiar": "node scripts/limpiar-imagenes.mjs"
   },
   "dependencies": {
     "next": "^15.5.22",
@@ -21,6 +23,7 @@
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
     "autoprefixer": "^10.5.4",
+    "playwright": "^1.62.1",
     "postcss": "^8.5.25",
     "tailwindcss": "^3.4.19",
     "typescript": "5.7.3"

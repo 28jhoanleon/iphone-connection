@@ -24,14 +24,20 @@ try {
 
 const archivos = new Set(readdirSync(DIR));
 const problemas = [];
+const huerfanas = [];
 let reales = 0, generadas = 0;
+
+// Archivos de imagen que no corresponden a ningún producto publicado.
+// Aparecen cuando una versión nueva descarta un recorte pero el archivo viejo
+// sigue en el repo: descomprimir encima no borra lo que ya no está en el ZIP.
+const refsPublicadas = new Set(catalogo.map((p) => p.ref));
 
 for (const p of catalogo) {
   const real = REALES.map((e) => `${p.ref}${e}`).find((f) => archivos.has(f));
   if (real) {
     reales++;
     const hash = createHash("sha1").update(readFileSync(join(DIR, real))).digest("hex").slice(0, 16);
-    if (!firmadas[p.ref]) problemas.push(`${p.ref} · imagen sin validar (${real})`);
+    if (!firmadas[p.ref]) problemas.push(`${p.ref} · imagen sin validar (${real}) — sobra en el repo, borrala`);
     else if (firmadas[p.ref] !== hash) problemas.push(`${p.ref} · imagen cambiada después de validarse`);
   } else if (archivos.has(`${p.ref}.svg`)) {
     generadas++;
@@ -40,7 +46,15 @@ for (const p of catalogo) {
   }
 }
 
+for (const f of archivos) {
+  const ref = f.replace(/\.[^.]+$/, "");
+  if (!refsPublicadas.has(ref)) huerfanas.push(f);
+}
+
 console.log(`Imágenes: ${reales} reales validadas · ${generadas} generadas · ${catalogo.length} productos`);
+if (huerfanas.length) {
+  console.warn(`Aviso: ${huerfanas.length} archivo(s) sin producto asociado (no afectan el sitio)`);
+}
 
 if (problemas.length) {
   console.error(`\n✗ ${problemas.length} problema(s):`);

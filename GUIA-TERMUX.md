@@ -279,3 +279,51 @@ Batería, poné "Sin restricciones".
 El mecanismo de imágenes sigue igual: un archivo llamado `A167.jpg` dentro de
 `public/productos` reemplaza automáticamente a la imagen generada. Termux solo
 cambia **cómo** llega ese archivo al servidor, no cómo funciona el sistema.
+
+---
+
+## Auditoría visual del sitio publicado
+
+Recorre todo el sitio con un navegador real, saca captura de cada pantalla y arma
+hojas de contacto para revisar el catálogo entero de un vistazo.
+
+**Primera vez** (descarga el navegador, ~150 MB):
+
+```bash
+cd ~/proyecto
+npm i
+npx playwright install chromium
+```
+
+**Cada vez que quieras revisar:**
+
+```bash
+cd ~/proyecto && npm run audit:visual
+```
+
+Tarda entre 5 y 10 minutos para las 417 pantallas. Al terminar deja:
+
+```
+auditoria-visual/hojas/     hojas de contacto (25 pantallas cada una)
+auditoria-visual.zip        todo empaquetado
+```
+
+Para verlas desde la galería del celular:
+
+```bash
+cp -r ~/proyecto/auditoria-visual/hojas ~/storage/shared/Pictures/auditoria
+```
+
+**Variantes útiles:**
+
+```bash
+npm run audit:visual -- --solo=fichas      # sólo fichas de producto
+npm run audit:visual -- --solo=catalogo    # sólo las 8 categorías
+npm run audit:visual -- --limite=40        # prueba rápida
+npm run audit:visual -- --local            # contra localhost:3000
+```
+
+Si Termux se queda sin memoria con las 417 pantallas, corré por partes con `--solo`.
+
+**Nota:** las capturas son artefactos de revisión, no van al repositorio.
+Ya están en `.gitignore`.
