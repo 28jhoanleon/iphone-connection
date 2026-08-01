@@ -1,6 +1,6 @@
 {
   "name": "iphone-connection",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,7 +12,7 @@
     "datos": "python3 scripts/importar-planilla.py && python3 scripts/generar-productos.py && python3 scripts/asignar-imagenes.py && python3 scripts/auditar-imagenes.py --borrar && python3 scripts/generar-indice.py",
     "auditar": "python3 scripts/auditar-catalogo.py && python3 scripts/auditar-imagenes.py",
     "verificar": "python3 scripts/verificar-datos.py && python3 scripts/auditar-catalogo.py && python3 scripts/auditar-imagenes.py",
-    "imagenes": "python3 scripts/propagar-imagenes.py && python3 scripts/auditar-imagenes.py --borrar && python3 scripts/generar-indice.py"
+    "imagenes": "python3 scripts/generar-productos.py && python3 scripts/imagenes-maestras.py && python3 scripts/auditar-imagenes.py --borrar && python3 scripts/generar-indice.py"
   },
   "dependencies": {
     "next": "^15.5.22",
