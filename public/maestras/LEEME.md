@@ -30,3 +30,24 @@ demasiado chicas, e informa el motivo. Una imagen rechazada no llega al sitio.
 
 El catálogo tiene 256 referencias pero sólo 185 modelos, y varias unidades del
 mismo modelo comparten color. Una sola imagen puede cubrir cinco referencias.
+
+## Descarga automática desde fuentes oficiales
+
+`data/fuentes-imagenes.json` tiene las URL oficiales por modelo. Para traerlas:
+
+```bash
+npm run descargar     # descarga, recorta, centra y valida
+npm run imagenes      # propaga a todas las referencias
+```
+
+El descargador tiene que correr en una máquina con salida a internet (tu
+celular sirve). Cubre 41 modelos y unas 109 referencias.
+
+Para agregar un modelo, sumá una entrada en `data/fuentes-imagenes.json`:
+
+```json
+"xiaomi-17t": { "url": "https://…", "modelo": "Xiaomi 17T" }
+```
+
+Si la foto es de otro modelo de la misma línea porque el original todavía no
+tiene imagen oficial, agregá `"equivalente": "Xiaomi 15T"`. Queda registrado.

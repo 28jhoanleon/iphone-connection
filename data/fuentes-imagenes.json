@@ -1,0 +1,183 @@
+{
+  "_nota": "modelo-slug -> url oficial. 'equivalente' indica que la foto es de otro modelo de la misma linea porque el original no tiene imagen oficial publicada. Las entradas con 'url_invalida' no se descargan: la URL no funciona.",
+  "iphone-11": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-black-select-2019?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 11"
+  },
+  "iphone-12-mini": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-mini-black-select-2020?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 12 Mini"
+  },
+  "iphone-12": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-white-select-2020?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 12"
+  },
+  "iphone-12-pro": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 12 Pro"
+  },
+  "iphone-13-mini": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-mini-midnight-select-2021?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 13 Mini"
+  },
+  "iphone-13": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-midnight-select-2021?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 13"
+  },
+  "iphone-13-pro": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-sierrablue-select?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 13 Pro"
+  },
+  "iphone-13-pro-max": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 13 Pro Max"
+  },
+  "iphone-14": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 14"
+  },
+  "iphone-14-plus": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-plus-finish-select-202209-6-7inch-starlight?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 14 Plus"
+  },
+  "iphone-14-pro": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-spaceblack?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 14 Pro"
+  },
+  "iphone-14-pro-max": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-finish-select-202209-6-7inch-deeppurple?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 14 Pro Max"
+  },
+  "iphone-15": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 15"
+  },
+  "iphone-15-plus": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-plus-finish-select-202309-6-7inch-blue?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 15 Plus"
+  },
+  "iphone-15-pro": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 15 Pro"
+  },
+  "iphone-15-pro-max": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-finish-select-202309-6-7inch-blacktitanium?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 15 Pro Max"
+  },
+  "iphone-16": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 16"
+  },
+  "iphone-16-pro-max": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-7inch-deserttitanium?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 16 Pro Max"
+  },
+  "iphone-16-pro": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-7inch-deserttitanium?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 16 Pro"
+  },
+  "iphone-17": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 17",
+    "equivalente": "iPhone 16"
+  },
+  "iphone-17-pro": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-7inch-deserttitanium?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 17 Pro",
+    "equivalente": "iPhone 16 Pro"
+  },
+  "iphone-17-pro-max": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-7inch-deserttitanium?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 17 Pro Max",
+    "equivalente": "iPhone 16 Pro Max"
+  },
+  "iphone-17e": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 17e",
+    "equivalente": "iPhone 16"
+  },
+  "iphone-17-air": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "iPhone 17 Air",
+    "equivalente": "iPhone 16"
+  },
+  "apple-watch-se-2-40mm": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-1-202409_GEO_US?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "Apple Watch SE 2 40mm"
+  },
+  "apple-watch-se-3-40mm": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-1-202409_GEO_US?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "Apple Watch SE 3 40mm",
+    "equivalente": "Apple Watch SE 2"
+  },
+  "apple-watch-se-3-44mm": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-1-202409_GEO_US?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "Apple Watch SE 3 44mm",
+    "equivalente": "Apple Watch SE 2"
+  },
+  "apple-watch-serie-10-46mm": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-2-202409?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "Apple Watch Serie 10 46mm"
+  },
+  "apple-watch-serie-11-42mm": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-2-202409?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "Apple Watch Serie 11 42mm",
+    "equivalente": "Apple Watch Series 10"
+  },
+  "apple-watch-serie-11-46mm": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-2-202409?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "Apple Watch Serie 11 46mm",
+    "equivalente": "Apple Watch Series 10"
+  },
+  "apple-watch-ultra-3-49mm": {
+    "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ultra-case-unselect-gallery-1-202409?wid=1000&hei=1000&fmt=png-alpha",
+    "modelo": "Apple Watch Ultra 3 49mm",
+    "equivalente": "Apple Watch Ultra 2"
+  },
+  "samsung-galaxy-watch-7-44mm": {
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/ar/2407/gallery/ar-galaxy-watch7-l310-sm-l310nzgaaro-thumb-542289658?$264_264_PNG$",
+    "modelo": "Samsung Galaxy Watch 7 44mm"
+  },
+  "samsung-galaxy-watch-8-40mm": {
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/ar/2407/gallery/ar-galaxy-watch7-l310-sm-l310nzgaaro-thumb-542289658?$264_264_PNG$",
+    "modelo": "Samsung Galaxy Watch 8 40mm",
+    "equivalente": "Galaxy Watch 7"
+  },
+  "samsung-galaxy-watch-8-44mm": {
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/ar/2407/gallery/ar-galaxy-watch7-l310-sm-l310nzgaaro-thumb-542289658?$264_264_PNG$",
+    "modelo": "Samsung Galaxy Watch 8 44mm",
+    "equivalente": "Galaxy Watch 7"
+  },
+  "samsung-galaxy-watch-ultra-7-47mm-lte": {
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/ar/2407/gallery/ar-galaxy-watch-ultra-l705-sm-l705fdwaaro-thumb-542289981?$264_264_PNG$",
+    "modelo": "Samsung Galaxy Watch Ultra 7 47mm LTE"
+  },
+  "samsung-galaxy-fit-3": {
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/ar/sm-r390nzaaro/gallery/ar-galaxy-fit3-r390-sm-r390nzaaro-thumb-539893976?$264_264_PNG$",
+    "modelo": "Samsung Galaxy Fit 3"
+  },
+  "jbl-partybox-710": {
+    "url": "https://www.jbl.com.ar/dw/image/v2/AAWZ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw76ed93ef/JBL_PartyBox_710_Hero_1605x1605px.png",
+    "modelo": "JBL PartyBox 710"
+  },
+  "ps5-digital": {
+    "modelo": "PS5 Digital",
+    "url_invalida": "https://gamedistribution.sony.com/is/image/Gamedistribution/ps5-digital-edition-console-hero-single-tint",
+    "nota": "gamedistribution.sony.com no resuelve DNS. Falta URL válida de PlayStation."
+  },
+  "ps5-lectora": {
+    "modelo": "PS5 Lectora",
+    "equivalente": "PS5 Pro",
+    "url_invalida": "https://gamedistribution.sony.com/is/image/Gamedistribution/ps5-pro-console-hero-single-tint",
+    "nota": "gamedistribution.sony.com no resuelve DNS. Falta URL válida de PlayStation."
+  },
+  "ps5-pro-digital": {
+    "modelo": "PS5 Pro Digital",
+    "url_invalida": "https://gamedistribution.sony.com/is/image/Gamedistribution/ps5-pro-console-hero-single-tint",
+    "nota": "gamedistribution.sony.com no resuelve DNS. Falta URL válida de PlayStation."
+  },
+  "gopro-hero-13": {
+    "url": "https://gopro.com/dw/image/v2/AABM_PRD/on/demandware.static/-/Sites-gopro-products/default/dw8a4f1002/images/hero13/HERO13Black_Main_1000x1000.png",
+    "modelo": "GoPro Hero 13"
+  }
+}

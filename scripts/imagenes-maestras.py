@@ -108,9 +108,13 @@ def main() -> None:
         disponibles[nombre] = salida
 
     # ---- 2. propagar a todas las referencias del modelo ----
+    # La maestra sólo se aplica donde no hay ya una foto: una imagen verificada
+    # para esa referencia puntual es más precisa que la del modelo.
     asignadas, modelos_ok = 0, 0
     for s, imagen in disponibles.items():
         for p in por_slug[s]:
+            if any(os.path.exists(f'{DESTINO}/{p["ref"]}{e}') for e in (".jpg", ".jpeg", ".png")):
+                continue
             shutil.copy(imagen, os.path.join(DESTINO, f'{p["ref"]}.webp'))
             asignadas += 1
         modelos_ok += 1

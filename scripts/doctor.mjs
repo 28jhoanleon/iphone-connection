@@ -57,7 +57,8 @@ if (faltan) {
   console.log(`\n  Para instalar lo que falta en ${SO}:`);
   const guia = INSTALAR[SO] ?? INSTALAR.Linux;
   if (!py) console.log(`    ${guia.python}`);
-  if (py) console.log(`    ${py} -m pip install pillow numpy scipy`);
+  if (py) console.log(`    ${py} -m pip install pillow numpy`);
+  console.log(`\n  Pillow y numpy hacen falta para: npm run descargar y npm run imagenes.`);
   if (!hay("git")) console.log(`    ${guia.git}`);
 }
 
