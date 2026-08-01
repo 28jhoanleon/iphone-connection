@@ -1,0 +1,23 @@
+{
+  "_nota": "Mapa recorte -> modelo+color. Se asigna por MODELO Y COLOR, no por referencia: una misma foto sirve para todas las unidades de ese modelo y color.",
+  "1000746186": [
+    {"i": 0,  "modelo": "iPhone 11",                "color": "Negro"},
+    {"i": 1,  "modelo": "iPhone 11",                "color": "Blanco"},
+    {"i": 2,  "modelo": "iPhone 11",                "color": "Negro"},
+    {"i": 3,  "modelo": "iPhone 11",                "color": "Negro"},
+    {"i": 4,  "modelo": "iPhone 11",                "color": "Negro"},
+    {"i": 5,  "modelo": "iPhone 12 Mini",           "color": "Negro"},
+    {"i": 6,  "modelo": "iPhone 12",                "color": "Blanco"},
+    {"i": 7,  "modelo": "iPhone 12",                "color": "Rojo"},
+    {"i": 8,  "modelo": "iPhone 12 Pro",            "color": "Azul"},
+    {"i": 9,  "modelo": "iPhone 12 Pro",            "color": "Azul"},
+    {"i": 10, "modelo": "iPhone 12 Pro",            "color": "Azul"},
+    {"i": 11, "modelo": "iPhone 13 Mini",           "color": "Negro"},
+    {"i": 12, "modelo": "Xiaomi 17 Ultra",          "color": "Negro"},
+    {"i": 13, "modelo": "MacBook Pro M5 Pro 16\"",  "color": null},
+    {"i": 14, "modelo": "Apple Watch Ultra 3 49mm", "color": null},
+    {"i": 15, "modelo": "JBL PartyBox 710",         "color": "Negro"},
+    {"i": 16, "modelo": "PS5 Pro Digital",          "color": "Blanco"},
+    {"i": 17, "modelo": "GoPro Hero 13",            "color": "Negro"}
+  ]
+}
