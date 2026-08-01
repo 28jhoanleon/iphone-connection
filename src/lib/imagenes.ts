@@ -37,3 +37,9 @@ export function rutaImagen(ref: string): string {
 export function fotografiasPropias(): number {
   return [...indice().values()].filter((a) => !a.endsWith(".svg")).length;
 }
+
+/** ¿La imagen es una fotografía/recorte real o la generada por el sistema? */
+export function tipoImagen(ref: string): "real" | "generada" {
+  const a = indice().get(ref);
+  return a && !a.endsWith(".svg") ? "real" : "generada";
+}

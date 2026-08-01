@@ -6,7 +6,12 @@
  * por no estar firmado.
  */
 import { readFileSync, readdirSync, unlinkSync } from "node:fs";
-import { join } from "node:path";
+import { join, dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+// Funciona igual en Termux, Linux, macOS y Windows: la raíz se resuelve
+// desde la ubicación del script, no desde el directorio actual.
+process.chdir(resolve(dirname(fileURLToPath(import.meta.url)), ".."));
 
 const DIR = "public/productos";
 const catalogo = JSON.parse(readFileSync("data/catalogo.json", "utf8")).filter((p) => p.publicado);

@@ -97,9 +97,14 @@ print(f"\nAVISOS: {len(avisos)}")
 for a in avisos[:40]: print("  ·", a)
 if len(avisos) > 40: print(f"  … y {len(avisos)-40} más")
 
-with open("reporte-auditoria.txt", "w", encoding="utf-8") as f:
+with open("reportes/reporte-auditoria.txt", "w", encoding="utf-8") as f:
     f.write(f"AUDITORÍA DE CATÁLOGO\nProductos: {len(c)} · publicados: {len(pub)}\n\n")
     f.write(f"GRAVES ({len(graves)})\n" + "\n".join("  " + g for g in graves))
     f.write(f"\n\nAVISOS ({len(avisos)})\n" + "\n".join("  " + a for a in avisos))
 
 sys.exit(1 if graves else 0)
+
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+_os.makedirs("reportes", exist_ok=True)

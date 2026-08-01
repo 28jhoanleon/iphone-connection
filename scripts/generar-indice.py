@@ -27,18 +27,22 @@ for u in cat:
     modelos.setdefault(u["modeloSlug"], []).append(u)
 
 for slug, us in modelos.items():
-    items.append({"tipo": "modelo", "titulo": us[0]["modelo"], "href": f"/modelo/{slug}",
-                  "imagen": img(us[0]["ref"]), "estado": f"{len(us)} unidades",
-                  "precioCentavos": min(precio(u) for u in us),
-                  "clave": norm(f'{us[0]["modelo"]} {us[0]["categoria"]} {us[0]["marca"]}')})
+    items.append({"t": "m", "n": us[0]["modelo"], "h": f"/modelo/{slug}",
+                  "i": img(us[0]["ref"]), "e": f"{len(us)} unidades",
+                  "p": min(precio(u) for u in us),
+                  "k": norm(f'{us[0]["modelo"]} {us[0]["categoria"]} {us[0]["marca"]}')})
 
 for u in cat:
     colores = " ".join(u["colores"] or ([u["color"]] if u["color"] else []))
-    items.append({"tipo": "unidad", "titulo": u["nombre"], "href": f'/unidad/{u["ref"]}',
-                  "imagen": img(u["ref"]),
-                  "estado": "Stock inmediato" if u["disponibilidad"] == "disponible" else "Por encargo",
-                  "precioCentavos": precio(u),
-                  "clave": norm(f'{u["nombre"]} {u["ref"]} {u["estadoEtiqueta"]} {colores} {u["capacidadGb"] or ""}gb')})
+    items.append({"t": "u", "n": u["nombre"], "h": f'/unidad/{u["ref"]}',
+                  "i": img(u["ref"]),
+                  "e": "Stock inmediato" if u["disponibilidad"] == "disponible" else "Por encargo",
+                  "p": precio(u),
+                  "k": norm(f'{u["nombre"]} {u["ref"]} {u["estadoEtiqueta"]} {colores} {u["capacidadGb"] or ""}gb')})
 
 json.dump(items, open("public/indice-busqueda.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print(f"indice-busqueda.json · {len(items)} entradas · {os.path.getsize('public/indice-busqueda.json')//1024} KB")
+
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))

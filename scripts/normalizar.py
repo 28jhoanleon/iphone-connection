@@ -19,6 +19,10 @@ Tres reglas de fondo:
 3. EL VOCABULARIO ES CERRADO.
    Colores, capacidades y estados salen de una lista fija. Nada se escribe libre.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
 import re
 
 # ---------------------------------------------------------------- taxonomía

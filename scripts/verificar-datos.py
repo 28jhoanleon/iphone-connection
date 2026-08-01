@@ -4,6 +4,10 @@ Verificación previa al deploy.
 Corta el build si falta un dato real de la empresa: la regla del proyecto es
 que no haya datos de ejemplo en ninguna pantalla.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
 import json, sys
 
 OBLIGATORIOS = ["whatsapp", "instagram", "zona", "horarios", "socios"]

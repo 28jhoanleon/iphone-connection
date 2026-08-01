@@ -12,13 +12,20 @@ Así no hay que asignar unidad por unidad.
 
 Los modelos sin foto disponible conservan la imagen generada (.svg).
 """
-import json, os, shutil, sys
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+_os.makedirs("reportes", exist_ok=True)
+
+import json, os, shutil, sys, tempfile
 import numpy as np
 from PIL import Image
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validar_imagen import analizar
 
-RECORTES = "/tmp/seg"
+# Directorio de recortes. Configurable por variable de entorno para funcionar
+# igual en Termux, Linux, macOS y Windows.
+RECORTES = os.environ.get("RECORTES_DIR") or os.path.join(tempfile.gettempdir(), "ic-recortes")
 DESTINO = "public/productos"
 
 # modelo del catálogo -> recortes disponibles, en orden de lámina
@@ -185,7 +192,7 @@ def elegir(candidatos: list[str], color_declarado: str | None) -> str:
     clave = color_declarado.strip().lower()
     if not any(k in clave for k in {**NEUTROS, **TONOS}):
         return candidatos[0]
-    return min(candidatos, key=lambda c: puntaje(color_dominante(os.path.join(RECORTES, c)), clave))
+    return min(candidatos, key=lambda c: puntaje(color_dominante(os.path.join(RECORTES, *c.split("/"))), clave))
 
 
 FUENTES_LOWER = {k.lower(): v for k, v in FUENTES.items()}
@@ -203,7 +210,7 @@ def main() -> None:
             continue
         color = u.get("color") or (u.get("colores") or [None])[0]
         elegido = elegir(cands, color)
-        origen = os.path.join(RECORTES, elegido)
+        origen = os.path.join(RECORTES, *elegido.split("/"))
         if not os.path.exists(origen):
             sin_foto.append(u["modelo"])
             continue
@@ -229,7 +236,7 @@ def main() -> None:
     print(f"Modelos sin foto:        {len(faltantes)} -> conservan imagen generada")
     for m in faltantes:
         print(f"   · {m}")
-    open("reporte-imagenes.txt", "w", encoding="utf-8").write("\n".join(detalle))
+    open("reportes/reporte-imagenes.txt", "w", encoding="utf-8").write("\n".join(detalle))
 
 
 if __name__ == "__main__":

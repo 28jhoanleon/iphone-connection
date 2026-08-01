@@ -8,6 +8,11 @@ siempre existe. Sale con error si queda algún producto sin imagen.
 
 Uso:  python3 scripts/auditar-imagenes.py [--borrar]
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+_os.makedirs("reportes", exist_ok=True)
+
 import csv, hashlib, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validar_imagen import analizar
@@ -62,7 +67,7 @@ json.dump(firmadas, open("data/imagenes-validadas.json", "w"), indent=0, sort_ke
 
 campos = ["referencia", "producto", "categoria", "archivo", "ocupacion_pct",
           "texto_detectado", "resolucion", "estado", "motivo"]
-with open("reporte-imagenes.csv", "w", newline="", encoding="utf-8-sig") as f:
+with open("reportes/reporte-imagenes.csv", "w", newline="", encoding="utf-8-sig") as f:
     w = csv.DictWriter(f, fieldnames=campos); w.writeheader(); w.writerows(filas)
 
 import collections

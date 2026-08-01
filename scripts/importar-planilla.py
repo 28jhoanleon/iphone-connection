@@ -14,6 +14,11 @@ Reglas (Doc 00 + ADR-001):
 - Los detalles declarados se publican.
 - Las columnas de cuotas se ignoran: hoy no se ofrece financiación.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+_os.makedirs("reportes", exist_ok=True)
+
 import csv, json, re, sys, unicodedata
 from datetime import date
 sys.path.insert(0, "scripts")
@@ -378,7 +383,7 @@ def main():
                f"Sin precio (no importados): {saltados}", ""]
     for k, v in cat.most_common():
         resumen.append(f"  {k:<14} {v}")
-    open("reporte-importacion.txt", "w", encoding="utf-8").write("\n".join(reporte + resumen))
+    open("reportes/reporte-importacion.txt", "w", encoding="utf-8").write("\n".join(reporte + resumen))
     print("\n".join(resumen))
 
 

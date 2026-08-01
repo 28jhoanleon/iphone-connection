@@ -8,7 +8,12 @@
  */
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { createHash } from "node:crypto";
-import { join } from "node:path";
+import { join, dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+// Funciona igual en Termux, Linux, macOS y Windows: la raíz se resuelve
+// desde la ubicación del script, no desde el directorio actual.
+process.chdir(resolve(dirname(fileURLToPath(import.meta.url)), ".."));
 
 const DIR = "public/productos";
 const REALES = [".webp", ".jpg", ".jpeg", ".png"];

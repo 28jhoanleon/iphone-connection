@@ -11,8 +11,13 @@ function normalizar(s: string): string {
   return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
-export default function Buscador({ indice: inicial }: { indice: ItemBusqueda[] }) {
-  const [indice, setIndice] = useState<ItemBusqueda[]>(inicial);
+/**
+ * El índice no viaja en el HTML: se descarga al primer foco del campo.
+ * Antes iba una muestra de 40 entradas en cada página, ~14 KB por carga que
+ * nunca llegaban a usarse porque el índice completo las reemplazaba enseguida.
+ */
+export default function Buscador() {
+  const [indice, setIndice] = useState<ItemBusqueda[]>([]);
   const [q, setQ] = useState("");
   const [abierto, setAbierto] = useState(false);
   const [cursor, setCursor] = useState(0);
@@ -34,12 +39,22 @@ export default function Buscador({ indice: inicial }: { indice: ItemBusqueda[] }
   // El índice completo se descarga recién al primer foco: no penaliza la carga
   // inicial de ninguna página y queda listo antes de que se termine de escribir.
   useEffect(() => {
-    if (!abierto || indice.length > inicial.length) return;
+    if (!abierto || indice.length > 0) return;
     fetch("/indice-busqueda.json")
       .then((r) => (r.ok ? r.json() : null))
-      .then((d) => d && setIndice(d))
+      .then((d) => {
+        if (!d) return;
+        // el archivo usa claves de una letra para pesar menos en la red
+        setIndice(
+          d.map((x: Record<string, string | number>) => ({
+            tipo: x.t === "m" ? "modelo" : "unidad",
+            titulo: String(x.n), href: String(x.h), imagen: String(x.i),
+            estado: String(x.e), precioCentavos: Number(x.p), clave: String(x.k),
+          })) as ItemBusqueda[],
+        );
+      })
       .catch(() => {});
-  }, [abierto, indice.length, inicial.length]);
+  }, [abierto, indice.length]);
 
   useEffect(() => {
     function fuera(e: MouseEvent) {
@@ -76,7 +91,9 @@ export default function Buscador({ indice: inicial }: { indice: ItemBusqueda[] }
 
       {abierto && q.trim().length >= 2 && (
         <div className="absolute left-0 right-0 top-[calc(100%+8px)] max-h-[70vh] overflow-y-auto z-50 overflow-hidden rounded-lg border border-line bg-paper shadow-[0_12px_40px_rgba(0,0,0,.10)]">
-          {resultados.length === 0 ? (
+          {indice.length === 0 ? (
+            <p className="px-4 py-4 text-[13.5px] text-mute-soft">Buscando…</p>
+          ) : resultados.length === 0 ? (
             <p className="px-4 py-4 text-[13.5px] text-mute">
               Sin resultados. Escribinos y te lo conseguimos.
             </p>

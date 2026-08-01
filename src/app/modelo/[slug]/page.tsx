@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { modelos, modeloPorSlug, slugFamilia } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
+import { SITIO } from "@/lib/seo";
 import Migas from "@/components/Migas";
 import SelectorUnidades from "@/components/SelectorUnidades";
 import Volver from "@/components/Volver";
@@ -14,9 +15,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const m = modeloPorSlug(slug);
+  if (!m) return { title: "Modelo — iPhone Connection" };
+  const url = `${SITIO}/modelo/${m.slug}`;
+  const titulo = `${m.nombre} — iPhone Connection`;
+  const desc = `${m.nombre} desde ${precio(m.desdeCentavos)}. ${m.unidades.length} unidades con estado y batería declarados.`;
   return {
-    title: m ? `${m.nombre} — iPhone Connection` : "Modelo",
-    description: m ? `${m.nombre} desde ${precio(m.desdeCentavos)}. Estado y batería declarados unidad por unidad.` : undefined,
+    title: titulo, description: desc,
+    alternates: { canonical: url },
+    openGraph: { title: titulo, description: desc, url, type: "website", locale: "es_AR" },
+    twitter: { card: "summary_large_image", title: titulo, description: desc },
   };
 }
 

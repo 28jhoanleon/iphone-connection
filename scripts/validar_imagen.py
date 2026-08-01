@@ -15,6 +15,10 @@ joysticks se parece a una línea de letras— sino la FÍSICA DEL TRAZO:
 
 De ahí la regla: saturación baja + muchos grises intermedios = texto.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
 import numpy as np
 from PIL import Image
 from scipy import ndimage

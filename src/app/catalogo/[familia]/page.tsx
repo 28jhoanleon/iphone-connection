@@ -4,6 +4,7 @@ import { familias, familiaPorSlug } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
 import { precio, precioARS } from "@/lib/formato";
 import { tipoCambio } from "@/lib/dolar";
+import { SITIO } from "@/lib/seo";
 import Migas from "@/components/Migas";
 import Volver from "@/components/Volver";
 
@@ -14,9 +15,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ familia: string }> }) {
   const { familia } = await params;
   const f = familiaPorSlug(familia);
+  if (!f) return { title: "Catálogo — iPhone Connection" };
+  const url = `${SITIO}/catalogo/${f.slug}`;
+  const titulo = `${f.nombre} — iPhone Connection`;
+  const desc = `${f.totalUnidades} equipos de ${f.nombre} con estado y batería declarados, precio actualizado y garantía escrita.`;
   return {
-    title: f ? `${f.nombre} — iPhone Connection` : "Catálogo",
-    description: f ? `${f.totalUnidades} unidades de ${f.nombre} con estado declarado y garantía escrita.` : undefined,
+    title: titulo, description: desc,
+    alternates: { canonical: url },
+    openGraph: { title: titulo, description: desc, url, type: "website", locale: "es_AR" },
+    twitter: { card: "summary_large_image", title: titulo, description: desc },
   };
 }
 

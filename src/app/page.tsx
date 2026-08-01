@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { familiasVisibles, destacadas, fechaActualizacion, todasLasUnidades, esUltimasUnidades, marcasPrincipales } from "@/lib/catalogo";
 import { rutaImagen } from "@/lib/imagenes";
-import { precio, precioARS, linkWhatsApp } from "@/lib/formato";
+import { linkWhatsApp } from "@/lib/formato";
 import { tipoCambio } from "@/lib/dolar";
 import TarjetaUnidad from "@/components/TarjetaUnidad";
 import BadgesConfianza from "@/components/BadgesConfianza";

@@ -12,6 +12,10 @@ El sitio resuelve la imagen así -> public/productos/{REF}.jpg  (fotografía pro
                                -> public/productos/{REF}.svg  (generada, fallback)
 Dejar caer un JPG con el nombre de la referencia reemplaza la imagen. Cero código.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
 import json, os, re
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

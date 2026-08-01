@@ -13,6 +13,10 @@ Método:
    (bajos y en el tercio inferior).
 4. Bounding box del producto -> recorte cuadrado centrado con margen.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+_os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validar_imagen import analizar

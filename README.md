@@ -1,42 +1,64 @@
-# iPhone Connection · V1
+# iPhone Connection · v2.0
 
-Plataforma de catálogo. Next.js 15 (App Router) · TypeScript · Tailwind · export estático.
+Catálogo y sitio público. Next.js 15 (App Router) · TypeScript · Tailwind.
+Funciona en **Android/Termux, Linux, macOS y Windows**.
+
+## Empezar
+
+```bash
+npm run doctor     # dice qué falta instalar en tu sistema
+npm i
+npm run dev        # http://localhost:3000
+```
+
+## Comandos
+
+| Comando | Qué hace | Necesita |
+|---|---|---|
+| `npm run dev` | Servidor de desarrollo | Node |
+| `npm run build` | Compila (valida imágenes antes) | Node |
+| `npm run doctor` | Diagnostica el entorno | Node |
+| `npm run limpiar` | Borra imágenes obsoletas del repo | Node |
+| `npm run auditar` | Revisa catálogo e imágenes | Python |
+| `npm run datos` | Reprocesa la planilla completa | Python |
+
+## Auditoría visual
+
+Abrí **`/auditoria`** en cualquier navegador. Muestra las 256 imágenes con referencia,
+marca, color, capacidad, estado, batería, disponibilidad y precio. Filtros por
+categoría, por tipo de imagen y por texto, más vista densa.
+
+No requiere Playwright ni Chromium: funciona desde el celular.
 
 ## Estructura
 
 ```
-src/app/         rutas (Home, catálogo, modelo, unidad, garantía, admin)
-src/components/  componentes reutilizables
-src/lib/         acceso a datos y formato · ÚNICA puerta al catálogo
-data/            catalogo.json — fuente única de datos
-public/productos/ imágenes por referencia (.svg generada, .jpg propia)
-db/schema/       esquema real de Postgres
-scripts/         importador de planilla y generador de imágenes
+src/app/          rutas
+src/components/   componentes reutilizables
+src/lib/          acceso a datos · ÚNICA puerta al catálogo
+data/             catalogo.json, empresa.json, precios.json, faq.json
+public/productos/ imágenes por referencia
+db/schema/        esquema Postgres para la etapa de Supabase
+scripts/          importador, generador de imágenes y auditorías
+docs/             guías y documentos de cierre
 ```
 
 ## Reglas del proyecto
 
-- Ningún producto escrito dentro del código. Todo sale de `data/catalogo.json`.
+- Ningún producto escrito dentro del código: todo sale de `data/catalogo.json`.
 - Ningún componente lee el JSON directo: todo pasa por `src/lib/catalogo.ts`.
-  Al migrar a Supabase se cambia ese archivo y nada más.
 - Dinero siempre en centavos enteros.
 - Costos y márgenes nunca salen al bundle público.
+- Ninguna imagen se publica sin pasar el validador.
+- Ningún dato de la empresa se inventa: si falta, el bloque no se renderiza.
 
-## Imágenes
+## Cambiar una imagen
 
-`/public/productos/{REF}.svg` es la imagen generada.
-Dejar `{REF}.jpg` en la misma carpeta la reemplaza automáticamente. Sin tocar código.
+Dejá `A167.jpg` en `public/productos/`. Reemplaza a la generada automáticamente.
+Formato: cuadrado, fondo blanco, mínimo 1000px.
 
-## Comandos
+## Documentación
 
-```
-npm run dev      desarrollo
-npm run build    build + export estático a /out
-npm run datos    reimportar planilla y regenerar imágenes
-```
-
-## Deploy
-
-`npm run build` genera `/out`. Ese contenido se publica en GitHub Pages.
-Al migrar el panel a Supabase se quita `output: "export"` de `next.config.ts`
-y el mismo repo se despliega en Vercel sin cambiar la app.
+- `docs/cierre-frontend-v2.md` — estado final, limitaciones y qué no tocar
+- `docs/GUIA-TERMUX.md` — trabajar desde el celular
+- `docs/GUIA-GITHUB-VERCEL.md` — publicar

@@ -1,12 +1,8 @@
 import Link from "next/link";
 import Buscador from "./Buscador";
-import { indiceBusqueda } from "@/lib/catalogo";
-import { tipoCambio } from "@/lib/dolar";
 import { linkWhatsApp } from "@/lib/formato";
 
-export default async function Header() {
-  const tc = await tipoCambio();
-  const indice = indiceBusqueda(tc.valor).slice(0, 40); // muestra inicial
+export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-lg">
@@ -26,7 +22,7 @@ export default async function Header() {
 
           {/* en escritorio el buscador vive en esta fila */}
           <div className="hidden flex-1 justify-end sm:flex sm:max-w-[300px]">
-            <Buscador indice={indice} />
+            <Buscador />
           </div>
 
           <a
@@ -39,7 +35,7 @@ export default async function Header() {
 
         {/* fila 2: en móvil el buscador ocupa el ancho completo */}
         <div className="pb-3 sm:hidden">
-          <Buscador indice={indice} />
+          <Buscador />
         </div>
       </div>
     </header>

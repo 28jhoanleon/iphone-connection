@@ -116,6 +116,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Buscar por nombre o referencia…"
+          aria-label="Buscar productos"
           className={`${input} max-w-xs`}
         />
         <button onClick={exportar} className="rounded-full border border-ink px-4 py-2 text-sm transition hover:bg-ink hover:text-paper">
@@ -126,7 +127,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
         </button>
         <label className="cursor-pointer rounded-full border border-line px-4 py-2 text-sm transition hover:border-ink">
           Importar CSV
-          <input type="file" accept=".csv,text/csv" className="hidden"
+          <input type="file" accept=".csv,text/csv" aria-label="Importar catálogo CSV" className="hidden"
                  onChange={(e) => e.target.files?.[0] && importar(e.target.files[0])} />
         </label>
         {sucio && <span className="font-data text-[11px] text-aviso-texto">CAMBIOS SIN EXPORTAR</span>}
@@ -164,7 +165,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
         </form>
       )}
 
-      <div className="overflow-x-auto rounded-lg border border-line">
+      <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:rounded-lg sm:border sm:border-line sm:px-0">
         <table className="w-full min-w-[860px] text-sm">
           <thead className="bg-surface font-data text-[10.5px] uppercase tracking-[.1em] text-mute">
             <tr>
@@ -183,6 +184,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
                 <td className="w-36 px-3 py-2">
                   <input
                     type="number"
+                    aria-label={`Precio de ${u.nombre}`}
                     className={input}
                     value={Math.round(u.precioCentavos / 100)}
                     onChange={(e) => editar(u.ref, { precioCentavos: Number(e.target.value) * 100 })}
@@ -191,6 +193,7 @@ export default function PanelProductos({ inicial }: { inicial: Unidad[] }) {
                 </td>
                 <td className="px-3 py-2">
                   <select
+                    aria-label={`Disponibilidad de ${u.nombre}`}
                     className={input}
                     value={u.disponibilidad}
                     onChange={(e) => editar(u.ref, { disponibilidad: e.target.value as Unidad["disponibilidad"] })}
