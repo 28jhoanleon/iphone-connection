@@ -92,13 +92,19 @@ def main() -> None:
             rechazadas.append((f, "no corresponde a ningún modelo del catálogo"))
             continue
 
-        salida = os.path.join(MAESTRAS, f"{nombre}.norm.webp")
         origen = os.path.join(MAESTRAS, f)
-        if ext.lower() == ".webp" and nombre.endswith(".norm"):
-            continue
-        if not normalizar(origen, salida):
+        salida = os.path.join(MAESTRAS, f"{nombre}.webp")
+        # Si ya es WebP de 1000x1000 viene normalizada del descargador: no se reprocesa.
+        try:
+            from PIL import Image as _I
+            ya_lista = ext.lower() == ".webp" and _I.open(origen).size == (LADO, LADO)
+        except Exception:
+            ya_lista = False
+        if not ya_lista and not normalizar(origen, salida):
             rechazadas.append((f, "imagen vacía o sin contenido"))
             continue
+        if ext.lower() != ".webp":
+            os.remove(origen)   # ya existe la versión WebP normalizada
 
         v = analizar(salida)
         if not v["ok"]:

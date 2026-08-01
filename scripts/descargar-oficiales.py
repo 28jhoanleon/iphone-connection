@@ -120,18 +120,33 @@ def main() -> None:
     print(f"Cobertura antes: {len(antes)}/{len(catalogo)}\n")
 
     ok, fallidas, equivalentes = [], [], []
+    ya_estaban = 0
 
-    entradas = [(k, v) for k, v in fuentes.items() if not k.startswith("_") and v.get("url")]
-    invalidas = [k for k, v in fuentes.items() if not k.startswith("_") and not v.get("url")]
+    entradas = [(k, v) for k, v in fuentes.items()
+                if not k.startswith("_") and (v.get("url") or v.get("alternativas"))]
+    invalidas = [k for k, v in fuentes.items()
+                 if not k.startswith("_") and not (v.get("url") or v.get("alternativas"))]
     total = len(entradas)
     for i, (slug_modelo, info) in enumerate(entradas):
         destino = os.path.join(MAESTRAS, f"{slug_modelo}.webp")
+        # No se vuelve a descargar lo que ya está: sólo faltantes.
         if os.path.exists(destino):
             ok.append(slug_modelo)
+            ya_estaban += 1
             continue
 
         print(f"  [{i+1}/{total}] {slug_modelo} … ", end="", flush=True)
-        datos, diag = descargar(info["url"])
+        # Cadena de URLs: se prueban en orden hasta que una responda. Los CDN de
+        # fabricante cambian sus rutas seguido; esto evita quedarse sin imagen
+        # por un 404 en la primera opción.
+        urls = info.get("alternativas") or [info["url"]]
+        datos, diag = None, "sin URL"
+        for n_url, u in enumerate(urls):
+            datos, diag = descargar(u)
+            if datos:
+                if n_url:
+                    diag += f" (alternativa {n_url + 1})"
+                break
         if not datos:
             print(diag)
             fallidas.append((slug_modelo, diag))
@@ -157,7 +172,8 @@ def main() -> None:
 
     if invalidas:
         print(f"\nSin URL válida ({len(invalidas)}): {', '.join(invalidas)}")
-    print(f"\nDescargadas y validadas : {len(ok)}")
+    print(f"\nYa estaban (no se rebajaron): {ya_estaban}")
+    print(f"Descargadas y validadas : {len(ok) - ya_estaban}")
     print(f"Con foto equivalente    : {len(equivalentes)}")
     print(f"Fallidas                : {len(fallidas)}")
     for s, motivo in fallidas:

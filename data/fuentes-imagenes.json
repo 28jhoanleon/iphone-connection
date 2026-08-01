@@ -1,5 +1,5 @@
 {
-  "_nota": "modelo-slug -> url oficial. 'equivalente' indica que la foto es de otro modelo de la misma linea porque el original no tiene imagen oficial publicada. Las entradas con 'url_invalida' no se descargan: la URL no funciona.",
+  "_nota": "modelo-slug -> url oficial. 'alternativas' se prueban en orden hasta que una responda. 'equivalente' indica que la foto es de otro modelo de la misma linea.",
   "iphone-11": {
     "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-black-select-2019?wid=1000&hei=1000&fmt=png-alpha",
     "modelo": "iPhone 11"
@@ -79,27 +79,54 @@
   "iphone-17": {
     "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha",
     "modelo": "iPhone 17",
-    "equivalente": "iPhone 16"
+    "alternativas": [
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-finish-select-202509-6-3inch-lavender?wid=1000&hei=1000&fmt=png-alpha",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-finish-select-202509-6-3inch-black?wid=1000&hei=1000&fmt=png-alpha",
+      "https://www.apple.com/v/iphone-17/g/images/overview/contrast/iphone_17__di090vk53j6u_large.jpg",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha"
+    ],
+    "nota": "prueba URLs oficiales del modelo; si ninguna responde usa el equivalente"
   },
   "iphone-17-pro": {
     "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-7inch-deserttitanium?wid=1000&hei=1000&fmt=png-alpha",
     "modelo": "iPhone 17 Pro",
-    "equivalente": "iPhone 16 Pro"
+    "alternativas": [
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-3inch-cosmicorange?wid=1000&hei=1000&fmt=png-alpha",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-3inch-deepblue?wid=1000&hei=1000&fmt=png-alpha",
+      "https://www.apple.com/v/iphone-17/g/images/overview/contextual_compare/slides/camera/pro_camera__erns3i92bvu6_large.jpg",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-7inch-deserttitanium?wid=1000&hei=1000&fmt=png-alpha"
+    ],
+    "nota": "prueba URLs oficiales del modelo; si ninguna responde usa el equivalente"
   },
   "iphone-17-pro-max": {
     "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-7inch-deserttitanium?wid=1000&hei=1000&fmt=png-alpha",
     "modelo": "iPhone 17 Pro Max",
-    "equivalente": "iPhone 16 Pro Max"
+    "alternativas": [
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-cosmicorange?wid=1000&hei=1000&fmt=png-alpha",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-deepblue?wid=1000&hei=1000&fmt=png-alpha",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-7inch-deserttitanium?wid=1000&hei=1000&fmt=png-alpha"
+    ],
+    "nota": "prueba URLs oficiales del modelo; si ninguna responde usa el equivalente"
   },
   "iphone-17e": {
     "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha",
     "modelo": "iPhone 17e",
-    "equivalente": "iPhone 16"
+    "alternativas": [
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17e-finish-select-202602-6-1inch-black?wid=1000&hei=1000&fmt=png-alpha",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16e-finish-select-202502-6-1inch-black?wid=1000&hei=1000&fmt=png-alpha",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha"
+    ],
+    "nota": "prueba URLs oficiales del modelo; si ninguna responde usa el equivalente"
   },
   "iphone-17-air": {
     "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha",
     "modelo": "iPhone 17 Air",
-    "equivalente": "iPhone 16"
+    "alternativas": [
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-air-finish-select-202509-6-5inch-skyblue?wid=1000&hei=1000&fmt=png-alpha",
+      "https://www.apple.com/v/iphone-17/g/images/overview/contrast/iphone_air__btyns2fslho2_large.jpg",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=1000&hei=1000&fmt=png-alpha"
+    ],
+    "nota": "prueba URLs oficiales del modelo; si ninguna responde usa el equivalente"
   },
   "apple-watch-se-2-40mm": {
     "url": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/s10-case-unselect-gallery-1-202409_GEO_US?wid=1000&hei=1000&fmt=png-alpha",
