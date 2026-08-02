@@ -6,8 +6,8 @@ import { Unidad } from "@/lib/tipos";
 import { rutaImagen } from "@/lib/imagenes";
 
 interface TarjetaUnidadProps {
-  unidad?: Unidad;
-  u?: Unidad; // Compatibilidad con prop 'u'
+  unidad?: any;
+  u?: any;
   tc?: number;
   ultimas?: boolean;
   prioridad?: boolean;
@@ -22,7 +22,6 @@ export const TarjetaUnidad: React.FC<TarjetaUnidadProps> = ({
   prioridad,
   mostrarAcciones = true,
 }) => {
-  // Acepta tanto 'unidad' como 'u' para no romper page.tsx
   const item = unidad || u;
   const [error, setError] = useState(false);
   const srcImagen = rutaImagen(item);
@@ -33,6 +32,12 @@ export const TarjetaUnidad: React.FC<TarjetaUnidadProps> = ({
 
   if (!item) return null;
 
+  const nombreModelo = item.modeloNombre || item.modelo || item.nombre || "Unidad";
+  const nombreMarca = item.marcaNombre || item.marca || "Apple";
+  const refUnidad = item.referencia || item.ref || item.id;
+  const precio = item.precioUsd || item.precio || 0;
+  const gb = item.almacenamiento || item.capacidad;
+
   return (
     <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden flex flex-col justify-between h-full">
       <div className="p-4 flex flex-col items-center">
@@ -40,7 +45,7 @@ export const TarjetaUnidad: React.FC<TarjetaUnidadProps> = ({
           {!error && srcImagen ? (
             <img
               src={srcImagen}
-              alt={item.titulo || item.modeloNombre || "Unidad"}
+              alt={nombreModelo}
               className="object-contain h-full w-full p-2"
               onError={() => setError(true)}
               loading={prioridad ? "eager" : "lazy"}
@@ -71,13 +76,13 @@ export const TarjetaUnidad: React.FC<TarjetaUnidadProps> = ({
             </span>
           )}
           <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-1 rounded-md block w-fit">
-            {item.marcaNombre}
+            {nombreMarca}
           </span>
           <h3 className="text-lg font-bold text-gray-900 mt-2 line-clamp-1">
-            {item.modeloNombre}
+            {nombreModelo}
           </h3>
           <p className="text-sm text-gray-500 mt-1">
-            {item.almacenamiento} • {item.color}
+            {gb} • {item.color}
           </p>
         </div>
       </div>
@@ -87,25 +92,26 @@ export const TarjetaUnidad: React.FC<TarjetaUnidadProps> = ({
           <div>
             <span className="text-xs text-gray-400 block">Precio</span>
             <span className="text-xl font-extrabold text-gray-900">
-              USD ${item.precioUsd}
+              USD ${precio}
             </span>
             {tc && (
               <span className="text-xs text-gray-500 block">
-                ~${(item.precioUsd * tc).toLocaleString()} ARS
+                ~${(precio * tc).toLocaleString()} ARS
               </span>
             )}
           </div>
-          <Link
-            href={`/unidad/${item.referencia}`}
-            className="bg-black hover:bg-gray-800 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors"
-          >
-            Ver detalle
-          </Link>
+          {refUnidad && (
+            <Link
+              href={`/unidad/${refUnidad}`}
+              className="bg-black hover:bg-gray-800 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors"
+            >
+              Ver detalle
+            </Link>
+          )}
         </div>
       )}
     </div>
   );
 };
 
-// Export por defecto para solucionar la importación en page.tsx
 export default TarjetaUnidad;
