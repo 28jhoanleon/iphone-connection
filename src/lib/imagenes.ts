@@ -2,10 +2,40 @@ import fs from "node:fs";
 import path from "node:path";
 
 const DIR_PRODUCTOS = path.join(process.cwd(), "public/productos");
+const DIR_PUBLIC = path.join(process.cwd(), "public");
+const CATALOGO_PATH = path.join(process.cwd(), "data/catalogo.json");
 const PRIORIDAD = [".jpg", ".jpeg", ".png", ".webp"];
 
-export function rutaImagen(ref: string, slug?: string, marca?: string, arquetipo?: string): string {
-  // 1. Prioridad: Buscar por referencia directa en /public/productos/ (ej: A101.jpg)
+// Indice en memoria para no re-leer el JSON en cada renderizado
+let refMapCache: Map<string, { slug: string; marca: string; arquetipo: string }> | null = null;
+
+function obtenerMapaCatalogo() {
+  if (refMapCache) return refMapCache;
+  const mapa = new Map<string, { slug: string; marca: string; arquetipo: string }>();
+  try {
+    if (fs.existsSync(CATALOGO_PATH)) {
+      const data = JSON.parse(fs.readFileSync(CATALOGO_PATH, "utf-8"));
+      if (Array.isArray(data)) {
+        for (const item of data) {
+          if (item.ref) {
+            mapa.set(String(item.ref), {
+              slug: item.modeloSlug || item.slug || "",
+              marca: item.marca || "",
+              arquetipo: item.arquetipo || "",
+            });
+          }
+        }
+      }
+    }
+  } catch (e) {
+    console.error("Error al leer catalogo.json en rutaImagen:", e);
+  }
+  refMapCache = mapa;
+  return mapa;
+}
+
+export function rutaImagen(ref: string, slugParam?: string, marcaParam?: string, arquetipoParam?: string): string {
+  // 1. Prioridad absoluta: si existe la foto propia en /public/productos/ (ej: A101.jpg)
   if (fs.existsSync(DIR_PRODUCTOS)) {
     for (const ext of PRIORIDAD) {
       if (fs.existsSync(path.join(DIR_PRODUCTOS, `${ref}${ext}`))) {
@@ -14,32 +44,49 @@ export function rutaImagen(ref: string, slug?: string, marca?: string, arquetipo
     }
   }
 
-  // 2. Buscar en la estructura jerárquica /public/imagenes/
-  if (slug) {
-    const m = (marca || "generico").toLowerCase().trim();
-    const s = slug.toLowerCase().trim();
-    let cat = arquetipo === "reloj" ? "smartwatch" : "smartphone";
+  // 2. Obtener slug, marca y arquetipo automáticamente desde catalogo.json si no vinieron por parámetro
+  let slug = slugParam;
+  let marca = marcaParam;
+  let arquetipo = arquetipoParam;
 
-    // Intentar variante 1: Categoria inferida (smartwatch, smartphone, notebook, etc.)
-    let rutaRelativa = `imagenes/${m}/${cat}/${s}/default.webp`;
-    if (fs.existsSync(path.join(process.cwd(), "public", rutaRelativa))) {
-      return `/${rutaRelativa}`;
-    }
-
-    // Intentar variante 2: Forzar 'smartphone' (donde están casi todas las carpetas físicas)
-    rutaRelativa = `imagenes/${m}/smartphone/${s}/default.webp`;
-    if (fs.existsSync(path.join(process.cwd(), "public", rutaRelativa))) {
-      return `/${rutaRelativa}`;
-    }
-
-    // Intentar variante 3: Forzar 'smartwatch'
-    rutaRelativa = `imagenes/${m}/smartwatch/${s}/default.webp`;
-    if (fs.existsSync(path.join(process.cwd(), "public", rutaRelativa))) {
-      return `/${rutaRelativa}`;
+  if (!slug) {
+    const info = obtenerMapaCatalogo().get(ref);
+    if (info) {
+      slug = info.slug;
+      marca = info.marca;
+      arquetipo = info.arquetipo;
     }
   }
 
-  // 3. Fallback al SVG dinámico solo si no existe el archivo estático
+  // 3. Buscar la imagen en public/imagenes/
+  if (slug) {
+    const s = slug.toLowerCase().trim();
+    const mRaw = (marca || "").toLowerCase().trim();
+
+    // Probar variaciones de marca (con tildes, sin tildes, con guiones)
+    const marcasProbar = Array.from(new Set([
+      mRaw,
+      mRaw.replace(/é/g, "e").replace(/á/g, "a").replace(/í/g, "i").replace(/ó/g, "o").replace(/ú/g, "u"),
+      mRaw.replace(/\s+/g, "-"),
+      mRaw.replace(/\s+/g, ""),
+      "generico",
+      "genérico"
+    ])).filter(Boolean);
+
+    // Categorías donde podría estar guardada la carpeta
+    const categoriasProbar = ["smartphone", "smartwatch", "notebook", "tablet", "audio", "consola"];
+
+    for (const m of marcasProbar) {
+      for (const cat of categoriasProbar) {
+        const rutaRelativa = `imagenes/${m}/${cat}/${s}/default.webp`;
+        if (fs.existsSync(path.join(DIR_PUBLIC, rutaRelativa))) {
+          return `/${rutaRelativa}`;
+        }
+      }
+    }
+  }
+
+  // 4. Si no se encontró ningún archivo, recurrir al SVG
   return `/productos/${ref}.svg`;
 }
 
