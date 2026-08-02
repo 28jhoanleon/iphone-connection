@@ -1,45 +1,52 @@
-/**
- * Resolución de imágenes en tiempo de build.
- * Prioridad: fotografía propia (.jpg/.jpeg/.png/.webp) > imagen generada (.svg)
- * Dejar caer `A104.jpg` en /public/productos reemplaza esa imagen sin tocar código.
- */
 import fs from "node:fs";
 import path from "node:path";
 
-const DIR = path.join(process.cwd(), "public/productos");
-const PRIORIDAD = [".jpg", ".jpeg", ".png", ".webp", ".svg"];
+const DIR_PRODUCTOS = path.join(process.cwd(), "public/productos");
+const DIR_IMAGENES = path.join(process.cwd(), "public/imagenes");
+const PRIORIDAD = [".jpg", ".jpeg", ".png", ".webp"];
 
-let cache: Map<string, string> | null = null;
-
-function indice(): Map<string, string> {
-  if (cache) return cache;
-  const m = new Map<string, string>();
-  let archivos: string[] = [];
-  try {
-    archivos = fs.readdirSync(DIR);
-  } catch {
-    archivos = [];
-  }
-  for (const ext of [...PRIORIDAD].reverse()) {
-    for (const a of archivos) {
-      if (a.toLowerCase().endsWith(ext)) m.set(path.basename(a, path.extname(a)), a);
+export function rutaImagen(ref: string, slug?: string, marca?: string, arquetipo?: string): string {
+  // 1. Buscar primero en /public/productos por ref (ej: A101.jpg)
+  if (fs.existsSync(DIR_PRODUCTOS)) {
+    for (const ext of PRIORIDAD) {
+      if (fs.existsSync(path.join(DIR_PRODUCTOS, `${ref}${ext}`))) {
+        return `/productos/${ref}${ext}`;
+      }
     }
   }
-  cache = m;
-  return m;
-}
 
-export function rutaImagen(ref: string): string {
-  const archivo = indice().get(ref);
-  return archivo ? `/productos/${archivo}` : `/productos/${ref}.svg`;
+  // 2. Si hay slug, buscar en la carpeta de imágenes jerárquica /public/imagenes/...
+  if (slug) {
+    const m = (marca || "apple").toLowerCase();
+    const cat = arquetipo === "reloj" ? "smartwatch" : "smartphone";
+    const rutaRelativa = `imagenes/${m}/${cat}/${slug}/default.webp`;
+    
+    if (fs.existsSync(path.join(process.cwd(), "public", rutaRelativa))) {
+      return `/${rutaRelativa}`;
+    }
+  }
+
+  // 3. Fallback al gráfico SVG generado si no existe foto real ni placeholder cargado
+  return `/productos/${ref}.svg`;
 }
 
 export function fotografiasPropias(): number {
-  return [...indice().values()].filter((a) => !a.endsWith(".svg")).length;
+  if (!fs.existsSync(DIR_PRODUCTOS)) return 0;
+  try {
+    const archivos = fs.readdirSync(DIR_PRODUCTOS);
+    return archivos.filter(a => !a.endsWith(".svg")).length;
+  } catch {
+    return 0;
+  }
 }
 
-/** ¿La imagen es una fotografía/recorte real o la generada por el sistema? */
 export function tipoImagen(ref: string): "real" | "generada" {
-  const a = indice().get(ref);
-  return a && !a.endsWith(".svg") ? "real" : "generada";
+  if (fs.existsSync(DIR_PRODUCTOS)) {
+    for (const ext of PRIORIDAD) {
+      if (fs.existsSync(path.join(DIR_PRODUCTOS, `${ref}${ext}`))) {
+        return "real";
+      }
+    }
+  }
+  return "generada";
 }
