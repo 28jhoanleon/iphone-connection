@@ -1,0 +1,111 @@
+airpods-4.jpg    # AirPods 4
+airpods-4-noise-cancel.jpg    # AirPods 4 Noise Cancel
+airtag-pack-x1-2-generacion.jpg    # AirTag Pack X1 2ª Generación
+airtag-pack-x4.jpg    # AirTag Pack X4
+amazfit-active-3-premium.jpg    # Amazfit Active 3 Premium
+amazfit-balance-2.jpg    # Amazfit Balance 2
+amazfit-gts-4-mini.jpg    # Amazfit Gts 4 Mini
+apple-pencil-1-generacion.jpg    # Apple Pencil 1ª Generación
+apple-pencil-pro.jpg    # Apple Pencil Pro
+apple-pencil-usb-c.jpg    # Apple Pencil USB-C
+apple-watch-se-2-40mm.jpg    # Apple Watch SE 2 40mm
+apple-watch-se-3-40mm.jpg    # Apple Watch SE 3 40mm
+apple-watch-se-3-44mm.jpg    # Apple Watch SE 3 44mm
+apple-watch-serie-10-46mm.jpg    # Apple Watch Serie 10 46mm
+apple-watch-serie-11-42mm.jpg    # Apple Watch Serie 11 42mm
+apple-watch-serie-11-46mm.jpg    # Apple Watch Serie 11 46mm
+apple-watch-ultra-3-49mm.jpg    # Apple Watch Ultra 3 49mm
+cable-usb-iphone.jpg    # Cable USB iPhone
+cargador-20w-certificado-iphone.jpg    # Cargador 20W certificado iPhone
+cargador-20w-original-iphone.jpg    # Cargador 20W original iPhone
+cargador-20w-original-iphone-llevando-el-equipo.jpg    # Cargador 20W original iPhone (llevando el equipo)
+cargador-samsung-25w-original.jpg    # Cargador Samsung 25W original
+garmin-forerunner-165-music.jpg    # Garmin Forerunner 165 Music
+garmin-instinct-2x-solar.jpg    # Garmin Instinct 2X Solar
+jbl-bt-endurance-run-3.jpg    # JBL BT Endurance Run 3
+jbl-boombox-4.jpg    # JBL Boombox 4
+jbl-charge-6.jpg    # JBL Charge 6
+jbl-flip-7.jpg    # JBL Flip 7
+jbl-go-4.jpg    # JBL Go 4
+jbl-tune-310-usb-c.jpg    # JBL Tune 310 USB-C
+jbl-tune-520bt.jpg    # JBL Tune 520BT
+jbl-tune-770nc.jpg    # JBL Tune 770NC
+joystick-ps5-dualsense-adicional.jpg    # Joystick PS5 DualSense Adicional
+lenovo-idea-tab-pro-12-7.jpg    # Lenovo Idea Tab Pro 12.7
+macbook-air-13-6-m5.jpg    # MacBook Air 13,6 M5
+macbook-air-15-3-m5.jpg    # MacBook Air 15,3 M5
+macbook-neo-13.jpg    # MacBook Neo 13"
+macbook-pro-m5-14.jpg    # MacBook Pro M5 14"
+macbook-pro-m5-pro-14.jpg    # MacBook Pro M5 Pro 14"
+malla-nike-para-apple-watch.jpg    # Malla Nike para Apple Watch
+motorola-moto-edge-60.jpg    # Motorola Moto Edge 60
+motorola-moto-edge-60-fusion.jpg    # Motorola Moto Edge 60 Fusion
+motorola-moto-edge-70-fusion.jpg    # Motorola Moto Edge 70 Fusion
+motorola-moto-edge-pro.jpg    # Motorola Moto Edge Pro
+motorola-moto-g06.jpg    # Motorola Moto G06
+motorola-moto-g15.jpg    # Motorola Moto G15
+motorola-moto-g17.jpg    # Motorola Moto G17
+motorola-moto-g35.jpg    # Motorola Moto G35
+motorola-moto-g56.jpg    # Motorola Moto G56
+motorola-moto-g57-power.jpg    # Motorola Moto G57 Power
+motorola-moto-g67.jpg    # Motorola Moto G67
+motorola-moto-g77.jpg    # Motorola Moto G77
+motorola-moto-g86.jpg    # Motorola Moto G86
+motorola-moto-g86-power.jpg    # Motorola Moto G86 Power
+nintendo-switch-2-lcd.jpg    # Nintendo Switch 2 LCD
+nintendo-switch-lite.jpg    # Nintendo Switch Lite
+nintendo-switch-oled.jpg    # Nintendo Switch OLED
+notebook-asus-vivobook-go-15-6.jpg    # Notebook Asus Vivobook Go 15.6"
+notebook-dell-15-6.jpg    # Notebook Dell 15,6"
+notebook-hp-15-6.jpg    # Notebook HP 15,6"
+notebook-lenovo-14.jpg    # Notebook Lenovo 14"
+notebook-lenovo-15-6.jpg    # Notebook Lenovo 15.6"
+notebook-lenovo-ideapad-1-15-6.jpg    # Notebook Lenovo Ideapad 1 15.6"
+ps5-digital.jpg    # PS5 Digital
+ps5-lectora.jpg    # PS5 Lectora
+ps5-vr2-lentes-realidad-virtual.jpg    # PS5 VR2 Lentes Realidad Virtual
+poco-f8-pro.jpg    # Poco F8 Pro
+poco-f8-ultra.jpg    # Poco F8 Ultra
+poco-m8.jpg    # Poco M8
+poco-m8-pro.jpg    # Poco M8 Pro
+poco-x8-pro.jpg    # Poco X8 Pro
+poco-x8-pro-8-gb-ram.jpg    # Poco X8 Pro 8 GB RAM
+poco-x8-pro-max.jpg    # Poco X8 Pro Max
+samsung-galaxy-a07.jpg    # Samsung Galaxy A07
+samsung-galaxy-a17.jpg    # Samsung Galaxy A17
+samsung-galaxy-a27.jpg    # Samsung Galaxy A27
+samsung-galaxy-a37.jpg    # Samsung Galaxy A37
+samsung-galaxy-a57.jpg    # Samsung Galaxy A57
+samsung-galaxy-fit-3.jpg    # Samsung Galaxy Fit 3
+samsung-galaxy-s25fe.jpg    # Samsung Galaxy S25FE
+samsung-galaxy-watch-7-44mm.jpg    # Samsung Galaxy Watch 7 44mm
+samsung-galaxy-watch-8-40mm.jpg    # Samsung Galaxy Watch 8 40mm
+samsung-galaxy-watch-8-44mm.jpg    # Samsung Galaxy Watch 8 44mm
+samsung-galaxy-watch-ultra-7-47mm-lte.jpg    # Samsung Galaxy Watch Ultra 7 47mm LTE
+samsung-tab-a11-8-7.jpg    # Samsung Tab A11 8.7"
+samsung-tab-a11.jpg    # Samsung Tab A11+
+samsung-tab-a11-11.jpg    # Samsung Tab A11+ 11"
+samsung-tab-a9-11.jpg    # Samsung Tab A9+ 11"
+samsung-tab-s10-fe-pen.jpg    # Samsung Tab S10 FE + Pen
+samsung-tab-s10-lite-pen.jpg    # Samsung Tab S10 Lite + Pen
+samsung-tab-s11-14-6-pen.jpg    # Samsung Tab S11 14.6 + Pen
+samsung-tab-s11-ultra-14-6-pen.jpg    # Samsung Tab S11 Ultra 14.6 + Pen
+smart-watch-t800-ultra-3.jpg    # Smart Watch T800 Ultra 3
+volante-logitech-para-ps5.jpg    # Volante Logitech para PS5
+wallet-magsafe.jpg    # Wallet MagSafe
+x-view-xpods-5.jpg    # X View Xpods 5
+xiaomi-17t.jpg    # Xiaomi 17T
+xiaomi-redmi-15.jpg    # Xiaomi Redmi 15
+xiaomi-redmi-15c.jpg    # Xiaomi Redmi 15C
+xiaomi-redmi-note-15.jpg    # Xiaomi Redmi Note 15
+xiaomi-redmi-note-15-pro.jpg    # Xiaomi Redmi Note 15 Pro
+xiaomi-redmi-note-15-pro.jpg    # Xiaomi Redmi Note 15 Pro +
+xiaomi-sport-band.jpg    # Xiaomi Sport Band
+xiaomi-tablet-redmi-pad-2-se-11.jpg    # Xiaomi Tablet Redmi Pad 2 SE 11"
+xiaomi-tablet-redmi-pad-pro-2-12-1.jpg    # Xiaomi Tablet Redmi Pad Pro 2 12.1"
+ipad-air-11-m4.jpg    # iPad Air 11" M4
+ipad-air-13-m4.jpg    # iPad Air 13" M4
+ipad-pro-11-m5.jpg    # iPad Pro 11" M5
+iphone-15-pro.jpg    # iPhone 15 Pro
+iphone-17-pro.jpg    # iPhone 17 Pro
+iphone-17e.jpg    # iPhone 17e
