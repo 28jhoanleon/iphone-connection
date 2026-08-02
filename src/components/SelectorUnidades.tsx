@@ -13,11 +13,9 @@ interface SelectorUnidadesProps {
 export const SelectorUnidades: React.FC<SelectorUnidadesProps> = ({
   modelo,
   unidades,
-  tc,
 }) => {
-  // Soporta recibir 'modelo.unidades' o el array 'unidades' directamente
-  const listaUnidades: Unidad[] = unidades || modelo?.unidades || [];
-  const [unidadSelec, setUnidadSelec] = useState<Unidad>(listaUnidades[0]);
+  const listaUnidades: any[] = unidades || modelo?.unidades || [];
+  const [unidadSelec, setUnidadSelec] = useState<any>(listaUnidades[0]);
 
   if (!listaUnidades || listaUnidades.length === 0) return null;
 
@@ -28,11 +26,14 @@ export const SelectorUnidades: React.FC<SelectorUnidadesProps> = ({
           Seleccionar variante:
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {listaUnidades.map((u) => {
-            const activa = unidadSelec && (u.id ? u.id === unidadSelec.id : u.referencia === unidadSelec.referencia);
+          {listaUnidades.map((u, idx) => {
+            const claveActual = u.id || u.referencia || u.ref || idx;
+            const claveSeleccionada = unidadSelec?.id || unidadSelec?.referencia || unidadSelec?.ref;
+            const activa = claveActual === claveSeleccionada;
+
             return (
               <button
-                key={u.id || u.referencia || u.ref}
+                key={claveActual}
                 onClick={() => setUnidadSelec(u)}
                 className={`w-full text-left p-3 rounded-xl border transition-all ${
                   activa
@@ -58,7 +59,6 @@ export const SelectorUnidades: React.FC<SelectorUnidadesProps> = ({
 
       <div className="mt-4">
         <TarjetaUnidad
-          key={unidadSelec?.id || unidadSelec?.referencia || unidadSelec?.ref}
           unidad={unidadSelec || listaUnidades[0]}
         />
       </div>
