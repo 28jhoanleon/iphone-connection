@@ -6,7 +6,7 @@
 import datos from "@/data/catalogo.json";
 import type { Familia, Modelo, Unidad } from "./tipos";
 import { precioARS } from "./formato";
-import { rutaImagen } from "./imagenes";
+import { rutaImagenUnidad } from "./imagenes";
 
 /** Orden de las categorías. Apple primero: jerarquía de marca del Doc 00. */
 const ORDEN = ["iPhone", "Android", "Notebooks", "Tablets", "Relojes",
@@ -190,7 +190,7 @@ export function indiceBusqueda(tc: number): ItemBusqueda[] {
       tipo: "modelo",
       titulo: m.nombre,
       href: `/modelo/${m.slug}`,
-      imagen: rutaImagen(m.unidades[0].ref),
+      imagen: rutaImagenUnidad(m.unidades[0]),
       estado: `${m.unidades.length} unidades`,
       precioCentavos: Math.min(...m.unidades.map((u) => precioARS(u, tc))),
       clave: normalizar([m.nombre, m.categoria, m.marca].join(" ")),
@@ -203,7 +203,7 @@ export function indiceBusqueda(tc: number): ItemBusqueda[] {
       tipo: "unidad",
       titulo: u.nombre,
       href: `/unidad/${u.ref}`,
-      imagen: rutaImagen(u.ref),
+      imagen: rutaImagenUnidad(u),
       estado: u.disponibilidad === "disponible" ? "Stock inmediato" : "Por encargo",
       precioCentavos: precioARS(u, tc),
       clave: normalizar(

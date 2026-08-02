@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { familias, familiaPorSlug } from "@/lib/catalogo";
-import { rutaImagen } from "@/lib/imagenes";
+import { rutaImagenUnidad } from "@/lib/imagenes";
 import { precio, precioARS } from "@/lib/formato";
 import { tipoCambio } from "@/lib/dolar";
 import { SITIO } from "@/lib/seo";
@@ -52,7 +52,7 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
           >
             <div className="mb-3 aspect-square overflow-hidden rounded-md bg-white">
               <img
-                src={rutaImagen(m.unidades[0].ref)}
+                src={rutaImagenUnidad(m.unidades[0])}
                 alt={m.nombre}
                 width={600}
                 height={600}

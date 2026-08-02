@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Unidad } from "@/lib/tipos";
 import { precio, precioARS } from "@/lib/formato";
-import { rutaImagen } from "@/lib/imagenes";
+import { rutaImagenUnidad } from "@/lib/imagenes";
 import EtiquetaEstado from "./EtiquetaEstado";
 import Readout from "./Readout";
 
@@ -30,7 +30,7 @@ export default function TarjetaUnidad({
     >
       <div className="mb-3 aspect-square overflow-hidden rounded-md bg-white">
         <img
-          src={rutaImagen(u.ref)}
+          src={rutaImagenUnidad(u)}
           alt={u.nombre}
           width={600}
           height={600}

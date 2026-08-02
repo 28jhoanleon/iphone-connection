@@ -4,7 +4,7 @@ import {
   todasLasUnidades, unidadPorRef, slugFamilia,
   mismasUnidades, relacionados, accesoriosCompatibles, esUltimasUnidades,
 } from "@/lib/catalogo";
-import { rutaImagen } from "@/lib/imagenes";
+import { rutaImagenUnidad } from "@/lib/imagenes";
 import {
   precio, precioARS, capacidad, garantia, linkWhatsApp, ETIQUETA_DISPONIBILIDAD,
 } from "@/lib/formato";
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ref: stri
   const titulo = `${u.nombre} ${u.estadoEtiqueta} — iPhone Connection`;
   const desc = `${u.nombreCompleto}. ${u.bateria ? `Salud de batería ${u.bateria}%. ` : ""}Garantía ${garantia(u)}. Estado declarado antes de comprar.`;
   const url = `${SITIO}/unidad/${u.ref}`;
-  const img = `${SITIO}${rutaImagen(u.ref)}`;
+  const img = `${SITIO}${rutaImagenUnidad(u)}`;
 
   return {
     title: titulo,
@@ -65,7 +65,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
     sku: u.ref,
     brand: { "@type": "Brand", name: u.marca },
     category: u.categoria,
-    image: [`${SITIO}${rutaImagen(u.ref)}`],
+    image: [`${SITIO}${rutaImagenUnidad(u)}`],
     description: `${u.nombre}. ${u.estadoEtiqueta}.${u.bateria ? ` Salud de batería ${u.bateria}%.` : ""}`,
     itemCondition: sellado
       ? "https://schema.org/NewCondition"
@@ -103,7 +103,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
         <div className="grid grid-cols-2 gap-2">
           <div className="col-span-2 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg bg-white">
             <img
-              src={rutaImagen(u.ref)} alt={u.nombre} width={1000} height={750}
+              src={rutaImagenUnidad(u)} alt={u.nombre} width={1000} height={750}
               fetchPriority="high" decoding="async"
               className="h-full w-full object-contain"
             />
@@ -111,7 +111,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
           {[0, 1].map((i) => (
             <div key={i} className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-white">
               <img
-                src={rutaImagen(u.ref)} alt="" width={500} height={500}
+                src={rutaImagenUnidad(u)} alt="" width={500} height={500}
                 loading="lazy" decoding="async"
                 className="h-full w-full object-contain"
               />
