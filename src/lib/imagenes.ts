@@ -2,11 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 
 const DIR_PRODUCTOS = path.join(process.cwd(), "public/productos");
-const DIR_IMAGENES = path.join(process.cwd(), "public/imagenes");
 const PRIORIDAD = [".jpg", ".jpeg", ".png", ".webp"];
 
 export function rutaImagen(ref: string, slug?: string, marca?: string, arquetipo?: string): string {
-  // 1. Buscar primero en /public/productos por ref (ej: A101.jpg)
+  // 1. Prioridad: Buscar por referencia directa en /public/productos/ (ej: A101.jpg)
   if (fs.existsSync(DIR_PRODUCTOS)) {
     for (const ext of PRIORIDAD) {
       if (fs.existsSync(path.join(DIR_PRODUCTOS, `${ref}${ext}`))) {
@@ -15,18 +14,32 @@ export function rutaImagen(ref: string, slug?: string, marca?: string, arquetipo
     }
   }
 
-  // 2. Si hay slug, buscar en la carpeta de imágenes jerárquica /public/imagenes/...
+  // 2. Buscar en la estructura jerárquica /public/imagenes/
   if (slug) {
-    const m = (marca || "apple").toLowerCase();
-    const cat = arquetipo === "reloj" ? "smartwatch" : "smartphone";
-    const rutaRelativa = `imagenes/${m}/${cat}/${slug}/default.webp`;
-    
+    const m = (marca || "generico").toLowerCase().trim();
+    const s = slug.toLowerCase().trim();
+    let cat = arquetipo === "reloj" ? "smartwatch" : "smartphone";
+
+    // Intentar variante 1: Categoria inferida (smartwatch, smartphone, notebook, etc.)
+    let rutaRelativa = `imagenes/${m}/${cat}/${s}/default.webp`;
+    if (fs.existsSync(path.join(process.cwd(), "public", rutaRelativa))) {
+      return `/${rutaRelativa}`;
+    }
+
+    // Intentar variante 2: Forzar 'smartphone' (donde están casi todas las carpetas físicas)
+    rutaRelativa = `imagenes/${m}/smartphone/${s}/default.webp`;
+    if (fs.existsSync(path.join(process.cwd(), "public", rutaRelativa))) {
+      return `/${rutaRelativa}`;
+    }
+
+    // Intentar variante 3: Forzar 'smartwatch'
+    rutaRelativa = `imagenes/${m}/smartwatch/${s}/default.webp`;
     if (fs.existsSync(path.join(process.cwd(), "public", rutaRelativa))) {
       return `/${rutaRelativa}`;
     }
   }
 
-  // 3. Fallback al gráfico SVG generado si no existe foto real ni placeholder cargado
+  // 3. Fallback al SVG dinámico solo si no existe el archivo estático
   return `/productos/${ref}.svg`;
 }
 
