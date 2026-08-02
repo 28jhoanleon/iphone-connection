@@ -1,41 +1,45 @@
-export type TipoImagenResultado = "generada" | "real";
+/**
+ * Resolución de imágenes en tiempo de build.
+ * Prioridad: fotografía propia (.jpg/.jpeg/.png/.webp) > imagen generada (.svg)
+ * Dejar caer `A104.jpg` en /public/productos reemplaza esa imagen sin tocar código.
+ */
+import fs from "node:fs";
+import path from "node:path";
+
+const DIR = path.join(process.cwd(), "public/productos");
+const PRIORIDAD = [".jpg", ".jpeg", ".png", ".webp", ".svg"];
+
+let cache: Map<string, string> | null = null;
+
+function indice(): Map<string, string> {
+  if (cache) return cache;
+  const m = new Map<string, string>();
+  let archivos: string[] = [];
+  try {
+    archivos = fs.readdirSync(DIR);
+  } catch {
+    archivos = [];
+  }
+  for (const ext of [...PRIORIDAD].reverse()) {
+    for (const a of archivos) {
+      if (a.toLowerCase().endsWith(ext)) m.set(path.basename(a, path.extname(a)), a);
+    }
+  }
+  cache = m;
+  return m;
+}
+
+export function rutaImagen(ref: string): string {
+  const archivo = indice().get(ref);
+  return archivo ? `/productos/${archivo}` : `/productos/${ref}.svg`;
+}
 
 export function fotografiasPropias(): number {
-  return 0;
+  return [...indice().values()].filter((a) => !a.endsWith(".svg")).length;
 }
 
-export function tipoImagen(input: any): TipoImagenResultado {
-  if (!input) return "generada";
-  if (typeof input === "string") return "generada";
-  if (input?.imagen && typeof input.imagen === "string" && input.imagen.trim() !== "") {
-    return "real";
-  }
-  return "generada";
-}
-
-export function rutaImagen(input: any): string {
-  if (!input) return "/maestras/default.svg";
-
-  // Si le pasan un string directo
-  if (typeof input === "string") {
-    if (input.startsWith("/")) return input;
-    const slugLimpio = input.toLowerCase().trim().replace(/\s+/g, "-");
-    return `/imagenes/apple/smartphone/${slugLimpio}/default.webp`;
-  }
-
-  // Si le pasan un objeto
-  if (input?.imagen && typeof input.imagen === "string" && input.imagen.trim() !== "") {
-    return input.imagen.startsWith("/") ? input.imagen : `/${input.imagen}`;
-  }
-
-  const marca = (input?.marcaSlug || input?.marca || "apple").toLowerCase().trim().replace(/\s+/g, "-");
-  const familia = (input?.familiaSlug || input?.categoria || "smartphone").toLowerCase().trim().replace(/\s+/g, "-");
-  let modelo = input?.modeloSlug || input?.referencia || input?.ref || input?.modelo || input?.nombre;
-
-  if (modelo) {
-    modelo = modelo.toLowerCase().trim().replace(/\s+/g, "-");
-    return `/imagenes/${marca}/${familia}/${modelo}/default.webp`;
-  }
-
-  return "/maestras/default.svg";
+/** ¿La imagen es una fotografía/recorte real o la generada por el sistema? */
+export function tipoImagen(ref: string): "real" | "generada" {
+  const a = indice().get(ref);
+  return a && !a.endsWith(".svg") ? "real" : "generada";
 }

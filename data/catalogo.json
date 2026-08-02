@@ -1,7 +1,6 @@
 [
   {
     "ref": "A101",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp",
     "modelo": "iPhone 11",
     "modeloSlug": "iphone-11",
     "config": null,
@@ -30,7 +29,6 @@
   },
   {
     "ref": "A102",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp",
     "modelo": "iPhone 11",
     "modeloSlug": "iphone-11",
     "config": null,
@@ -59,7 +57,6 @@
   },
   {
     "ref": "A103",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp",
     "modelo": "iPhone 11",
     "modeloSlug": "iphone-11",
     "config": null,
@@ -85,7 +82,6 @@
   },
   {
     "ref": "A104",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp",
     "modelo": "iPhone 11",
     "modeloSlug": "iphone-11",
     "config": null,
@@ -111,7 +107,6 @@
   },
   {
     "ref": "A105",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp",
     "modelo": "iPhone 11",
     "modeloSlug": "iphone-11",
     "config": null,
@@ -137,7 +132,6 @@
   },
   {
     "ref": "A106",
-    "imagen": "/imagenes/apple/smartphone/iphone-12-mini/default.webp",
     "modelo": "iPhone 12 Mini",
     "modeloSlug": "iphone-12-mini",
     "config": null,
@@ -163,7 +157,6 @@
   },
   {
     "ref": "A107",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp",
     "modelo": "iPhone 12",
     "modeloSlug": "iphone-12",
     "config": null,
@@ -189,7 +182,6 @@
   },
   {
     "ref": "A108",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp",
     "modelo": "iPhone 12",
     "modeloSlug": "iphone-12",
     "config": null,
@@ -215,7 +207,6 @@
   },
   {
     "ref": "A109",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp",
     "modelo": "iPhone 12",
     "modeloSlug": "iphone-12",
     "config": null,
@@ -241,7 +232,6 @@
   },
   {
     "ref": "A110",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp",
     "modelo": "iPhone 12",
     "modeloSlug": "iphone-12",
     "config": null,
@@ -270,7 +260,6 @@
   },
   {
     "ref": "A111",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp",
     "modelo": "iPhone 12",
     "modeloSlug": "iphone-12",
     "config": null,
@@ -300,7 +289,6 @@
   },
   {
     "ref": "A112",
-    "imagen": "/imagenes/apple/smartphone/iphone-12-pro/default.webp",
     "modelo": "iPhone 12 Pro",
     "modeloSlug": "iphone-12-pro",
     "config": null,
@@ -326,7 +314,6 @@
   },
   {
     "ref": "A113",
-    "imagen": "/imagenes/apple/smartphone/iphone-12-pro/default.webp",
     "modelo": "iPhone 12 Pro",
     "modeloSlug": "iphone-12-pro",
     "config": null,
@@ -352,7 +339,6 @@
   },
   {
     "ref": "A114",
-    "imagen": "/imagenes/apple/smartphone/iphone-12-pro/default.webp",
     "modelo": "iPhone 12 Pro",
     "modeloSlug": "iphone-12-pro",
     "config": null,
@@ -378,7 +364,6 @@
   },
   {
     "ref": "A115",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-mini/default.webp",
     "modelo": "iPhone 13 Mini",
     "modeloSlug": "iphone-13-mini",
     "config": null,
@@ -407,7 +392,6 @@
   },
   {
     "ref": "A116",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-mini/default.webp",
     "modelo": "iPhone 13 Mini",
     "modeloSlug": "iphone-13-mini",
     "config": null,
@@ -433,7 +417,6 @@
   },
   {
     "ref": "A117",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-mini/default.webp",
     "modelo": "iPhone 13 Mini",
     "modeloSlug": "iphone-13-mini",
     "config": null,
@@ -463,7 +446,6 @@
   },
   {
     "ref": "A118",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-mini/default.webp",
     "modelo": "iPhone 13 Mini",
     "modeloSlug": "iphone-13-mini",
     "config": null,
@@ -492,7 +474,6 @@
   },
   {
     "ref": "A119",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-mini/default.webp",
     "modelo": "iPhone 13 Mini",
     "modeloSlug": "iphone-13-mini",
     "config": null,
@@ -521,7 +502,6 @@
   },
   {
     "ref": "A120",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -551,7 +531,6 @@
   },
   {
     "ref": "A121",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -580,7 +559,6 @@
   },
   {
     "ref": "A122",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -609,7 +587,6 @@
   },
   {
     "ref": "A123",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -635,7 +612,6 @@
   },
   {
     "ref": "A124",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -661,7 +637,6 @@
   },
   {
     "ref": "A125",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -691,7 +666,6 @@
   },
   {
     "ref": "A126",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -717,7 +691,6 @@
   },
   {
     "ref": "A127",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -743,7 +716,6 @@
   },
   {
     "ref": "A128",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -769,7 +741,6 @@
   },
   {
     "ref": "A129",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-pro/default.webp",
     "modelo": "iPhone 13 Pro",
     "modeloSlug": "iphone-13-pro",
     "config": null,
@@ -795,7 +766,6 @@
   },
   {
     "ref": "A130",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-pro/default.webp",
     "modelo": "iPhone 13 Pro",
     "modeloSlug": "iphone-13-pro",
     "config": null,
@@ -821,7 +791,6 @@
   },
   {
     "ref": "A131",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-pro/default.webp",
     "modelo": "iPhone 13 Pro",
     "modeloSlug": "iphone-13-pro",
     "config": null,
@@ -847,7 +816,6 @@
   },
   {
     "ref": "A132",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-pro-max/default.webp",
     "modelo": "iPhone 13 Pro Max",
     "modeloSlug": "iphone-13-pro-max",
     "config": null,
@@ -873,7 +841,6 @@
   },
   {
     "ref": "A133",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-pro-max/default.webp",
     "modelo": "iPhone 13 Pro Max",
     "modeloSlug": "iphone-13-pro-max",
     "config": null,
@@ -899,7 +866,6 @@
   },
   {
     "ref": "A134",
-    "imagen": "/imagenes/apple/smartphone/iphone-13-pro-max/default.webp",
     "modelo": "iPhone 13 Pro Max",
     "modeloSlug": "iphone-13-pro-max",
     "config": null,
@@ -925,7 +891,6 @@
   },
   {
     "ref": "A135",
-    "imagen": "/imagenes/apple/smartphone/iphone-14/default.webp",
     "modelo": "iPhone 14",
     "modeloSlug": "iphone-14",
     "config": null,
@@ -951,7 +916,6 @@
   },
   {
     "ref": "A136",
-    "imagen": "/imagenes/apple/smartphone/iphone-14/default.webp",
     "modelo": "iPhone 14",
     "modeloSlug": "iphone-14",
     "config": null,
@@ -980,7 +944,6 @@
   },
   {
     "ref": "A137",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-plus/default.webp",
     "modelo": "iPhone 14 Plus",
     "modeloSlug": "iphone-14-plus",
     "config": null,
@@ -1006,7 +969,6 @@
   },
   {
     "ref": "A138",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-plus/default.webp",
     "modelo": "iPhone 14 Plus",
     "modeloSlug": "iphone-14-plus",
     "config": null,
@@ -1032,7 +994,6 @@
   },
   {
     "ref": "A139",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-pro/default.webp",
     "modelo": "iPhone 14 Pro",
     "modeloSlug": "iphone-14-pro",
     "config": null,
@@ -1058,7 +1019,6 @@
   },
   {
     "ref": "A140",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-pro/default.webp",
     "modelo": "iPhone 14 Pro",
     "modeloSlug": "iphone-14-pro",
     "config": null,
@@ -1087,7 +1047,6 @@
   },
   {
     "ref": "A141",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-pro/default.webp",
     "modelo": "iPhone 14 Pro",
     "modeloSlug": "iphone-14-pro",
     "config": null,
@@ -1113,7 +1072,6 @@
   },
   {
     "ref": "A142",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-pro/default.webp",
     "modelo": "iPhone 14 Pro",
     "modeloSlug": "iphone-14-pro",
     "config": null,
@@ -1142,7 +1100,6 @@
   },
   {
     "ref": "A143",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-pro/default.webp",
     "modelo": "iPhone 14 Pro",
     "modeloSlug": "iphone-14-pro",
     "config": null,
@@ -1168,7 +1125,6 @@
   },
   {
     "ref": "A144",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-pro/default.webp",
     "modelo": "iPhone 14 Pro",
     "modeloSlug": "iphone-14-pro",
     "config": null,
@@ -1194,7 +1150,6 @@
   },
   {
     "ref": "A145",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-pro/default.webp",
     "modelo": "iPhone 14 Pro",
     "modeloSlug": "iphone-14-pro",
     "config": null,
@@ -1223,7 +1178,6 @@
   },
   {
     "ref": "A146",
-    "imagen": "/imagenes/apple/smartphone/iphone-14-pro-max/default.webp",
     "modelo": "iPhone 14 Pro Max",
     "modeloSlug": "iphone-14-pro-max",
     "config": null,
@@ -1249,7 +1203,6 @@
   },
   {
     "ref": "A147",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp",
     "modelo": "iPhone 15",
     "modeloSlug": "iphone-15",
     "config": null,
@@ -1275,7 +1228,6 @@
   },
   {
     "ref": "A148",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp",
     "modelo": "iPhone 15",
     "modeloSlug": "iphone-15",
     "config": null,
@@ -1301,7 +1253,6 @@
   },
   {
     "ref": "A149",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp",
     "modelo": "iPhone 15 Pro",
     "modeloSlug": "iphone-15-pro",
     "config": null,
@@ -1327,7 +1278,6 @@
   },
   {
     "ref": "A150",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp",
     "modelo": "iPhone 15 Pro",
     "modeloSlug": "iphone-15-pro",
     "config": null,
@@ -1357,7 +1307,6 @@
   },
   {
     "ref": "A151",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp",
     "modelo": "iPhone 15 Pro",
     "modeloSlug": "iphone-15-pro",
     "config": null,
@@ -1387,7 +1336,6 @@
   },
   {
     "ref": "A152",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp",
     "modelo": "iPhone 15 Pro",
     "modeloSlug": "iphone-15-pro",
     "config": null,
@@ -1413,7 +1361,6 @@
   },
   {
     "ref": "A153",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp",
     "modelo": "iPhone 15 Pro",
     "modeloSlug": "iphone-15-pro",
     "config": null,
@@ -1439,7 +1386,6 @@
   },
   {
     "ref": "A154",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp",
     "modelo": "iPhone 15 Pro",
     "modeloSlug": "iphone-15-pro",
     "config": null,
@@ -1465,7 +1411,6 @@
   },
   {
     "ref": "A155",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp",
     "modelo": "iPhone 15 Pro",
     "modeloSlug": "iphone-15-pro",
     "config": null,
@@ -1491,7 +1436,6 @@
   },
   {
     "ref": "A156",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro-max/default.webp",
     "modelo": "iPhone 15 Pro Max",
     "modeloSlug": "iphone-15-pro-max",
     "config": null,
@@ -1517,7 +1461,6 @@
   },
   {
     "ref": "A157",
-    "imagen": "/imagenes/apple/smartphone/iphone-16-pro/default.webp",
     "modelo": "iPhone 16 Pro",
     "modeloSlug": "iphone-16-pro",
     "config": null,
@@ -1546,7 +1489,6 @@
   },
   {
     "ref": "A158",
-    "imagen": "/imagenes/apple/smartphone/iphone-16-pro/default.webp",
     "modelo": "iPhone 16 Pro",
     "modeloSlug": "iphone-16-pro",
     "config": null,
@@ -1575,7 +1517,6 @@
   },
   {
     "ref": "A159",
-    "imagen": "/imagenes/apple/smartphone/iphone-16-pro/default.webp",
     "modelo": "iPhone 16 Pro",
     "modeloSlug": "iphone-16-pro",
     "config": null,
@@ -1601,7 +1542,6 @@
   },
   {
     "ref": "A160",
-    "imagen": "/imagenes/apple/smartphone/iphone-16-pro-max/default.webp",
     "modelo": "iPhone 16 Pro Max",
     "modeloSlug": "iphone-16-pro-max",
     "config": null,
@@ -1627,7 +1567,6 @@
   },
   {
     "ref": "A161",
-    "imagen": "/imagenes/apple/smartphone/iphone-16-pro-max/default.webp",
     "modelo": "iPhone 16 Pro Max",
     "modeloSlug": "iphone-16-pro-max",
     "config": null,
@@ -1657,7 +1596,6 @@
   },
   {
     "ref": "A162",
-    "imagen": "/imagenes/apple/smartphone/iphone-16-pro-max/default.webp",
     "modelo": "iPhone 16 Pro Max",
     "modeloSlug": "iphone-16-pro-max",
     "config": null,
@@ -1686,7 +1624,6 @@
   },
   {
     "ref": "A163",
-    "imagen": "/imagenes/apple/smartphone/iphone-16-pro-max/default.webp",
     "modelo": "iPhone 16 Pro Max",
     "modeloSlug": "iphone-16-pro-max",
     "config": null,
@@ -1712,7 +1649,6 @@
   },
   {
     "ref": "A164",
-    "imagen": "/imagenes/apple/smartphone/iphone-17e/default.webp",
     "modelo": "iPhone 17e",
     "modeloSlug": "iphone-17e",
     "config": null,
@@ -1738,7 +1674,6 @@
   },
   {
     "ref": "A165",
-    "imagen": "/imagenes/apple/smartphone/iphone-17/default.webp",
     "modelo": "iPhone 17",
     "modeloSlug": "iphone-17",
     "config": null,
@@ -1764,7 +1699,6 @@
   },
   {
     "ref": "A166",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro/default.webp",
     "modelo": "iPhone 17 Pro",
     "modeloSlug": "iphone-17-pro",
     "config": null,
@@ -1790,7 +1724,6 @@
   },
   {
     "ref": "A167",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s22/default.webp",
     "modelo": "Samsung Galaxy S22",
     "modeloSlug": "samsung-galaxy-s22",
     "config": null,
@@ -1816,7 +1749,6 @@
   },
   {
     "ref": "A168",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-serie-10-46mm/default.webp",
     "modelo": "Apple Watch Serie 10 46mm",
     "modeloSlug": "apple-watch-serie-10-46mm",
     "config": null,
@@ -1842,7 +1774,6 @@
   },
   {
     "ref": "A169",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-ultra-3-49mm/default.webp",
     "modelo": "Apple Watch Ultra 3 49mm",
     "modeloSlug": "apple-watch-ultra-3-49mm",
     "config": null,
@@ -1868,7 +1799,6 @@
   },
   {
     "ref": "A170",
-    "imagen": "/imagenes/sony/smartphone/joystick-ps5-dualsense/default.webp",
     "modelo": "Joystick PS5 DualSense",
     "modeloSlug": "joystick-ps5-dualsense",
     "config": null,
@@ -1894,7 +1824,6 @@
   },
   {
     "ref": "A171",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp",
     "modelo": "iPhone 13",
     "modeloSlug": "iphone-13",
     "config": null,
@@ -1920,7 +1849,6 @@
   },
   {
     "ref": "A172",
-    "imagen": "/imagenes/apple/smartphone/iphone-14/default.webp",
     "modelo": "iPhone 14",
     "modeloSlug": "iphone-14",
     "config": null,
@@ -1946,7 +1874,6 @@
   },
   {
     "ref": "A173",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp",
     "modelo": "iPhone 15",
     "modeloSlug": "iphone-15",
     "config": null,
@@ -1972,7 +1899,6 @@
   },
   {
     "ref": "A174",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp",
     "modelo": "iPhone 15",
     "modeloSlug": "iphone-15",
     "config": null,
@@ -1998,7 +1924,6 @@
   },
   {
     "ref": "A175",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp",
     "modelo": "iPhone 15",
     "modeloSlug": "iphone-15",
     "config": null,
@@ -2024,7 +1949,6 @@
   },
   {
     "ref": "A176",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-plus/default.webp",
     "modelo": "iPhone 15 Plus",
     "modeloSlug": "iphone-15-plus",
     "config": null,
@@ -2050,7 +1974,6 @@
   },
   {
     "ref": "A177",
-    "imagen": "/imagenes/apple/smartphone/iphone-16/default.webp",
     "modelo": "iPhone 16",
     "modeloSlug": "iphone-16",
     "config": null,
@@ -2076,7 +1999,6 @@
   },
   {
     "ref": "A178",
-    "imagen": "/imagenes/apple/smartphone/iphone-16-plus/default.webp",
     "modelo": "iPhone 16 Plus",
     "modeloSlug": "iphone-16-plus",
     "config": null,
@@ -2102,7 +2024,6 @@
   },
   {
     "ref": "A179",
-    "imagen": "/imagenes/apple/smartphone/iphone-16-pro-max/default.webp",
     "modelo": "iPhone 16 Pro Max",
     "modeloSlug": "iphone-16-pro-max",
     "config": null,
@@ -2128,7 +2049,6 @@
   },
   {
     "ref": "A180",
-    "imagen": "/imagenes/apple/smartphone/iphone-17/default.webp",
     "modelo": "iPhone 17",
     "modeloSlug": "iphone-17",
     "config": null,
@@ -2154,7 +2074,6 @@
   },
   {
     "ref": "A181",
-    "imagen": "/imagenes/apple/smartphone/iphone-17/default.webp",
     "modelo": "iPhone 17",
     "modeloSlug": "iphone-17",
     "config": null,
@@ -2180,7 +2099,6 @@
   },
   {
     "ref": "A182",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-air/default.webp",
     "modelo": "iPhone 17 Air",
     "modeloSlug": "iphone-17-air",
     "config": null,
@@ -2206,7 +2124,6 @@
   },
   {
     "ref": "A183",
-    "imagen": "/imagenes/apple/smartphone/iphone-17e/default.webp",
     "modelo": "iPhone 17e",
     "modeloSlug": "iphone-17e",
     "config": null,
@@ -2232,7 +2149,6 @@
   },
   {
     "ref": "A184",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro/default.webp",
     "modelo": "iPhone 17 Pro",
     "modeloSlug": "iphone-17-pro",
     "config": null,
@@ -2258,7 +2174,6 @@
   },
   {
     "ref": "A185",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro/default.webp",
     "modelo": "iPhone 17 Pro",
     "modeloSlug": "iphone-17-pro",
     "config": null,
@@ -2284,7 +2199,6 @@
   },
   {
     "ref": "A186",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro/default.webp",
     "modelo": "iPhone 17 Pro",
     "modeloSlug": "iphone-17-pro",
     "config": null,
@@ -2310,7 +2224,6 @@
   },
   {
     "ref": "A187",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro/default.webp",
     "modelo": "iPhone 17 Pro",
     "modeloSlug": "iphone-17-pro",
     "config": null,
@@ -2336,7 +2249,6 @@
   },
   {
     "ref": "A188",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro/default.webp",
     "modelo": "iPhone 17 Pro",
     "modeloSlug": "iphone-17-pro",
     "config": null,
@@ -2362,7 +2274,6 @@
   },
   {
     "ref": "A189",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro-max/default.webp",
     "modelo": "iPhone 17 Pro Max",
     "modeloSlug": "iphone-17-pro-max",
     "config": null,
@@ -2388,7 +2299,6 @@
   },
   {
     "ref": "A190",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro-max/default.webp",
     "modelo": "iPhone 17 Pro Max",
     "modeloSlug": "iphone-17-pro-max",
     "config": null,
@@ -2414,7 +2324,6 @@
   },
   {
     "ref": "A191",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro-max/default.webp",
     "modelo": "iPhone 17 Pro Max",
     "modeloSlug": "iphone-17-pro-max",
     "config": null,
@@ -2440,7 +2349,6 @@
   },
   {
     "ref": "A192",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro-max/default.webp",
     "modelo": "iPhone 17 Pro Max",
     "modeloSlug": "iphone-17-pro-max",
     "config": null,
@@ -2466,7 +2374,6 @@
   },
   {
     "ref": "A193",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro-max/default.webp",
     "modelo": "iPhone 17 Pro Max",
     "modeloSlug": "iphone-17-pro-max",
     "config": null,
@@ -2492,7 +2399,6 @@
   },
   {
     "ref": "A194",
-    "imagen": "/imagenes/apple/smartphone/iphone-17-pro-max/default.webp",
     "modelo": "iPhone 17 Pro Max",
     "modeloSlug": "iphone-17-pro-max",
     "config": null,
@@ -2518,7 +2424,6 @@
   },
   {
     "ref": "A195",
-    "imagen": "/imagenes/apple/smartphone/macbook-neo-13/default.webp",
     "modelo": "MacBook Neo 13\"",
     "modeloSlug": "macbook-neo-13",
     "config": null,
@@ -2544,7 +2449,6 @@
   },
   {
     "ref": "A196",
-    "imagen": "/imagenes/apple/smartphone/macbook-neo-13/default.webp",
     "modelo": "MacBook Neo 13\"",
     "modeloSlug": "macbook-neo-13",
     "config": null,
@@ -2570,7 +2474,6 @@
   },
   {
     "ref": "A197",
-    "imagen": "/imagenes/apple/smartphone/macbook-air-13-6-m5/default.webp",
     "modelo": "MacBook Air 13,6 M5",
     "modeloSlug": "macbook-air-13-6-m5",
     "config": null,
@@ -2596,7 +2499,6 @@
   },
   {
     "ref": "A198",
-    "imagen": "/imagenes/apple/smartphone/macbook-air-13-6-m5/default.webp",
     "modelo": "MacBook Air 13,6 M5",
     "modeloSlug": "macbook-air-13-6-m5",
     "config": null,
@@ -2622,7 +2524,6 @@
   },
   {
     "ref": "A199",
-    "imagen": "/imagenes/apple/smartphone/macbook-air-15-3-m5/default.webp",
     "modelo": "MacBook Air 15,3 M5",
     "modeloSlug": "macbook-air-15-3-m5",
     "config": null,
@@ -2648,7 +2549,6 @@
   },
   {
     "ref": "A200",
-    "imagen": "/imagenes/apple/smartphone/macbook-air-15-3-m5/default.webp",
     "modelo": "MacBook Air 15,3 M5",
     "modeloSlug": "macbook-air-15-3-m5",
     "config": null,
@@ -2674,7 +2574,6 @@
   },
   {
     "ref": "A201",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-14/default.webp",
     "modelo": "MacBook Pro M5 14\"",
     "modeloSlug": "macbook-pro-m5-14",
     "config": "16 GB RAM",
@@ -2700,7 +2599,6 @@
   },
   {
     "ref": "A202",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-14/default.webp",
     "modelo": "MacBook Pro M5 14\"",
     "modeloSlug": "macbook-pro-m5-14",
     "config": "16 GB RAM",
@@ -2726,7 +2624,6 @@
   },
   {
     "ref": "A203",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-14/default.webp",
     "modelo": "MacBook Pro M5 14\"",
     "modeloSlug": "macbook-pro-m5-14",
     "config": "24 GB RAM",
@@ -2752,7 +2649,6 @@
   },
   {
     "ref": "A204",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-14/default.webp",
     "modelo": "MacBook Pro M5 14\"",
     "modeloSlug": "macbook-pro-m5-14",
     "config": "32 GB RAM",
@@ -2778,7 +2674,6 @@
   },
   {
     "ref": "A205",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-pro-14/default.webp",
     "modelo": "MacBook Pro M5 Pro 14\"",
     "modeloSlug": "macbook-pro-m5-pro-14",
     "config": "24 GB RAM",
@@ -2804,7 +2699,6 @@
   },
   {
     "ref": "A206",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-pro-14/default.webp",
     "modelo": "MacBook Pro M5 Pro 14\"",
     "modeloSlug": "macbook-pro-m5-pro-14",
     "config": "24 GB RAM",
@@ -2830,7 +2724,6 @@
   },
   {
     "ref": "A207",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-pro-14/default.webp",
     "modelo": "MacBook Pro M5 Pro 14\"",
     "modeloSlug": "macbook-pro-m5-pro-14",
     "config": "24 GB RAM · 20 core",
@@ -2856,7 +2749,6 @@
   },
   {
     "ref": "A208",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-pro-14/default.webp",
     "modelo": "MacBook Pro M5 Pro 14\"",
     "modeloSlug": "macbook-pro-m5-pro-14",
     "config": "48 GB RAM · 16 core",
@@ -2882,7 +2774,6 @@
   },
   {
     "ref": "A209",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-pro-16/default.webp",
     "modelo": "MacBook Pro M5 Pro 16\"",
     "modeloSlug": "macbook-pro-m5-pro-16",
     "config": "24 GB RAM · 20 core",
@@ -2908,7 +2799,6 @@
   },
   {
     "ref": "A210",
-    "imagen": "/imagenes/apple/smartphone/macbook-pro-m5-pro-16/default.webp",
     "modelo": "MacBook Pro M5 Pro 16\"",
     "modeloSlug": "macbook-pro-m5-pro-16",
     "config": "48 GB RAM · 20 core",
@@ -2934,7 +2824,6 @@
   },
   {
     "ref": "A211",
-    "imagen": "/imagenes/apple/smartphone/ipad-mini-a17-pro/default.webp",
     "modelo": "iPad Mini A17 Pro",
     "modeloSlug": "ipad-mini-a17-pro",
     "config": null,
@@ -2960,7 +2849,6 @@
   },
   {
     "ref": "A212",
-    "imagen": "/imagenes/apple/smartphone/ipad-mini-a17-pro/default.webp",
     "modelo": "iPad Mini A17 Pro",
     "modeloSlug": "ipad-mini-a17-pro",
     "config": null,
@@ -2986,7 +2874,6 @@
   },
   {
     "ref": "A213",
-    "imagen": "/imagenes/apple/smartphone/ipad-11/default.webp",
     "modelo": "iPad 11",
     "modeloSlug": "ipad-11",
     "config": null,
@@ -3012,7 +2899,6 @@
   },
   {
     "ref": "A214",
-    "imagen": "/imagenes/apple/smartphone/ipad-11/default.webp",
     "modelo": "iPad 11",
     "modeloSlug": "ipad-11",
     "config": null,
@@ -3038,7 +2924,6 @@
   },
   {
     "ref": "A215",
-    "imagen": "/imagenes/apple/smartphone/ipad-air-11-m4/default.webp",
     "modelo": "iPad Air 11\" M4",
     "modeloSlug": "ipad-air-11-m4",
     "config": null,
@@ -3064,7 +2949,6 @@
   },
   {
     "ref": "A216",
-    "imagen": "/imagenes/apple/smartphone/ipad-air-11-m4/default.webp",
     "modelo": "iPad Air 11\" M4",
     "modeloSlug": "ipad-air-11-m4",
     "config": null,
@@ -3090,7 +2974,6 @@
   },
   {
     "ref": "A217",
-    "imagen": "/imagenes/apple/smartphone/ipad-air-13-m4/default.webp",
     "modelo": "iPad Air 13\" M4",
     "modeloSlug": "ipad-air-13-m4",
     "config": null,
@@ -3116,7 +2999,6 @@
   },
   {
     "ref": "A218",
-    "imagen": "/imagenes/apple/smartphone/ipad-air-13-m4/default.webp",
     "modelo": "iPad Air 13\" M4",
     "modeloSlug": "ipad-air-13-m4",
     "config": null,
@@ -3142,7 +3024,6 @@
   },
   {
     "ref": "A219",
-    "imagen": "/imagenes/apple/smartphone/ipad-pro-11-m5/default.webp",
     "modelo": "iPad Pro 11\" M5",
     "modeloSlug": "ipad-pro-11-m5",
     "config": null,
@@ -3168,7 +3049,6 @@
   },
   {
     "ref": "A220",
-    "imagen": "/imagenes/apple/smartphone/ipad-pro-11-m5/default.webp",
     "modelo": "iPad Pro 11\" M5",
     "modeloSlug": "ipad-pro-11-m5",
     "config": null,
@@ -3194,7 +3074,6 @@
   },
   {
     "ref": "A221",
-    "imagen": "/imagenes/apple/smartphone/ipad-pro-13-m5/default.webp",
     "modelo": "iPad Pro 13\" M5",
     "modeloSlug": "ipad-pro-13-m5",
     "config": null,
@@ -3220,7 +3099,6 @@
   },
   {
     "ref": "A222",
-    "imagen": "/imagenes/apple/smartphone/ipad-pro-13-m5/default.webp",
     "modelo": "iPad Pro 13\" M5",
     "modeloSlug": "ipad-pro-13-m5",
     "config": null,
@@ -3246,7 +3124,6 @@
   },
   {
     "ref": "A223",
-    "imagen": "/imagenes/apple/smartphone/apple-pencil-1-generacion/default.webp",
     "modelo": "Apple Pencil 1ª Generación",
     "modeloSlug": "apple-pencil-1-generacion",
     "config": null,
@@ -3272,7 +3149,6 @@
   },
   {
     "ref": "A224",
-    "imagen": "/imagenes/apple/smartphone/apple-pencil-usb-c/default.webp",
     "modelo": "Apple Pencil USB-C",
     "modeloSlug": "apple-pencil-usb-c",
     "config": null,
@@ -3298,7 +3174,6 @@
   },
   {
     "ref": "A225",
-    "imagen": "/imagenes/apple/smartphone/apple-pencil-pro/default.webp",
     "modelo": "Apple Pencil Pro",
     "modeloSlug": "apple-pencil-pro",
     "config": null,
@@ -3324,7 +3199,6 @@
   },
   {
     "ref": "A226",
-    "imagen": "/imagenes/apple/smartphone/airpods-pro-3/default.webp",
     "modelo": "AirPods Pro 3",
     "modeloSlug": "airpods-pro-3",
     "config": null,
@@ -3350,7 +3224,6 @@
   },
   {
     "ref": "A227",
-    "imagen": "/imagenes/apple/smartphone/airpods-4-noise-cancel/default.webp",
     "modelo": "AirPods 4 Noise Cancel",
     "modeloSlug": "airpods-4-noise-cancel",
     "config": null,
@@ -3376,7 +3249,6 @@
   },
   {
     "ref": "A228",
-    "imagen": "/imagenes/apple/smartphone/airpods-4/default.webp",
     "modelo": "AirPods 4",
     "modeloSlug": "airpods-4",
     "config": null,
@@ -3402,7 +3274,6 @@
   },
   {
     "ref": "A229",
-    "imagen": "/imagenes/apple/smartphone/airtag-pack-x1-2-generacion/default.webp",
     "modelo": "AirTag Pack X1 2ª Generación",
     "modeloSlug": "airtag-pack-x1-2-generacion",
     "config": null,
@@ -3428,7 +3299,6 @@
   },
   {
     "ref": "A230",
-    "imagen": "/imagenes/apple/smartphone/airtag-pack-x4/default.webp",
     "modelo": "AirTag Pack X4",
     "modeloSlug": "airtag-pack-x4",
     "config": null,
@@ -3454,7 +3324,6 @@
   },
   {
     "ref": "A231",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-se-2-40mm/default.webp",
     "modelo": "Apple Watch SE 2 40mm",
     "modeloSlug": "apple-watch-se-2-40mm",
     "config": "Cellular",
@@ -3480,7 +3349,6 @@
   },
   {
     "ref": "A232",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-se-3-40mm/default.webp",
     "modelo": "Apple Watch SE 3 40mm",
     "modeloSlug": "apple-watch-se-3-40mm",
     "config": null,
@@ -3506,7 +3374,6 @@
   },
   {
     "ref": "A233",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-se-3-44mm/default.webp",
     "modelo": "Apple Watch SE 3 44mm",
     "modeloSlug": "apple-watch-se-3-44mm",
     "config": null,
@@ -3532,7 +3399,6 @@
   },
   {
     "ref": "A234",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-serie-11-42mm/default.webp",
     "modelo": "Apple Watch Serie 11 42mm",
     "modeloSlug": "apple-watch-serie-11-42mm",
     "config": null,
@@ -3558,7 +3424,6 @@
   },
   {
     "ref": "A235",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-serie-11-42mm/default.webp",
     "modelo": "Apple Watch Serie 11 42mm",
     "modeloSlug": "apple-watch-serie-11-42mm",
     "config": "Cellular",
@@ -3584,7 +3449,6 @@
   },
   {
     "ref": "A236",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-serie-11-46mm/default.webp",
     "modelo": "Apple Watch Serie 11 46mm",
     "modeloSlug": "apple-watch-serie-11-46mm",
     "config": null,
@@ -3610,7 +3474,6 @@
   },
   {
     "ref": "A237",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-serie-11-46mm/default.webp",
     "modelo": "Apple Watch Serie 11 46mm",
     "modeloSlug": "apple-watch-serie-11-46mm",
     "config": "Cellular",
@@ -3636,7 +3499,6 @@
   },
   {
     "ref": "A238",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-ultra-3-49mm/default.webp",
     "modelo": "Apple Watch Ultra 3 49mm",
     "modeloSlug": "apple-watch-ultra-3-49mm",
     "config": null,
@@ -3662,7 +3524,6 @@
   },
   {
     "ref": "A239",
-    "imagen": "/imagenes/apple/smartphone/malla-nike-para-apple-watch/default.webp",
     "modelo": "Malla Nike para Apple Watch",
     "modeloSlug": "malla-nike-para-apple-watch",
     "config": null,
@@ -3688,7 +3549,6 @@
   },
   {
     "ref": "A240",
-    "imagen": "/imagenes/amazfit/smartwatch/amazfit-balance-2/default.webp",
     "modelo": "Amazfit Balance 2",
     "modeloSlug": "amazfit-balance-2",
     "config": null,
@@ -3714,7 +3574,6 @@
   },
   {
     "ref": "A241",
-    "imagen": "/imagenes/amazfit/smartwatch/amazfit-active-3-premium/default.webp",
     "modelo": "Amazfit Active 3 Premium",
     "modeloSlug": "amazfit-active-3-premium",
     "config": null,
@@ -3740,7 +3599,6 @@
   },
   {
     "ref": "A242",
-    "imagen": "/imagenes/garmin/smartwatch/garmin-instinct-2x-solar/default.webp",
     "modelo": "Garmin Instinct 2X Solar",
     "modeloSlug": "garmin-instinct-2x-solar",
     "config": null,
@@ -3766,7 +3624,6 @@
   },
   {
     "ref": "A243",
-    "imagen": "/imagenes/garmin/smartwatch/garmin-forerunner-165-music/default.webp",
     "modelo": "Garmin Forerunner 165 Music",
     "modeloSlug": "garmin-forerunner-165-music",
     "config": null,
@@ -3792,7 +3649,6 @@
   },
   {
     "ref": "A244",
-    "imagen": "/imagenes/samsung/smartwatch/samsung-galaxy-watch-ultra-7-47mm-lte/default.webp",
     "modelo": "Samsung Galaxy Watch Ultra 7 47mm LTE",
     "modeloSlug": "samsung-galaxy-watch-ultra-7-47mm-lte",
     "config": null,
@@ -3818,7 +3674,6 @@
   },
   {
     "ref": "A245",
-    "imagen": "/imagenes/amazfit/smartwatch/amazfit-gts-4-mini/default.webp",
     "modelo": "Amazfit Gts 4 Mini",
     "modeloSlug": "amazfit-gts-4-mini",
     "config": null,
@@ -3844,7 +3699,6 @@
   },
   {
     "ref": "A246",
-    "imagen": "/imagenes/samsung/smartwatch/samsung-galaxy-watch-7-44mm/default.webp",
     "modelo": "Samsung Galaxy Watch 7 44mm",
     "modeloSlug": "samsung-galaxy-watch-7-44mm",
     "config": null,
@@ -3870,7 +3724,6 @@
   },
   {
     "ref": "A247",
-    "imagen": "/imagenes/samsung/smartwatch/samsung-galaxy-watch-8-44mm/default.webp",
     "modelo": "Samsung Galaxy Watch 8 44mm",
     "modeloSlug": "samsung-galaxy-watch-8-44mm",
     "config": null,
@@ -3896,7 +3749,6 @@
   },
   {
     "ref": "A248",
-    "imagen": "/imagenes/samsung/smartwatch/samsung-galaxy-watch-8-40mm/default.webp",
     "modelo": "Samsung Galaxy Watch 8 40mm",
     "modeloSlug": "samsung-galaxy-watch-8-40mm",
     "config": null,
@@ -3922,7 +3774,6 @@
   },
   {
     "ref": "A249",
-    "imagen": "/imagenes/samsung/smartwatch/samsung-galaxy-fit-3/default.webp",
     "modelo": "Samsung Galaxy Fit 3",
     "modeloSlug": "samsung-galaxy-fit-3",
     "config": null,
@@ -3948,7 +3799,6 @@
   },
   {
     "ref": "A250",
-    "imagen": "/imagenes/xiaomi/smartwatch/xiaomi-sport-band/default.webp",
     "modelo": "Xiaomi Sport Band",
     "modeloSlug": "xiaomi-sport-band",
     "config": null,
@@ -3974,7 +3824,6 @@
   },
   {
     "ref": "A251",
-    "imagen": "/imagenes/genérico/smartwatch/smart-watch-t800-ultra-3/default.webp",
     "modelo": "Smart Watch T800 Ultra 3",
     "modeloSlug": "smart-watch-t800-ultra-3",
     "config": null,
@@ -4000,7 +3849,6 @@
   },
   {
     "ref": "A252",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s26-ultra/default.webp",
     "modelo": "Samsung Galaxy S26 Ultra",
     "modeloSlug": "samsung-galaxy-s26-ultra",
     "config": null,
@@ -4026,7 +3874,6 @@
   },
   {
     "ref": "A253",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s26-ultra/default.webp",
     "modelo": "Samsung Galaxy S26 Ultra",
     "modeloSlug": "samsung-galaxy-s26-ultra",
     "config": null,
@@ -4052,7 +3899,6 @@
   },
   {
     "ref": "A254",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s26-plus/default.webp",
     "modelo": "Samsung Galaxy S26 Plus",
     "modeloSlug": "samsung-galaxy-s26-plus",
     "config": null,
@@ -4078,7 +3924,6 @@
   },
   {
     "ref": "A255",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s26-plus/default.webp",
     "modelo": "Samsung Galaxy S26 Plus",
     "modeloSlug": "samsung-galaxy-s26-plus",
     "config": null,
@@ -4104,7 +3949,6 @@
   },
   {
     "ref": "A256",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s26/default.webp",
     "modelo": "Samsung Galaxy S26",
     "modeloSlug": "samsung-galaxy-s26",
     "config": null,
@@ -4130,7 +3974,6 @@
   },
   {
     "ref": "A257",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s26/default.webp",
     "modelo": "Samsung Galaxy S26",
     "modeloSlug": "samsung-galaxy-s26",
     "config": null,
@@ -4156,7 +3999,6 @@
   },
   {
     "ref": "A258",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s25-ultra/default.webp",
     "modelo": "Samsung Galaxy S25 Ultra",
     "modeloSlug": "samsung-galaxy-s25-ultra",
     "config": null,
@@ -4182,7 +4024,6 @@
   },
   {
     "ref": "A259",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s25fe/default.webp",
     "modelo": "Samsung Galaxy S25FE",
     "modeloSlug": "samsung-galaxy-s25fe",
     "config": null,
@@ -4208,7 +4049,6 @@
   },
   {
     "ref": "A260",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-s25fe/default.webp",
     "modelo": "Samsung Galaxy S25FE",
     "modeloSlug": "samsung-galaxy-s25fe",
     "config": null,
@@ -4234,7 +4074,6 @@
   },
   {
     "ref": "A261",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a57/default.webp",
     "modelo": "Samsung Galaxy A57",
     "modeloSlug": "samsung-galaxy-a57",
     "config": "5G",
@@ -4260,7 +4099,6 @@
   },
   {
     "ref": "A262",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a37/default.webp",
     "modelo": "Samsung Galaxy A37",
     "modeloSlug": "samsung-galaxy-a37",
     "config": null,
@@ -4286,7 +4124,6 @@
   },
   {
     "ref": "A263",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a37/default.webp",
     "modelo": "Samsung Galaxy A37",
     "modeloSlug": "samsung-galaxy-a37",
     "config": null,
@@ -4312,7 +4149,6 @@
   },
   {
     "ref": "A264",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a27/default.webp",
     "modelo": "Samsung Galaxy A27",
     "modeloSlug": "samsung-galaxy-a27",
     "config": null,
@@ -4338,7 +4174,6 @@
   },
   {
     "ref": "A265",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a26/default.webp",
     "modelo": "Samsung Galaxy A26",
     "modeloSlug": "samsung-galaxy-a26",
     "config": null,
@@ -4364,7 +4199,6 @@
   },
   {
     "ref": "A266",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a26/default.webp",
     "modelo": "Samsung Galaxy A26",
     "modeloSlug": "samsung-galaxy-a26",
     "config": null,
@@ -4390,7 +4224,6 @@
   },
   {
     "ref": "A267",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a17/default.webp",
     "modelo": "Samsung Galaxy A17",
     "modeloSlug": "samsung-galaxy-a17",
     "config": null,
@@ -4416,7 +4249,6 @@
   },
   {
     "ref": "A268",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a17/default.webp",
     "modelo": "Samsung Galaxy A17",
     "modeloSlug": "samsung-galaxy-a17",
     "config": null,
@@ -4442,7 +4274,6 @@
   },
   {
     "ref": "A269",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a16/default.webp",
     "modelo": "Samsung Galaxy A16",
     "modeloSlug": "samsung-galaxy-a16",
     "config": null,
@@ -4468,7 +4299,6 @@
   },
   {
     "ref": "A270",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a07/default.webp",
     "modelo": "Samsung Galaxy A07",
     "modeloSlug": "samsung-galaxy-a07",
     "config": null,
@@ -4494,7 +4324,6 @@
   },
   {
     "ref": "A271",
-    "imagen": "/imagenes/samsung/smartphone/samsung-galaxy-a07/default.webp",
     "modelo": "Samsung Galaxy A07",
     "modeloSlug": "samsung-galaxy-a07",
     "config": null,
@@ -4520,7 +4349,6 @@
   },
   {
     "ref": "A272",
-    "imagen": "/imagenes/x view/smartphone/x-view-xpods-5/default.webp",
     "modelo": "X View Xpods 5",
     "modeloSlug": "x-view-xpods-5",
     "config": null,
@@ -4546,7 +4374,6 @@
   },
   {
     "ref": "A273",
-    "imagen": "/imagenes/poco/smartphone/poco-f8-ultra/default.webp",
     "modelo": "Poco F8 Ultra",
     "modeloSlug": "poco-f8-ultra",
     "config": null,
@@ -4572,7 +4399,6 @@
   },
   {
     "ref": "A274",
-    "imagen": "/imagenes/poco/smartphone/poco-f8-pro/default.webp",
     "modelo": "Poco F8 Pro",
     "modeloSlug": "poco-f8-pro",
     "config": null,
@@ -4598,7 +4424,6 @@
   },
   {
     "ref": "A275",
-    "imagen": "/imagenes/poco/smartphone/poco-x8-pro-8-gb-ram/default.webp",
     "modelo": "Poco X8 Pro 8 GB RAM",
     "modeloSlug": "poco-x8-pro-8-gb-ram",
     "config": "5G",
@@ -4624,7 +4449,6 @@
   },
   {
     "ref": "A276",
-    "imagen": "/imagenes/poco/smartphone/poco-x8-pro/default.webp",
     "modelo": "Poco X8 Pro",
     "modeloSlug": "poco-x8-pro",
     "config": "12 GB RAM · 5G",
@@ -4650,7 +4474,6 @@
   },
   {
     "ref": "A277",
-    "imagen": "/imagenes/poco/smartphone/poco-x8-pro-max/default.webp",
     "modelo": "Poco X8 Pro Max",
     "modeloSlug": "poco-x8-pro-max",
     "config": "12 GB RAM · 5G",
@@ -4676,7 +4499,6 @@
   },
   {
     "ref": "A278",
-    "imagen": "/imagenes/poco/smartphone/poco-x8-pro-max/default.webp",
     "modelo": "Poco X8 Pro Max",
     "modeloSlug": "poco-x8-pro-max",
     "config": "12 GB RAM · 5G",
@@ -4702,7 +4524,6 @@
   },
   {
     "ref": "A279",
-    "imagen": "/imagenes/poco/smartphone/poco-m8-pro/default.webp",
     "modelo": "Poco M8 Pro",
     "modeloSlug": "poco-m8-pro",
     "config": "12 GB RAM",
@@ -4728,7 +4549,6 @@
   },
   {
     "ref": "A280",
-    "imagen": "/imagenes/poco/smartphone/poco-m8-pro/default.webp",
     "modelo": "Poco M8 Pro",
     "modeloSlug": "poco-m8-pro",
     "config": "8 GB RAM",
@@ -4754,7 +4574,6 @@
   },
   {
     "ref": "A281",
-    "imagen": "/imagenes/poco/smartphone/poco-m8/default.webp",
     "modelo": "Poco M8",
     "modeloSlug": "poco-m8",
     "config": "8 GB RAM",
@@ -4780,7 +4599,6 @@
   },
   {
     "ref": "A282",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-17-ultra/default.webp",
     "modelo": "Xiaomi 17 Ultra",
     "modeloSlug": "xiaomi-17-ultra",
     "config": null,
@@ -4806,7 +4624,6 @@
   },
   {
     "ref": "A283",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-17t/default.webp",
     "modelo": "Xiaomi 17T",
     "modeloSlug": "xiaomi-17t",
     "config": null,
@@ -4832,7 +4649,6 @@
   },
   {
     "ref": "A284",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-note-15-pro/default.webp",
     "modelo": "Xiaomi Redmi Note 15 Pro +",
     "modeloSlug": "xiaomi-redmi-note-15-pro",
     "config": "12 GB RAM · 5G",
@@ -4858,7 +4674,6 @@
   },
   {
     "ref": "A285",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-note-15-pro/default.webp",
     "modelo": "Xiaomi Redmi Note 15 Pro +",
     "modeloSlug": "xiaomi-redmi-note-15-pro",
     "config": "8 GB RAM · 5G",
@@ -4884,7 +4699,6 @@
   },
   {
     "ref": "A286",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-note-15-pro/default.webp",
     "modelo": "Xiaomi Redmi Note 15 Pro",
     "modeloSlug": "xiaomi-redmi-note-15-pro",
     "config": "8 GB RAM · 5G",
@@ -4910,7 +4724,6 @@
   },
   {
     "ref": "A287",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-note-15-pro/default.webp",
     "modelo": "Xiaomi Redmi Note 15 Pro",
     "modeloSlug": "xiaomi-redmi-note-15-pro",
     "config": "12 GB RAM · 4G",
@@ -4936,7 +4749,6 @@
   },
   {
     "ref": "A288",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-note-15-pro/default.webp",
     "modelo": "Xiaomi Redmi Note 15 Pro",
     "modeloSlug": "xiaomi-redmi-note-15-pro",
     "config": "8 GB RAM · 5G",
@@ -4962,7 +4774,6 @@
   },
   {
     "ref": "A289",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-note-15-pro/default.webp",
     "modelo": "Xiaomi Redmi Note 15 Pro",
     "modeloSlug": "xiaomi-redmi-note-15-pro",
     "config": "8 GB RAM · 4G",
@@ -4988,7 +4799,6 @@
   },
   {
     "ref": "A290",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-note-15/default.webp",
     "modelo": "Xiaomi Redmi Note 15",
     "modeloSlug": "xiaomi-redmi-note-15",
     "config": "8 GB RAM · 5G",
@@ -5014,7 +4824,6 @@
   },
   {
     "ref": "A291",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-note-15/default.webp",
     "modelo": "Xiaomi Redmi Note 15",
     "modeloSlug": "xiaomi-redmi-note-15",
     "config": "8 GB RAM",
@@ -5040,7 +4849,6 @@
   },
   {
     "ref": "A292",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-note-15/default.webp",
     "modelo": "Xiaomi Redmi Note 15",
     "modeloSlug": "xiaomi-redmi-note-15",
     "config": "6 GB RAM",
@@ -5066,7 +4874,6 @@
   },
   {
     "ref": "A293",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-15/default.webp",
     "modelo": "Xiaomi Redmi 15",
     "modeloSlug": "xiaomi-redmi-15",
     "config": "6 GB RAM",
@@ -5092,7 +4899,6 @@
   },
   {
     "ref": "A294",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-15c/default.webp",
     "modelo": "Xiaomi Redmi 15C",
     "modeloSlug": "xiaomi-redmi-15c",
     "config": "8 GB RAM",
@@ -5118,7 +4924,6 @@
   },
   {
     "ref": "A295",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-15c/default.webp",
     "modelo": "Xiaomi Redmi 15C",
     "modeloSlug": "xiaomi-redmi-15c",
     "config": "4 GB RAM",
@@ -5144,7 +4949,6 @@
   },
   {
     "ref": "A296",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-redmi-15c/default.webp",
     "modelo": "Xiaomi Redmi 15C",
     "modeloSlug": "xiaomi-redmi-15c",
     "config": "4 GB RAM",
@@ -5170,7 +4974,6 @@
   },
   {
     "ref": "A297",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-edge-pro/default.webp",
     "modelo": "Motorola Moto Edge Pro",
     "modeloSlug": "motorola-moto-edge-pro",
     "config": "12 GB RAM",
@@ -5196,7 +4999,6 @@
   },
   {
     "ref": "A298",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-edge-60/default.webp",
     "modelo": "Motorola Moto Edge 60",
     "modeloSlug": "motorola-moto-edge-60",
     "config": "12 GB RAM",
@@ -5222,7 +5024,6 @@
   },
   {
     "ref": "A299",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-edge-60-fusion/default.webp",
     "modelo": "Motorola Moto Edge 60 Fusion",
     "modeloSlug": "motorola-moto-edge-60-fusion",
     "config": "8 GB RAM",
@@ -5248,7 +5049,6 @@
   },
   {
     "ref": "A300",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-edge-70-fusion/default.webp",
     "modelo": "Motorola Moto Edge 70 Fusion",
     "modeloSlug": "motorola-moto-edge-70-fusion",
     "config": "8 GB RAM",
@@ -5274,7 +5074,6 @@
   },
   {
     "ref": "A301",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g86-power/default.webp",
     "modelo": "Motorola Moto G86 Power",
     "modeloSlug": "motorola-moto-g86-power",
     "config": "8 GB RAM",
@@ -5300,7 +5099,6 @@
   },
   {
     "ref": "A302",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g86/default.webp",
     "modelo": "Motorola Moto G86",
     "modeloSlug": "motorola-moto-g86",
     "config": "8 GB RAM",
@@ -5326,7 +5124,6 @@
   },
   {
     "ref": "A303",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g77/default.webp",
     "modelo": "Motorola Moto G77",
     "modeloSlug": "motorola-moto-g77",
     "config": "8 GB RAM",
@@ -5352,7 +5149,6 @@
   },
   {
     "ref": "A304",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g57-power/default.webp",
     "modelo": "Motorola Moto G57 Power",
     "modeloSlug": "motorola-moto-g57-power",
     "config": "12 GB RAM",
@@ -5378,7 +5174,6 @@
   },
   {
     "ref": "A305",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g67/default.webp",
     "modelo": "Motorola Moto G67",
     "modeloSlug": "motorola-moto-g67",
     "config": "4 GB RAM",
@@ -5404,7 +5199,6 @@
   },
   {
     "ref": "A306",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g56/default.webp",
     "modelo": "Motorola Moto G56",
     "modeloSlug": "motorola-moto-g56",
     "config": null,
@@ -5430,7 +5224,6 @@
   },
   {
     "ref": "A307",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g35/default.webp",
     "modelo": "Motorola Moto G35",
     "modeloSlug": "motorola-moto-g35",
     "config": null,
@@ -5456,7 +5249,6 @@
   },
   {
     "ref": "A308",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g17/default.webp",
     "modelo": "Motorola Moto G17",
     "modeloSlug": "motorola-moto-g17",
     "config": "4 GB RAM",
@@ -5482,7 +5274,6 @@
   },
   {
     "ref": "A309",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g15/default.webp",
     "modelo": "Motorola Moto G15",
     "modeloSlug": "motorola-moto-g15",
     "config": "4 GB RAM",
@@ -5508,7 +5299,6 @@
   },
   {
     "ref": "A310",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g15/default.webp",
     "modelo": "Motorola Moto G15",
     "modeloSlug": "motorola-moto-g15",
     "config": "4 GB RAM",
@@ -5534,7 +5324,6 @@
   },
   {
     "ref": "A311",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g15/default.webp",
     "modelo": "Motorola Moto G15",
     "modeloSlug": "motorola-moto-g15",
     "config": "4 GB RAM",
@@ -5560,7 +5349,6 @@
   },
   {
     "ref": "A312",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g06/default.webp",
     "modelo": "Motorola Moto G06",
     "modeloSlug": "motorola-moto-g06",
     "config": "4 GB RAM",
@@ -5586,7 +5374,6 @@
   },
   {
     "ref": "A313",
-    "imagen": "/imagenes/motorola/smartphone/motorola-moto-g06/default.webp",
     "modelo": "Motorola Moto G06",
     "modeloSlug": "motorola-moto-g06",
     "config": "4 GB RAM",
@@ -5612,7 +5399,6 @@
   },
   {
     "ref": "A314",
-    "imagen": "/imagenes/dell/smartphone/notebook-dell-15-6/default.webp",
     "modelo": "Notebook Dell 15,6\"",
     "modeloSlug": "notebook-dell-15-6",
     "config": null,
@@ -5638,7 +5424,6 @@
   },
   {
     "ref": "A315",
-    "imagen": "/imagenes/hp/smartphone/notebook-hp-15-6/default.webp",
     "modelo": "Notebook HP 15,6\"",
     "modeloSlug": "notebook-hp-15-6",
     "config": null,
@@ -5664,7 +5449,6 @@
   },
   {
     "ref": "A316",
-    "imagen": "/imagenes/lenovo/smartphone/notebook-lenovo-15-6/default.webp",
     "modelo": "Notebook Lenovo 15.6\"",
     "modeloSlug": "notebook-lenovo-15-6",
     "config": null,
@@ -5690,7 +5474,6 @@
   },
   {
     "ref": "A317",
-    "imagen": "/imagenes/lenovo/smartphone/notebook-lenovo-14/default.webp",
     "modelo": "Notebook Lenovo 14\"",
     "modeloSlug": "notebook-lenovo-14",
     "config": null,
@@ -5716,7 +5499,6 @@
   },
   {
     "ref": "A318",
-    "imagen": "/imagenes/lenovo/smartphone/notebook-lenovo-ideapad-1-15-6/default.webp",
     "modelo": "Notebook Lenovo Ideapad 1 15.6\"",
     "modeloSlug": "notebook-lenovo-ideapad-1-15-6",
     "config": "(AMD Ryzen 5-7520u | 8GB RAM | 256Gb SSD | Windows 11) (15AMN7)",
@@ -5742,7 +5524,6 @@
   },
   {
     "ref": "A319",
-    "imagen": "/imagenes/asus/smartphone/notebook-asus-vivobook-go-15-6/default.webp",
     "modelo": "Notebook Asus Vivobook Go 15.6\"",
     "modeloSlug": "notebook-asus-vivobook-go-15-6",
     "config": "(Intel N150 | 8GB RAM | 128Gb UFS | Windows 11) (E1504TA-BQ027W)",
@@ -5768,7 +5549,6 @@
   },
   {
     "ref": "A320",
-    "imagen": "/imagenes/sony/smartphone/ps5-pro-digital/default.webp",
     "modelo": "PS5 Pro Digital",
     "modeloSlug": "ps5-pro-digital",
     "config": "1 Joystick",
@@ -5794,7 +5574,6 @@
   },
   {
     "ref": "A321",
-    "imagen": "/imagenes/sony/smartphone/ps5-vr2-lentes-realidad-virtual/default.webp",
     "modelo": "PS5 VR2 Lentes Realidad Virtual",
     "modeloSlug": "ps5-vr2-lentes-realidad-virtual",
     "config": null,
@@ -5820,7 +5599,6 @@
   },
   {
     "ref": "A322",
-    "imagen": "/imagenes/sony/smartphone/ps5-digital/default.webp",
     "modelo": "PS5 Digital",
     "modeloSlug": "ps5-digital",
     "config": "1 Joystick",
@@ -5846,7 +5624,6 @@
   },
   {
     "ref": "A323",
-    "imagen": "/imagenes/sony/smartphone/ps5-lectora/default.webp",
     "modelo": "PS5 Lectora",
     "modeloSlug": "ps5-lectora",
     "config": "1 Joystick",
@@ -5872,7 +5649,6 @@
   },
   {
     "ref": "A324",
-    "imagen": "/imagenes/nintendo/smartphone/nintendo-switch-2-lcd/default.webp",
     "modelo": "Nintendo Switch 2 LCD",
     "modeloSlug": "nintendo-switch-2-lcd",
     "config": "Con Mario Kart",
@@ -5898,7 +5674,6 @@
   },
   {
     "ref": "A325",
-    "imagen": "/imagenes/nintendo/smartphone/nintendo-switch-oled/default.webp",
     "modelo": "Nintendo Switch OLED",
     "modeloSlug": "nintendo-switch-oled",
     "config": null,
@@ -5924,7 +5699,6 @@
   },
   {
     "ref": "A326",
-    "imagen": "/imagenes/nintendo/smartphone/nintendo-switch-lite/default.webp",
     "modelo": "Nintendo Switch Lite",
     "modeloSlug": "nintendo-switch-lite",
     "config": null,
@@ -5950,7 +5724,6 @@
   },
   {
     "ref": "A327",
-    "imagen": "/imagenes/sony/smartphone/joystick-ps5-dualsense-adicional/default.webp",
     "modelo": "Joystick PS5 DualSense Adicional",
     "modeloSlug": "joystick-ps5-dualsense-adicional",
     "config": null,
@@ -5976,7 +5749,6 @@
   },
   {
     "ref": "A328",
-    "imagen": "/imagenes/sony/smartphone/volante-logitech-para-ps5/default.webp",
     "modelo": "Volante Logitech para PS5",
     "modeloSlug": "volante-logitech-para-ps5",
     "config": null,
@@ -6002,7 +5774,6 @@
   },
   {
     "ref": "A329",
-    "imagen": "/imagenes/jbl/smartphone/jbl-partybox-710/default.webp",
     "modelo": "JBL PartyBox 710",
     "modeloSlug": "jbl-partybox-710",
     "config": null,
@@ -6028,7 +5799,6 @@
   },
   {
     "ref": "A330",
-    "imagen": "/imagenes/jbl/smartphone/jbl-boombox-4/default.webp",
     "modelo": "JBL Boombox 4",
     "modeloSlug": "jbl-boombox-4",
     "config": null,
@@ -6054,7 +5824,6 @@
   },
   {
     "ref": "A331",
-    "imagen": "/imagenes/jbl/smartphone/jbl-charge-6/default.webp",
     "modelo": "JBL Charge 6",
     "modeloSlug": "jbl-charge-6",
     "config": null,
@@ -6080,7 +5849,6 @@
   },
   {
     "ref": "A332",
-    "imagen": "/imagenes/jbl/smartphone/jbl-flip-7/default.webp",
     "modelo": "JBL Flip 7",
     "modeloSlug": "jbl-flip-7",
     "config": null,
@@ -6106,7 +5874,6 @@
   },
   {
     "ref": "A333",
-    "imagen": "/imagenes/jbl/smartphone/jbl-go-4/default.webp",
     "modelo": "JBL Go 4",
     "modeloSlug": "jbl-go-4",
     "config": null,
@@ -6132,7 +5899,6 @@
   },
   {
     "ref": "A334",
-    "imagen": "/imagenes/jbl/smartphone/jbl-tune-520bt/default.webp",
     "modelo": "JBL Tune 520BT",
     "modeloSlug": "jbl-tune-520bt",
     "config": null,
@@ -6158,7 +5924,6 @@
   },
   {
     "ref": "A335",
-    "imagen": "/imagenes/jbl/smartphone/jbl-tune-770nc/default.webp",
     "modelo": "JBL Tune 770NC",
     "modeloSlug": "jbl-tune-770nc",
     "config": null,
@@ -6184,7 +5949,6 @@
   },
   {
     "ref": "A336",
-    "imagen": "/imagenes/jbl/smartphone/jbl-bt-endurance-run-3/default.webp",
     "modelo": "JBL BT Endurance Run 3",
     "modeloSlug": "jbl-bt-endurance-run-3",
     "config": null,
@@ -6210,7 +5974,6 @@
   },
   {
     "ref": "A337",
-    "imagen": "/imagenes/jbl/smartphone/jbl-tune-310-usb-c/default.webp",
     "modelo": "JBL Tune 310 USB-C",
     "modeloSlug": "jbl-tune-310-usb-c",
     "config": null,
@@ -6236,7 +5999,6 @@
   },
   {
     "ref": "A338",
-    "imagen": "/imagenes/apple/smartphone/cable-usb-iphone/default.webp",
     "modelo": "Cable USB iPhone",
     "modeloSlug": "cable-usb-iphone",
     "config": null,
@@ -6262,7 +6024,6 @@
   },
   {
     "ref": "A339",
-    "imagen": "/imagenes/apple/smartphone/cargador-20w-certificado-iphone/default.webp",
     "modelo": "Cargador 20W certificado iPhone",
     "modeloSlug": "cargador-20w-certificado-iphone",
     "config": null,
@@ -6288,7 +6049,6 @@
   },
   {
     "ref": "A340",
-    "imagen": "/imagenes/apple/smartphone/cargador-20w-original-iphone/default.webp",
     "modelo": "Cargador 20W original iPhone",
     "modeloSlug": "cargador-20w-original-iphone",
     "config": null,
@@ -6314,7 +6074,6 @@
   },
   {
     "ref": "A341",
-    "imagen": "/imagenes/apple/smartphone/cargador-20w-original-iphone-llevando-el-equipo/default.webp",
     "modelo": "Cargador 20W original iPhone (llevando el equipo)",
     "modeloSlug": "cargador-20w-original-iphone-llevando-el-equipo",
     "config": null,
@@ -6340,7 +6099,6 @@
   },
   {
     "ref": "A342",
-    "imagen": "/imagenes/samsung/smartphone/cargador-samsung-25w-original/default.webp",
     "modelo": "Cargador Samsung 25W original",
     "modeloSlug": "cargador-samsung-25w-original",
     "config": null,
@@ -6366,7 +6124,6 @@
   },
   {
     "ref": "A343",
-    "imagen": "/imagenes/apple/smartphone/wallet-magsafe/default.webp",
     "modelo": "Wallet MagSafe",
     "modeloSlug": "wallet-magsafe",
     "config": null,
@@ -6392,7 +6149,6 @@
   },
   {
     "ref": "A344",
-    "imagen": "/imagenes/gopro/smartphone/gopro-hero-13/default.webp",
     "modelo": "GoPro Hero 13",
     "modeloSlug": "gopro-hero-13",
     "config": null,
@@ -6418,7 +6174,6 @@
   },
   {
     "ref": "A345",
-    "imagen": "/imagenes/lenovo/smartphone/lenovo-idea-tab-pro-12-7/default.webp",
     "modelo": "Lenovo Idea Tab Pro 12.7",
     "modeloSlug": "lenovo-idea-tab-pro-12-7",
     "config": "con teclado y pen",
@@ -6444,7 +6199,6 @@
   },
   {
     "ref": "A346",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-tablet-redmi-pad-pro-2-12-1/default.webp",
     "modelo": "Xiaomi Tablet Redmi Pad Pro 2 12.1\"",
     "modeloSlug": "xiaomi-tablet-redmi-pad-pro-2-12-1",
     "config": "WiFi",
@@ -6470,7 +6224,6 @@
   },
   {
     "ref": "A347",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-tablet-redmi-pad-pro-2-12-1/default.webp",
     "modelo": "Xiaomi Tablet Redmi Pad Pro 2 12.1\"",
     "modeloSlug": "xiaomi-tablet-redmi-pad-pro-2-12-1",
     "config": "WiFi",
@@ -6496,7 +6249,6 @@
   },
   {
     "ref": "A348",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-tablet-redmi-pad-2-se-11/default.webp",
     "modelo": "Xiaomi Tablet Redmi Pad 2 SE 11\"",
     "modeloSlug": "xiaomi-tablet-redmi-pad-2-se-11",
     "config": "WiFi",
@@ -6522,7 +6274,6 @@
   },
   {
     "ref": "A349",
-    "imagen": "/imagenes/xiaomi/smartphone/xiaomi-tablet-redmi-pad-2-se-11/default.webp",
     "modelo": "Xiaomi Tablet Redmi Pad 2 SE 11\"",
     "modeloSlug": "xiaomi-tablet-redmi-pad-2-se-11",
     "config": "WiFi",
@@ -6548,7 +6299,6 @@
   },
   {
     "ref": "A350",
-    "imagen": "/imagenes/samsung/smartphone/samsung-tab-s11-ultra-14-6-pen/default.webp",
     "modelo": "Samsung Tab S11 Ultra 14.6 + Pen",
     "modeloSlug": "samsung-tab-s11-ultra-14-6-pen",
     "config": null,
@@ -6574,7 +6324,6 @@
   },
   {
     "ref": "A351",
-    "imagen": "/imagenes/samsung/smartphone/samsung-tab-s11-14-6-pen/default.webp",
     "modelo": "Samsung Tab S11 14.6 + Pen",
     "modeloSlug": "samsung-tab-s11-14-6-pen",
     "config": null,
@@ -6600,7 +6349,6 @@
   },
   {
     "ref": "A352",
-    "imagen": "/imagenes/samsung/smartphone/samsung-tab-s10-fe-pen/default.webp",
     "modelo": "Samsung Tab S10 FE + Pen",
     "modeloSlug": "samsung-tab-s10-fe-pen",
     "config": "5G",
@@ -6626,7 +6374,6 @@
   },
   {
     "ref": "A353",
-    "imagen": "/imagenes/samsung/smartphone/samsung-tab-s10-fe-pen/default.webp",
     "modelo": "Samsung Tab S10 FE + Pen",
     "modeloSlug": "samsung-tab-s10-fe-pen",
     "config": "5G",
@@ -6652,7 +6399,6 @@
   },
   {
     "ref": "A354",
-    "imagen": "/imagenes/samsung/smartphone/samsung-tab-s10-lite-pen/default.webp",
     "modelo": "Samsung Tab S10 Lite + Pen",
     "modeloSlug": "samsung-tab-s10-lite-pen",
     "config": null,
@@ -6678,7 +6424,6 @@
   },
   {
     "ref": "A355",
-    "imagen": "/imagenes/samsung/smartphone/samsung-tab-a11/default.webp",
     "modelo": "Samsung Tab A11+",
     "modeloSlug": "samsung-tab-a11",
     "config": null,
@@ -6704,7 +6449,6 @@
   },
   {
     "ref": "A356",
-    "imagen": "/imagenes/samsung/smartphone/samsung-tab-a11-11/default.webp",
     "modelo": "Samsung Tab A11+ 11\"",
     "modeloSlug": "samsung-tab-a11-11",
     "config": null,
@@ -6730,7 +6474,6 @@
   },
   {
     "ref": "A357",
-    "imagen": "/imagenes/samsung/smartphone/samsung-tab-a11-8-7/default.webp",
     "modelo": "Samsung Tab A11 8.7\"",
     "modeloSlug": "samsung-tab-a11-8-7",
     "config": null,
@@ -6756,7 +6499,6 @@
   },
   {
     "ref": "A358",
-    "imagen": "/imagenes/samsung/smartphone/samsung-tab-a9-11/default.webp",
     "modelo": "Samsung Tab A9+ 11\"",
     "modeloSlug": "samsung-tab-a9-11",
     "config": null,
