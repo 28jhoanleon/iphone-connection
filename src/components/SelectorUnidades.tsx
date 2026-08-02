@@ -59,3 +59,5 @@ export const SelectorUnidades: React.FC<SelectorUnidadesProps> = ({
     </div>
   );
 };
+
+export default SelectorUnidades;
