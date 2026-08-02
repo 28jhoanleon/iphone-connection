@@ -5,28 +5,34 @@ import { Unidad } from "@/lib/tipos";
 import { TarjetaUnidad } from "./TarjetaUnidad";
 
 interface SelectorUnidadesProps {
-  unidades: Unidad[];
+  modelo?: any;
+  unidades?: Unidad[];
+  tc?: number;
 }
 
 export const SelectorUnidades: React.FC<SelectorUnidadesProps> = ({
+  modelo,
   unidades,
+  tc,
 }) => {
-  const [unidadSelec, setUnidadSelec] = useState<Unidad>(unidades[0]);
+  // Soporta recibir 'modelo.unidades' o el array 'unidades' directamente
+  const listaUnidades: Unidad[] = unidades || modelo?.unidades || [];
+  const [unidadSelec, setUnidadSelec] = useState<Unidad>(listaUnidades[0]);
 
-  if (!unidades || unidades.length === 0) return null;
+  if (!listaUnidades || listaUnidades.length === 0) return null;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="md:col-span-1">
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+    <div className="grid grid-cols-1 gap-6">
+      <div className="space-y-2">
+        <label className="block text-sm font-medium text-gray-700">
           Seleccionar variante:
         </label>
-        <div className="space-y-2">
-          {unidades.map((u) => {
-            const activa = u.id === unidadSelec.id;
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {listaUnidades.map((u) => {
+            const activa = unidadSelec && (u.id ? u.id === unidadSelec.id : u.referencia === unidadSelec.referencia);
             return (
               <button
-                key={u.id || u.referencia}
+                key={u.id || u.referencia || u.ref}
                 onClick={() => setUnidadSelec(u)}
                 className={`w-full text-left p-3 rounded-xl border transition-all ${
                   activa
@@ -35,14 +41,14 @@ export const SelectorUnidades: React.FC<SelectorUnidadesProps> = ({
                 }`}
               >
                 <div className="font-semibold text-sm">
-                  {u.almacenamiento} - {u.color}
+                  {u.almacenamiento || u.capacidad} - {u.color}
                 </div>
                 <div
                   className={`text-xs ${
                     activa ? "text-gray-300" : "text-gray-500"
                   }`}
                 >
-                  USD ${u.precioUsd} ({u.estado})
+                  USD ${u.precioUsd || u.precio} ({u.estado})
                 </div>
               </button>
             );
@@ -50,10 +56,10 @@ export const SelectorUnidades: React.FC<SelectorUnidadesProps> = ({
         </div>
       </div>
 
-      <div className="md:col-span-2">
+      <div className="mt-4">
         <TarjetaUnidad
-          key={unidadSelec.id || unidadSelec.referencia}
-          unidad={unidadSelec}
+          key={unidadSelec?.id || unidadSelec?.referencia || unidadSelec?.ref}
+          unidad={unidadSelec || listaUnidades[0]}
         />
       </div>
     </div>
