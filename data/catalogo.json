@@ -26,7 +26,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp"
   },
   {
     "ref": "A102",
@@ -55,7 +55,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/white.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp"
   },
   {
     "ref": "A103",
@@ -81,7 +81,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp"
   },
   {
     "ref": "A104",
@@ -107,7 +107,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp"
   },
   {
     "ref": "A105",
@@ -133,7 +133,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-11/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-11/default.webp"
   },
   {
     "ref": "A106",
@@ -185,7 +185,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp"
   },
   {
     "ref": "A108",
@@ -211,7 +211,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp"
   },
   {
     "ref": "A109",
@@ -237,7 +237,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp"
   },
   {
     "ref": "A110",
@@ -266,7 +266,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp"
   },
   {
     "ref": "A111",
@@ -296,7 +296,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-12/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-12/default.webp"
   },
   {
     "ref": "A112",
@@ -547,7 +547,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-13/midnight.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-13/default.webp"
   },
   {
     "ref": "A121",
@@ -1271,7 +1271,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp"
   },
   {
     "ref": "A148",
@@ -1297,7 +1297,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp"
   },
   {
     "ref": "A149",
@@ -1323,7 +1323,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/black-titanium.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp"
   },
   {
     "ref": "A150",
@@ -1353,7 +1353,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/natural-titanium.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp"
   },
   {
     "ref": "A151",
@@ -1383,7 +1383,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/black-titanium.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp"
   },
   {
     "ref": "A152",
@@ -1409,7 +1409,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/black-titanium.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp"
   },
   {
     "ref": "A153",
@@ -1435,7 +1435,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/black-titanium.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp"
   },
   {
     "ref": "A154",
@@ -1461,7 +1461,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/black-titanium.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp"
   },
   {
     "ref": "A155",
@@ -1487,7 +1487,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/black-titanium.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15-pro/default.webp"
   },
   {
     "ref": "A156",
@@ -1968,7 +1968,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp"
   },
   {
     "ref": "A174",
@@ -1994,7 +1994,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp"
   },
   {
     "ref": "A175",
@@ -2020,7 +2020,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartphone/iphone-15/black.webp"
+    "imagen": "/imagenes/apple/smartphone/iphone-15/default.webp"
   },
   {
     "ref": "A176",
@@ -3658,7 +3658,7 @@
     "disponibilidad": "por_encargo",
     "publicado": true,
     "actualizado": "2026-08-01",
-    "imagen": "/imagenes/apple/smartwatch/apple-watch-ultra-2/titanium.webp"
+    "imagen": "/imagenes/apple/smartwatch/apple-watch-ultra-3-49mm/default.webp"
   },
   {
     "ref": "A239",
