@@ -4,9 +4,8 @@ import path from "node:path";
 const DIR_PRODUCTOS = path.join(process.cwd(), "public/productos");
 const DIR_PUBLIC = path.join(process.cwd(), "public");
 const CATALOGO_PATH = path.join(process.cwd(), "data/catalogo.json");
-const PRIORIDAD = [".jpg", ".jpeg", ".png", ".webp"];
+const EXTENSIONES = [".webp", ".png", ".jpg", ".jpeg"];
 
-// Indice en memoria para no re-leer el JSON en cada renderizado
 let refMapCache: Map<string, { slug: string; marca: string; arquetipo: string }> | null = null;
 
 function obtenerMapaCatalogo() {
@@ -28,23 +27,23 @@ function obtenerMapaCatalogo() {
       }
     }
   } catch (e) {
-    console.error("Error al leer catalogo.json en rutaImagen:", e);
+    console.error("Error al leer catalogo.json:", e);
   }
   refMapCache = mapa;
   return mapa;
 }
 
 export function rutaImagen(ref: string, slugParam?: string, marcaParam?: string, arquetipoParam?: string): string {
-  // 1. Prioridad absoluta: si existe la foto propia en /public/productos/ (ej: A101.jpg)
+  // 1. Fotos directas por código (A101.jpg, A101.png, etc.)
   if (fs.existsSync(DIR_PRODUCTOS)) {
-    for (const ext of PRIORIDAD) {
+    for (const ext of EXTENSIONES) {
       if (fs.existsSync(path.join(DIR_PRODUCTOS, `${ref}${ext}`))) {
         return `/productos/${ref}${ext}`;
       }
     }
   }
 
-  // 2. Obtener slug, marca y arquetipo automáticamente desde catalogo.json si no vinieron por parámetro
+  // 2. Datos del producto
   let slug = slugParam;
   let marca = marcaParam;
   let arquetipo = arquetipoParam;
@@ -58,12 +57,11 @@ export function rutaImagen(ref: string, slugParam?: string, marcaParam?: string,
     }
   }
 
-  // 3. Buscar la imagen en public/imagenes/
+  // 3. Búsqueda exhaustiva por carpetas
   if (slug) {
     const s = slug.toLowerCase().trim();
     const mRaw = (marca || "").toLowerCase().trim();
 
-    // Probar variaciones de marca (con tildes, sin tildes, con guiones)
     const marcasProbar = Array.from(new Set([
       mRaw,
       mRaw.replace(/é/g, "e").replace(/á/g, "a").replace(/í/g, "i").replace(/ó/g, "o").replace(/ú/g, "u"),
@@ -73,20 +71,21 @@ export function rutaImagen(ref: string, slugParam?: string, marcaParam?: string,
       "genérico"
     ])).filter(Boolean);
 
-    // Categorías donde podría estar guardada la carpeta
     const categoriasProbar = ["smartphone", "smartwatch", "notebook", "tablet", "audio", "consola"];
 
     for (const m of marcasProbar) {
       for (const cat of categoriasProbar) {
-        const rutaRelativa = `imagenes/${m}/${cat}/${s}/default.webp`;
-        if (fs.existsSync(path.join(DIR_PUBLIC, rutaRelativa))) {
-          return `/${rutaRelativa}`;
+        for (const ext of EXTENSIONES) {
+          const rutaRelativa = `imagenes/${m}/${cat}/${s}/default${ext}`;
+          if (fs.existsSync(path.join(DIR_PUBLIC, rutaRelativa))) {
+            return `/${rutaRelativa}`;
+          }
         }
       }
     }
   }
 
-  // 4. Si no se encontró ningún archivo, recurrir al SVG
+  // 4. Fallback seguro a SVG si la imagen no existe
   return `/productos/${ref}.svg`;
 }
 
@@ -102,7 +101,7 @@ export function fotografiasPropias(): number {
 
 export function tipoImagen(ref: string): "real" | "generada" {
   if (fs.existsSync(DIR_PRODUCTOS)) {
-    for (const ext of PRIORIDAD) {
+    for (const ext of EXTENSIONES) {
       if (fs.existsSync(path.join(DIR_PRODUCTOS, `${ref}${ext}`))) {
         return "real";
       }
