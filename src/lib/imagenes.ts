@@ -2,39 +2,74 @@ import fs from "node:fs";
 import path from "node:path";
 
 const DIR_PRODUCTOS = path.join(process.cwd(), "public/productos");
-const DIR_PUBLIC = path.join(process.cwd(), "public");
+const DIR_IMAGENES = path.join(process.cwd(), "public/imagenes");
 const CATALOGO_PATH = path.join(process.cwd(), "data/catalogo.json");
 const EXTENSIONES = [".webp", ".png", ".jpg", ".jpeg"];
 
-let refMapCache: Map<string, { slug: string; marca: string; arquetipo: string }> | null = null;
+let mapaImagenesFisicas: Map<string, string> | null = null;
+let refMapCache: Map<string, string> | null = null;
+
+function escaniarDirectorio(dir: string): string[] {
+  let resultados: string[] = [];
+  if (!fs.existsSync(dir)) return resultados;
+
+  const items = fs.readdirSync(dir, { withFileTypes: true });
+  for (const item of items) {
+    const fullPath = path.join(dir, item.name);
+    if (item.isDirectory()) {
+      resultados = resultados.concat(escaniarDirectorio(fullPath));
+    } else if (EXTENSIONES.some(ext => item.name.toLowerCase().endsWith(ext))) {
+      resultados.push(fullPath);
+    }
+  }
+  return resultados;
+}
+
+function obtenerMapaImagenes() {
+  if (mapaImagenesFisicas) return mapaImagenesFisicas;
+
+  const mapa = new Map<string, string>();
+  const todosLosArchivos = escaniarDirectorio(DIR_IMAGENES);
+
+  for (const archivoPath of todosLosArchivos) {
+    const relativa = path.relative(path.join(process.cwd(), "public"), archivoPath).replace(/\\/g, "/");
+    const partes = relativa.split("/");
+
+    if (partes.length >= 4) {
+      const slugCarpeta = partes[partes.length - 2].toLowerCase().trim();
+      if (!mapa.has(slugCarpeta)) {
+        mapa.set(slugCarpeta, `/${relativa}`);
+      }
+    }
+  }
+
+  mapaImagenesFisicas = mapa;
+  return mapa;
+}
 
 function obtenerMapaCatalogo() {
   if (refMapCache) return refMapCache;
-  const mapa = new Map<string, { slug: string; marca: string; arquetipo: string }>();
+  const mapa = new Map<string, string>();
   try {
     if (fs.existsSync(CATALOGO_PATH)) {
       const data = JSON.parse(fs.readFileSync(CATALOGO_PATH, "utf-8"));
       if (Array.isArray(data)) {
         for (const item of data) {
           if (item.ref) {
-            mapa.set(String(item.ref), {
-              slug: item.modeloSlug || item.slug || "",
-              marca: item.marca || "",
-              arquetipo: item.arquetipo || "",
-            });
+            const slug = item.modeloSlug || item.slug || "";
+            if (slug) mapa.set(String(item.ref), String(slug));
           }
         }
       }
     }
   } catch (e) {
-    console.error("Error al leer catalogo.json:", e);
+    console.error("Error leyendo catalogo.json:", e);
   }
   refMapCache = mapa;
   return mapa;
 }
 
-export function rutaImagen(ref: string, slugParam?: string, marcaParam?: string, arquetipoParam?: string): string {
-  // 1. Fotos directas por código (A101.jpg, A101.png, etc.)
+export function rutaImagen(ref: string, slugParam?: string): string {
   if (fs.existsSync(DIR_PRODUCTOS)) {
     for (const ext of EXTENSIONES) {
       if (fs.existsSync(path.join(DIR_PRODUCTOS, `${ref}${ext}`))) {
@@ -43,49 +78,19 @@ export function rutaImagen(ref: string, slugParam?: string, marcaParam?: string,
     }
   }
 
-  // 2. Datos del producto
   let slug = slugParam;
-  let marca = marcaParam;
-  let arquetipo = arquetipoParam;
-
   if (!slug) {
-    const info = obtenerMapaCatalogo().get(ref);
-    if (info) {
-      slug = info.slug;
-      marca = info.marca;
-      arquetipo = info.arquetipo;
-    }
+    slug = obtenerMapaCatalogo().get(ref);
   }
 
-  // 3. Búsqueda exhaustiva por carpetas
   if (slug) {
-    const s = slug.toLowerCase().trim();
-    const mRaw = (marca || "").toLowerCase().trim();
-
-    const marcasProbar = Array.from(new Set([
-      mRaw,
-      mRaw.replace(/é/g, "e").replace(/á/g, "a").replace(/í/g, "i").replace(/ó/g, "o").replace(/ú/g, "u"),
-      mRaw.replace(/\s+/g, "-"),
-      mRaw.replace(/\s+/g, ""),
-      "generico",
-      "genérico"
-    ])).filter(Boolean);
-
-    const categoriasProbar = ["smartphone", "smartwatch", "notebook", "tablet", "audio", "consola"];
-
-    for (const m of marcasProbar) {
-      for (const cat of categoriasProbar) {
-        for (const ext of EXTENSIONES) {
-          const rutaRelativa = `imagenes/${m}/${cat}/${s}/default${ext}`;
-          if (fs.existsSync(path.join(DIR_PUBLIC, rutaRelativa))) {
-            return `/${rutaRelativa}`;
-          }
-        }
-      }
+    const slugNorm = slug.toLowerCase().trim();
+    const mapaFisico = obtenerMapaImagenes();
+    if (mapaFisico.has(slugNorm)) {
+      return mapaFisico.get(slugNorm)!;
     }
   }
 
-  // 4. Fallback seguro a SVG si la imagen no existe
   return `/productos/${ref}.svg`;
 }
 
