@@ -1,12 +1,9 @@
-// Tipo estricto esperado por ItemAuditoria en auditoria/page.tsx
 export type TipoImagenResultado = "generada" | "real";
 
-// Función requerida por admin/page.tsx
 export function fotografiasPropias(): number {
   return 0;
 }
 
-// Acepta cualquier entrada sin validar tipos estrictos para evitar rejections en Vercel
 export function tipoImagen(input: any): TipoImagenResultado {
   if (!input) return "generada";
   if (typeof input === "string") return "generada";
@@ -19,20 +16,24 @@ export function tipoImagen(input: any): TipoImagenResultado {
 export function rutaImagen(input: any): string {
   if (!input) return "/maestras/default.svg";
 
+  // Si le pasan un string directo
   if (typeof input === "string") {
     if (input.startsWith("/")) return input;
-    return `/imagenes/apple/smartphone/${input}/default.webp`;
+    const slugLimpio = input.toLowerCase().trim().replace(/\s+/g, "-");
+    return `/imagenes/apple/smartphone/${slugLimpio}/default.webp`;
   }
 
+  // Si le pasan un objeto
   if (input?.imagen && typeof input.imagen === "string" && input.imagen.trim() !== "") {
     return input.imagen.startsWith("/") ? input.imagen : `/${input.imagen}`;
   }
 
-  const marca = input?.marcaSlug || "apple";
-  const familia = input?.familiaSlug || "smartphone";
-  const modelo = input?.modeloSlug || input?.referencia || input?.ref;
+  const marca = (input?.marcaSlug || input?.marca || "apple").toLowerCase().trim().replace(/\s+/g, "-");
+  const familia = (input?.familiaSlug || input?.categoria || "smartphone").toLowerCase().trim().replace(/\s+/g, "-");
+  let modelo = input?.modeloSlug || input?.referencia || input?.ref || input?.modelo || input?.nombre;
 
   if (modelo) {
+    modelo = modelo.toLowerCase().trim().replace(/\s+/g, "-");
     return `/imagenes/${marca}/${familia}/${modelo}/default.webp`;
   }
 

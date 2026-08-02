@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Unidad } from "@/lib/tipos";
 import { rutaImagen } from "@/lib/imagenes";
 
 interface TarjetaUnidadProps {
@@ -23,12 +22,13 @@ export const TarjetaUnidad: React.FC<TarjetaUnidadProps> = ({
   mostrarAcciones = true,
 }) => {
   const item = unidad || u;
-  const [error, setError] = useState(false);
-  const srcImagen = rutaImagen(item);
+  const [imgSrc, setImgSrc] = useState<string>("/maestras/default.svg");
 
   useEffect(() => {
-    setError(false);
-  }, [srcImagen]);
+    if (item) {
+      setImgSrc(rutaImagen(item));
+    }
+  }, [item]);
 
   if (!item) return null;
 
@@ -42,31 +42,18 @@ export const TarjetaUnidad: React.FC<TarjetaUnidadProps> = ({
     <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden flex flex-col justify-between h-full">
       <div className="p-4 flex flex-col items-center">
         <div className="relative w-full h-48 mb-4 flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden">
-          {!error && srcImagen ? (
-            <img
-              src={srcImagen}
-              alt={nombreModelo}
-              className="object-contain h-full w-full p-2"
-              onError={() => setError(true)}
-              loading={prioridad ? "eager" : "lazy"}
-            />
-          ) : (
-            <div className="flex flex-col items-center justify-center text-gray-400 p-4 text-center">
-              <svg
-                className="w-12 h-12 mb-2 stroke-current"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-              <span className="text-xs font-medium">Sin imagen</span>
-            </div>
-          )}
+          <img
+            src={imgSrc}
+            alt={nombreModelo}
+            className="object-contain h-full w-full p-2"
+            onError={() => {
+              // Si falla la imagen .webp, cae inmediatamente al SVG por defecto
+              if (imgSrc !== "/maestras/default.svg") {
+                setImgSrc("/maestras/default.svg");
+              }
+            }}
+            loading={prioridad ? "eager" : "lazy"}
+          />
         </div>
 
         <div className="w-full text-left">
@@ -81,9 +68,11 @@ export const TarjetaUnidad: React.FC<TarjetaUnidadProps> = ({
           <h3 className="text-lg font-bold text-gray-900 mt-2 line-clamp-1">
             {nombreModelo}
           </h3>
-          <p className="text-sm text-gray-500 mt-1">
-            {gb} • {item.color}
-          </p>
+          {gb && (
+            <p className="text-sm text-gray-500 mt-1">
+              {gb} {item.color ? `• ${item.color}` : ""}
+            </p>
+          )}
         </div>
       </div>
 
