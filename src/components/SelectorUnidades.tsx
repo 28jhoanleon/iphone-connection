@@ -1,102 +1,61 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import Link from "next/link";
-import type { Modelo, Unidad } from "@/lib/tipos";
-import { precio, precioARS, capacidad } from "@/lib/formato";
+import React, { useState } from "react";
+import { Unidad } from "@/lib/tipos";
+import { TarjetaUnidad } from "./TarjetaUnidad";
 
-/**
- * Núcleo de la navegación aprobada (opción A · wireframe 30/07/2026):
- * capacidad y color son SELECTORES dentro del modelo, no pantallas separadas.
- */
-export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: number }) {
-  const [cap, setCap] = useState<number | null>(null);
-  const [color, setColor] = useState<string | null>(null);
+interface SelectorUnidadesProps {
+  unidades: Unidad[];
+}
 
-  const coloresDe = (u: Unidad) => u.colores ?? (u.color ? [u.color] : []);
+export const SelectorUnidades: React.FC<SelectorUnidadesProps> = ({
+  unidades,
+}) => {
+  const [unidadSelec, setUnidadSelec] = useState<Unidad>(unidades[0]);
 
-  const visibles = useMemo(
-    () =>
-      modelo.unidades.filter(
-        (u) => (!cap || u.capacidadGb === cap) && (!color || coloresDe(u).includes(color)),
-      ),
-    [modelo, cap, color],
-  );
-
-  const chip = (activo: boolean) =>
-    `rounded-full border px-4 py-2.5 text-[13.5px] leading-none transition ${
-      activo ? "border-ink bg-ink text-paper" : "border-line text-mute hover:border-ink hover:text-ink"
-    }`;
+  if (!unidades || unidades.length === 0) return null;
 
   return (
-    <div>
-      <h1 className="mb-1.5 text-[clamp(28px,4vw,40px)] font-semibold leading-[1.06] tracking-[-.03em]">
-        {modelo.nombre}
-      </h1>
-      <p className="mb-6 text-[15px] text-mute">
-        {modelo.unidades.length} unidad{modelo.unidades.length > 1 ? "es" : ""} · desde{" "}
-        {precio(Math.min(...modelo.unidades.map((u) => precioARS(u, tc))))}
-      </p>
-
-      {modelo.capacidades.length > 1 && (
-        <>
-          <p className="etiqueta mb-2.5">Capacidad</p>
-          <div className="mb-6 flex flex-wrap gap-2">
-            <button onClick={() => setCap(null)} aria-pressed={!cap} className={chip(!cap)}>Todas</button>
-            {modelo.capacidades.map((c) => (
-              <button key={c} onClick={() => setCap(c)} aria-pressed={cap === c} className={chip(cap === c)}>
-                {capacidad(c)}
-              </button>
-            ))}
-          </div>
-        </>
-      )}
-
-      {modelo.colores.length > 1 && (
-        <>
-          <p className="etiqueta mb-2.5">Color</p>
-          <div className="mb-6 flex flex-wrap gap-2">
-            <button onClick={() => setColor(null)} aria-pressed={!color} className={chip(!color)}>Todos</button>
-            {modelo.colores.map((c) => (
-              <button key={c} onClick={() => setColor(c)} aria-pressed={color === c} className={chip(color === c)}>
-                {c}
-              </button>
-            ))}
-          </div>
-        </>
-      )}
-
-      <p className="etiqueta mb-3">Unidades que coinciden · {visibles.length}</p>
-
-      {visibles.length === 0 ? (
-        <p className="py-10 text-mute">
-          No hay unidades con esa combinación. Probá con otra capacidad o color.
-        </p>
-      ) : (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="md:col-span-1">
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Seleccionar variante:
+        </label>
         <div className="space-y-2">
-          {visibles.map((u) => (
-            <Link
-              key={u.ref}
-              href={`/unidad/${u.ref}`}
-              className="flex items-center justify-between gap-4 rounded-lg border border-line p-4 transition hover:border-ink"
-            >
-              <div className="min-w-0">
-                <p className="font-data text-[13.5px] font-medium">
-                  {u.bateria ? `Batería ${u.bateria}%` : "Nuevo sellado"}
-                </p>
-                <p className="text-[12.5px] text-mute">
-                  {u.estadoEtiqueta}
-                  {u.color ? ` · ${u.color}` : u.colores ? ` · ${u.colores.join(" / ")}` : ""}
-                </p>
-                {u.defecto && <p className="mt-0.5 text-[11px] text-aviso-texto">Detalle declarado: {u.defecto}</p>}
-              </div>
-              <span className="whitespace-nowrap text-[17px] font-semibold tracking-[-.02em]">
-                {precio(precioARS(u, tc))}
-              </span>
-            </Link>
-          ))}
+          {unidades.map((u) => {
+            const activa = u.id === unidadSelec.id;
+            return (
+              <button
+                key={u.id || u.referencia}
+                onClick={() => setUnidadSelec(u)}
+                className={`w-full text-left p-3 rounded-xl border transition-all ${
+                  activa
+                    ? "border-black bg-black text-white shadow-sm"
+                    : "border-gray-200 bg-white text-gray-700 hover:border-gray-300"
+                }`}
+              >
+                <div className="font-semibold text-sm">
+                  {u.almacenamiento} - {u.color}
+                </div>
+                <div
+                  className={`text-xs ${
+                    activa ? "text-gray-300" : "text-gray-500"
+                  }`}
+                >
+                  USD ${u.precioUsd} ({u.estado})
+                </div>
+              </button>
+            );
+          })}
         </div>
-      )}
+      </div>
+
+      <div className="md:col-span-2">
+        <TarjetaUnidad
+          key={unidadSelec.id || unidadSelec.referencia}
+          unidad={unidadSelec}
+        />
+      </div>
     </div>
   );
-}
+};
