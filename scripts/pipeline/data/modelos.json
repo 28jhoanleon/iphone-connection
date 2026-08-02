@@ -1,0 +1,6 @@
+{
+  "iPhone 11": { "slug": "iphone-11", "marca": "apple", "categoria": "smartphone" },
+  "iPhone 13": { "slug": "iphone-13", "marca": "apple", "categoria": "smartphone" },
+  "iPhone 15 Pro": { "slug": "iphone-15-pro", "marca": "apple", "categoria": "smartphone" },
+  "Apple Watch Ultra 2": { "slug": "apple-watch-ultra-2", "marca": "apple", "categoria": "smartwatch" }
+}

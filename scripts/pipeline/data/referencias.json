@@ -1,0 +1,7 @@
+{
+  "A101": { "slug": "iphone-11", "color": "black", "marca": "apple", "categoria": "smartphone" },
+  "A102": { "slug": "iphone-11", "color": "white", "marca": "apple", "categoria": "smartphone" },
+  "A120": { "slug": "iphone-13", "color": "midnight", "marca": "apple", "categoria": "smartphone" },
+  "A150": { "slug": "iphone-15-pro", "color": "natural-titanium", "marca": "apple", "categoria": "smartphone" },
+  "A238": { "slug": "apple-watch-ultra-2", "color": "titanium", "marca": "apple", "categoria": "smartwatch" }
+}

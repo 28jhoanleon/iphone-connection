@@ -1,0 +1,62 @@
+{
+  "apple": [
+    {
+      "slug": "iphone-11",
+      "categoria": "smartphone",
+      "colores": ["black", "white"],
+      "fuentes": {
+        "black": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-black-select-2019?wid=1000&hei=1000&fmt=png-alpha",
+        "white": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-white-select-2019?wid=1000&hei=1000&fmt=png-alpha"
+      }
+    },
+    {
+      "slug": "iphone-12",
+      "categoria": "smartphone",
+      "colores": ["black", "white", "blue"],
+      "fuentes": {
+        "black": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-black-select-2020?wid=1000&hei=1000&fmt=png-alpha"
+      }
+    },
+    {
+      "slug": "iphone-13",
+      "categoria": "smartphone",
+      "colores": ["midnight", "starlight", "blue"],
+      "fuentes": {
+        "midnight": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-midnight-select-2021?wid=1000&hei=1000&fmt=png-alpha"
+      }
+    },
+    {
+      "slug": "iphone-14",
+      "categoria": "smartphone",
+      "colores": ["midnight", "starlight", "blue"],
+      "fuentes": {
+        "midnight": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=1000&hei=1000&fmt=png-alpha"
+      }
+    },
+    {
+      "slug": "iphone-15",
+      "categoria": "smartphone",
+      "colores": ["black", "blue", "green"],
+      "fuentes": {
+        "black": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black?wid=1000&hei=1000&fmt=png-alpha"
+      }
+    },
+    {
+      "slug": "iphone-15-pro",
+      "categoria": "smartphone",
+      "colores": ["natural-titanium", "black-titanium"],
+      "fuentes": {
+        "natural-titanium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=1000&hei=1000&fmt=png-alpha",
+        "black-titanium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium?wid=1000&hei=1000&fmt=png-alpha"
+      }
+    },
+    {
+      "slug": "apple-watch-ultra-2",
+      "categoria": "smartwatch",
+      "colores": ["titanium"],
+      "fuentes": {
+        "titanium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ultra-case-unselect-gallery-1-202409?wid=1000&hei=1000&fmt=png-alpha"
+      }
+    }
+  ]
+}

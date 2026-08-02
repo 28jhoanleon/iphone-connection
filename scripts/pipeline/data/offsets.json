@@ -1,0 +1,8 @@
+{
+  "default": { "scale": 0.85, "offsetX": 0, "offsetY": 0 },
+  "categories": {
+    "smartphone": { "scale": 0.88, "offsetX": 0, "offsetY": -8 },
+    "smartwatch": { "scale": 0.76, "offsetX": 0, "offsetY": -20 },
+    "laptop": { "scale": 0.82, "offsetX": 0, "offsetY": 10 }
+  }
+}
