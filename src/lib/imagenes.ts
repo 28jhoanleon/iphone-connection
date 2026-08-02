@@ -1,7 +1,9 @@
 import { Unidad } from "./tipos";
 
-// Exportaciones que requieren admin/page.tsx y auditoria/page.tsx
-export const fotografiasPropias = new Set<string>();
+// Función requerida por admin/page.tsx
+export function fotografiasPropias(): number {
+  return 0;
+}
 
 export function tipoImagen(unidad: Partial<Unidad> | null | undefined): string {
   if (!unidad) return "default";
