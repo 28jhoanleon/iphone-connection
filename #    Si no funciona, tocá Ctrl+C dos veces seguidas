@@ -1,0 +1,54 @@
+# 📸 Pack de Imagenes iPhoneConnection - Batch 3
+
+## Contenido
+52 fotos oficiales renombradas listas para public/maestras/
+
+## Instrucciones para Termux
+
+### Paso 1: Descargar el ZIP
+Desde el navegador de tu celular, descarga el archivo ZIP que te paso Kimi.
+El archivo se guardara en Descargas/Downloads.
+
+### Paso 2: Mover a Termux
+En Termux, corre:
+```bash
+termux-setup-storage
+cp ~/storage/downloads/imagenes-iphoneconnection-v3.zip ~/proyecto/
+cd ~/proyecto
+unzip imagenes-iphoneconnection-v3.zip
+```
+
+### Paso 3: Copiar imagenes
+```bash
+cp maestras/* public/maestras/
+```
+
+### Paso 4: Procesar
+```bash
+npm run imagenes
+```
+
+### Paso 5: Commitear y pushear
+```bash
+git add .
+git commit -m "Agrego 52 fotos oficiales batch 3"
+git push origin main
+```
+
+## Lista de imagenes incluidas
+- iPhone: 17 Pro, 15 Pro, 17e
+- iPad: Pro 11 M5, Air 11 M4, Air 13 M4
+- MacBook: Air 13.6 M5, Air 15.3 M5, Pro M5 14, Pro M5 Pro 14
+- Apple Watch: Ultra 3 49mm, Series 10 46mm, Series 11 42/46mm, SE 3 40mm
+- AirPods: 4, 4 Noise Cancel, Pro 3
+- Apple Pencil: Pro, USB-C
+- AirTag: Pack x4
+- Wallet MagSafe
+- Samsung: Galaxy S25FE, Galaxy Watch Ultra 7 47mm LTE, Galaxy Fit 3
+- Samsung Tablets: Tab S11 Ultra 14.6, Tab S11 14.6, Tab S10 FE
+- Poco: F8 Ultra, F8 Pro
+- Xiaomi: 17T
+- Motorola: Moto Edge Pro
+- Gaming: PS5 Pro Digital, PS5 Lectora, Nintendo Switch 2 LCD, Nintendo Switch OLED, GoPro Hero 13
+- Audio JBL: PartyBox 710, Boombox 4, Charge 6, Go 4, Tune 770NC
+- Garmin: Forerunner 165 Music, Instinct 2X Solar
