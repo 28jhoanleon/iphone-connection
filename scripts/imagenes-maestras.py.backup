@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
 """
-Pipeline de imagenes maestras · iPhone Connection  (v2.2 robusta)
+Pipeline de imágenes maestras · iPhone Connection
 
-Reemplaza al segmentador de laminas. El modelo pasa a ser la unidad de trabajo:
+Reemplaza al segmentador de láminas. El modelo pasa a ser la unidad de trabajo:
 
-    public/maestras/{modelo-slug}.{jpg|png|webp}   <- una imagen por modelo
-                    | propagacion automatica
-    public/productos/{REF}.webp                     <- todas sus referencias
+    public/maestras/{modelo-slug}.{jpg|png|webp}   ← una imagen por modelo
+                    ↓ propagación automática
+    public/productos/{REF}.webp                     ← todas sus referencias
 
 Para agregar la foto de un modelo alcanza con dejar el archivo en `maestras/`
-con el slug del modelo y correr `npm run imagenes`. No hay que tocar codigo ni
-saber que referencias existen.
+con el slug del modelo y correr `npm run imagenes`. No hay que tocar código ni
+saber qué referencias existen.
 
-Normalizacion aplicada a toda imagen maestra, para que el catalogo se vea
+Normalización aplicada a toda imagen maestra, para que el catálogo se vea
 uniforme aunque las fotos vengan de fuentes distintas:
-  - recorte del fondo sobrante
-  - centrado en lienzo cuadrado de 1000x1000
-  - fondo blanco puro
-  - mismo margen y mismo zoom relativo
-  - WebP optimizado
+  · recorte del fondo sobrante
+  · centrado en lienzo cuadrado de 1000x1000
+  · fondo blanco puro
+  · mismo margen y mismo zoom relativo
+  · WebP optimizado
 
 Si un modelo no tiene maestra, conserva su imagen generada.
 """
@@ -28,51 +28,15 @@ _os.chdir(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
 
 import json, os, re, shutil, unicodedata
 import numpy as np
-from PIL import Image, UnidentifiedImageError
-
-try:
-    from validar_imagen import analizar
-except Exception:
-    # Fallback si no existe validar_imagen.py
-    def analizar(ruta):
-        return {"ok": True, "motivo": ""}
+from PIL import Image
+from validar_imagen import analizar
 
 MAESTRAS = "public/maestras"
 DESTINO = "public/productos"
 ENTRADA = (".jpg", ".jpeg", ".png", ".webp")
 LADO = 1000
-MARGEN = 0.08          # proporcion del lado que queda libre alrededor
+MARGEN = 0.08          # proporción del lado que queda libre alrededor
 UMBRAL_FONDO = 244
-
-# Magic bytes para validar imagenes reales antes de tocar PIL
-MAGIC_IMAGEN = {
-    b"\xff\xd8": "jpeg",
-    b"\x89PNG": "png",
-    b"GIF87a": "gif",
-    b"GIF89a": "gif",
-    b"RIFF": "webp",   # webp empieza con RIFF....WEBP
-}
-
-
-def es_imagen_valida(ruta: str) -> bool:
-    """Verifica magic bytes antes de intentar abrir con PIL."""
-    try:
-        with open(ruta, "rb") as f:
-            header = f.read(16)
-    except Exception:
-        return False
-
-    if len(header) < 4:
-        return False
-
-    for magic, fmt in MAGIC_IMAGEN.items():
-        if header.startswith(magic):
-            # Para webp, verificar que sea realmente webp (RIFF...WEBP)
-            if fmt == "webp":
-                return b"WEBP" in header
-            return True
-
-    return False
 
 
 def slug(s: str) -> str:
@@ -83,13 +47,7 @@ def slug(s: str) -> str:
 
 def normalizar(origen: str, destino: str) -> bool:
     """Recorta, centra sobre blanco y exporta WebP de 1000x1000."""
-    try:
-        im = Image.open(origen)
-    except UnidentifiedImageError:
-        return False
-    except Exception:
-        return False
-
+    im = Image.open(origen)
     if im.mode in ("RGBA", "LA", "P"):
         im = im.convert("RGBA")
         fondo = Image.new("RGBA", im.size, (255, 255, 255, 255))
@@ -107,9 +65,7 @@ def normalizar(origen: str, destino: str) -> bool:
     w, h = im.size
     disponible = LADO * (1 - MARGEN * 2)
     factor = disponible / max(w, h)
-    nuevo_w = max(1, int(w * factor))
-    nuevo_h = max(1, int(h * factor))
-    im = im.resize((nuevo_w, nuevo_h), Image.LANCZOS)
+    im = im.resize((max(1, int(w * factor)), max(1, int(h * factor))), Image.LANCZOS)
 
     lienzo = Image.new("RGB", (LADO, LADO), (255, 255, 255))
     lienzo.paste(im, ((LADO - im.width) // 2, (LADO - im.height) // 2))
@@ -133,28 +89,22 @@ def main() -> None:
         if ext.lower() not in ENTRADA:
             continue
         if nombre not in por_slug:
-            rechazadas.append((f, "no corresponde a ningun modelo del catalogo"))
+            rechazadas.append((f, "no corresponde a ningún modelo del catálogo"))
             continue
 
         origen = os.path.join(MAESTRAS, f)
-
-        # VALIDACION ROBUSTA: verificar que sea imagen real antes de tocar PIL
-        if not es_imagen_valida(origen):
-            rechazadas.append((f, "archivo corrupto o no es una imagen real (probablemente HTML descargado por error)"))
-            continue
-
         salida = os.path.join(MAESTRAS, f"{nombre}.webp")
         # Si ya es WebP de 1000x1000 viene normalizada del descargador: no se reprocesa.
         try:
-            ya_lista = ext.lower() == ".webp" and Image.open(origen).size == (LADO, LADO)
+            from PIL import Image as _I
+            ya_lista = ext.lower() == ".webp" and _I.open(origen).size == (LADO, LADO)
         except Exception:
             ya_lista = False
-
         if not ya_lista and not normalizar(origen, salida):
-            rechazadas.append((f, "imagen vacia o sin contenido"))
+            rechazadas.append((f, "imagen vacía o sin contenido"))
             continue
         if ext.lower() != ".webp":
-            os.remove(origen)   # ya existe la version WebP normalizada
+            os.remove(origen)   # ya existe la versión WebP normalizada
 
         v = analizar(salida)
         if not v["ok"]:
@@ -164,8 +114,8 @@ def main() -> None:
         disponibles[nombre] = salida
 
     # ---- 2. propagar a todas las referencias del modelo ----
-    # La maestra solo se aplica donde no hay ya una foto: una imagen verificada
-    # para esa referencia puntual es mas precisa que la del modelo.
+    # La maestra sólo se aplica donde no hay ya una foto: una imagen verificada
+    # para esa referencia puntual es más precisa que la del modelo.
     asignadas, modelos_ok = 0, 0
     for s, imagen in disponibles.items():
         for p in por_slug[s]:
@@ -185,15 +135,15 @@ def main() -> None:
     print(f"Referencias asignadas   : {asignadas}")
     print(f"Fotos reales            : {len(con_foto)} / {len(catalogo)}")
     print(f"Imagen generada         : {len(catalogo) - len(con_foto)}")
-    print(f"Modelos sin fotografia  : {len(sin_foto)}")
+    print(f"Modelos sin fotografía  : {len(sin_foto)}")
 
     if rechazadas:
         print(f"\nRechazadas ({len(rechazadas)}):")
         for f, motivo in rechazadas:
-            print(f"  - {f}: {motivo}")
+            print(f"  · {f}: {motivo}")
 
     with open("reportes/modelos-sin-foto.txt", "w", encoding="utf-8") as f:
-        f.write("# Deja la imagen en public/maestras/ con este nombre y corre: npm run imagenes\n")
+        f.write("# Dejá la imagen en public/maestras/ con este nombre y corré: npm run imagenes\n")
         for m in sin_foto:
             f.write(f"{slug(m)}.jpg    # {m}\n")
 

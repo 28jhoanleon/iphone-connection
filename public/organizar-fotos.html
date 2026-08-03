@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>📸 Organizar Fotos — iPhoneConnection</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f5f7;color:#111;padding:10px;max-width:100%}
+  h1{font-size:17px;text-align:center;margin-bottom:3px}
+  .sub{font-size:11px;text-align:center;color:#666;margin-bottom:10px}
+  .progress{position:sticky;top:0;background:#f5f5f7;padding:8px 0;z-index:20;border-bottom:1px solid #ddd;margin-bottom:10px}
+  .stats{display:flex;gap:6px;justify-content:center;margin-bottom:6px;flex-wrap:wrap}
+  .stat{background:#fff;padding:5px 10px;border-radius:6px;font-size:11px;border:1px solid #ddd}
+  .stat b{color:#007aff}
+  .bar{height:5px;background:#ddd;border-radius:3px;overflow:hidden}
+  .bar-fill{height:100%;background:#34a853;width:0%;transition:.3s}
+  .grid{display:grid;grid-template-columns:1fr;gap:10px}
+  @media(min-width:400px){.grid{grid-template-columns:1fr 1fr}}
+  .card{background:#fff;border:1px solid #ddd;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+  .card.assigned{border-color:#34a853;background:#e8f5e9}
+  .img-wrap{height:180px;display:flex;align-items:center;justify-content:center;background:#fafafa;padding:8px}
+  .img-wrap img{max-width:100%;max-height:100%;object-fit:contain}
+  .card-body{padding:10px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .img-name{font-size:10px;color:#888;word-break:break-all}
+  .img-size{font-size:9px;color:#aaa}
+  .search-model{width:100%;padding:6px 8px;border:1px solid #ddd;border-radius:6px;font-size:12px;background:#fff}
+  .model-select{width:100%;padding:6px 8px;border:1px solid #ddd;border-radius:6px;font-size:12px;background:#fff;margin-top:4px}
+  .model-select option:disabled{color:#aaa}
+  .assigned-badge{font-size:10px;color:#34a853;font-weight:600;display:none}
+  .card.assigned .assigned-badge{display:block}
+  .actions{margin-top:auto;padding-top:6px}
+  .btn-assign{width:100%;padding:8px;border:none;border-radius:6px;background:#007aff;color:#fff;font-size:12px;font-weight:600;cursor:pointer}
+  .btn-assign:disabled{background:#ccc}
+  .bottom-actions{position:sticky;bottom:0;background:#f5f5f7;padding:10px;border-top:1px solid #ddd;display:flex;gap:8px;flex-wrap:wrap;z-index:20}
+  .btn-gen{flex:1;padding:12px;border:none;border-radius:8px;background:#34a853;color:#fff;font-size:13px;font-weight:700;cursor:pointer}
+  .btn-gen:disabled{background:#ccc}
+  .btn-reset{padding:12px 16px;border:none;border-radius:8px;background:#ff3b30;color:#fff;font-size:13px;font-weight:700;cursor:pointer}
+  .script-output{display:none;background:#1e1e1e;color:#0f0;padding:12px;border-radius:8px;font-family:monospace;font-size:11px;white-space:pre-wrap;word-break:break-all;margin-top:10px;max-height:300px;overflow:auto}
+  .script-output.show{display:block}
+  .copy-hint{font-size:11px;color:#666;text-align:center;margin-top:6px}
+  .hidden{display:none!important}
+</style>
+</head>
+<body>
+<h1>📸 Organizar Fotos Descargadas</h1>
+<p class="sub">Asigna cada imagen al modelo correcto del catalogo</p>
+
+<div class="progress">
+  <div class="stats">
+    <div class="stat">✅ Asignadas: <b id="countDone">0</b></div>
+    <div class="stat">⏳ Faltan: <b id="countLeft">0</b></div>
+    <div class="stat">📊 Total: <b id="countTotal">0</b></div>
+  </div>
+  <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="bottom-actions">
+  <button class="btn-gen" id="btnGen" onclick="generarScript()" disabled>📋 Generar script de movimiento</button>
+  <button class="btn-reset" onclick="resetTodo()">🔄 Reiniciar</button>
+</div>
+
+<div class="copy-hint" id="copyHint"></div>
+<pre class="script-output" id="scriptOut"></pre>
+
+<script>
+const MODELOS = [{"slug":"airtag-pack-x1-2-generacion","modelo":"AirTag Pack X1 2ª Generación","marca":"Apple","categoria":"Accesorios","refs":["A229"],"unidades":1},{"slug":"airtag-pack-x4","modelo":"AirTag Pack X4","marca":"Apple","categoria":"Accesorios","refs":["A230"],"unidades":1},{"slug":"apple-pencil-1-generacion","modelo":"Apple Pencil 1ª Generación","marca":"Apple","categoria":"Accesorios","refs":["A223"],"unidades":1},{"slug":"apple-pencil-pro","modelo":"Apple Pencil Pro","marca":"Apple","categoria":"Accesorios","refs":["A225"],"unidades":1},{"slug":"apple-pencil-usb-c","modelo":"Apple Pencil USB-C","marca":"Apple","categoria":"Accesorios","refs":["A224"],"unidades":1},{"slug":"cable-usb-iphone","modelo":"Cable USB iPhone","marca":"Apple","categoria":"Accesorios","refs":["A338"],"unidades":1},{"slug":"cargador-20w-certificado-iphone","modelo":"Cargador 20W certificado iPhone","marca":"Apple","categoria":"Accesorios","refs":["A339"],"unidades":1},{"slug":"cargador-20w-original-iphone","modelo":"Cargador 20W original iPhone","marca":"Apple","categoria":"Accesorios","refs":["A340"],"unidades":1},{"slug":"cargador-20w-original-iphone-llevando-el-equipo","modelo":"Cargador 20W original iPhone (llevando el equipo)","marca":"Apple","categoria":"Accesorios","refs":["A341"],"unidades":1},{"slug":"cargador-samsung-25w-original","modelo":"Cargador Samsung 25W original","marca":"Samsung","categoria":"Accesorios","refs":["A342"],"unidades":1},{"slug":"gopro-hero-13","modelo":"GoPro Hero 13","marca":"GoPro","categoria":"Accesorios","refs":["A344"],"unidades":1},{"slug":"joystick-ps5-dualsense","modelo":"Joystick PS5 DualSense","marca":"Sony","categoria":"Accesorios","refs":["A170"],"unidades":1},{"slug":"joystick-ps5-dualsense-adicional","modelo":"Joystick PS5 DualSense Adicional","marca":"Sony","categoria":"Accesorios","refs":["A327"],"unidades":1},{"slug":"malla-nike-para-apple-watch","modelo":"Malla Nike para Apple Watch","marca":"Apple","categoria":"Accesorios","refs":["A239"],"unidades":1},{"slug":"volante-logitech-para-ps5","modelo":"Volante Logitech para PS5","marca":"Sony","categoria":"Accesorios","refs":["A328"],"unidades":1},{"slug":"wallet-magsafe","modelo":"Wallet MagSafe","marca":"Apple","categoria":"Accesorios","refs":["A343"],"unidades":1},{"slug":"motorola-moto-edge-60","modelo":"Motorola Moto Edge 60","marca":"Motorola","categoria":"Android","refs":["A298"],"unidades":1},{"slug":"motorola-moto-edge-60-fusion","modelo":"Motorola Moto Edge 60 Fusion","marca":"Motorola","categoria":"Android","refs":["A299"],"unidades":1},{"slug":"motorola-moto-edge-70-fusion","modelo":"Motorola Moto Edge 70 Fusion","marca":"Motorola","categoria":"Android","refs":["A300"],"unidades":1},{"slug":"motorola-moto-edge-pro","modelo":"Motorola Moto Edge Pro","marca":"Motorola","categoria":"Android","refs":["A297"],"unidades":1},{"slug":"motorola-moto-g06","modelo":"Motorola Moto G06","marca":"Motorola","categoria":"Android","refs":["A312","A313"],"unidades":2},{"slug":"motorola-moto-g15","modelo":"Motorola Moto G15","marca":"Motorola","categoria":"Android","refs":["A309","A310","A311"],"unidades":3},{"slug":"motorola-moto-g17","modelo":"Motorola Moto G17","marca":"Motorola","categoria":"Android","refs":["A308"],"unidades":1},{"slug":"motorola-moto-g35","modelo":"Motorola Moto G35","marca":"Motorola","categoria":"Android","refs":["A307"],"unidades":1},{"slug":"motorola-moto-g56","modelo":"Motorola Moto G56","marca":"Motorola","categoria":"Android","refs":["A306"],"unidades":1},{"slug":"motorola-moto-g57-power","modelo":"Motorola Moto G57 Power","marca":"Motorola","categoria":"Android","refs":["A304"],"unidades":1},{"slug":"motorola-moto-g67","modelo":"Motorola Moto G67","marca":"Motorola","categoria":"Android","refs":["A305"],"unidades":1},{"slug":"motorola-moto-g77","modelo":"Motorola Moto G77","marca":"Motorola","categoria":"Android","refs":["A303"],"unidades":1},{"slug":"motorola-moto-g86","modelo":"Motorola Moto G86","marca":"Motorola","categoria":"Android","refs":["A302"],"unidades":1},{"slug":"motorola-moto-g86-power","modelo":"Motorola Moto G86 Power","marca":"Motorola","categoria":"Android","refs":["A301"],"unidades":1},{"slug":"poco-f8-pro","modelo":"Poco F8 Pro","marca":"POCO","categoria":"Android","refs":["A274"],"unidades":1},{"slug":"poco-f8-ultra","modelo":"Poco F8 Ultra","marca":"POCO","categoria":"Android","refs":["A273"],"unidades":1},{"slug":"poco-m8","modelo":"Poco M8","marca":"POCO","categoria":"Android","refs":["A281"],"unidades":1},{"slug":"poco-m8-pro","modelo":"Poco M8 Pro","marca":"POCO","categoria":"Android","refs":["A279","A280"],"unidades":2},{"slug":"poco-x8-pro","modelo":"Poco X8 Pro","marca":"POCO","categoria":"Android","refs":["A276"],"unidades":1},{"slug":"poco-x8-pro-8-gb-ram","modelo":"Poco X8 Pro 8 GB RAM","marca":"POCO","categoria":"Android","refs":["A275"],"unidades":1},{"slug":"poco-x8-pro-max","modelo":"Poco X8 Pro Max","marca":"POCO","categoria":"Android","refs":["A277","A278"],"unidades":2},{"slug":"samsung-galaxy-a07","modelo":"Samsung Galaxy A07","marca":"Samsung","categoria":"Android","refs":["A270","A271"],"unidades":2},{"slug":"samsung-galaxy-a16","modelo":"Samsung Galaxy A16","marca":"Samsung","categoria":"Android","refs":["A269"],"unidades":1},{"slug":"samsung-galaxy-a17","modelo":"Samsung Galaxy A17","marca":"Samsung","categoria":"Android","refs":["A267","A268"],"unidades":2},{"slug":"samsung-galaxy-a26","modelo":"Samsung Galaxy A26","marca":"Samsung","categoria":"Android","refs":["A265","A266"],"unidades":2},{"slug":"samsung-galaxy-a27","modelo":"Samsung Galaxy A27","marca":"Samsung","categoria":"Android","refs":["A264"],"unidades":1},{"slug":"samsung-galaxy-a37","modelo":"Samsung Galaxy A37","marca":"Samsung","categoria":"Android","refs":["A262","A263"],"unidades":2},{"slug":"samsung-galaxy-a57","modelo":"Samsung Galaxy A57","marca":"Samsung","categoria":"Android","refs":["A261"],"unidades":1},{"slug":"samsung-galaxy-s22","modelo":"Samsung Galaxy S22","marca":"Samsung","categoria":"Android","refs":["A167"],"unidades":1},{"slug":"samsung-galaxy-s25-ultra","modelo":"Samsung Galaxy S25 Ultra","marca":"Samsung","categoria":"Android","refs":["A258"],"unidades":1},{"slug":"samsung-galaxy-s25fe","modelo":"Samsung Galaxy S25FE","marca":"Samsung","categoria":"Android","refs":["A259","A260"],"unidades":2},{"slug":"samsung-galaxy-s26","modelo":"Samsung Galaxy S26","marca":"Samsung","categoria":"Android","refs":["A256","A257"],"unidades":2},{"slug":"samsung-galaxy-s26-plus","modelo":"Samsung Galaxy S26 Plus","marca":"Samsung","categoria":"Android","refs":["A254","A255"],"unidades":2},{"slug":"samsung-galaxy-s26-ultra","modelo":"Samsung Galaxy S26 Ultra","marca":"Samsung","categoria":"Android","refs":["A252","A253"],"unidades":2},{"slug":"xiaomi-17-ultra","modelo":"Xiaomi 17 Ultra","marca":"Xiaomi","categoria":"Android","refs":["A282"],"unidades":1},{"slug":"xiaomi-17t","modelo":"Xiaomi 17T","marca":"Xiaomi","categoria":"Android","refs":["A283"],"unidades":1},{"slug":"xiaomi-redmi-15","modelo":"Xiaomi Redmi 15","marca":"Xiaomi","categoria":"Android","refs":["A293"],"unidades":1},{"slug":"xiaomi-redmi-15c","modelo":"Xiaomi Redmi 15C","marca":"Xiaomi","categoria":"Android","refs":["A294","A295","A296"],"unidades":3},{"slug":"xiaomi-redmi-note-15","modelo":"Xiaomi Redmi Note 15","marca":"Xiaomi","categoria":"Android","refs":["A290","A291","A292"],"unidades":3},{"slug":"xiaomi-redmi-note-15-pro","modelo":"Xiaomi Redmi Note 15 Pro +","marca":"Xiaomi","categoria":"Android","refs":["A284","A285","A286","A287","A288","A289"],"unidades":6},{"slug":"airpods-4","modelo":"AirPods 4","marca":"Apple","categoria":"Audio","refs":["A228"],"unidades":1},{"slug":"airpods-4-noise-cancel","modelo":"AirPods 4 Noise Cancel","marca":"Apple","categoria":"Audio","refs":["A227"],"unidades":1},{"slug":"airpods-pro-3","modelo":"AirPods Pro 3","marca":"Apple","categoria":"Audio","refs":["A226"],"unidades":1},{"slug":"jbl-boombox-4","modelo":"JBL Boombox 4","marca":"JBL","categoria":"Audio","refs":["A330"],"unidades":1},{"slug":"jbl-bt-endurance-run-3","modelo":"JBL BT Endurance Run 3","marca":"JBL","categoria":"Audio","refs":["A336"],"unidades":1},{"slug":"jbl-charge-6","modelo":"JBL Charge 6","marca":"JBL","categoria":"Audio","refs":["A331"],"unidades":1},{"slug":"jbl-flip-7","modelo":"JBL Flip 7","marca":"JBL","categoria":"Audio","refs":["A332"],"unidades":1},{"slug":"jbl-go-4","modelo":"JBL Go 4","marca":"JBL","categoria":"Audio","refs":["A333"],"unidades":1},{"slug":"jbl-partybox-710","modelo":"JBL PartyBox 710","marca":"JBL","categoria":"Audio","refs":["A329"],"unidades":1},{"slug":"jbl-tune-310-usb-c","modelo":"JBL Tune 310 USB-C","marca":"JBL","categoria":"Audio","refs":["A337"],"unidades":1},{"slug":"jbl-tune-520bt","modelo":"JBL Tune 520BT","marca":"JBL","categoria":"Audio","refs":["A334"],"unidades":1},{"slug":"jbl-tune-770nc","modelo":"JBL Tune 770NC","marca":"JBL","categoria":"Audio","refs":["A335"],"unidades":1},{"slug":"x-view-xpods-5","modelo":"X View Xpods 5","marca":"X View","categoria":"Audio","refs":["A272"],"unidades":1},{"slug":"nintendo-switch-2-lcd","modelo":"Nintendo Switch 2 LCD","marca":"Nintendo","categoria":"Consolas","refs":["A324"],"unidades":1},{"slug":"nintendo-switch-lite","modelo":"Nintendo Switch Lite","marca":"Nintendo","categoria":"Consolas","refs":["A326"],"unidades":1},{"slug":"nintendo-switch-oled","modelo":"Nintendo Switch OLED","marca":"Nintendo","categoria":"Consolas","refs":["A325"],"unidades":1},{"slug":"ps5-digital","modelo":"PS5 Digital","marca":"Sony","categoria":"Consolas","refs":["A322"],"unidades":1},{"slug":"ps5-lectora","modelo":"PS5 Lectora","marca":"Sony","categoria":"Consolas","refs":["A323"],"unidades":1},{"slug":"ps5-pro-digital","modelo":"PS5 Pro Digital","marca":"Sony","categoria":"Consolas","refs":["A320"],"unidades":1},{"slug":"ps5-vr2-lentes-realidad-virtual","modelo":"PS5 VR2 Lentes Realidad Virtual","marca":"Sony","categoria":"Consolas","refs":["A321"],"unidades":1},{"slug":"iphone-11","modelo":"iPhone 11","marca":"Apple","categoria":"iPhone","refs":["A101","A102","A103","A104","A105"],"unidades":5},{"slug":"iphone-12","modelo":"iPhone 12","marca":"Apple","categoria":"iPhone","refs":["A107","A108","A109","A110","A111"],"unidades":5},{"slug":"iphone-12-mini","modelo":"iPhone 12 Mini","marca":"Apple","categoria":"iPhone","refs":["A106"],"unidades":1},{"slug":"iphone-12-pro","modelo":"iPhone 12 Pro","marca":"Apple","categoria":"iPhone","refs":["A112","A113","A114"],"unidades":3},{"slug":"iphone-13","modelo":"iPhone 13","marca":"Apple","categoria":"iPhone","refs":["A120","A121","A122","A123","A124","A125","A126","A127","A128","A171"],"unidades":10},{"slug":"iphone-13-mini","modelo":"iPhone 13 Mini","marca":"Apple","categoria":"iPhone","refs":["A115","A116","A117","A118","A119"],"unidades":5},{"slug":"iphone-13-pro","modelo":"iPhone 13 Pro","marca":"Apple","categoria":"iPhone","refs":["A129","A130","A131"],"unidades":3},{"slug":"iphone-13-pro-max","modelo":"iPhone 13 Pro Max","marca":"Apple","categoria":"iPhone","refs":["A132","A133","A134"],"unidades":3},{"slug":"iphone-14","modelo":"iPhone 14","marca":"Apple","categoria":"iPhone","refs":["A135","A136","A172"],"unidades":3},{"slug":"iphone-14-plus","modelo":"iPhone 14 Plus","marca":"Apple","categoria":"iPhone","refs":["A137","A138"],"unidades":2},{"slug":"iphone-14-pro","modelo":"iPhone 14 Pro","marca":"Apple","categoria":"iPhone","refs":["A139","A140","A141","A142","A143","A144","A145"],"unidades":7},{"slug":"iphone-14-pro-max","modelo":"iPhone 14 Pro Max","marca":"Apple","categoria":"iPhone","refs":["A146"],"unidades":1},{"slug":"iphone-15","modelo":"iPhone 15","marca":"Apple","categoria":"iPhone","refs":["A147","A148","A173","A174","A175"],"unidades":5},{"slug":"iphone-15-plus","modelo":"iPhone 15 Plus","marca":"Apple","categoria":"iPhone","refs":["A176"],"unidades":1},{"slug":"iphone-15-pro","modelo":"iPhone 15 Pro","marca":"Apple","categoria":"iPhone","refs":["A149","A150","A151","A152","A153","A154","A155"],"unidades":7},{"slug":"iphone-15-pro-max","modelo":"iPhone 15 Pro Max","marca":"Apple","categoria":"iPhone","refs":["A156"],"unidades":1},{"slug":"iphone-16","modelo":"iPhone 16","marca":"Apple","categoria":"iPhone","refs":["A177"],"unidades":1},{"slug":"iphone-16-plus","modelo":"iPhone 16 Plus","marca":"Apple","categoria":"iPhone","refs":["A178"],"unidades":1},{"slug":"iphone-16-pro","modelo":"iPhone 16 Pro","marca":"Apple","categoria":"iPhone","refs":["A157","A158","A159"],"unidades":3},{"slug":"iphone-16-pro-max","modelo":"iPhone 16 Pro Max","marca":"Apple","categoria":"iPhone","refs":["A160","A161","A162","A163","A179"],"unidades":5},{"slug":"iphone-17","modelo":"iPhone 17","marca":"Apple","categoria":"iPhone","refs":["A165","A180","A181"],"unidades":3},{"slug":"iphone-17-air","modelo":"iPhone 17 Air","marca":"Apple","categoria":"iPhone","refs":["A182"],"unidades":1},{"slug":"iphone-17-pro","modelo":"iPhone 17 Pro","marca":"Apple","categoria":"iPhone","refs":["A166","A184","A185","A186","A187","A188"],"unidades":6},{"slug":"iphone-17-pro-max","modelo":"iPhone 17 Pro Max","marca":"Apple","categoria":"iPhone","refs":["A189","A190","A191","A192","A193","A194"],"unidades":6},{"slug":"iphone-17e","modelo":"iPhone 17e","marca":"Apple","categoria":"iPhone","refs":["A164","A183"],"unidades":2},{"slug":"macbook-air-13-6-m5","modelo":"MacBook Air 13,6 M5","marca":"Apple","categoria":"Notebooks","refs":["A197","A198"],"unidades":2},{"slug":"macbook-air-15-3-m5","modelo":"MacBook Air 15,3 M5","marca":"Apple","categoria":"Notebooks","refs":["A199","A200"],"unidades":2},{"slug":"macbook-neo-13","modelo":"MacBook Neo 13\"","marca":"Apple","categoria":"Notebooks","refs":["A195","A196"],"unidades":2},{"slug":"macbook-pro-m5-14","modelo":"MacBook Pro M5 14\"","marca":"Apple","categoria":"Notebooks","refs":["A201","A202","A203","A204"],"unidades":4},{"slug":"macbook-pro-m5-pro-14","modelo":"MacBook Pro M5 Pro 14\"","marca":"Apple","categoria":"Notebooks","refs":["A205","A206","A207","A208"],"unidades":4},{"slug":"macbook-pro-m5-pro-16","modelo":"MacBook Pro M5 Pro 16\"","marca":"Apple","categoria":"Notebooks","refs":["A209","A210"],"unidades":2},{"slug":"notebook-asus-vivobook-go-15-6","modelo":"Notebook Asus Vivobook Go 15.6\"","marca":"Asus","categoria":"Notebooks","refs":["A319"],"unidades":1},{"slug":"notebook-dell-15-6","modelo":"Notebook Dell 15,6\"","marca":"Dell","categoria":"Notebooks","refs":["A314"],"unidades":1},{"slug":"notebook-hp-15-6","modelo":"Notebook HP 15,6\"","marca":"HP","categoria":"Notebooks","refs":["A315"],"unidades":1},{"slug":"notebook-lenovo-14","modelo":"Notebook Lenovo 14\"","marca":"Lenovo","categoria":"Notebooks","refs":["A317"],"unidades":1},{"slug":"notebook-lenovo-15-6","modelo":"Notebook Lenovo 15.6\"","marca":"Lenovo","categoria":"Notebooks","refs":["A316"],"unidades":1},{"slug":"notebook-lenovo-ideapad-1-15-6","modelo":"Notebook Lenovo Ideapad 1 15.6\"","marca":"Lenovo","categoria":"Notebooks","refs":["A318"],"unidades":1},{"slug":"amazfit-active-3-premium","modelo":"Amazfit Active 3 Premium","marca":"Amazfit","categoria":"Relojes","refs":["A241"],"unidades":1},{"slug":"amazfit-balance-2","modelo":"Amazfit Balance 2","marca":"Amazfit","categoria":"Relojes","refs":["A240"],"unidades":1},{"slug":"amazfit-gts-4-mini","modelo":"Amazfit Gts 4 Mini","marca":"Amazfit","categoria":"Relojes","refs":["A245"],"unidades":1},{"slug":"apple-watch-se-2-40mm","modelo":"Apple Watch SE 2 40mm","marca":"Apple","categoria":"Relojes","refs":["A231"],"unidades":1},{"slug":"apple-watch-se-3-40mm","modelo":"Apple Watch SE 3 40mm","marca":"Apple","categoria":"Relojes","refs":["A232"],"unidades":1},{"slug":"apple-watch-se-3-44mm","modelo":"Apple Watch SE 3 44mm","marca":"Apple","categoria":"Relojes","refs":["A233"],"unidades":1},{"slug":"apple-watch-serie-10-46mm","modelo":"Apple Watch Serie 10 46mm","marca":"Apple","categoria":"Relojes","refs":["A168"],"unidades":1},{"slug":"apple-watch-serie-11-42mm","modelo":"Apple Watch Serie 11 42mm","marca":"Apple","categoria":"Relojes","refs":["A234","A235"],"unidades":2},{"slug":"apple-watch-serie-11-46mm","modelo":"Apple Watch Serie 11 46mm","marca":"Apple","categoria":"Relojes","refs":["A236","A237"],"unidades":2},{"slug":"apple-watch-ultra-3-49mm","modelo":"Apple Watch Ultra 3 49mm","marca":"Apple","categoria":"Relojes","refs":["A169","A238"],"unidades":2},{"slug":"garmin-forerunner-165-music","modelo":"Garmin Forerunner 165 Music","marca":"Garmin","categoria":"Relojes","refs":["A243"],"unidades":1},{"slug":"garmin-instinct-2x-solar","modelo":"Garmin Instinct 2X Solar","marca":"Garmin","categoria":"Relojes","refs":["A242"],"unidades":1},{"slug":"samsung-galaxy-fit-3","modelo":"Samsung Galaxy Fit 3","marca":"Samsung","categoria":"Relojes","refs":["A249"],"unidades":1},{"slug":"samsung-galaxy-watch-7-44mm","modelo":"Samsung Galaxy Watch 7 44mm","marca":"Samsung","categoria":"Relojes","refs":["A246"],"unidades":1},{"slug":"samsung-galaxy-watch-8-40mm","modelo":"Samsung Galaxy Watch 8 40mm","marca":"Samsung","categoria":"Relojes","refs":["A248"],"unidades":1},{"slug":"samsung-galaxy-watch-8-44mm","modelo":"Samsung Galaxy Watch 8 44mm","marca":"Samsung","categoria":"Relojes","refs":["A247"],"unidades":1},{"slug":"samsung-galaxy-watch-ultra-7-47mm-lte","modelo":"Samsung Galaxy Watch Ultra 7 47mm LTE","marca":"Samsung","categoria":"Relojes","refs":["A244"],"unidades":1},{"slug":"smart-watch-t800-ultra-3","modelo":"Smart Watch T800 Ultra 3","marca":"Genérico","categoria":"Relojes","refs":["A251"],"unidades":1},{"slug":"xiaomi-sport-band","modelo":"Xiaomi Sport Band","marca":"Xiaomi","categoria":"Relojes","refs":["A250"],"unidades":1},{"slug":"ipad-11","modelo":"iPad 11","marca":"Apple","categoria":"Tablets","refs":["A213","A214"],"unidades":2},{"slug":"ipad-air-11-m4","modelo":"iPad Air 11\" M4","marca":"Apple","categoria":"Tablets","refs":["A215","A216"],"unidades":2},{"slug":"ipad-air-13-m4","modelo":"iPad Air 13\" M4","marca":"Apple","categoria":"Tablets","refs":["A217","A218"],"unidades":2},{"slug":"ipad-mini-a17-pro","modelo":"iPad Mini A17 Pro","marca":"Apple","categoria":"Tablets","refs":["A211","A212"],"unidades":2},{"slug":"ipad-pro-11-m5","modelo":"iPad Pro 11\" M5","marca":"Apple","categoria":"Tablets","refs":["A219","A220"],"unidades":2},{"slug":"ipad-pro-13-m5","modelo":"iPad Pro 13\" M5","marca":"Apple","categoria":"Tablets","refs":["A221","A222"],"unidades":2},{"slug":"lenovo-idea-tab-pro-12-7","modelo":"Lenovo Idea Tab Pro 12.7","marca":"Lenovo","categoria":"Tablets","refs":["A345"],"unidades":1},{"slug":"samsung-tab-a11-8-7","modelo":"Samsung Tab A11 8.7\"","marca":"Samsung","categoria":"Tablets","refs":["A357"],"unidades":1},{"slug":"samsung-tab-a11","modelo":"Samsung Tab A11+","marca":"Samsung","categoria":"Tablets","refs":["A355"],"unidades":1},{"slug":"samsung-tab-a11-11","modelo":"Samsung Tab A11+ 11\"","marca":"Samsung","categoria":"Tablets","refs":["A356"],"unidades":1},{"slug":"samsung-tab-a9-11","modelo":"Samsung Tab A9+ 11\"","marca":"Samsung","categoria":"Tablets","refs":["A358"],"unidades":1},{"slug":"samsung-tab-s10-fe-pen","modelo":"Samsung Tab S10 FE + Pen","marca":"Samsung","categoria":"Tablets","refs":["A352","A353"],"unidades":2},{"slug":"samsung-tab-s10-lite-pen","modelo":"Samsung Tab S10 Lite + Pen","marca":"Samsung","categoria":"Tablets","refs":["A354"],"unidades":1},{"slug":"samsung-tab-s11-14-6-pen","modelo":"Samsung Tab S11 14.6 + Pen","marca":"Samsung","categoria":"Tablets","refs":["A351"],"unidades":1},{"slug":"samsung-tab-s11-ultra-14-6-pen","modelo":"Samsung Tab S11 Ultra 14.6 + Pen","marca":"Samsung","categoria":"Tablets","refs":["A350"],"unidades":1},{"slug":"xiaomi-tablet-redmi-pad-2-se-11","modelo":"Xiaomi Tablet Redmi Pad 2 SE 11\"","marca":"Xiaomi","categoria":"Tablets","refs":["A348","A349"],"unidades":2},{"slug":"xiaomi-tablet-redmi-pad-pro-2-12-1","modelo":"Xiaomi Tablet Redmi Pad Pro 2 12.1\"","marca":"Xiaomi","categoria":"Tablets","refs":["A346","A347"],"unidades":2}];
+const IMAGENES = [{"id":0,"nombreOriginal":"ar-galaxy-tab-a9-plus-sm-x210-sm-x210nzsaaro-539822822.png","cleanName":"img_000.png","sizeKb":391},{"id":1,"nombreOriginal":"y07r5un2jld1hyaf1vthz6f9y7ri4o805180.png","cleanName":"img_001.png","sizeKb":176},{"id":2,"nombreOriginal":"010395144.jpeg","cleanName":"img_002.jpeg","sizeKb":91},{"id":3,"nombreOriginal":"2_746b8fe7-c0ef-49ca-8393-fdb784402bb7_grande.png","cleanName":"img_003.png","sizeKb":79},{"id":4,"nombreOriginal":"latin-en-galaxy-tab-a11-sm-x130-573713-sm-x133nzazgto-550429860.png","cleanName":"img_004.png","sizeKb":65},{"id":5,"nombreOriginal":"Tablet-Xiaomi-Redmi-Pad-2-11-8GB-256GB-WiFi.png","cleanName":"img_005.png","sizeKb":48},{"id":6,"nombreOriginal":"ie-galaxy-tab-a11-plus-sm-x230-sm-x230nzareub-550053123.jpeg","cleanName":"img_006.jpeg","sizeKb":21},{"id":7,"nombreOriginal":"images (8).jpeg","cleanName":"img_007.jpeg","sizeKb":11},{"id":8,"nombreOriginal":"images (6).jpeg","cleanName":"img_008.jpeg","sizeKb":9},{"id":9,"nombreOriginal":"D_NQ_NP_821161-MLA99514679418_112025-O.webp","cleanName":"img_009.webp","sizeKb":8},{"id":10,"nombreOriginal":"images (7).jpeg","cleanName":"img_010.jpeg","sizeKb":8}];
+const LS_KEY = 'ic_org_fotos_v1';
+
+function load(){ try{return JSON.parse(localStorage.getItem(LS_KEY)||'{}')}catch(e){return{}} }
+function save(obj){ localStorage.setItem(LS_KEY, JSON.stringify(obj)); }
+let asignaciones = load();
+
+// Construir opciones del select agrupadas por categoria
+let selectOptions = '<option value="">-- Elegir modelo --</option>';
+let catActual = '';
+MODELOS.forEach(m => {
+  if (m.categoria !== catActual) {
+    if (catActual) selectOptions += '</optgroup>';
+    selectOptions += '<optgroup label="📂 ' + m.categoria + '">';
+    catActual = m.categoria;
+  }
+  selectOptions += '<option value="' + m.slug + '">' + m.marca + ' ' + m.modelo + ' (' + m.unidades + 'u)</option>';
+});
+if (catActual) selectOptions += '</optgroup>';
+
+// Renderizar grid
+const grid = document.getElementById('grid');
+IMAGENES.forEach(img => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.id = img.id;
+  card.innerHTML = 
+    '<div class="img-wrap"><img src="temp-fotos/' + img.cleanName + '" alt="' + img.nombreOriginal + '" loading="lazy"></div>' +
+    '<div class="card-body">' +
+      '<div class="img-name">' + img.nombreOriginal + '</div>' +
+      '<div class="img-size">' + img.sizeKb + ' KB</div>' +
+      '<div class="assigned-badge">✅ Asignado</div>' +
+      '<input type="text" class="search-model" placeholder="Buscar modelo..." oninput="filtrarSelect(this)">' +
+      '<select class="model-select" onchange="asignar(' + img.id + ', this.value, this)">' + selectOptions + '</select>' +
+      '<div class="actions"><button class="btn-assign" onclick="confirmarAsignacion(' + img.id + ', this)">✅ Confirmar asignacion</button></div>' +
+    '</div>';
+  grid.appendChild(card);
+});
+
+function filtrarSelect(input) {
+  const q = input.value.toLowerCase();
+  const select = input.nextElementSibling;
+  const opts = select.querySelectorAll('option');
+  opts.forEach(opt => {
+    if (!opt.value) return;
+    const match = opt.textContent.toLowerCase().includes(q);
+    opt.style.display = match ? '' : 'none';
+  });
+}
+
+function asignar(id, slug, select) {
+  const btn = select.parentElement.querySelector('.btn-assign');
+  btn.disabled = !slug;
+}
+
+function confirmarAsignacion(id, btn) {
+  const card = document.querySelector('.card[data-id="' + id + '"]');
+  const select = card.querySelector('.model-select');
+  const slug = select.value;
+  if (!slug) return;
+  asignaciones[id] = slug;
+  save(asignaciones);
+  card.classList.add('assigned');
+  updateStats();
+}
+
+function updateStats() {
+  let done = 0;
+  IMAGENES.forEach(img => { if (asignaciones[img.id]) done++; });
+  const total = IMAGENES.length;
+  document.getElementById('countDone').textContent = done;
+  document.getElementById('countLeft').textContent = total - done;
+  document.getElementById('countTotal').textContent = total;
+  document.getElementById('barFill').style.width = total ? (done/total*100) + '%' : '0%';
+  document.getElementById('btnGen').disabled = done === 0;
+}
+
+function resetTodo() {
+  if (!confirm('Borrar todas las asignaciones?')) return;
+  asignaciones = {};
+  save(asignaciones);
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('assigned'));
+  document.querySelectorAll('.model-select').forEach(s => s.value = '');
+  document.querySelectorAll('.btn-assign').forEach(b => b.disabled = true);
+  document.getElementById('scriptOut').classList.remove('show');
+  updateStats();
+}
+
+function generarScript() {
+  let lines = ['#!/bin/bash', '# Script generado por iPhoneConnection — Organizar Fotos', '# Copiar y pegar en Termux, o guardar como scripts/mover-fotos.sh', ''];
+
+  // Crear mapeo inverso: slug -> img
+  const asignadas = [];
+  IMAGENES.forEach(img => {
+    const slug = asignaciones[img.id];
+    if (!slug) return;
+    const modelo = MODELOS.find(m => m.slug === slug);
+    if (!modelo) return;
+    asignadas.push({img, modelo});
+  });
+
+  lines.push('echo "Moviendo ' + asignadas.length + ' fotos..."');
+  lines.push('mkdir -p public/maestras');
+  lines.push('');
+
+  asignadas.forEach(({img, modelo}) => {
+    const origen = '/sdcard/Download/fotos-ic/'.replace(/'/g, "'\''") + '/' + img.nombreOriginal.replace(/'/g, "'\''");
+    const destino = 'public/maestras/' + modelo.slug + img.ext;
+    lines.push('# ' + modelo.marca + ' ' + modelo.modelo + ' (' + modelo.refs.join(', ') + ')');
+    lines.push('cp "' + origen + '" "' + destino + '"');
+    lines.push('');
+  });
+
+  lines.push('echo "✅ Listo. Correr: npm run imagenes"');
+
+  const script = lines.join('\n');
+  document.getElementById('scriptOut').textContent = script;
+  document.getElementById('scriptOut').classList.add('show');
+  document.getElementById('copyHint').textContent = 'Copia el script de arriba y pegalo en Termux (o guardalo como scripts/mover-fotos.sh)';
+
+  // Intentar copiar al portapapeles
+  try {
+    navigator.clipboard.writeText(script);
+    document.getElementById('copyHint').textContent = '✅ Script copiado al portapapeles! Pegalo en Termux.';
+  } catch(e) {}
+}
+
+updateStats();
+</script>
+</body>
+</html>
