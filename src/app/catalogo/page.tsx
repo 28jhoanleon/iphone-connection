@@ -3,7 +3,6 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import catalogData from "@/data/catalogo.json";
 
-// ¡AQUÍ ESTABA EL ERROR! Le agregamos ": number"
 const formatPrice = (price: number) => {
   return new Intl.NumberFormat("es-AR", {
     style: "currency",
@@ -27,7 +26,9 @@ export default function CatalogoPage() {
     if (sortBy === "price-asc") products.sort((a, b) => a.precioCentavos - b.precioCentavos);
     else if (sortBy === "price-desc") products.sort((a, b) => b.precioCentavos - a.precioCentavos);
     else if (sortBy === "name") products.sort((a, b) => a.modelo.localeCompare(b.modelo));
-    return products.reduce((acc, product) => {
+    
+    // ¡EL ARREGLO ESTÁ AQUÍ! Le decimos a TypeScript que guarda arrays de productos
+    return products.reduce<Record<string, typeof catalogData[0][]>>((acc, product) => {
       const category = product.categoria || "Otros";
       if (!acc[category]) acc[category] = [];
       acc[category].push(product);
