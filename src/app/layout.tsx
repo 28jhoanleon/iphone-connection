@@ -1,60 +1,21 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppFab from "@/components/WhatsAppFab";
-import { SITIO } from "@/lib/seo";
 import "./globals.css";
-
+import ClientLayout from "./client-layout";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITIO),
-  title: {
-    default: "iPhone Connection — Tecnología con respaldo",
-    template: "%s",
-  },
-  description:
-    "Tecnología revisada, documentada y con garantía escrita. Sabés exactamente qué estás comprando.",
-  alternates: { canonical: "/" },
-  robots: { index: true, follow: true },
-  openGraph: {
-    title: "iPhone Connection — Tecnología con respaldo",
-    description: "Sabés exactamente qué estás comprando.",
-    url: SITIO,
-    siteName: "iPhone Connection",
-    locale: "es_AR",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "iPhone Connection",
-    description: "Sabés exactamente qué estás comprando.",
-  },
+  title: "iPhoneConnection",
+  description: "Tecnología revisada, documentada y con garantía escrita.",
 };
 
-/**
- * Fuentes por <link> y no por next/font: el entorno de build no tiene salida a
- * fonts.googleapis.com. Al pasar a Vercel conviene migrar a next/font y autohospedarlas
- * (elimina una petición externa y mejora el LCP). Registrado en backlog.
- */
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="es-AR">
-      <head>
-        {/* preconnect + preload: la fuente empieza a bajar antes de que el CSS la pida.
-            Reduce el salto de texto (CLS) y adelanta el LCP. */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <meta name="theme-color" content="#FAFAFA" />
-      </head>
-      <body className="font-sans">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppFab />
+    <html lang="es">
+      <body className="bg-[#f5f5f7] text-[#1d1d1f] font-sans antialiased">
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
