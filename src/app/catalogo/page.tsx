@@ -27,7 +27,6 @@ export default function CatalogoPage() {
     else if (sortBy === "price-desc") products.sort((a, b) => b.precioCentavos - a.precioCentavos);
     else if (sortBy === "name") products.sort((a, b) => a.modelo.localeCompare(b.modelo));
     
-    // ¡EL ARREGLO ESTÁ AQUÍ! Le decimos a TypeScript que guarda arrays de productos
     return products.reduce<Record<string, typeof catalogData[0][]>>((acc, product) => {
       const category = product.categoria || "Otros";
       if (!acc[category]) acc[category] = [];
@@ -37,9 +36,12 @@ export default function CatalogoPage() {
   }, [selectedBrand, sortBy]);
 
   const categoryNames = Object.keys(groupedProducts);
-  const [expandedCategories, setExpandedCategories] = useState([]);
+  
+  // CORRECCIÓN 1: Tipificar el estado como un array de strings
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
-  const toggleCategory = (category) => {
+  // CORRECCIÓN 2: Tipificar el parámetro 'category' como string
+  const toggleCategory = (category: string) => {
     setExpandedCategories((prev) => 
       prev.includes(category) 
         ? prev.filter((c) => c !== category) 
