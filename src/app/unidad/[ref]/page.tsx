@@ -124,9 +124,15 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
           <h1 className="mb-1.5 mt-3 text-[clamp(26px,5.6vw,36px)] font-semibold leading-[1.08] tracking-[-.035em]">
             {u.nombre}
           </h1>
-          <p className="mb-6 text-[15px] text-mute">
+          <p className="mb-5 text-[15px] text-mute">
             {u.estadoEtiqueta} · {ETIQUETA_DISPONIBILIDAD[u.disponibilidad]}
           </p>
+
+          {u.descripcion && (
+            <p className="mb-7 max-w-[52ch] text-[15.5px] leading-[1.65] text-mute">
+              {u.descripcion}
+            </p>
+          )}
 
           <p className="text-[clamp(28px,7.4vw,33px)] font-semibold leading-none tracking-[-.03em]">
             {precio(p)}

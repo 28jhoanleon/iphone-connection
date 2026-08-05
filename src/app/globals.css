@@ -38,6 +38,22 @@
   .tarjeta    { @apply rounded-lg border border-line bg-paper transition duration-200 hover:-translate-y-0.5 hover:border-ink hover:shadow-[0_4px_16px_rgba(0,0,0,.06)]; }
 }
 
+/* Aparición al hacer scroll. 16px y 600ms con desaceleración: se percibe como
+   que el contenido se asienta, no como un efecto. */
+.por-revelar {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.revelado {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .6s cubic-bezier(.22,.61,.36,1),
+              transform .6s cubic-bezier(.22,.61,.36,1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .por-revelar { opacity: 1; transform: none; }
+}
+
 /* microinteracciones · sutiles y cortas, nunca decorativas */
 @keyframes entrada {
   from { opacity: 0; transform: translateY(-4px); }

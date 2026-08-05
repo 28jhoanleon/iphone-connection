@@ -4,6 +4,7 @@ import { rutaImagen } from "@/lib/imagenes";
 import { linkWhatsApp } from "@/lib/formato";
 import { tipoCambio } from "@/lib/dolar";
 import TarjetaUnidad from "@/components/TarjetaUnidad";
+import Revelar from "@/components/Revelar";
 import BadgesConfianza from "@/components/BadgesConfianza";
 import Marcas from "@/components/Marcas";
 import { IconoRevision, IconoGarantia, IconoAsesoramiento } from "@/components/Iconos";
@@ -43,7 +44,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <Marcas marcas={marcasDestacadas} />
+      <Revelar><Marcas marcas={marcasDestacadas} /></Revelar>
 
       {/* BENEFICIOS */}
       <section className="contenedor">
@@ -54,8 +55,9 @@ export default async function Home() {
             [<IconoGarantia key="g" />, "Garantía escrita", "Condiciones claras, por escrito, desde el día de la compra. Sin letra chica."],
             [<IconoAsesoramiento key="a" />, "Asesoramiento", "Te decimos qué equipo te conviene, incluso cuando no es el más caro."],
           ].map(([icono, t, d], i) => (
-            <div
+            <Revelar
               key={t as string}
+              retraso={i * 90}
               className={`flex gap-3.5 py-6 sm:block sm:py-10 ${i > 0 ? "border-t border-line sm:border-l sm:border-t-0 sm:pl-7" : ""} ${i < 2 ? "sm:pr-7" : ""}`}
             >
               <span className="mt-0.5 shrink-0 text-ink sm:mb-3 sm:block">{icono}</span>
@@ -63,7 +65,7 @@ export default async function Home() {
                 <h3 className="mb-1 text-[16.5px] font-semibold leading-tight sm:mb-1.5 sm:text-[17px]">{t as string}</h3>
                 <p className="text-[14.5px] leading-relaxed text-mute sm:text-[14.5px]">{d as string}</p>
               </div>
-            </div>
+            </Revelar>
           ))}
         </div>
       </section>
@@ -73,8 +75,8 @@ export default async function Home() {
         <h2 className="titulo-sec mb-6">Explorar por categoría</h2>
         <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {fams.map((f) => (
+            <Revelar key={f.slug} retraso={(fams.indexOf(f) % 4) * 70}>
             <Link
-              key={f.slug}
               href={`/catalogo/${f.slug}`}
               className="group flex flex-col rounded-lg border border-line bg-paper p-3 transition duration-200 hover:-translate-y-0.5 hover:border-ink sm:p-4"
             >
@@ -94,6 +96,7 @@ export default async function Home() {
                 {f.totalUnidades} EQUIPOS
               </p>
             </Link>
+            </Revelar>
           ))}
         </div>
       </section>
@@ -108,7 +111,9 @@ export default async function Home() {
         </div>
         <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {dest.map((u, i) => (
-            <TarjetaUnidad key={u.ref} u={u} tc={tc.valor} ultimas={esUltimasUnidades(u)} prioridad={i < 2} />
+            <Revelar key={u.ref} retraso={(i % 4) * 70} className="h-full">
+              <TarjetaUnidad u={u} tc={tc.valor} ultimas={esUltimasUnidades(u)} prioridad={i < 2} />
+            </Revelar>
           ))}
         </div>
       </section>

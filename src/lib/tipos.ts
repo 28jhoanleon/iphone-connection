@@ -21,6 +21,7 @@ export interface Unidad {
   estadoEtiqueta: string;
   bateria: number | null;
   bateriaPosibleReemplazo: boolean;
+  descripcion?: string;
   defecto: string | null;
   costoCentavos: number | null;
   precioCentavos: number;
