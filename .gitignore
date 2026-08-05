@@ -13,3 +13,5 @@ reportes/
 *.zip
 maestras/
 fotos-modelo/
+generar_*.py
+.env
