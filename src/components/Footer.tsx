@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { empresa, tiene, hayEnvios, hayPagos } from "@/lib/empresa";
 import { familiasVisibles } from "@/lib/catalogo";
-import { tipoCambio, fechaLegible } from "@/lib/dolar";
+import { tipoCambio, fechaLegible, MOSTRAR_COTIZACION } from "@/lib/dolar";
 import { linkWhatsApp } from "@/lib/formato";
 
 export default async function Footer() {

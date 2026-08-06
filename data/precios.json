@@ -3,5 +3,7 @@
   "margen": 0.15,
   "redondeoPesos": 1000,
   "tcRespaldo": 1520,
-  "revalidarSegundos": 21600
+  "revalidarSegundos": 21600,
+  "mostrarCotizacion": false,
+  "_nota": "mostrarCotizacion:false oculta el dolar al publico. El precio se sigue calculando con el."
 }

@@ -1,11 +1,14 @@
 {
   "nombre": "iPhone Connection",
-  "whatsapp": "",
+  "whatsapp": "5493413386047",
   "instagram": "",
   "email": "",
   "zona": "",
   "horarios": "",
-  "socios": [],
+  "socios": [
+    "Jhoan",
+    "Bryan"
+  ],
   "anioFundacion": "",
   "dominio": "",
   "envios": {
@@ -19,7 +22,25 @@
     "nota": ""
   },
   "incluyeCaja": {
-    "nuevo_sellado": ["Equipo", "Cable de carga", "Documentación original", "Caja sellada"],
-    "usado": ["Equipo", "Cable de carga"]
-  }
+    "nuevo_sellado": [
+      "Equipo",
+      "Cable de carga",
+      "Documentación original",
+      "Caja sellada"
+    ],
+    "usado": [
+      "Equipo",
+      "Cable de carga"
+    ]
+  },
+  "vendedores": [
+    {
+      "nombre": "Jhoan",
+      "whatsapp": "5493413386047"
+    },
+    {
+      "nombre": "Bryan",
+      "whatsapp": "5493416674306"
+    }
+  ]
 }

@@ -11,6 +11,9 @@
  */
 import cfg from "@/data/precios.json";
 
+/** El público no ve la cotización: es un parámetro interno de pricing. */
+export const MOSTRAR_COTIZACION = Boolean((cfg as { mostrarCotizacion?: boolean }).mostrarCotizacion);
+
 export interface Cotizacion {
   valor: number;
   nombre: string;

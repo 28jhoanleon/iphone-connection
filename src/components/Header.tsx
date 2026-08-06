@@ -18,6 +18,7 @@ export default function Header() {
           </Link>
 
           <nav aria-label="Principal" className="hidden items-center gap-6 text-[13.5px] leading-none text-mute lg:flex">
+            <Link href="/catalogo" className="hover:text-ink">Catálogo</Link>
             <Link href="/nosotros" className="hover:text-ink">Nosotros</Link>
             <Link href="/garantia" className="hover:text-ink">Garantía</Link>
             <Link href="/faq" className="hover:text-ink">FAQ</Link>

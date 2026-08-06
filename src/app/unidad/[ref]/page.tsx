@@ -8,7 +8,7 @@ import { rutaImagenUnidad } from "@/lib/imagenes";
 import {
   precio, precioARS, capacidad, garantia, linkWhatsApp, ETIQUETA_DISPONIBILIDAD,
 } from "@/lib/formato";
-import { tipoCambio, fechaLegible } from "@/lib/dolar";
+import { tipoCambio, fechaLegible, MOSTRAR_COTIZACION } from "@/lib/dolar";
 import { empresa, hayEnvios, hayPagos } from "@/lib/empresa";
 import { SITIO } from "@/lib/seo";
 import Migas from "@/components/Migas";
@@ -137,7 +137,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
           <p className="text-[clamp(28px,7.4vw,33px)] font-semibold leading-none tracking-[-.03em]">
             {precio(p)}
           </p>
-          {tc.fuente === "api" && (
+          {MOSTRAR_COTIZACION && tc.fuente === "api" && (
             <p className="mt-2 font-data text-[11px] tracking-[.06em] text-mute-soft">
               {tc.nombre.toUpperCase()} ${tc.valor} · {fechaLegible(tc)}
             </p>

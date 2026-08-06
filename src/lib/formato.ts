@@ -1,5 +1,5 @@
 import type { Unidad } from "./tipos";
-import { empresa } from "./empresa";
+import { empresa, whatsappPara } from "./empresa";
 import cfg from "@/data/precios.json";
 
 /**
@@ -37,10 +37,11 @@ export function garantia(u: Unidad): string {
 
 /** Mensaje precargado de WhatsApp · Doc 00 §9 */
 export function linkWhatsApp(u?: Unidad): string {
-  // El número vive en data/empresa.json. Mientras no esté cargado, los CTA llevan
-  // a /contacto en vez de quedar como enlace muerto: nunca un href="#".
-  if (!empresa.whatsapp) return "/contacto";
-  const base = `https://wa.me/${empresa.whatsapp.replace(/\D/g, "")}`;
+  // Las consultas se reparten entre los vendedores según la referencia del
+  // producto: el mismo equipo cae siempre en el mismo, así no se pisan.
+  const numero = whatsappPara(u?.ref);
+  if (!numero) return "/contacto";
+  const base = `https://wa.me/${numero.replace(/\D/g, "")}`;
   if (!u) return `${base}?text=${encodeURIComponent("Hola, quería hacer una consulta.")}`;
   return `${base}?text=${encodeURIComponent(`Hola, me interesa el ${u.nombreCompleto} — ref. #${u.ref}`)}`;
 }
