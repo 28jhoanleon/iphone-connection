@@ -70,8 +70,17 @@ def analizar(ruta: str) -> dict:
         "piezas": piezas,
     })
 
-    # trazo de texto: sin color, tinta oscura y mucho gris de antialias
+    # Trazo de texto: sin color, tinta oscura y mucho gris de antialias.
     es_texto = sat < SAT_TEXTO and medios > MEDIOS_TEXTO and oscuro > OSCURO_TEXTO
+
+    # Salvedad para objetos oscuros sólidos. Un reloj o un auricular negro tiene
+    # el mismo perfil de trazo que el texto, pero es una masa compacta: sus
+    # píxeles llenan casi todo su recuadro. El texto, en cambio, son trazos
+    # finos separados por blanco y nunca supera un tercio de su propio recuadro.
+    solidez = float(tinta.sum() / max((ys.max() - ys.min() + 1) * (xs.max() - xs.min() + 1), 1))
+    if es_texto and solidez > 0.42:
+        es_texto = False
+    res["solidez"] = round(solidez, 3)
     res["texto"] = bool(es_texto)
 
     if es_texto:
