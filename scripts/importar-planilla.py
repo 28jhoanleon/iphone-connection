@@ -26,8 +26,12 @@ from normalizar import (CATEGORIA_FINAL, ORDEN_CATEGORIA, normalizar_colores,
                         detectar_marca, limpiar_nombre, separar_modelo, es_replica)
 
 ORIGEN = "datos/lista-completa.csv"
-TC_PLANILLA = 1520
-MARGEN = 0.15
+# El tipo de cambio y el margen viven en data/precios.json, no acá. Tenerlos
+# escritos en el script hacía que cambiarlos en el JSON no tuviera efecto.
+_cfg = json.load(open("data/precios.json", encoding="utf-8"))
+_cfg = json.load(open("data/precios.json", encoding="utf-8"))
+TC_PLANILLA = _cfg["tcRespaldo"]
+MARGEN = _cfg["margen"]
 
 # sección de la planilla -> (categoría, arquetipo, marca por defecto)
 SECCIONES = {
@@ -86,10 +90,29 @@ def slugify(s):
 
 
 def a_usd(txt):
+    """
+    Precio en dólares desde el texto de la planilla.
+
+    El punto es separador de MILES, no decimal: "$1.150" son mil ciento
+    cincuenta dólares, no uno con quince. Interpretarlo al revés hacía que todo
+    lo que costara más de mil se guardara mil veces más barato.
+    """
     t = re.sub(r"[^\d.,]", "", str(txt or ""))
     if not t:
         return None
-    t = t.replace(",", "")
+    if "," in t and "." in t:
+        # el último separador que aparece es el decimal
+        if t.rfind(",") > t.rfind("."):
+            t = t.replace(".", "").replace(",", ".")
+        else:
+            t = t.replace(",", "")
+    elif "," in t:
+        # coma decimal sólo si deja uno o dos dígitos: "1,50" es decimal, "1,150" son miles
+        t = t.replace(",", ".") if len(t.split(",")[-1]) <= 2 else t.replace(",", "")
+    elif t.count(".") >= 1:
+        # punto de miles si deja exactamente tres dígitos: "1.150" son miles
+        if len(t.split(".")[-1]) == 3:
+            t = t.replace(".", "")
     try:
         v = float(t)
     except ValueError:
@@ -182,6 +205,25 @@ def main():
         ancla = modelo
 
         usd = a_usd(col("usd"))
+        # En varias filas la planilla corre las columnas cuando falta la
+        # batería, y el precio en dólares termina en la celda del color. Se
+        # busca el valor por su FORMA (empieza con $ y no es un precio en
+        # pesos de seis cifras) en lugar de confiar en la posición.
+        if usd is None:
+            # Sólo se rescata cuando la celda propia vino vacía, nunca para
+            # "corregir" un valor existente. Y se descartan los precios en
+            # pesos: en la planilla conviven ambos, y un cargador de USD 8
+            # aparece como $12.900 en la columna de al lado.
+            for celda in c[:8]:
+                t = celda.strip()
+                if not t.startswith("$"):
+                    continue
+                v = a_usd(t)
+                # un precio en pesos tiene separador de miles y supera los 20.000
+                if v and 3 <= v <= 20000 and not (v > 3000 and "." in t):
+                    usd = v
+                    reporte.append(f"Fila {n}: precio USD tomado de otra columna (columnas corridas).")
+                    break
         if usd is None:
             saltados += 1
             reporte.append(f"Fila {n}: «{modelo}» sin precio en dólares. No se importa.")
@@ -190,6 +232,22 @@ def main():
         categoria, arquetipo, marca_def = SECCIONES[seccion]
 
         low = modelo.lower()
+        # Productos que no pertenecen a la sección donde los puso el proveedor.
+        # Un robot aspirador dentro de la hoja de tablets no es una tablet.
+        FUERA_DE_SECCION = {
+            "aspirador": ("Hogar", "accesorio"),
+            "aspiradora": ("Hogar", "accesorio"),
+            "robot": ("Hogar", "accesorio"),
+            "purificador": ("Hogar", "accesorio"),
+            "balanza": ("Hogar", "accesorio"),
+        }
+        for pista, (cat_h, arq_h) in FUERA_DE_SECCION.items():
+            if pista in modelo.lower():
+                categoria, arquetipo = cat_h, arq_h
+                es_ajeno = True
+                reporte.append(f"Fila {n}: «{modelo}» reclasificado a {cat_h}.")
+                break
+
         ACCESORIO_PROPIO = ("airtag", "malla", "pencil", "pencul", "teclado", "joystick",
                             "volante", "cable", "cargador", "wallet", "battery pack", "mouse")
         if any(low.startswith(k) for k in ACCESORIO_PROPIO):
@@ -343,6 +401,24 @@ def main():
             )
 
         modelo_base = bajar_conectores(modelo_base)
+
+        # Notebooks y tablets: la configuración ES el producto. Cuatro MacBook
+        # Pro M5 14" con distinta RAM y almacenamiento no son el mismo equipo,
+        # y sin esos datos el cliente ve cuatro precios sin saber por qué.
+        if categoria in ("Notebooks", "Tablets"):
+            extras = []
+            m_alm = re.search(r"\b(\d+)\s*(tb|gb)\b", modelo, re.I)
+            if m_alm:
+                extras.append(f"{m_alm.group(1)} {m_alm.group(2).upper()}")
+            m_ram = re.search(r"\b(\d+)\s*ram\b", modelo, re.I)
+            if m_ram:
+                extras.append(f"{m_ram.group(1)} GB RAM")
+            m_gpu = re.search(r"\b(\d+)\s*core\s*gpu\b", modelo, re.I)
+            if m_gpu:
+                extras.append(f"GPU {m_gpu.group(1)} núcleos")
+            for e in extras:
+                if e.lower() not in modelo_base.lower():
+                    modelo_base += f" {e}"
         # siglas y nombres propios que no deben quedar en minúscula
         for mal, bien in (("Airtag", "AirTag"), ("usb-c", "USB-C"), ("Usb", "USB"),
                           ("Usbc", "USB-C"), ("Magsafe", "MagSafe"), ("Dualsense", "DualSense"),

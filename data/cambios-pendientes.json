@@ -1,0 +1,371 @@
+{
+  "fecha": "2026-08-06T22:58",
+  "filas": 383,
+  "totales": {
+    "precios": 0,
+    "nuevos": 43,
+    "salidos": 35,
+    "otros": 0
+  },
+  "precios": [],
+  "nuevos": [
+    {
+      "nombre": "MacBook Neo 13\" 256 GB 256 GB — Nuevo sellado",
+      "precio": 146832000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Neo 13\" Citrus 256 GB 256 GB — Nuevo sellado",
+      "precio": 145084000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Neo 13\" 512 GB 512 GB — Nuevo sellado",
+      "precio": 164312000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Air 13\" M4 16 GB — Nuevo sellado",
+      "precio": 218500000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Air 13,6 M5 512 GB 512 GB — Nuevo sellado",
+      "precio": 235980000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Air 13,6 M5 1 TB 1 TB — Nuevo sellado",
+      "precio": 354844000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Air 15,3 M5 1 TB 1 TB — Nuevo sellado",
+      "precio": 389804000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 14\" 512 GB 16 GB RAM — Nuevo sellado",
+      "precio": 354844000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 14\" 1 TB 16 GB RAM — Nuevo sellado",
+      "precio": 384560000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 14\" 1 TB 24 GB RAM — Nuevo sellado",
+      "precio": 433504000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 14\" 1 TB 32 GB RAM — Nuevo sellado",
+      "precio": 482448000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 Pro 14\" 1 TB 24 GB RAM — Nuevo sellado",
+      "precio": 492936000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM — Nuevo sellado",
+      "precio": 597816000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM GPU 20 núcleos — Nuevo sellado",
+      "precio": 641516000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 Pro 14\" 1 TB 48 GB RAM GPU 16 núcleos — Nuevo sellado",
+      "precio": 652004000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 Pro 16\" 1 TB 24 GB RAM GPU 20 núcleos — Nuevo sellado",
+      "precio": 580336000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "MacBook Pro M5 Pro 16\" 1 TB 48 GB RAM GPU 20 núcleos — Nuevo sellado",
+      "precio": 737656000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Asus Vivobook Go 15.6\" 8 GB — Nuevo sellado",
+      "precio": 68172000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Asus 14\" 8 GB — Nuevo sellado",
+      "precio": 77786000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Asus Vivobook 16\" 16 GB — Nuevo sellado",
+      "precio": 202768000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Dell 15,6\" 8 GB — Nuevo sellado",
+      "precio": 129352000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Dell 15.6\" 16 GB — Nuevo sellado",
+      "precio": 150328000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Dell Inspiron 15.6\" 16 GB — Nuevo sellado",
+      "precio": 164312000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook HP 17.3\" 8 GB — Nuevo sellado",
+      "precio": 115368000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook HP Victus Gaming 15.6\" 8 GB — Nuevo sellado",
+      "precio": 176548000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Lenovo Ideapad 1 15.6\" 8 GB — Nuevo sellado",
+      "precio": 100510000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Lenovo 15.6\" 8 GB — Nuevo sellado",
+      "precio": 115368000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Lenovo 15.6\" 16 GB — Nuevo sellado",
+      "precio": 146832000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Notebook Lenovo 14\" 8 GB — Nuevo sellado",
+      "precio": 135470000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK 16 GB — Nuevo sellado",
+      "precio": 166060000,
+      "categoria": "Notebooks"
+    },
+    {
+      "nombre": "Samsung Tab S11 Ultra 14.6\" + Pen 256 GB 256 GB — Nuevo sellado",
+      "precio": 197524000,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Samsung Tab S11 11\" + Pen 128 GB 128 GB — Nuevo sellado",
+      "precio": 139665200,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Samsung Tab S10 FE + Pen SM-X520 256 GB 256 GB — Nuevo sellado",
+      "precio": 102258000,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Samsung Tab S10 FE + Pen SM-X520 128 GB 128 GB — Nuevo sellado",
+      "precio": 91770000,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Samsung Tab S10 Lite + Pen SM-X400 128 GB 128 GB — Nuevo sellado",
+      "precio": 70794000,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Samsung Tab A11+ 11\" 256 GB 256 GB — Nuevo sellado",
+      "precio": 61180000,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Samsung Tab A11+ 11\" 128 GB 128 GB — Nuevo sellado",
+      "precio": 50692000,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Samsung Tab A11 8.6\" LTE 64 GB 64 GB — Nuevo sellado",
+      "precio": 36708000,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Samsung Tab A9+ 11\" 64 GB 64 GB — Nuevo sellado",
+      "precio": 37582000,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 256 GB 256 GB — Nuevo sellado",
+      "precio": 69745200,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 128 GB 128 GB — Nuevo sellado",
+      "precio": 55062000,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Xiaomi Redmi Pad 2 11\" 256 GB 256 GB — Nuevo sellado",
+      "precio": 48769200,
+      "categoria": "Tablets"
+    },
+    {
+      "nombre": "Xiaomi Redmi Pad 2 11\" 128 GB 128 GB — Nuevo sellado",
+      "precio": 38805600,
+      "categoria": "Tablets"
+    }
+  ],
+  "salidos": [
+    {
+      "nombre": "MacBook Neo 13\" 256 GB — Nuevo sellado",
+      "ref": "A208"
+    },
+    {
+      "nombre": "MacBook Neo 13\" Citrus 256 GB — Nuevo sellado",
+      "ref": "A209"
+    },
+    {
+      "nombre": "MacBook Neo 13\" 512 GB — Nuevo sellado",
+      "ref": "A210"
+    },
+    {
+      "nombre": "MacBook Air 13\" M4 — Nuevo sellado",
+      "ref": "A211"
+    },
+    {
+      "nombre": "MacBook Air 13,6 M5 512 GB — Nuevo sellado",
+      "ref": "A212"
+    },
+    {
+      "nombre": "MacBook Air 13,6 M5 1 TB — Nuevo sellado",
+      "ref": "A214"
+    },
+    {
+      "nombre": "MacBook Air 15,3 M5 1 TB — Nuevo sellado",
+      "ref": "A217"
+    },
+    {
+      "nombre": "MacBook Pro M5 14\" — Nuevo sellado",
+      "ref": "A221"
+    },
+    {
+      "nombre": "MacBook Pro M5 Pro 14\" — Nuevo sellado",
+      "ref": "A225"
+    },
+    {
+      "nombre": "MacBook Pro M5 Pro 16\" — Nuevo sellado",
+      "ref": "A227"
+    },
+    {
+      "nombre": "Notebook Asus Vivobook Go 15.6\" — Nuevo sellado",
+      "ref": "A330"
+    },
+    {
+      "nombre": "Notebook Asus 14\" — Nuevo sellado",
+      "ref": "A331"
+    },
+    {
+      "nombre": "Notebook Asus Vivobook 16\" — Nuevo sellado",
+      "ref": "A332"
+    },
+    {
+      "nombre": "Notebook Dell 15,6\" — Nuevo sellado",
+      "ref": "A333"
+    },
+    {
+      "nombre": "Notebook Dell 15.6\" — Nuevo sellado",
+      "ref": "A334"
+    },
+    {
+      "nombre": "Notebook Dell Inspiron 15.6\" — Nuevo sellado",
+      "ref": "A335"
+    },
+    {
+      "nombre": "Notebook HP 17.3\" — Nuevo sellado",
+      "ref": "A336"
+    },
+    {
+      "nombre": "Notebook HP Victus Gaming 15.6\" — Nuevo sellado",
+      "ref": "A337"
+    },
+    {
+      "nombre": "Notebook Lenovo Ideapad 1 15.6\" — Nuevo sellado",
+      "ref": "A338"
+    },
+    {
+      "nombre": "Notebook Lenovo 15.6\" — Nuevo sellado",
+      "ref": "A342"
+    },
+    {
+      "nombre": "Notebook Lenovo 14\" — Nuevo sellado",
+      "ref": "A341"
+    },
+    {
+      "nombre": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK — Nuevo sellado",
+      "ref": "A343"
+    },
+    {
+      "nombre": "Samsung Tab S11 Ultra 14.6\" + Pen 256 GB — Nuevo sellado",
+      "ref": "A369"
+    },
+    {
+      "nombre": "Samsung Tab S11 11\" + Pen 128 GB — Nuevo sellado",
+      "ref": "A370"
+    },
+    {
+      "nombre": "Samsung Tab S10 FE + Pen SM-X520 256 GB — Nuevo sellado",
+      "ref": "A371"
+    },
+    {
+      "nombre": "Samsung Tab S10 FE + Pen SM-X520 128 GB — Nuevo sellado",
+      "ref": "A372"
+    },
+    {
+      "nombre": "Samsung Tab S10 Lite + Pen SM-X400 128 GB — Nuevo sellado",
+      "ref": "A373"
+    },
+    {
+      "nombre": "Samsung Tab A11+ 11\" 256 GB — Nuevo sellado",
+      "ref": "A374"
+    },
+    {
+      "nombre": "Samsung Tab A11+ 11\" 128 GB — Nuevo sellado",
+      "ref": "A375"
+    },
+    {
+      "nombre": "Samsung Tab A11 8.6\" LTE 64 GB — Nuevo sellado",
+      "ref": "A376"
+    },
+    {
+      "nombre": "Samsung Tab A9+ 11\" 64 GB — Nuevo sellado",
+      "ref": "A377"
+    },
+    {
+      "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 256 GB — Nuevo sellado",
+      "ref": "A378"
+    },
+    {
+      "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 128 GB — Nuevo sellado",
+      "ref": "A379"
+    },
+    {
+      "nombre": "Xiaomi Redmi Pad 2 11\" 256 GB — Nuevo sellado",
+      "ref": "A380"
+    },
+    {
+      "nombre": "Xiaomi Redmi Pad 2 11\" 128 GB — Nuevo sellado",
+      "ref": "A381"
+    }
+  ],
+  "otros": []
+}
