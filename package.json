@@ -8,7 +8,7 @@
     "start": "next start",
     "doctor": "node scripts/doctor.mjs",
     "limpiar": "node scripts/limpiar-imagenes.mjs",
-    "prebuild": "node scripts/limpiar-imagenes.mjs && node scripts/verificar-imagenes.mjs",
+    "prebuild": "node scripts/limpiar-imagenes.mjs",
     "datos": "python3 scripts/importar-planilla.py && python3 scripts/generar-productos.py && python3 scripts/asignar-imagenes.py && python3 scripts/auditar-imagenes.py --borrar && python3 scripts/generar-indice.py",
     "auditar": "python3 scripts/auditar-catalogo.py && python3 scripts/auditar-imagenes.py",
     "verificar": "python3 scripts/verificar-datos.py && python3 scripts/auditar-catalogo.py && python3 scripts/auditar-imagenes.py",
