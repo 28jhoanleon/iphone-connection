@@ -15,3 +15,5 @@ maestras/
 fotos-modelo/
 generar_*.py
 .env
+contenido/
+public/contenido/
