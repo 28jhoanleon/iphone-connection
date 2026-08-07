@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import type { Modelo, Unidad } from "@/lib/tipos";
 import { precio, precioARS, capacidad } from "@/lib/formato";
@@ -9,9 +9,12 @@ import { precio, precioARS, capacidad } from "@/lib/formato";
  * Núcleo de la navegación aprobada (opción A · wireframe 30/07/2026):
  * capacidad y color son SELECTORES dentro del modelo, no pantallas separadas.
  */
-export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: number }) {
+export default function SelectorUnidades({
+  modelo, tc, imagenes,
+}: { modelo: Modelo; tc: number; imagenes: Record<string, string> }) {
   const [cap, setCap] = useState<number | null>(null);
   const [color, setColor] = useState<string | null>(null);
+  const [entrando, setEntrando] = useState(false);
 
   const coloresDe = (u: Unidad) => u.colores ?? (u.color ? [u.color] : []);
 
@@ -23,12 +26,37 @@ export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: n
     [modelo, cap, color],
   );
 
+  // La foto sigue a la selección: al elegir un color se ve ese color, no la
+  // del primer producto. El cambio se hace con un fundido corto para que se
+  // perciba como una transición y no como un salto.
+  const refFoto = visibles[0]?.ref ?? modelo.unidades[0].ref;
+
+  useEffect(() => {
+    setEntrando(true);
+    const t = setTimeout(() => setEntrando(false), 30);
+    return () => clearTimeout(t);
+  }, [refFoto]);
+
   const chip = (activo: boolean) =>
     `rounded-full border px-4 py-2.5 text-[13.5px] leading-none transition ${
       activo ? "border-ink bg-ink text-paper" : "border-line text-mute hover:border-ink hover:text-ink"
     }`;
 
   return (
+    <>
+    <div className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-white">
+      <img
+        key={refFoto}
+        src={imagenes[refFoto] ?? imagenes[modelo.unidades[0].ref]}
+        alt={modelo.nombre}
+        width={1000}
+        height={1000}
+        className={`h-full w-full object-contain transition-all duration-500 ease-out ${
+          entrando ? "scale-[.97] opacity-0" : "scale-100 opacity-100"
+        }`}
+      />
+    </div>
+
     <div>
       <h1 className="mb-1.5 text-[clamp(28px,4vw,40px)] font-semibold leading-[1.06] tracking-[-.03em]">
         {modelo.nombre}
@@ -98,5 +126,6 @@ export default function SelectorUnidades({ modelo, tc }: { modelo: Modelo; tc: n
         </div>
       )}
     </div>
+    </>
   );
 }

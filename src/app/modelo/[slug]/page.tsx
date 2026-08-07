@@ -32,6 +32,8 @@ export default async function ModeloPage({ params }: { params: Promise<{ slug: s
   const m = modeloPorSlug(slug);
   if (!m) notFound();
   const tc = await tipoCambio();
+  // Una imagen por unidad: el selector cambia la foto al elegir color.
+  const imagenes = Object.fromEntries(m.unidades.map((u) => [u.ref, rutaImagen(u.ref)]));
 
   return (
     <div className="contenedor">
@@ -44,10 +46,7 @@ export default async function ModeloPage({ params }: { params: Promise<{ slug: s
       />
       <Volver href={`/catalogo/${slugFamilia(m.categoria)}`} texto={`Volver a ${m.categoria}`} />
       <div className="grid gap-10 py-4 pb-16 md:grid-cols-2 md:pb-20 md:gap-14">
-        <div className="flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-white">
-          <img src={rutaImagen(m.unidades[0].ref)} alt={m.nombre} className="h-full w-full object-contain" />
-        </div>
-        <SelectorUnidades modelo={m} tc={tc.valor} />
+        <SelectorUnidades modelo={m} tc={tc.valor} imagenes={imagenes} />
       </div>
     </div>
   );

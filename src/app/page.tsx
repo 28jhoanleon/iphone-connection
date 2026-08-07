@@ -33,7 +33,7 @@ export default async function Home() {
             revisado, con su estado y su salud de batería declarados antes de que preguntes.
           </p>
           <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 sm:mt-9">
-            <Link href="/catalogo/iphone" className="btn-solido w-full sm:w-auto">
+            <Link href="/catalogo" className="btn-solido w-full sm:w-auto">
               Ver catálogo
             </Link>
             <Link href="/garantia" className="btn-texto">
@@ -105,7 +105,7 @@ export default async function Home() {
       <section className="contenedor pb-12 pt-10 sm:pb-16 sm:pt-14">
         <div className="mb-6 flex items-baseline justify-between gap-4">
           <h2 className="titulo-sec">Destacados</h2>
-          <Link href="/catalogo/iphone" className="btn-texto shrink-0">
+          <Link href="/catalogo" className="btn-texto shrink-0">
             Ver todo <span aria-hidden="true">→</span>
           </Link>
         </div>

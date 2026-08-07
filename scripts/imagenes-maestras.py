@@ -132,7 +132,10 @@ def main() -> None:
         nombre, ext = os.path.splitext(f)
         if ext.lower() not in ENTRADA:
             continue
-        if nombre not in por_slug:
+        # Las maestras pueden llamarse {modelo} o {modelo}-{color}. Aceptar sólo
+        # la primera forma descartaba las 108 fotos por color, y por eso todas
+        # las unidades de un modelo terminaban con la misma imagen.
+        if nombre not in por_slug and not any(nombre.startswith(m + "-") for m in por_slug):
             rechazadas.append((f, "no corresponde a ningun modelo del catalogo"))
             continue
 
@@ -163,17 +166,60 @@ def main() -> None:
             continue
         disponibles[nombre] = salida
 
-    # ---- 2. propagar a todas las referencias del modelo ----
+    # ---- 2. propagar, prefiriendo la maestra del color exacto ----
+    # Hay maestras nombradas {modelo}-{color}: sin esto, todas las unidades de
+    # un modelo recibían la misma foto y se perdía la distinción por color.
     # La maestra solo se aplica donde no hay ya una foto: una imagen verificada
     # para esa referencia puntual es mas precisa que la del modelo.
     asignadas, modelos_ok = 0, 0
+    def color_slug(p):
+        c = p.get("color") or (p.get("colores") or [None])[0]
+        return slug(c) if c else None
+
+    # primero las maestras con color: {modelo}-{color}
+    usadas = set()
     for s, imagen in disponibles.items():
-        for p in por_slug[s]:
+        for modelo_slug, unidades in por_slug.items():
+            if not s.startswith(modelo_slug + "-"):
+                continue
+            color = s[len(modelo_slug) + 1:]
+            for p in unidades:
+                if color_slug(p) == color and p["ref"] not in usadas:
+                    if any(os.path.exists(f'{DESTINO}/{p["ref"]}{e}') for e in (".jpg", ".jpeg", ".png")):
+                        continue
+                    shutil.copy(imagen, os.path.join(DESTINO, f'{p["ref"]}.webp'))
+                    usadas.add(p["ref"])
+                    asignadas += 1
+            modelos_ok += 1
+
+    # Después las maestras sin color, para lo que quedó sin asignar.
+    for s, imagen in disponibles.items():
+        for p in por_slug.get(s, []):
+            if p["ref"] in usadas:
+                continue
             if any(os.path.exists(f'{DESTINO}/{p["ref"]}{e}') for e in (".jpg", ".jpeg", ".png")):
                 continue
             shutil.copy(imagen, os.path.join(DESTINO, f'{p["ref"]}.webp'))
+            usadas.add(p["ref"])
             asignadas += 1
         modelos_ok += 1
+
+    # Último recurso: si una unidad quedó sin foto pero otra del mismo modelo
+    # sí tiene, se reutiliza. Preferible el modelo correcto en otro color que
+    # una silueta: el color se lee en la ficha, el modelo se reconoce de un vistazo.
+    reales_ext = (".webp", ".jpg", ".jpeg", ".png")
+    for modelo_slug, unidades in por_slug.items():
+        con = next((p for p in unidades
+                    if any(os.path.exists(f'{DESTINO}/{p["ref"]}{e}') for e in reales_ext)), None)
+        if not con:
+            continue
+        origen = next(f'{DESTINO}/{con["ref"]}{e}' for e in reales_ext
+                      if os.path.exists(f'{DESTINO}/{con["ref"]}{e}'))
+        for p in unidades:
+            if any(os.path.exists(f'{DESTINO}/{p["ref"]}{e}') for e in reales_ext):
+                continue
+            shutil.copy(origen, os.path.join(DESTINO, f'{p["ref"]}.webp'))
+            asignadas += 1
 
     # ---- 3. informe ----
     reales = (".webp", ".jpg", ".jpeg", ".png")

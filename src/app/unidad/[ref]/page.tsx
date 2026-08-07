@@ -158,7 +158,11 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
             </div>
           )}
 
-          <a href={linkWhatsApp(u)} className="btn-solido my-6 w-full">Consultar por WhatsApp</a>
+          <a href={linkWhatsApp(u)} className="btn-solido mb-3 mt-6 w-full">Consultar por WhatsApp</a>
+          <p className="mb-6 text-center text-[12.5px] leading-relaxed text-mute">
+            Precio de referencia, sujeto a confirmación al momento de la compra.
+            Los valores se actualizan a diario según la cotización.
+          </p>
 
           <div className="space-y-4">
             <BloqueFicha titulo="Estado de esta unidad">

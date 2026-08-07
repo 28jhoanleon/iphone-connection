@@ -472,7 +472,12 @@ def main():
             "costoCentavos": costo_c,
             "precioCentavos": int(round(costo_c * TC_PLANILLA * (1 + MARGEN))),
             "origen": "proveedor",
-            "disponibilidad": "por_encargo",
+            # Los iPhone usados son unidades únicas: si están en la planilla,
+            # existe una sola. Cuando se vende, el proveedor la saca y
+            # desaparece del sitio. El resto tiene reposición permanente.
+            "disponibilidad": ("ultima_unidad"
+                               if categoria == "iPhone" and estado != "nuevo_sellado"
+                               else "por_encargo"),
             "publicado": not sin_bateria,
             "actualizado": hoy,
         })

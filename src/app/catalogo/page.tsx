@@ -48,7 +48,8 @@ export default async function Catalogo() {
         </h1>
         <p className="mt-3 max-w-[46ch] text-[15.5px] text-mute">
           Filtrá por marca, categoría, estado o precio. Cada equipo con su estado y su
-          salud de batería declarados.
+          salud de batería declarados. Precios de referencia, sujetos a confirmación
+          al momento de la compra.
         </p>
       </div>
 
