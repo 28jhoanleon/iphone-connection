@@ -17,43 +17,29 @@ export interface ItemFoto {
 type Estado = "libre" | "subiendo" | "listo" | "error";
 
 /**
- * Consulta de búsqueda de imágenes.
+ * Consultas de búsqueda de imágenes.
  *
- * Prioriza el sitio oficial del fabricante: son las fotos que ya usa el catálogo
- * y las que mejor quedan tras normalizar, porque vienen del producto solo sobre
- * fondo plano. Se pide PNG transparente y tamaño grande; el filtro isz:lt,islt:2mp
- * descarta miniaturas, que es de donde salen los recortes borrosos.
+ * Tres botones con criterios distintos porque ninguno funciona siempre:
+ * combinar site: con filtros de tamaño y transparencia deja cero resultados en
+ * la mayoría de los productos. Se ofrece de más restrictivo a más amplio.
  */
-const OFICIAL: Record<string, string> = {
-  Apple: "site:apple.com",
-  Samsung: "site:samsung.com",
-  Xiaomi: "site:mi.com OR site:xiaomi.com",
-  POCO: "site:mi.com OR site:xiaomi.com",
-  Motorola: "site:motorola.com",
-  JBL: "site:jbl.com",
-  Sony: "site:playstation.com OR site:sony.com",
-  Nintendo: "site:nintendo.com",
-  Lenovo: "site:lenovo.com",
-  Garmin: "site:garmin.com",
-  GoPro: "site:gopro.com",
-};
-
-function consultaBusqueda(item: ItemFoto): string {
+function buscarOficial(item: ItemFoto): string {
   const color = item.color === "sin color" ? "" : item.color;
-  const sitio = OFICIAL[item.marca] ?? "";
-  const q = `${item.modelo} ${color} ${sitio} png transparente producto`.trim();
-  // tbs=isz:lt,islt:2mp descarta imágenes chicas; ic:trans prefiere transparencia
-  return `https://www.google.com/search?tbm=isch&tbs=isz:lt,islt:2mp,ic:trans&q=${encodeURIComponent(q)}`;
+  const q = `${item.modelo} ${color} oficial`.trim();
+  return `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(q)}`;
 }
 
-/**
- * Carga de fotos del catálogo.
- *
- * Está pensado para completar muchas fotos seguidas, no para cargar una suelta:
- * el filtro arranca en "sin foto" y cada tarjeta acepta arrastrar o tocar. La
- * imagen se normaliza del lado del servidor con el mismo criterio que el resto
- * del catálogo, así que no hay que preparar nada antes de subirla.
- */
+function buscarPng(item: ItemFoto): string {
+  const color = item.color === "sin color" ? "" : item.color;
+  const q = `${item.modelo} ${color} png fondo blanco`.trim();
+  // isz:l pide imágenes grandes sin llegar a excluir casi todo
+  return `https://www.google.com/search?tbm=isch&tbs=isz:l&q=${encodeURIComponent(q)}`;
+}
+
+function buscarAmplia(item: ItemFoto): string {
+  return `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(item.nombre)}`;
+}
+
 export default function CargarFotos({
   items,
   categorias,
@@ -318,21 +304,29 @@ function Tarjeta({
 
       <div className="mb-2 flex gap-1.5">
         <a
-          href={consultaBusqueda(item)}
+          href={buscarPng(item)}
           target="_blank"
           rel="noreferrer"
           className="flex-1 rounded-full border border-line py-2 text-center text-[11.5px] font-medium text-mute transition hover:border-ink hover:text-ink"
+          title="PNG con fondo blanco, imágenes grandes"
         >
-          Buscar
+          PNG
         </a>
         <a
-          href={`https://www.google.com/search?tbm=isch&tbs=isz:lt,islt:4mp&q=${encodeURIComponent(
-            `${item.nombre} fondo blanco`,
-          )}`}
+          href={buscarOficial(item)}
           target="_blank"
           rel="noreferrer"
           className="flex-1 rounded-full border border-line py-2 text-center text-[11.5px] font-medium text-mute transition hover:border-ink hover:text-ink"
-          title="Búsqueda amplia, imágenes de más de 4 megapíxeles"
+          title="Nombre del modelo y color, sin filtros"
+        >
+          Oficial
+        </a>
+        <a
+          href={buscarAmplia(item)}
+          target="_blank"
+          rel="noreferrer"
+          className="flex-1 rounded-full border border-line py-2 text-center text-[11.5px] font-medium text-mute transition hover:border-ink hover:text-ink"
+          title="Nombre completo del producto"
         >
           Amplia
         </a>
