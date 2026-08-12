@@ -17,6 +17,36 @@ export interface ItemFoto {
 type Estado = "libre" | "subiendo" | "listo" | "error";
 
 /**
+ * Consulta de búsqueda de imágenes.
+ *
+ * Prioriza el sitio oficial del fabricante: son las fotos que ya usa el catálogo
+ * y las que mejor quedan tras normalizar, porque vienen del producto solo sobre
+ * fondo plano. Se pide PNG transparente y tamaño grande; el filtro isz:lt,islt:2mp
+ * descarta miniaturas, que es de donde salen los recortes borrosos.
+ */
+const OFICIAL: Record<string, string> = {
+  Apple: "site:apple.com",
+  Samsung: "site:samsung.com",
+  Xiaomi: "site:mi.com OR site:xiaomi.com",
+  POCO: "site:mi.com OR site:xiaomi.com",
+  Motorola: "site:motorola.com",
+  JBL: "site:jbl.com",
+  Sony: "site:playstation.com OR site:sony.com",
+  Nintendo: "site:nintendo.com",
+  Lenovo: "site:lenovo.com",
+  Garmin: "site:garmin.com",
+  GoPro: "site:gopro.com",
+};
+
+function consultaBusqueda(item: ItemFoto): string {
+  const color = item.color === "sin color" ? "" : item.color;
+  const sitio = OFICIAL[item.marca] ?? "";
+  const q = `${item.modelo} ${color} ${sitio} png transparente producto`.trim();
+  // tbs=isz:lt,islt:2mp descarta imágenes chicas; ic:trans prefiere transparencia
+  return `https://www.google.com/search?tbm=isch&tbs=isz:lt,islt:2mp,ic:trans&q=${encodeURIComponent(q)}`;
+}
+
+/**
  * Carga de fotos del catálogo.
  *
  * Está pensado para completar muchas fotos seguidas, no para cargar una suelta:
@@ -34,7 +64,7 @@ export default function CargarFotos({
   local: boolean;
 }) {
   const [cat, setCat] = useState("Todas");
-  const [soloSinFoto, setSoloSinFoto] = useState(true);
+  const [soloSinFoto, setSoloSinFoto] = useState(false);
   const [q, setQ] = useState("");
   const [estados, setEstados] = useState<Record<string, Estado>>({});
   const [mensajes, setMensajes] = useState<Record<string, string>>({});
@@ -259,7 +289,7 @@ function Tarjeta({
         {estado === "libre" && (
           <span className="absolute inset-0 grid place-items-center bg-ink/0 opacity-0 transition group-hover:bg-ink/5 group-hover:opacity-100">
             <span className="rounded-full bg-ink px-3 py-1.5 font-data text-[10.5px] uppercase tracking-[.1em] text-paper">
-              Cargar
+              {item.tipo === "real" ? "Reemplazar" : "Cargar"}
             </span>
           </span>
         )}
@@ -288,14 +318,23 @@ function Tarjeta({
 
       <div className="mb-2 flex gap-1.5">
         <a
-          href={`https://www.google.com/search?tbm=isch&q=${encodeURIComponent(
-            `${item.modelo} ${item.color === "sin color" ? "" : item.color} png fondo blanco`,
-          )}`}
+          href={consultaBusqueda(item)}
           target="_blank"
           rel="noreferrer"
           className="flex-1 rounded-full border border-line py-2 text-center text-[11.5px] font-medium text-mute transition hover:border-ink hover:text-ink"
         >
           Buscar
+        </a>
+        <a
+          href={`https://www.google.com/search?tbm=isch&tbs=isz:lt,islt:4mp&q=${encodeURIComponent(
+            `${item.nombre} fondo blanco`,
+          )}`}
+          target="_blank"
+          rel="noreferrer"
+          className="flex-1 rounded-full border border-line py-2 text-center text-[11.5px] font-medium text-mute transition hover:border-ink hover:text-ink"
+          title="Búsqueda amplia, imágenes de más de 4 megapíxeles"
+        >
+          Amplia
         </a>
         <button
           onClick={onUltima}
@@ -307,7 +346,10 @@ function Tarjeta({
       </div>
 
       <p className="line-clamp-2 min-h-[2.5em] text-[13px] font-medium leading-[1.3]">{item.nombre}</p>
-      <p className="mt-1 font-data text-[10px] tracking-[.06em] text-mute-soft">
+      <p className="mt-1 flex items-center gap-1.5 font-data text-[10px] tracking-[.06em] text-mute-soft">
+        <span className={`inline-block h-1.5 w-1.5 shrink-0 rounded-full ${
+          item.tipo === "real" || imagenNueva ? "bg-ink" : "bg-line"
+        }`} />
         #{item.ref} · {item.color.toUpperCase()}
       </p>
 

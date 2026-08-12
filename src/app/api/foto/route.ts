@@ -4,6 +4,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+
 const ejecutar = promisify(execFile);
 
 /**
@@ -33,12 +34,12 @@ function esProduccion() {
 /**
  * Normaliza con Python en lugar de sharp.
  *
- * sharp necesita binarios nativos que no compilan en Termux. Pillow ya está
- * instalado y hace lo mismo, así que la normalización se delega al script que
- * el proyecto ya usa para el resto del catálogo.
+ * sharp necesita binarios nativos que no existen para android-arm64, así que en
+ * Termux no carga. Pillow ya está instalado y produce el mismo resultado, así
+ * que la normalización se delega al script que el proyecto usa para el catálogo.
  */
 async function normalizar(buffer: Buffer, ref: string): Promise<void> {
-  const tmp = path.join("public/productos", `_tmp_${ref}`);
+  const tmp = path.join(DESTINO, `_tmp_${ref}`);
   await writeFile(tmp, buffer);
   try {
     await ejecutar("python3", ["scripts/normalizar-una.py", tmp, ref]);
@@ -72,6 +73,7 @@ export async function POST(req: NextRequest) {
 
     const entrada = Buffer.from(await archivo.arrayBuffer());
 
+    // se borran las otras extensiones para que no queden dos fotos del mismo producto
     for (const ext of [".jpg", ".jpeg", ".png"]) {
       const viejo = path.join(DESTINO, ref + ext);
       if (existsSync(viejo)) await unlink(viejo);
