@@ -22,7 +22,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A102",
@@ -47,7 +49,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A103",
@@ -72,7 +76,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A104",
@@ -97,7 +103,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A105",
@@ -122,7 +130,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A106",
@@ -147,7 +157,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A107",
@@ -172,7 +184,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A108",
@@ -197,7 +211,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A109",
@@ -222,7 +238,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A110",
@@ -247,7 +265,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A111",
@@ -272,7 +292,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A112",
@@ -297,7 +319,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A113",
@@ -322,7 +346,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A114",
@@ -351,7 +377,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A115",
@@ -376,7 +406,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A116",
@@ -405,7 +437,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A117",
@@ -430,7 +466,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A118",
@@ -455,7 +493,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A119",
@@ -484,7 +524,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A120",
@@ -509,7 +553,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A121",
@@ -534,7 +580,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A122",
@@ -563,7 +611,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A123",
@@ -592,7 +644,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A124",
@@ -621,7 +677,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A125",
@@ -646,7 +706,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A126",
@@ -671,7 +733,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A127",
@@ -701,7 +765,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A128",
@@ -726,7 +794,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A129",
@@ -751,7 +821,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A130",
@@ -776,7 +848,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A131",
@@ -801,7 +875,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A132",
@@ -826,7 +902,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A133",
@@ -851,7 +929,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A134",
@@ -876,7 +956,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A135",
@@ -901,7 +983,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A136",
@@ -926,7 +1010,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A137",
@@ -951,7 +1037,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A138",
@@ -976,7 +1064,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A139",
@@ -1001,7 +1091,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A140",
@@ -1026,7 +1118,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A141",
@@ -1054,7 +1148,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A142",
@@ -1082,7 +1180,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A143",
@@ -1107,7 +1209,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A144",
@@ -1135,7 +1239,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A145",
@@ -1160,7 +1268,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A146",
@@ -1188,7 +1298,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A147",
@@ -1217,7 +1331,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A148",
@@ -1245,7 +1363,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A149",
@@ -1273,7 +1395,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A150",
@@ -1301,7 +1427,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A151",
@@ -1329,7 +1459,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A152",
@@ -1354,7 +1488,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A153",
@@ -1379,7 +1515,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A154",
@@ -1407,7 +1545,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A155",
@@ -1435,7 +1577,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A156",
@@ -1463,7 +1609,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A157",
@@ -1491,7 +1641,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A158",
@@ -1516,7 +1670,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A159",
@@ -1545,7 +1701,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A160",
@@ -1573,7 +1733,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A161",
@@ -1598,7 +1762,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A162",
@@ -1623,7 +1789,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A163",
@@ -1648,7 +1816,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A164",
@@ -1676,7 +1846,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A165",
@@ -1701,7 +1875,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A166",
@@ -1729,7 +1905,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A167",
@@ -1754,7 +1934,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A168",
@@ -1783,7 +1965,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A169",
@@ -1808,7 +1994,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A170",
@@ -1833,7 +2021,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A171",
@@ -1862,7 +2052,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A172",
@@ -1887,7 +2081,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A173",
@@ -1912,7 +2108,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A174",
@@ -1937,7 +2135,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A175",
@@ -1965,7 +2165,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A176",
@@ -1990,7 +2194,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A177",
@@ -2015,7 +2221,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A178",
@@ -2040,7 +2248,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A179",
@@ -2065,7 +2275,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A180",
@@ -2093,7 +2307,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A181",
@@ -2121,7 +2339,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A182",
@@ -2171,7 +2393,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A184",
@@ -2196,7 +2420,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A185",
@@ -2246,7 +2474,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A187",
@@ -2271,7 +2503,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A188",
@@ -2296,7 +2532,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A189",
@@ -2321,7 +2561,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A190",
@@ -2346,7 +2590,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A191",
@@ -2371,7 +2619,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A192",
@@ -2396,7 +2648,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A193",
@@ -2421,7 +2677,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A194",
@@ -2446,7 +2706,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A195",
@@ -2471,7 +2735,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A196",
@@ -2496,7 +2764,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A197",
@@ -2521,7 +2793,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A198",
@@ -2546,7 +2820,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A199",
@@ -2571,7 +2847,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A200",
@@ -2596,7 +2874,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A201",
@@ -2621,7 +2903,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A202",
@@ -2646,7 +2932,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A203",
@@ -2671,7 +2959,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A204",
@@ -2696,7 +2986,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A205",
@@ -2721,7 +3013,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A206",
@@ -2746,7 +3042,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A207",
@@ -2771,7 +3071,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A208",
@@ -2796,7 +3100,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A209",
@@ -2821,7 +3127,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A210",
@@ -2846,7 +3154,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A211",
@@ -2871,7 +3183,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A212",
@@ -2896,7 +3212,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A213",
@@ -2921,7 +3241,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A214",
@@ -2946,7 +3270,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A215",
@@ -2971,7 +3299,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A216",
@@ -2996,7 +3326,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A217",
@@ -3021,7 +3355,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A218",
@@ -3046,7 +3384,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A219",
@@ -3071,7 +3413,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A220",
@@ -3096,7 +3442,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A221",
@@ -3121,7 +3471,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A222",
@@ -3146,7 +3500,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A223",
@@ -3171,7 +3529,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A224",
@@ -3196,7 +3558,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A225",
@@ -3221,7 +3587,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A226",
@@ -3246,7 +3616,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A227",
@@ -3271,7 +3645,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A228",
@@ -3296,7 +3674,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A229",
@@ -3321,7 +3701,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A230",
@@ -3346,7 +3728,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A231",
@@ -3371,7 +3755,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A232",
@@ -3396,7 +3782,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A233",
@@ -3421,7 +3809,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A234",
@@ -3446,7 +3836,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A235",
@@ -3471,7 +3863,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A236",
@@ -3496,7 +3890,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A237",
@@ -3521,7 +3917,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A238",
@@ -3546,7 +3944,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A239",
@@ -3571,7 +3971,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A240",
@@ -3596,7 +3998,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A241",
@@ -3621,7 +4025,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A242",
@@ -3646,7 +4052,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A243",
@@ -3671,7 +4079,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A244",
@@ -3696,7 +4106,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A245",
@@ -3721,7 +4133,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A246",
@@ -3746,7 +4160,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A247",
@@ -3771,7 +4187,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A248",
@@ -3796,7 +4214,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A249",
@@ -3821,7 +4241,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A250",
@@ -3846,7 +4268,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A251",
@@ -3871,7 +4295,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A252",
@@ -3896,7 +4322,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A253",
@@ -3921,7 +4349,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A254",
@@ -3946,7 +4376,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A255",
@@ -3971,7 +4403,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A256",
@@ -3996,7 +4430,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A257",
@@ -4021,7 +4457,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A258",
@@ -4046,7 +4484,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A259",
@@ -4071,7 +4511,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A260",
@@ -4096,7 +4540,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A261",
@@ -4121,7 +4569,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A262",
@@ -4146,7 +4596,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A263",
@@ -4171,7 +4623,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A264",
@@ -4196,7 +4650,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A265",
@@ -4221,7 +4677,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A266",
@@ -4246,7 +4704,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A267",
@@ -4271,7 +4731,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A268",
@@ -4296,7 +4760,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A269",
@@ -4321,7 +4790,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A270",
@@ -4346,7 +4819,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A271",
@@ -4371,7 +4848,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A272",
@@ -4396,7 +4877,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A273",
@@ -4421,7 +4906,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A274",
@@ -4446,7 +4935,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A275",
@@ -4471,7 +4964,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A276",
@@ -4496,7 +4994,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A277",
@@ -4521,7 +5024,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A278",
@@ -4546,7 +5054,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A279",
@@ -4571,7 +5083,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A280",
@@ -4596,7 +5112,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A281",
@@ -4621,7 +5141,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A282",
@@ -4646,7 +5170,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A283",
@@ -4671,7 +5199,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A284",
@@ -4696,7 +5228,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A285",
@@ -4721,7 +5258,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A286",
@@ -4746,7 +5288,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A287",
@@ -4771,7 +5318,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A288",
@@ -4796,7 +5348,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A289",
@@ -4821,7 +5378,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A290",
@@ -4846,7 +5408,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A291",
@@ -4871,7 +5438,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A292",
@@ -4896,7 +5468,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A293",
@@ -4921,7 +5497,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A294",
@@ -4946,7 +5526,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A295",
@@ -4971,7 +5555,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A296",
@@ -4996,7 +5584,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A297",
@@ -5021,7 +5613,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A298",
@@ -5046,7 +5642,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A299",
@@ -5071,7 +5671,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A300",
@@ -5096,7 +5700,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A301",
@@ -5121,7 +5729,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A302",
@@ -5146,7 +5759,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A303",
@@ -5171,7 +5789,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A304",
@@ -5196,7 +5819,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A305",
@@ -5221,7 +5849,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A306",
@@ -5246,7 +5878,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A307",
@@ -5271,7 +5907,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A308",
@@ -5296,7 +5936,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A309",
@@ -5321,7 +5965,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A310",
@@ -5346,7 +5994,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A311",
@@ -5371,7 +6023,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A312",
@@ -5396,7 +6052,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A313",
@@ -5421,7 +6081,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A314",
@@ -5446,7 +6110,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A315",
@@ -5471,7 +6139,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A316",
@@ -5496,7 +6168,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A317",
@@ -5521,7 +6197,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A318",
@@ -5546,7 +6226,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A319",
@@ -5571,7 +6255,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A320",
@@ -5596,7 +6285,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A321",
@@ -5621,7 +6314,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A322",
@@ -5646,7 +6343,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A323",
@@ -5671,7 +6373,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A324",
@@ -5696,7 +6402,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A325",
@@ -5721,7 +6432,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A326",
@@ -5746,7 +6462,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A327",
@@ -5771,7 +6491,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A328",
@@ -5796,7 +6520,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A329",
@@ -5821,7 +6550,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A330",
@@ -5846,7 +6579,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A331",
@@ -5871,7 +6608,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A332",
@@ -5896,7 +6637,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A333",
@@ -5921,7 +6666,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A334",
@@ -5946,7 +6695,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A335",
@@ -5971,7 +6724,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A336",
@@ -5996,7 +6753,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A337",
@@ -6021,7 +6782,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A338",
@@ -6046,7 +6811,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A339",
@@ -6071,7 +6840,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A340",
@@ -6096,7 +6869,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A341",
@@ -6121,7 +6898,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A342",
@@ -6146,7 +6927,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A343",
@@ -6171,7 +6956,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia",
+      "nombre demasiado largo"
+    ]
   },
   {
     "ref": "A344",
@@ -6196,7 +6986,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A345",
@@ -6221,7 +7013,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A346",
@@ -6246,7 +7040,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A347",
@@ -6271,7 +7067,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A348",
@@ -6296,7 +7094,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A349",
@@ -6321,7 +7121,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A350",
@@ -6346,7 +7148,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A351",
@@ -6371,7 +7175,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A352",
@@ -6396,7 +7202,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A353",
@@ -6421,7 +7231,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A354",
@@ -6446,7 +7260,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A355",
@@ -6471,7 +7287,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A356",
@@ -6496,7 +7316,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A357",
@@ -6521,7 +7345,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A358",
@@ -6546,7 +7372,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A359",
@@ -6571,7 +7399,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A360",
@@ -6596,7 +7428,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A361",
@@ -6621,7 +7455,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A362",
@@ -6646,7 +7482,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A363",
@@ -6671,7 +7509,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A364",
@@ -6696,7 +7536,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A365",
@@ -6721,7 +7563,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A366",
@@ -6746,7 +7592,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A367",
@@ -6771,7 +7619,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A368",
@@ -6796,7 +7646,9 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A369",
@@ -6821,7 +7673,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A370",
@@ -6846,7 +7702,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A371",
@@ -6871,7 +7731,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A372",
@@ -6896,7 +7760,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A373",
@@ -6921,7 +7789,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A374",
@@ -6946,7 +7818,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A375",
@@ -6971,7 +7847,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A376",
@@ -6996,7 +7876,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A377",
@@ -7021,7 +7905,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A378",
@@ -7046,7 +7934,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A379",
@@ -7071,7 +7963,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A380",
@@ -7096,7 +7992,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A381",
@@ -7121,7 +8021,11 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A382",
@@ -7146,7 +8050,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A383",
@@ -7171,7 +8080,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A384",
@@ -7196,7 +8110,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A385",
@@ -7221,7 +8140,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A386",
@@ -7246,7 +8170,12 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A387",
@@ -7271,6 +8200,10 @@
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   }
 ]
