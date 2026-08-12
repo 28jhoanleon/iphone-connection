@@ -1,371 +1,624 @@
 {
-  "fecha": "2026-08-06T22:58",
-  "filas": 383,
+  "fecha": "2026-08-12T13:57",
+  "filas": 390,
   "totales": {
-    "precios": 0,
-    "nuevos": 43,
-    "salidos": 35,
-    "otros": 0
+    "precios": 15,
+    "nuevos": 36,
+    "salidos": 31,
+    "otros": 51
   },
-  "precios": [],
-  "nuevos": [
+  "precios": [
     {
-      "nombre": "MacBook Neo 13\" 256 GB 256 GB — Nuevo sellado",
-      "precio": 146832000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 11 128 GB Blanco — Seleccionado A",
+      "antes": 38157000,
+      "despues": 34523000,
+      "variacion": -9.5
     },
     {
-      "nombre": "MacBook Neo 13\" Citrus 256 GB 256 GB — Nuevo sellado",
-      "precio": 145084000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 11 64 GB Negro — Seleccionado A",
+      "antes": 34523000,
+      "despues": 32706000,
+      "variacion": -5.3
     },
     {
-      "nombre": "MacBook Neo 13\" 512 GB 512 GB — Nuevo sellado",
-      "precio": 164312000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 13 Pro 128 GB Azul — Seleccionado A",
+      "antes": 77222500,
+      "despues": 78131000,
+      "variacion": 1.2
     },
     {
-      "nombre": "MacBook Air 13\" M4 16 GB — Nuevo sellado",
-      "precio": 218500000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 13 Pro Max 256 GB Negro — Seleccionado B",
+      "antes": 79948000,
+      "despues": 72680000,
+      "variacion": -9.1
     },
     {
-      "nombre": "MacBook Air 13,6 M5 512 GB 512 GB — Nuevo sellado",
-      "precio": 235980000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 14 Pro Max 128 GB — Seleccionado A",
+      "antes": 103569000,
+      "despues": 100843500,
+      "variacion": -2.6
     },
     {
-      "nombre": "MacBook Air 13,6 M5 1 TB 1 TB — Nuevo sellado",
-      "precio": 354844000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 15 128 GB — Seleccionado A",
+      "antes": 87216000,
+      "despues": 83582000,
+      "variacion": -4.2
     },
     {
-      "nombre": "MacBook Air 15,3 M5 1 TB 1 TB — Nuevo sellado",
-      "precio": 389804000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 16 Pro 128 GB Titanio Desert — Seleccionado A",
+      "antes": 139909000,
+      "despues": 139000500,
+      "variacion": -0.6
     },
     {
-      "nombre": "MacBook Pro M5 14\" 512 GB 16 GB RAM — Nuevo sellado",
-      "precio": 354844000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 17 256 GB — Nuevo sellado",
+      "antes": 178066000,
+      "despues": 177157500,
+      "variacion": -0.5
     },
     {
-      "nombre": "MacBook Pro M5 14\" 1 TB 16 GB RAM — Nuevo sellado",
-      "precio": 384560000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 17 Pro 512 GB — Nuevo sellado",
+      "antes": 263465000,
+      "despues": 261648000,
+      "variacion": -0.7
     },
     {
-      "nombre": "MacBook Pro M5 14\" 1 TB 24 GB RAM — Nuevo sellado",
-      "precio": 433504000,
-      "categoria": "Notebooks"
+      "nombre": "iPhone 17 Pro Max 1 TB — Nuevo sellado",
+      "antes": 317975000,
+      "despues": 319792000,
+      "variacion": 0.6
     },
     {
-      "nombre": "MacBook Pro M5 14\" 1 TB 32 GB RAM — Nuevo sellado",
-      "precio": 482448000,
-      "categoria": "Notebooks"
+      "nombre": "Samsung Galaxy S26 Ultra 1 TB — Nuevo sellado",
+      "antes": 258014000,
+      "despues": 263465000,
+      "variacion": 2.1
     },
     {
-      "nombre": "MacBook Pro M5 Pro 14\" 1 TB 24 GB RAM — Nuevo sellado",
-      "precio": 492936000,
-      "categoria": "Notebooks"
+      "nombre": "Motorola Moto Edge 60 Fusion Ds 256 GB — Nuevo sellado",
+      "antes": 59052500,
+      "despues": 54328300,
+      "variacion": -8.0
     },
     {
-      "nombre": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM — Nuevo sellado",
-      "precio": 597816000,
-      "categoria": "Notebooks"
+      "nombre": "PS5 Pro Digital — Nuevo sellado",
+      "antes": 225308000,
+      "despues": 228942000,
+      "variacion": 1.6
     },
     {
-      "nombre": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM GPU 20 núcleos — Nuevo sellado",
-      "precio": 641516000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "MacBook Pro M5 Pro 14\" 1 TB 48 GB RAM GPU 16 núcleos — Nuevo sellado",
-      "precio": 652004000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "MacBook Pro M5 Pro 16\" 1 TB 24 GB RAM GPU 20 núcleos — Nuevo sellado",
-      "precio": 580336000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "MacBook Pro M5 Pro 16\" 1 TB 48 GB RAM GPU 20 núcleos — Nuevo sellado",
-      "precio": 737656000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Asus Vivobook Go 15.6\" 8 GB — Nuevo sellado",
-      "precio": 68172000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Asus 14\" 8 GB — Nuevo sellado",
-      "precio": 77786000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Asus Vivobook 16\" 16 GB — Nuevo sellado",
-      "precio": 202768000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Dell 15,6\" 8 GB — Nuevo sellado",
-      "precio": 129352000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Dell 15.6\" 16 GB — Nuevo sellado",
-      "precio": 150328000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Dell Inspiron 15.6\" 16 GB — Nuevo sellado",
-      "precio": 164312000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook HP 17.3\" 8 GB — Nuevo sellado",
-      "precio": 115368000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook HP Victus Gaming 15.6\" 8 GB — Nuevo sellado",
-      "precio": 176548000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Lenovo Ideapad 1 15.6\" 8 GB — Nuevo sellado",
-      "precio": 100510000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Lenovo 15.6\" 8 GB — Nuevo sellado",
-      "precio": 115368000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Lenovo 15.6\" 16 GB — Nuevo sellado",
-      "precio": 146832000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Notebook Lenovo 14\" 8 GB — Nuevo sellado",
-      "precio": 135470000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK 16 GB — Nuevo sellado",
-      "precio": 166060000,
-      "categoria": "Notebooks"
-    },
-    {
-      "nombre": "Samsung Tab S11 Ultra 14.6\" + Pen 256 GB 256 GB — Nuevo sellado",
-      "precio": 197524000,
-      "categoria": "Tablets"
-    },
-    {
-      "nombre": "Samsung Tab S11 11\" + Pen 128 GB 128 GB — Nuevo sellado",
-      "precio": 139665200,
-      "categoria": "Tablets"
-    },
-    {
-      "nombre": "Samsung Tab S10 FE + Pen SM-X520 256 GB 256 GB — Nuevo sellado",
-      "precio": 102258000,
-      "categoria": "Tablets"
-    },
-    {
-      "nombre": "Samsung Tab S10 FE + Pen SM-X520 128 GB 128 GB — Nuevo sellado",
-      "precio": 91770000,
-      "categoria": "Tablets"
+      "nombre": "PS5 Digital — Nuevo sellado",
+      "antes": 127190000,
+      "despues": 130824000,
+      "variacion": 2.9
     },
     {
       "nombre": "Samsung Tab S10 Lite + Pen SM-X400 128 GB 128 GB — Nuevo sellado",
-      "precio": 70794000,
-      "categoria": "Tablets"
+      "antes": 73588500,
+      "despues": 71771500,
+      "variacion": -2.5
+    }
+  ],
+  "nuevos": [
+    {
+      "nombre": "iPhone Xs Max 256 GB Dorado — Seleccionado C",
+      "precio": 23621000,
+      "categoria": "iPhone"
     },
     {
-      "nombre": "Samsung Tab A11+ 11\" 256 GB 256 GB — Nuevo sellado",
-      "precio": 61180000,
-      "categoria": "Tablets"
+      "nombre": "iPhone 11 128 GB — Seleccionado C",
+      "precio": 32706000,
+      "categoria": "iPhone"
     },
     {
-      "nombre": "Samsung Tab A11+ 11\" 128 GB 128 GB — Nuevo sellado",
-      "precio": 50692000,
-      "categoria": "Tablets"
+      "nombre": "iPhone 11 128 GB Negro — Seleccionado A",
+      "precio": 38157000,
+      "categoria": "iPhone"
     },
     {
-      "nombre": "Samsung Tab A11 8.6\" LTE 64 GB 64 GB — Nuevo sellado",
-      "precio": 36708000,
-      "categoria": "Tablets"
+      "nombre": "iPhone 12 64 GB Negro — Seleccionado C",
+      "precio": 38157000,
+      "categoria": "iPhone"
     },
     {
-      "nombre": "Samsung Tab A9+ 11\" 64 GB 64 GB — Nuevo sellado",
-      "precio": 37582000,
-      "categoria": "Tablets"
+      "nombre": "iPhone 12 128 GB Azul — Seleccionado C",
+      "precio": 43608000,
+      "categoria": "iPhone"
     },
     {
-      "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 256 GB 256 GB — Nuevo sellado",
-      "precio": 69745200,
-      "categoria": "Tablets"
+      "nombre": "iPhone 12 128 GB Negro — Seleccionado A",
+      "precio": 47242000,
+      "categoria": "iPhone"
     },
     {
-      "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 128 GB 128 GB — Nuevo sellado",
-      "precio": 55062000,
-      "categoria": "Tablets"
+      "nombre": "iPhone 12 Pro 128 GB Azul — Seleccionado C",
+      "precio": 48150500,
+      "categoria": "iPhone"
     },
     {
-      "nombre": "Xiaomi Redmi Pad 2 11\" 256 GB 256 GB — Nuevo sellado",
-      "precio": 48769200,
-      "categoria": "Tablets"
+      "nombre": "iPhone 12 Pro 128 GB Negro — Seleccionado A",
+      "precio": 49967500,
+      "categoria": "iPhone"
     },
     {
-      "nombre": "Xiaomi Redmi Pad 2 11\" 128 GB 128 GB — Nuevo sellado",
-      "precio": 38805600,
-      "categoria": "Tablets"
+      "nombre": "iPhone 12 Pro Max 128 GB Negro — Seleccionado C",
+      "precio": 54510000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 13 Mini 128 GB Negro — Seleccionado C",
+      "precio": 41791000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 13 Mini 256 GB — Seleccionado A",
+      "precio": 49967500,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 13 128 GB Azul — Seleccionado C",
+      "precio": 39974000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 13 Pro 128 GB — Seleccionado C",
+      "precio": 74497000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 13 Pro 128 GB — Seleccionado A",
+      "precio": 81765000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 13 Pro 256 GB — Seleccionado C",
+      "precio": 78131000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 13 Pro Max 128 GB — Seleccionado C",
+      "precio": 85399000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 13 Pro Max 128 GB — Seleccionado A",
+      "precio": 90850000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 14 Plus 256 GB Rojo — Seleccionado A",
+      "precio": 72680000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 14 Pro 128 GB Negro — Seleccionado B",
+      "precio": 58144000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 14 Pro 256 GB Lila — Seleccionado B",
+      "precio": 94484000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 14 Pro 256 GB Lila — Seleccionado A",
+      "precio": 98118000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 14 Pro Max 128 GB Lila — Seleccionado C",
+      "precio": 99026500,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 14 Pro Max 128 GB Lila — Seleccionado A",
+      "precio": 102660500,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 14 Pro Max 128 GB Dorado — Seleccionado A",
+      "precio": 105386000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 14 Pro Max 256 GB — Seleccionado B",
+      "precio": 99935000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 14 Pro Max 256 GB — Seleccionado A",
+      "precio": 108111500,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 15 128 GB Verde — Seleccionado B",
+      "precio": 81765000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 15 128 GB Negro — Seleccionado B",
+      "precio": 82673500,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 15 Pro 128 GB Titanio Natural — Seleccionado A",
+      "precio": 112654000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 16 128 GB — Seleccionado A",
+      "precio": 119922000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 16 Pro 128 GB Negro — Seleccionado A",
+      "precio": 139909000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 16 Pro 256 GB — Seleccionado B",
+      "precio": 118105000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 16 Pro 256 GB Titanio Natural — Seleccionado A",
+      "precio": 141726000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 17e 256 GB Rosa — Seleccionado B",
+      "precio": 127190000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 17 256 GB Blanco — Seleccionado A",
+      "precio": 154445000,
+      "categoria": "iPhone"
+    },
+    {
+      "nombre": "iPhone 17 Pro Max 256 GB Azul — Seleccionado A",
+      "precio": 225308000,
+      "categoria": "iPhone"
     }
   ],
   "salidos": [
     {
-      "nombre": "MacBook Neo 13\" 256 GB — Nuevo sellado",
-      "ref": "A208"
+      "nombre": "iPhone 11 64 GB Negro — Seleccionado C",
+      "ref": "A102"
     },
     {
-      "nombre": "MacBook Neo 13\" Citrus 256 GB — Nuevo sellado",
-      "ref": "A209"
+      "nombre": "iPhone 11 Pro 256 GB Dorado — Seleccionado C",
+      "ref": "A104"
     },
     {
-      "nombre": "MacBook Neo 13\" 512 GB — Nuevo sellado",
-      "ref": "A210"
+      "nombre": "iPhone 11 Pro 256 GB Dorado — Seleccionado A",
+      "ref": "A105"
     },
     {
-      "nombre": "MacBook Air 13\" M4 — Nuevo sellado",
-      "ref": "A211"
+      "nombre": "iPhone 11 Pro Max 256 GB Verde — Seleccionado C",
+      "ref": "A106"
     },
     {
-      "nombre": "MacBook Air 13,6 M5 512 GB — Nuevo sellado",
-      "ref": "A212"
+      "nombre": "iPhone 11 Pro Max 256 GB Verde — Seleccionado A",
+      "ref": "A107"
     },
     {
-      "nombre": "MacBook Air 13,6 M5 1 TB — Nuevo sellado",
-      "ref": "A214"
+      "nombre": "iPhone 12 Pro 128 GB Negro — Seleccionado C",
+      "ref": "A109"
     },
     {
-      "nombre": "MacBook Air 15,3 M5 1 TB — Nuevo sellado",
-      "ref": "A217"
+      "nombre": "iPhone 13 Mini 128 GB — Seleccionado C",
+      "ref": "A114"
     },
     {
-      "nombre": "MacBook Pro M5 14\" — Nuevo sellado",
-      "ref": "A221"
+      "nombre": "iPhone 13 Mini 256 GB Blanco — Seleccionado A",
+      "ref": "A118"
     },
     {
-      "nombre": "MacBook Pro M5 Pro 14\" — Nuevo sellado",
-      "ref": "A225"
+      "nombre": "iPhone 13 128 GB — Seleccionado C",
+      "ref": "A119"
     },
     {
-      "nombre": "MacBook Pro M5 Pro 16\" — Nuevo sellado",
-      "ref": "A227"
+      "nombre": "iPhone 13 256 GB Rosa — Seleccionado A",
+      "ref": "A129"
     },
     {
-      "nombre": "Notebook Asus Vivobook Go 15.6\" — Nuevo sellado",
-      "ref": "A330"
+      "nombre": "iPhone 13 Pro 128 GB Negro — Seleccionado B",
+      "ref": "A130"
     },
     {
-      "nombre": "Notebook Asus 14\" — Nuevo sellado",
-      "ref": "A331"
+      "nombre": "iPhone 13 Pro 128 GB Negro — Seleccionado A",
+      "ref": "A132"
     },
     {
-      "nombre": "Notebook Asus Vivobook 16\" — Nuevo sellado",
-      "ref": "A332"
+      "nombre": "iPhone 13 Pro 256 GB Negro — Seleccionado C",
+      "ref": "A133"
     },
     {
-      "nombre": "Notebook Dell 15,6\" — Nuevo sellado",
-      "ref": "A333"
+      "nombre": "iPhone 13 Pro 256 GB Azul — Seleccionado C",
+      "ref": "A134"
     },
     {
-      "nombre": "Notebook Dell 15.6\" — Nuevo sellado",
-      "ref": "A334"
+      "nombre": "iPhone 13 Pro Max 256 GB Negro — Seleccionado C",
+      "ref": "A136"
     },
     {
-      "nombre": "Notebook Dell Inspiron 15.6\" — Nuevo sellado",
-      "ref": "A335"
+      "nombre": "iPhone 13 Pro Max 256 GB Negro — Seleccionado A",
+      "ref": "A138"
     },
     {
-      "nombre": "Notebook HP 17.3\" — Nuevo sellado",
-      "ref": "A336"
+      "nombre": "iPhone 14 128 GB Negro — Seleccionado C",
+      "ref": "A139"
     },
     {
-      "nombre": "Notebook HP Victus Gaming 15.6\" — Nuevo sellado",
-      "ref": "A337"
+      "nombre": "iPhone 14 Pro 256 GB — Seleccionado A",
+      "ref": "A155"
     },
     {
-      "nombre": "Notebook Lenovo Ideapad 1 15.6\" — Nuevo sellado",
-      "ref": "A338"
+      "nombre": "iPhone 15 Pro 128 GB — Seleccionado B",
+      "ref": "A164"
     },
     {
-      "nombre": "Notebook Lenovo 15.6\" — Nuevo sellado",
-      "ref": "A342"
+      "nombre": "iPhone 15 Pro 128 GB Negro — Seleccionado A",
+      "ref": "A165"
     },
     {
-      "nombre": "Notebook Lenovo 14\" — Nuevo sellado",
-      "ref": "A341"
+      "nombre": "iPhone 15 Pro Max 256 GB Titanio Natural — Seleccionado B",
+      "ref": "A167"
     },
     {
-      "nombre": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK — Nuevo sellado",
-      "ref": "A343"
+      "nombre": "iPhone 15 Pro Max 256 GB — Seleccionado A",
+      "ref": "A168"
     },
     {
-      "nombre": "Samsung Tab S11 Ultra 14.6\" + Pen 256 GB — Nuevo sellado",
-      "ref": "A369"
+      "nombre": "iPhone 16 Pro 256 GB Titanio Desert — Seleccionado A",
+      "ref": "A173"
     },
     {
-      "nombre": "Samsung Tab S11 11\" + Pen 128 GB — Nuevo sellado",
-      "ref": "A370"
+      "nombre": "iPhone 17 256 GB Negro — Seleccionado A",
+      "ref": "A178"
     },
     {
-      "nombre": "Samsung Tab S10 FE + Pen SM-X520 256 GB — Nuevo sellado",
-      "ref": "A371"
+      "nombre": "iPhone 17 Pro 256 GB — Seleccionado B",
+      "ref": "A180"
     },
     {
-      "nombre": "Samsung Tab S10 FE + Pen SM-X520 128 GB — Nuevo sellado",
-      "ref": "A372"
+      "nombre": "iPhone 17 Pro Max 256 GB — Seleccionado A",
+      "ref": "A181"
     },
     {
-      "nombre": "Samsung Tab S10 Lite + Pen SM-X400 128 GB — Nuevo sellado",
-      "ref": "A373"
+      "nombre": "iPhone Galasy S23 FE 128 GB Verde — Nuevo sellado",
+      "ref": "A182"
     },
     {
-      "nombre": "Samsung Tab A11+ 11\" 256 GB — Nuevo sellado",
-      "ref": "A374"
+      "nombre": "iPhone 13 128 GB — Nuevo sellado",
+      "ref": "A186"
     },
     {
-      "nombre": "Samsung Tab A11+ 11\" 128 GB — Nuevo sellado",
-      "ref": "A375"
+      "nombre": "iPhone 14 128 GB — Nuevo sellado",
+      "ref": "A187"
     },
     {
-      "nombre": "Samsung Tab A11 8.6\" LTE 64 GB — Nuevo sellado",
-      "ref": "A376"
+      "nombre": "iPhone 14 Plus 128 GB — Nuevo sellado",
+      "ref": "A188"
     },
     {
-      "nombre": "Samsung Tab A9+ 11\" 64 GB — Nuevo sellado",
-      "ref": "A377"
-    },
-    {
-      "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 256 GB — Nuevo sellado",
-      "ref": "A378"
-    },
-    {
-      "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 128 GB — Nuevo sellado",
-      "ref": "A379"
-    },
-    {
-      "nombre": "Xiaomi Redmi Pad 2 11\" 256 GB — Nuevo sellado",
-      "ref": "A380"
-    },
-    {
-      "nombre": "Xiaomi Redmi Pad 2 11\" 128 GB — Nuevo sellado",
-      "ref": "A381"
+      "nombre": "iPhone 17 512 GB — Nuevo sellado",
+      "ref": "A194"
     }
   ],
-  "otros": []
+  "otros": [
+    {
+      "nombre": "iPhone 11 128 GB Blanco — Seleccionado A",
+      "campo": "batería",
+      "detalle": "100% → 93%"
+    },
+    {
+      "nombre": "iPhone 11 128 GB Blanco — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 11 64 GB Negro — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 12 64 GB Negro — Seleccionado B",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 12 Pro 128 GB Azul — Seleccionado B",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 12 Pro 128 GB Azul — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 12 Pro 256 GB Azul — Seleccionado C",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 12 Pro 256 GB Azul — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 Mini 128 GB Negro — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 Mini 128 GB — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 Mini 256 GB Blanco — Seleccionado C",
+      "campo": "batería",
+      "detalle": "76% → 77%"
+    },
+    {
+      "nombre": "iPhone 13 Mini 256 GB Blanco — Seleccionado C",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 128 GB Negro — Seleccionado B",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 128 GB Rojo — Seleccionado C",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 128 GB — Seleccionado B",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 128 GB — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 128 GB Negro — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 256 GB Negro — Seleccionado C",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 Pro 128 GB Azul — Seleccionado A",
+      "campo": "batería",
+      "detalle": "86% → 90%"
+    },
+    {
+      "nombre": "iPhone 13 Pro 128 GB Azul — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 Pro 256 GB Azul — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 13 Pro Max 256 GB Negro — Seleccionado B",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 128 GB Negro — Seleccionado B",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 128 GB — Seleccionado B",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 128 GB Negro — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 128 GB — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 128 GB Rojo — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 Pro 128 GB — Seleccionado C",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 Pro 128 GB — Seleccionado B",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 Pro 128 GB — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 Pro 128 GB Lila — Seleccionado A",
+      "campo": "batería",
+      "detalle": "94% → 92%"
+    },
+    {
+      "nombre": "iPhone 14 Pro 128 GB Lila — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 14 Pro Max 128 GB — Seleccionado A",
+      "campo": "batería",
+      "detalle": "92% → 85%"
+    },
+    {
+      "nombre": "iPhone 14 Pro Max 128 GB — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 15 128 GB — Seleccionado A",
+      "campo": "batería",
+      "detalle": "89% → 87%"
+    },
+    {
+      "nombre": "iPhone 15 128 GB — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 15 128 GB Celeste — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 15 128 GB Rosa — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 15 256 GB Rosa — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 15 Pro 128 GB — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 15 Pro Max 1 TB Titanio Natural — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 16 Pro 128 GB Titanio Natural — Seleccionado A",
+      "campo": "batería",
+      "detalle": "87% → 85%"
+    },
+    {
+      "nombre": "iPhone 16 Pro 128 GB Titanio Natural — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 16 Pro 128 GB — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 16 Pro 128 GB Titanio Desert — Seleccionado A",
+      "campo": "batería",
+      "detalle": "90% → 91%"
+    },
+    {
+      "nombre": "iPhone 16 Pro 128 GB Titanio Desert — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 16 Pro Max 256 GB Titanio Natural — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 16 Pro Max 256 GB — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 16 Pro Max 256 GB Titanio Desert — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 16 Pro Max 256 GB Negro — Seleccionado A",
+      "campo": "disponibilidad"
+    },
+    {
+      "nombre": "iPhone 17 256 GB — Seleccionado B",
+      "campo": "disponibilidad"
+    }
+  ]
 }

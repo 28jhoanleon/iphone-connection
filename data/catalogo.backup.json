@@ -18,11 +18,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 21000,
-    "precioCentavos": 36708000,
+    "precioCentavos": 38157000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A102",
@@ -43,11 +45,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 15500,
-    "precioCentavos": 27094000,
+    "precioCentavos": 28163500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A103",
@@ -68,11 +72,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 19000,
-    "precioCentavos": 33212000,
+    "precioCentavos": 34523000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A104",
@@ -93,11 +99,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 20000,
-    "precioCentavos": 34960000,
+    "precioCentavos": 36340000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A105",
@@ -118,11 +126,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 24000,
-    "precioCentavos": 41952000,
+    "precioCentavos": 43608000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A106",
@@ -143,11 +153,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 22000,
-    "precioCentavos": 38456000,
+    "precioCentavos": 39974000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A107",
@@ -168,11 +180,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 26000,
-    "precioCentavos": 45448000,
+    "precioCentavos": 47242000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A108",
@@ -193,11 +207,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": "Detalle mínimo en pantalla",
     "costoCentavos": 22000,
-    "precioCentavos": 38456000,
+    "precioCentavos": 39974000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A109",
@@ -218,11 +234,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 27000,
-    "precioCentavos": 47196000,
+    "precioCentavos": 49059000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A110",
@@ -243,11 +261,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": "Sin Face ID",
     "costoCentavos": 28000,
-    "precioCentavos": 48944000,
+    "precioCentavos": 50876000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A111",
@@ -268,11 +288,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 31000,
-    "precioCentavos": 54188000,
+    "precioCentavos": 56327000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A112",
@@ -293,11 +315,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 29000,
-    "precioCentavos": 50692000,
+    "precioCentavos": 52693000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A113",
@@ -318,11 +342,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 32000,
-    "precioCentavos": 55936000,
+    "precioCentavos": 58144000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A114",
@@ -347,11 +373,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 23000,
-    "precioCentavos": 40204000,
+    "precioCentavos": 41791000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A115",
@@ -372,11 +402,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 24500,
-    "precioCentavos": 42826000,
+    "precioCentavos": 44516500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A116",
@@ -401,11 +433,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 26000,
-    "precioCentavos": 45448000,
+    "precioCentavos": 47242000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A117",
@@ -426,11 +462,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 24500,
-    "precioCentavos": 42826000,
+    "precioCentavos": 44516500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A118",
@@ -451,11 +489,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 27500,
-    "precioCentavos": 48070000,
+    "precioCentavos": 49967500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A119",
@@ -480,11 +520,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": "Detalle pantalla",
     "costoCentavos": 22000,
-    "precioCentavos": 38456000,
+    "precioCentavos": 39974000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A120",
@@ -505,11 +549,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": "Detalle pantalla",
     "costoCentavos": 22000,
-    "precioCentavos": 38456000,
+    "precioCentavos": 39974000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A121",
@@ -530,11 +576,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 30500,
-    "precioCentavos": 53314000,
+    "precioCentavos": 55418500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A122",
@@ -559,11 +607,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 31500,
-    "precioCentavos": 55062000,
+    "precioCentavos": 57235500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A123",
@@ -588,11 +640,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 32000,
-    "precioCentavos": 55936000,
+    "precioCentavos": 58144000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A124",
@@ -617,11 +673,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 33000,
-    "precioCentavos": 57684000,
+    "precioCentavos": 59961000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A125",
@@ -642,11 +702,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 33500,
-    "precioCentavos": 58558000,
+    "precioCentavos": 60869500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A126",
@@ -667,11 +729,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 34000,
-    "precioCentavos": 59432000,
+    "precioCentavos": 61778000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A127",
@@ -697,11 +761,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 34500,
-    "precioCentavos": 60306000,
+    "precioCentavos": 62686500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A128",
@@ -722,11 +790,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": "Píxel muerto en pantalla",
     "costoCentavos": 28000,
-    "precioCentavos": 48944000,
+    "precioCentavos": 50876000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A129",
@@ -747,11 +817,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 37000,
-    "precioCentavos": 64676000,
+    "precioCentavos": 67229000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A130",
@@ -772,11 +844,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 42000,
-    "precioCentavos": 73416000,
+    "precioCentavos": 76314000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A131",
@@ -797,11 +871,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 42500,
-    "precioCentavos": 74290000,
+    "precioCentavos": 77222500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A132",
@@ -822,11 +898,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 45000,
-    "precioCentavos": 78660000,
+    "precioCentavos": 81765000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A133",
@@ -847,11 +925,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 43000,
-    "precioCentavos": 75164000,
+    "precioCentavos": 78131000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A134",
@@ -872,11 +952,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 43500,
-    "precioCentavos": 76038000,
+    "precioCentavos": 79039500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A135",
@@ -897,11 +979,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 46000,
-    "precioCentavos": 80408000,
+    "precioCentavos": 83582000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A136",
@@ -922,11 +1006,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 48000,
-    "precioCentavos": 83904000,
+    "precioCentavos": 87216000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A137",
@@ -947,11 +1033,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": "Modulo cambiado",
     "costoCentavos": 44000,
-    "precioCentavos": 76912000,
+    "precioCentavos": 79948000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A138",
@@ -972,11 +1060,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 51000,
-    "precioCentavos": 89148000,
+    "precioCentavos": 92667000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A139",
@@ -997,11 +1087,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 35000,
-    "precioCentavos": 61180000,
+    "precioCentavos": 63595000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A140",
@@ -1022,11 +1114,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 35000,
-    "precioCentavos": 61180000,
+    "precioCentavos": 63595000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A141",
@@ -1050,11 +1144,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 35500,
-    "precioCentavos": 62054000,
+    "precioCentavos": 64503500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A142",
@@ -1078,11 +1176,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 36000,
-    "precioCentavos": 62928000,
+    "precioCentavos": 65412000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A143",
@@ -1103,11 +1205,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 36500,
-    "precioCentavos": 63802000,
+    "precioCentavos": 66320500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A144",
@@ -1131,11 +1235,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 37000,
-    "precioCentavos": 64676000,
+    "precioCentavos": 67229000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A145",
@@ -1156,11 +1264,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 37500,
-    "precioCentavos": 65550000,
+    "precioCentavos": 68137500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A146",
@@ -1184,11 +1294,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 37500,
-    "precioCentavos": 65550000,
+    "precioCentavos": 68137500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A147",
@@ -1213,11 +1327,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 38000,
-    "precioCentavos": 66424000,
+    "precioCentavos": 69046000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A148",
@@ -1241,11 +1359,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 47500,
-    "precioCentavos": 83030000,
+    "precioCentavos": 86307500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A149",
@@ -1269,11 +1391,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 48000,
-    "precioCentavos": 83904000,
+    "precioCentavos": 87216000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A150",
@@ -1297,11 +1423,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 48500,
-    "precioCentavos": 84778000,
+    "precioCentavos": 88124500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A151",
@@ -1325,11 +1455,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 48500,
-    "precioCentavos": 84778000,
+    "precioCentavos": 88124500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A152",
@@ -1350,11 +1484,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 49000,
-    "precioCentavos": 85652000,
+    "precioCentavos": 89033000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A153",
@@ -1375,11 +1511,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 49500,
-    "precioCentavos": 86526000,
+    "precioCentavos": 89941500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A154",
@@ -1403,11 +1541,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 50500,
-    "precioCentavos": 88274000,
+    "precioCentavos": 91758500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A155",
@@ -1431,11 +1573,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 54000,
-    "precioCentavos": 94392000,
+    "precioCentavos": 98118000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A156",
@@ -1459,11 +1605,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 56000,
-    "precioCentavos": 97888000,
+    "precioCentavos": 101752000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A157",
@@ -1487,11 +1637,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 57000,
-    "precioCentavos": 99636000,
+    "precioCentavos": 103569000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A158",
@@ -1512,11 +1666,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 45500,
-    "precioCentavos": 79534000,
+    "precioCentavos": 82673500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A159",
@@ -1541,11 +1697,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 46000,
-    "precioCentavos": 80408000,
+    "precioCentavos": 83582000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A160",
@@ -1569,11 +1729,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 48000,
-    "precioCentavos": 83904000,
+    "precioCentavos": 87216000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A161",
@@ -1594,11 +1758,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 48500,
-    "precioCentavos": 84778000,
+    "precioCentavos": 88124500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A162",
@@ -1619,11 +1785,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 49500,
-    "precioCentavos": 86526000,
+    "precioCentavos": 89941500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A163",
@@ -1644,11 +1812,13 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 53000,
-    "precioCentavos": 92644000,
+    "precioCentavos": 96301000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A164",
@@ -1672,11 +1842,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 61500,
-    "precioCentavos": 107502000,
+    "precioCentavos": 111745500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A165",
@@ -1697,11 +1871,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 62000,
-    "precioCentavos": 108376000,
+    "precioCentavos": 112654000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A166",
@@ -1725,11 +1901,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 64000,
-    "precioCentavos": 111872000,
+    "precioCentavos": 116288000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A167",
@@ -1750,11 +1930,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 68000,
-    "precioCentavos": 118864000,
+    "precioCentavos": 123556000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A168",
@@ -1779,11 +1961,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 74000,
-    "precioCentavos": 129352000,
+    "precioCentavos": 134458000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A169",
@@ -1804,11 +1990,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 74000,
-    "precioCentavos": 129352000,
+    "precioCentavos": 134458000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A170",
@@ -1829,11 +2017,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 75000,
-    "precioCentavos": 131100000,
+    "precioCentavos": 136275000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A171",
@@ -1858,11 +2048,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 76000,
-    "precioCentavos": 132848000,
+    "precioCentavos": 138092000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A172",
@@ -1883,11 +2077,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 77000,
-    "precioCentavos": 134596000,
+    "precioCentavos": 139909000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A173",
@@ -1908,11 +2104,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 78000,
-    "precioCentavos": 136344000,
+    "precioCentavos": 141726000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A174",
@@ -1933,11 +2131,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 92000,
-    "precioCentavos": 160816000,
+    "precioCentavos": 167164000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A175",
@@ -1961,11 +2161,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 93000,
-    "precioCentavos": 162564000,
+    "precioCentavos": 168981000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A176",
@@ -1986,11 +2190,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 94000,
-    "precioCentavos": 164312000,
+    "precioCentavos": 170798000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A177",
@@ -2011,11 +2217,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 95500,
-    "precioCentavos": 166934000,
+    "precioCentavos": 173523500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A178",
@@ -2036,11 +2244,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 85000,
-    "precioCentavos": 148580000,
+    "precioCentavos": 154445000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A179",
@@ -2061,11 +2271,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": "Nuevo sin caja",
     "costoCentavos": 87000,
-    "precioCentavos": 152076000,
+    "precioCentavos": 158079000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A180",
@@ -2089,11 +2303,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": "Nuevo sin caja",
     "costoCentavos": 115000,
-    "precioCentavos": 201020000,
+    "precioCentavos": 208955000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A181",
@@ -2117,11 +2335,15 @@
     "bateriaPosibleReemplazo": true,
     "defecto": null,
     "costoCentavos": 124000,
-    "precioCentavos": 216752000,
+    "precioCentavos": 225308000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A182",
@@ -2142,7 +2364,7 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 20000,
-    "precioCentavos": 34960000,
+    "precioCentavos": 36340000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": false,
@@ -2167,11 +2389,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 30000,
-    "precioCentavos": 52440000,
+    "precioCentavos": 54510000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A184",
@@ -2192,11 +2416,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 16000,
-    "precioCentavos": 27968000,
+    "precioCentavos": 29072000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A185",
@@ -2217,7 +2445,7 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 4500,
-    "precioCentavos": 7866000,
+    "precioCentavos": 8176500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": false,
@@ -2242,11 +2470,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 52000,
-    "precioCentavos": 90896000,
+    "precioCentavos": 94484000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A187",
@@ -2267,11 +2499,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 61000,
-    "precioCentavos": 106628000,
+    "precioCentavos": 110837000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A188",
@@ -2292,11 +2528,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 66000,
-    "precioCentavos": 115368000,
+    "precioCentavos": 119922000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A189",
@@ -2317,11 +2557,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 71000,
-    "precioCentavos": 124108000,
+    "precioCentavos": 129007000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A190",
@@ -2342,11 +2586,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 60000,
-    "precioCentavos": 104880000,
+    "precioCentavos": 109020000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A191",
@@ -2367,11 +2615,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 82000,
-    "precioCentavos": 143336000,
+    "precioCentavos": 148994000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A192",
@@ -2392,11 +2644,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 117000,
-    "precioCentavos": 204516000,
+    "precioCentavos": 212589000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A193",
@@ -2417,11 +2673,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 98000,
-    "precioCentavos": 171304000,
+    "precioCentavos": 178066000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A194",
@@ -2442,11 +2702,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 106000,
-    "precioCentavos": 185288000,
+    "precioCentavos": 192602000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A195",
@@ -2467,11 +2731,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 99000,
-    "precioCentavos": 173052000,
+    "precioCentavos": 179883000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A196",
@@ -2492,11 +2760,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 75000,
-    "precioCentavos": 131100000,
+    "precioCentavos": 136275000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A197",
@@ -2517,11 +2789,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 117500,
-    "precioCentavos": 205390000,
+    "precioCentavos": 213497500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A198",
@@ -2542,11 +2816,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 121000,
-    "precioCentavos": 211508000,
+    "precioCentavos": 219857000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A199",
@@ -2567,11 +2843,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 121000,
-    "precioCentavos": 211508000,
+    "precioCentavos": 219857000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A200",
@@ -2592,11 +2870,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 145000,
-    "precioCentavos": 253460000,
+    "precioCentavos": 263465000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A201",
@@ -2617,11 +2899,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 175000,
-    "precioCentavos": 305900000,
+    "precioCentavos": 317975000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A202",
@@ -2642,11 +2928,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 127000,
-    "precioCentavos": 221996000,
+    "precioCentavos": 230759000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A203",
@@ -2667,11 +2955,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 128000,
-    "precioCentavos": 223744000,
+    "precioCentavos": 232576000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A204",
@@ -2692,11 +2982,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 129000,
-    "precioCentavos": 225492000,
+    "precioCentavos": 234393000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A205",
@@ -2717,11 +3009,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 154000,
-    "precioCentavos": 269192000,
+    "precioCentavos": 279818000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A206",
@@ -2742,11 +3038,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 175000,
-    "precioCentavos": 305900000,
+    "precioCentavos": 317975000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A207",
@@ -2767,19 +3067,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 215000,
-    "precioCentavos": 375820000,
+    "precioCentavos": 390655000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A208",
-    "modelo": "MacBook Neo 13\"",
-    "modeloSlug": "macbook-neo-13",
+    "modelo": "MacBook Neo 13\" 256 GB",
+    "modeloSlug": "macbook-neo-13-256-gb",
     "config": null,
-    "nombre": "MacBook Neo 13\" 256 GB",
-    "nombreCompleto": "MacBook Neo 13\" 256 GB — Nuevo sellado",
+    "nombre": "MacBook Neo 13\" 256 GB 256 GB",
+    "nombreCompleto": "MacBook Neo 13\" 256 GB 256 GB — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -2792,19 +3096,21 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 84000,
-    "precioCentavos": 146832000,
+    "precioCentavos": 152628000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A209",
-    "modelo": "MacBook Neo 13\" Citrus",
-    "modeloSlug": "macbook-neo-13-citrus",
+    "modelo": "MacBook Neo 13\" Citrus 256 GB",
+    "modeloSlug": "macbook-neo-13-citrus-256-gb",
     "config": null,
-    "nombre": "MacBook Neo 13\" Citrus 256 GB",
-    "nombreCompleto": "MacBook Neo 13\" Citrus 256 GB — Nuevo sellado",
+    "nombre": "MacBook Neo 13\" Citrus 256 GB 256 GB",
+    "nombreCompleto": "MacBook Neo 13\" Citrus 256 GB 256 GB — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -2817,19 +3123,21 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 83000,
-    "precioCentavos": 145084000,
+    "precioCentavos": 150811000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A210",
-    "modelo": "MacBook Neo 13\"",
-    "modeloSlug": "macbook-neo-13",
+    "modelo": "MacBook Neo 13\" 512 GB",
+    "modeloSlug": "macbook-neo-13-512-gb",
     "config": null,
-    "nombre": "MacBook Neo 13\" 512 GB",
-    "nombreCompleto": "MacBook Neo 13\" 512 GB — Nuevo sellado",
+    "nombre": "MacBook Neo 13\" 512 GB 512 GB",
+    "nombreCompleto": "MacBook Neo 13\" 512 GB 512 GB — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -2842,19 +3150,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 94000,
-    "precioCentavos": 164312000,
+    "precioCentavos": 170798000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A211",
-    "modelo": "MacBook Air 13\" M4",
-    "modeloSlug": "macbook-air-13-m4",
+    "modelo": "MacBook Air 13\" M4 16 GB",
+    "modeloSlug": "macbook-air-13-m4-16-gb",
     "config": null,
-    "nombre": "MacBook Air 13\" M4",
-    "nombreCompleto": "MacBook Air 13\" M4 — Nuevo sellado",
+    "nombre": "MacBook Air 13\" M4 16 GB",
+    "nombreCompleto": "MacBook Air 13\" M4 16 GB — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -2867,19 +3179,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 125000,
-    "precioCentavos": 218500000,
+    "precioCentavos": 227125000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A212",
-    "modelo": "MacBook Air 13,6 M5",
-    "modeloSlug": "macbook-air-13-6-m5",
+    "modelo": "MacBook Air 13,6 M5 512 GB",
+    "modeloSlug": "macbook-air-13-6-m5-512-gb",
     "config": null,
-    "nombre": "MacBook Air 13,6 M5 512 GB",
-    "nombreCompleto": "MacBook Air 13,6 M5 512 GB — Nuevo sellado",
+    "nombre": "MacBook Air 13,6 M5 512 GB 512 GB",
+    "nombreCompleto": "MacBook Air 13,6 M5 512 GB 512 GB — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -2892,19 +3208,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 135000,
-    "precioCentavos": 235980000,
+    "precioCentavos": 245295000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A213",
-    "modelo": "MacBook Air 13,6 M5",
-    "modeloSlug": "macbook-air-13-6-m5",
+    "modelo": "MacBook Air 13,6 M5 1 TB",
+    "modeloSlug": "macbook-air-13-6-m5-1-tb",
     "config": null,
-    "nombre": "MacBook Air 13,6 M5 1 TB",
-    "nombreCompleto": "MacBook Air 13,6 M5 1 TB — Nuevo sellado",
+    "nombre": "MacBook Air 13,6 M5 1 TB 1 TB",
+    "nombreCompleto": "MacBook Air 13,6 M5 1 TB 1 TB — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -2917,19 +3237,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 157000,
-    "precioCentavos": 274436000,
+    "precioCentavos": 285269000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A214",
-    "modelo": "MacBook Air 13,6 M5",
-    "modeloSlug": "macbook-air-13-6-m5",
+    "modelo": "MacBook Air 13,6 M5 1 TB",
+    "modeloSlug": "macbook-air-13-6-m5-1-tb",
     "config": null,
-    "nombre": "MacBook Air 13,6 M5 1 TB",
-    "nombreCompleto": "MacBook Air 13,6 M5 1 TB — Nuevo sellado",
+    "nombre": "MacBook Air 13,6 M5 1 TB 1 TB",
+    "nombreCompleto": "MacBook Air 13,6 M5 1 TB 1 TB — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -2942,11 +3266,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 203000,
-    "precioCentavos": 354844000,
+    "precioCentavos": 368851000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A215",
@@ -2967,19 +3295,21 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 154500,
-    "precioCentavos": 270066000,
+    "precioCentavos": 280726500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A216",
-    "modelo": "MacBook Air 15,3 M5",
-    "modeloSlug": "macbook-air-15-3-m5",
+    "modelo": "MacBook Air 15,3 M5 1 TB",
+    "modeloSlug": "macbook-air-15-3-m5-1-tb",
     "config": null,
-    "nombre": "MacBook Air 15,3 M5 1 TB",
-    "nombreCompleto": "MacBook Air 15,3 M5 1 TB — Nuevo sellado",
+    "nombre": "MacBook Air 15,3 M5 1 TB 1 TB",
+    "nombreCompleto": "MacBook Air 15,3 M5 1 TB 1 TB — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -2992,19 +3322,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 199000,
-    "precioCentavos": 347852000,
+    "precioCentavos": 361583000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A217",
-    "modelo": "MacBook Air 15,3 M5",
-    "modeloSlug": "macbook-air-15-3-m5",
+    "modelo": "MacBook Air 15,3 M5 1 TB",
+    "modeloSlug": "macbook-air-15-3-m5-1-tb",
     "config": null,
-    "nombre": "MacBook Air 15,3 M5 1 TB",
-    "nombreCompleto": "MacBook Air 15,3 M5 1 TB — Nuevo sellado",
+    "nombre": "MacBook Air 15,3 M5 1 TB 1 TB",
+    "nombreCompleto": "MacBook Air 15,3 M5 1 TB 1 TB — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3017,19 +3351,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 223000,
-    "precioCentavos": 389804000,
+    "precioCentavos": 405191000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A218",
-    "modelo": "MacBook Pro M5 14\"",
-    "modeloSlug": "macbook-pro-m5-14",
+    "modelo": "MacBook Pro M5 14\" 512 GB 16 GB RAM",
+    "modeloSlug": "macbook-pro-m5-14-512-gb-16-gb-ram",
     "config": "16 GB RAM",
-    "nombre": "MacBook Pro M5 14\"",
-    "nombreCompleto": "MacBook Pro M5 14\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 14\" 512 GB 16 GB RAM",
+    "nombreCompleto": "MacBook Pro M5 14\" 512 GB 16 GB RAM — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3042,19 +3380,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 203000,
-    "precioCentavos": 354844000,
+    "precioCentavos": 368851000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A219",
-    "modelo": "MacBook Pro M5 14\"",
-    "modeloSlug": "macbook-pro-m5-14",
+    "modelo": "MacBook Pro M5 14\" 1 TB 16 GB RAM",
+    "modeloSlug": "macbook-pro-m5-14-1-tb-16-gb-ram",
     "config": "16 GB RAM",
-    "nombre": "MacBook Pro M5 14\"",
-    "nombreCompleto": "MacBook Pro M5 14\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 14\" 1 TB 16 GB RAM",
+    "nombreCompleto": "MacBook Pro M5 14\" 1 TB 16 GB RAM — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3067,19 +3409,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 220000,
-    "precioCentavos": 384560000,
+    "precioCentavos": 399740000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A220",
-    "modelo": "MacBook Pro M5 14\"",
-    "modeloSlug": "macbook-pro-m5-14",
+    "modelo": "MacBook Pro M5 14\" 1 TB 24 GB RAM",
+    "modeloSlug": "macbook-pro-m5-14-1-tb-24-gb-ram",
     "config": "24 GB RAM",
-    "nombre": "MacBook Pro M5 14\"",
-    "nombreCompleto": "MacBook Pro M5 14\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 14\" 1 TB 24 GB RAM",
+    "nombreCompleto": "MacBook Pro M5 14\" 1 TB 24 GB RAM — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3092,19 +3438,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 248000,
-    "precioCentavos": 433504000,
+    "precioCentavos": 450616000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A221",
-    "modelo": "MacBook Pro M5 14\"",
-    "modeloSlug": "macbook-pro-m5-14",
+    "modelo": "MacBook Pro M5 14\" 1 TB 32 GB RAM",
+    "modeloSlug": "macbook-pro-m5-14-1-tb-32-gb-ram",
     "config": "32 GB RAM",
-    "nombre": "MacBook Pro M5 14\"",
-    "nombreCompleto": "MacBook Pro M5 14\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 14\" 1 TB 32 GB RAM",
+    "nombreCompleto": "MacBook Pro M5 14\" 1 TB 32 GB RAM — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3117,19 +3467,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 276000,
-    "precioCentavos": 482448000,
+    "precioCentavos": 501492000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A222",
-    "modelo": "MacBook Pro M5 Pro 14\"",
-    "modeloSlug": "macbook-pro-m5-pro-14",
+    "modelo": "MacBook Pro M5 Pro 14\" 1 TB 24 GB RAM",
+    "modeloSlug": "macbook-pro-m5-pro-14-1-tb-24-gb-ram",
     "config": "24 GB RAM",
-    "nombre": "MacBook Pro M5 Pro 14\"",
-    "nombreCompleto": "MacBook Pro M5 Pro 14\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 Pro 14\" 1 TB 24 GB RAM",
+    "nombreCompleto": "MacBook Pro M5 Pro 14\" 1 TB 24 GB RAM — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3142,19 +3496,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 282000,
-    "precioCentavos": 492936000,
+    "precioCentavos": 512394000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A223",
-    "modelo": "MacBook Pro M5 Pro 14\"",
-    "modeloSlug": "macbook-pro-m5-pro-14",
+    "modelo": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM",
+    "modeloSlug": "macbook-pro-m5-pro-14-2-tb-24-gb-ram",
     "config": "24 GB RAM",
-    "nombre": "MacBook Pro M5 Pro 14\"",
-    "nombreCompleto": "MacBook Pro M5 Pro 14\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM",
+    "nombreCompleto": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3167,19 +3525,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 342000,
-    "precioCentavos": 597816000,
+    "precioCentavos": 621414000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A224",
-    "modelo": "MacBook Pro M5 Pro 14\"",
-    "modeloSlug": "macbook-pro-m5-pro-14",
+    "modelo": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM GPU 20 núcleos",
+    "modeloSlug": "macbook-pro-m5-pro-14-2-tb-24-gb-ram-gpu-20-nucleos",
     "config": "24 GB RAM · 20 core",
-    "nombre": "MacBook Pro M5 Pro 14\"",
-    "nombreCompleto": "MacBook Pro M5 Pro 14\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM GPU 20 núcleos",
+    "nombreCompleto": "MacBook Pro M5 Pro 14\" 2 TB 24 GB RAM GPU 20 núcleos — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3192,19 +3554,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 367000,
-    "precioCentavos": 641516000,
+    "precioCentavos": 666839000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A225",
-    "modelo": "MacBook Pro M5 Pro 14\"",
-    "modeloSlug": "macbook-pro-m5-pro-14",
+    "modelo": "MacBook Pro M5 Pro 14\" 1 TB 48 GB RAM GPU 16 núcleos",
+    "modeloSlug": "macbook-pro-m5-pro-14-1-tb-48-gb-ram-gpu-16-nucleos",
     "config": "48 GB RAM · 16 core",
-    "nombre": "MacBook Pro M5 Pro 14\"",
-    "nombreCompleto": "MacBook Pro M5 Pro 14\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 Pro 14\" 1 TB 48 GB RAM GPU 16 núcleos",
+    "nombreCompleto": "MacBook Pro M5 Pro 14\" 1 TB 48 GB RAM GPU 16 núcleos — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3217,19 +3583,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 373000,
-    "precioCentavos": 652004000,
+    "precioCentavos": 677741000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A226",
-    "modelo": "MacBook Pro M5 Pro 16\"",
-    "modeloSlug": "macbook-pro-m5-pro-16",
+    "modelo": "MacBook Pro M5 Pro 16\" 1 TB 24 GB RAM GPU 20 núcleos",
+    "modeloSlug": "macbook-pro-m5-pro-16-1-tb-24-gb-ram-gpu-20-nucleos",
     "config": "24 GB RAM · 20 core",
-    "nombre": "MacBook Pro M5 Pro 16\"",
-    "nombreCompleto": "MacBook Pro M5 Pro 16\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 Pro 16\" 1 TB 24 GB RAM GPU 20 núcleos",
+    "nombreCompleto": "MacBook Pro M5 Pro 16\" 1 TB 24 GB RAM GPU 20 núcleos — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3242,19 +3612,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 332000,
-    "precioCentavos": 580336000,
+    "precioCentavos": 603244000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A227",
-    "modelo": "MacBook Pro M5 Pro 16\"",
-    "modeloSlug": "macbook-pro-m5-pro-16",
+    "modelo": "MacBook Pro M5 Pro 16\" 1 TB 48 GB RAM GPU 20 núcleos",
+    "modeloSlug": "macbook-pro-m5-pro-16-1-tb-48-gb-ram-gpu-20-nucleos",
     "config": "48 GB RAM · 20 core",
-    "nombre": "MacBook Pro M5 Pro 16\"",
-    "nombreCompleto": "MacBook Pro M5 Pro 16\" — Nuevo sellado",
+    "nombre": "MacBook Pro M5 Pro 16\" 1 TB 48 GB RAM GPU 20 núcleos",
+    "nombreCompleto": "MacBook Pro M5 Pro 16\" 1 TB 48 GB RAM GPU 20 núcleos — Nuevo sellado",
     "marca": "Apple",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -3267,11 +3641,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 422000,
-    "precioCentavos": 737656000,
+    "precioCentavos": 766774000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A228",
@@ -3292,11 +3670,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 64000,
-    "precioCentavos": 111872000,
+    "precioCentavos": 116288000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A229",
@@ -3317,11 +3697,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 74000,
-    "precioCentavos": 129352000,
+    "precioCentavos": 134458000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A230",
@@ -3342,11 +3724,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 50000,
-    "precioCentavos": 87400000,
+    "precioCentavos": 90850000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A231",
@@ -3367,11 +3751,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 63000,
-    "precioCentavos": 110124000,
+    "precioCentavos": 114471000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A232",
@@ -3392,11 +3778,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 76000,
-    "precioCentavos": 132848000,
+    "precioCentavos": 138092000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A233",
@@ -3417,11 +3805,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 96000,
-    "precioCentavos": 167808000,
+    "precioCentavos": 174432000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A234",
@@ -3442,11 +3832,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 104000,
-    "precioCentavos": 181792000,
+    "precioCentavos": 188968000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A235",
@@ -3467,11 +3859,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 115000,
-    "precioCentavos": 201020000,
+    "precioCentavos": 208955000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A236",
@@ -3492,11 +3886,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 126000,
-    "precioCentavos": 220248000,
+    "precioCentavos": 228942000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A237",
@@ -3517,11 +3913,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 146500,
-    "precioCentavos": 256082000,
+    "precioCentavos": 266190500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A238",
@@ -3542,11 +3940,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 155000,
-    "precioCentavos": 270940000,
+    "precioCentavos": 281635000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A239",
@@ -3567,11 +3967,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 176000,
-    "precioCentavos": 307648000,
+    "precioCentavos": 319792000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A240",
@@ -3592,11 +3994,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 12500,
-    "precioCentavos": 21850000,
+    "precioCentavos": 22712500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A241",
@@ -3617,11 +4021,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 12500,
-    "precioCentavos": 21850000,
+    "precioCentavos": 22712500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A242",
@@ -3642,11 +4048,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 15000,
-    "precioCentavos": 26220000,
+    "precioCentavos": 27255000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A243",
@@ -3667,11 +4075,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 27000,
-    "precioCentavos": 47196000,
+    "precioCentavos": 49059000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A244",
@@ -3692,11 +4102,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 20000,
-    "precioCentavos": 34960000,
+    "precioCentavos": 36340000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A245",
@@ -3717,11 +4129,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 14500,
-    "precioCentavos": 25346000,
+    "precioCentavos": 26346500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A246",
@@ -3742,11 +4156,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 5500,
-    "precioCentavos": 9614000,
+    "precioCentavos": 9993500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A247",
@@ -3767,11 +4183,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 12000,
-    "precioCentavos": 20976000,
+    "precioCentavos": 21804000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A248",
@@ -3792,11 +4210,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 25000,
-    "precioCentavos": 43700000,
+    "precioCentavos": 45425000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A249",
@@ -3817,11 +4237,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 30500,
-    "precioCentavos": 53314000,
+    "precioCentavos": 55418500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A250",
@@ -3842,11 +4264,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 34000,
-    "precioCentavos": 59432000,
+    "precioCentavos": 61778000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A251",
@@ -3867,11 +4291,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 39500,
-    "precioCentavos": 69046000,
+    "precioCentavos": 71771500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A252",
@@ -3892,11 +4318,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 67000,
-    "precioCentavos": 117116000,
+    "precioCentavos": 121739000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A253",
@@ -3917,11 +4345,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 43000,
-    "precioCentavos": 75164000,
+    "precioCentavos": 78131000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A254",
@@ -3942,11 +4372,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 71000,
-    "precioCentavos": 124108000,
+    "precioCentavos": 129007000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A255",
@@ -3967,11 +4399,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 81000,
-    "precioCentavos": 141588000,
+    "precioCentavos": 147177000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A256",
@@ -3992,11 +4426,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 2000,
-    "precioCentavos": 3496000,
+    "precioCentavos": 3634000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A257",
@@ -4017,11 +4453,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 31300,
-    "precioCentavos": 54712400,
+    "precioCentavos": 56872100,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A258",
@@ -4042,11 +4480,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 20000,
-    "precioCentavos": 34960000,
+    "precioCentavos": 36340000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A259",
@@ -4067,11 +4507,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 12500,
-    "precioCentavos": 21850000,
+    "precioCentavos": 22712500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A260",
@@ -4092,11 +4536,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 12000,
-    "precioCentavos": 20976000,
+    "precioCentavos": 21804000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A261",
@@ -4117,11 +4565,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 9500,
-    "precioCentavos": 16606000,
+    "precioCentavos": 17261500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A262",
@@ -4142,11 +4592,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 47000,
-    "precioCentavos": 82156000,
+    "precioCentavos": 85399000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A263",
@@ -4167,11 +4619,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 37500,
-    "precioCentavos": 65550000,
+    "precioCentavos": 68137500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A264",
@@ -4192,11 +4646,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 24000,
-    "precioCentavos": 41952000,
+    "precioCentavos": 43608000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A265",
@@ -4217,11 +4673,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 27000,
-    "precioCentavos": 47196000,
+    "precioCentavos": 49059000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A266",
@@ -4242,11 +4700,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 24500,
-    "precioCentavos": 42826000,
+    "precioCentavos": 44516500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A267",
@@ -4267,11 +4727,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 6500,
-    "precioCentavos": 11362000,
+    "precioCentavos": 11810500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A268",
@@ -4292,11 +4756,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 5200,
-    "precioCentavos": 9089600,
+    "precioCentavos": 9448400,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A269",
@@ -4317,11 +4786,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 142000,
-    "precioCentavos": 248216000,
+    "precioCentavos": 258014000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A270",
@@ -4342,11 +4815,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 117000,
-    "precioCentavos": 204516000,
+    "precioCentavos": 212589000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A271",
@@ -4367,11 +4844,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 106000,
-    "precioCentavos": 185288000,
+    "precioCentavos": 192602000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A272",
@@ -4392,11 +4873,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 95000,
-    "precioCentavos": 166060000,
+    "precioCentavos": 172615000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A273",
@@ -4417,11 +4902,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 90000,
-    "precioCentavos": 157320000,
+    "precioCentavos": 163530000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A274",
@@ -4442,11 +4931,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 78000,
-    "precioCentavos": 136344000,
+    "precioCentavos": 141726000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A275",
@@ -4467,11 +4960,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 65000,
-    "precioCentavos": 113620000,
+    "precioCentavos": 118105000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A276",
@@ -4492,11 +4990,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 59000,
-    "precioCentavos": 103132000,
+    "precioCentavos": 107203000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A277",
@@ -4517,11 +5020,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 55000,
-    "precioCentavos": 96140000,
+    "precioCentavos": 99935000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A278",
@@ -4542,11 +5050,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 65000,
-    "precioCentavos": 113620000,
+    "precioCentavos": 118105000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A279",
@@ -4567,11 +5079,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 49000,
-    "precioCentavos": 85652000,
+    "precioCentavos": 89033000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A280",
@@ -4592,11 +5108,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 46500,
-    "precioCentavos": 81282000,
+    "precioCentavos": 84490500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A281",
@@ -4617,11 +5137,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 44500,
-    "precioCentavos": 77786000,
+    "precioCentavos": 80856500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A282",
@@ -4642,11 +5166,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 44500,
-    "precioCentavos": 77786000,
+    "precioCentavos": 80856500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A283",
@@ -4667,11 +5195,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 36000,
-    "precioCentavos": 62928000,
+    "precioCentavos": 65412000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A284",
@@ -4692,11 +5224,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 38500,
-    "precioCentavos": 67298000,
+    "precioCentavos": 69954500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A285",
@@ -4717,11 +5254,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 30500,
-    "precioCentavos": 53314000,
+    "precioCentavos": 55418500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A286",
@@ -4742,11 +5284,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 27500,
-    "precioCentavos": 48070000,
+    "precioCentavos": 49967500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A287",
@@ -4767,11 +5314,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 33000,
-    "precioCentavos": 57684000,
+    "precioCentavos": 59961000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A288",
@@ -4792,11 +5344,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 26000,
-    "precioCentavos": 45448000,
+    "precioCentavos": 47242000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A289",
@@ -4817,11 +5374,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 19000,
-    "precioCentavos": 33212000,
+    "precioCentavos": 34523000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A290",
@@ -4842,11 +5404,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 14500,
-    "precioCentavos": 25346000,
+    "precioCentavos": 26346500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A291",
@@ -4867,11 +5434,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 10000,
-    "precioCentavos": 17480000,
+    "precioCentavos": 18170000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A292",
@@ -4892,11 +5464,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 89000,
-    "precioCentavos": 155572000,
+    "precioCentavos": 161713000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A293",
@@ -4917,11 +5493,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 65000,
-    "precioCentavos": 113620000,
+    "precioCentavos": 118105000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A294",
@@ -4942,11 +5522,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 64000,
-    "precioCentavos": 111872000,
+    "precioCentavos": 116288000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A295",
@@ -4967,11 +5551,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 57500,
-    "precioCentavos": 100510000,
+    "precioCentavos": 104477500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A296",
@@ -4992,11 +5580,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 52000,
-    "precioCentavos": 90896000,
+    "precioCentavos": 94484000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A297",
@@ -5017,11 +5609,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 44000,
-    "precioCentavos": 76912000,
+    "precioCentavos": 79948000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A298",
@@ -5042,11 +5638,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 41500,
-    "precioCentavos": 72542000,
+    "precioCentavos": 75405500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A299",
@@ -5067,11 +5667,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 38000,
-    "precioCentavos": 66424000,
+    "precioCentavos": 69046000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A300",
@@ -5092,11 +5696,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 32000,
-    "precioCentavos": 55936000,
+    "precioCentavos": 58144000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A301",
@@ -5117,11 +5725,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 97500,
-    "precioCentavos": 170430000,
+    "precioCentavos": 177157500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A302",
@@ -5142,11 +5755,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 96500,
-    "precioCentavos": 168682000,
+    "precioCentavos": 175340500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A303",
@@ -5167,11 +5785,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 83000,
-    "precioCentavos": 145084000,
+    "precioCentavos": 150811000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A304",
@@ -5192,11 +5815,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 66200,
-    "precioCentavos": 115717600,
+    "precioCentavos": 120285400,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A305",
@@ -5217,11 +5845,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 52500,
-    "precioCentavos": 91770000,
+    "precioCentavos": 95392500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A306",
@@ -5242,11 +5874,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 46900,
-    "precioCentavos": 81981200,
+    "precioCentavos": 85217300,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A307",
@@ -5267,11 +5903,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 41500,
-    "precioCentavos": 72542000,
+    "precioCentavos": 75405500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A308",
@@ -5292,11 +5932,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 41400,
-    "precioCentavos": 72367200,
+    "precioCentavos": 75223800,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A309",
@@ -5317,11 +5961,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 38000,
-    "precioCentavos": 66424000,
+    "precioCentavos": 69046000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A310",
@@ -5342,11 +5990,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 38000,
-    "precioCentavos": 66424000,
+    "precioCentavos": 69046000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A311",
@@ -5367,11 +6019,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 32500,
-    "precioCentavos": 56810000,
+    "precioCentavos": 59052500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A312",
@@ -5392,11 +6048,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 30500,
-    "precioCentavos": 53314000,
+    "precioCentavos": 55418500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A313",
@@ -5417,11 +6077,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 26000,
-    "precioCentavos": 45448000,
+    "precioCentavos": 47242000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A314",
@@ -5442,11 +6106,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 21000,
-    "precioCentavos": 36708000,
+    "precioCentavos": 38157000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A315",
@@ -5467,11 +6135,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 23000,
-    "precioCentavos": 40204000,
+    "precioCentavos": 41791000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A316",
@@ -5492,11 +6164,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 19500,
-    "precioCentavos": 34086000,
+    "precioCentavos": 35431500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A317",
@@ -5517,11 +6193,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 18000,
-    "precioCentavos": 31464000,
+    "precioCentavos": 32706000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A318",
@@ -5542,11 +6222,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 15500,
-    "precioCentavos": 27094000,
+    "precioCentavos": 28163500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A319",
@@ -5567,11 +6251,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 49900,
-    "precioCentavos": 87225200,
+    "precioCentavos": 90668300,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A320",
@@ -5592,11 +6281,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 46000,
-    "precioCentavos": 80408000,
+    "precioCentavos": 83582000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A321",
@@ -5617,11 +6310,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 38500,
-    "precioCentavos": 67298000,
+    "precioCentavos": 69954500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A322",
@@ -5642,11 +6339,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 32500,
-    "precioCentavos": 56810000,
+    "precioCentavos": 59052500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A323",
@@ -5667,11 +6369,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 30200,
-    "precioCentavos": 52789600,
+    "precioCentavos": 54873400,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A324",
@@ -5692,11 +6398,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 30800,
-    "precioCentavos": 53838400,
+    "precioCentavos": 55963600,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A325",
@@ -5717,11 +6428,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 29900,
-    "precioCentavos": 52265200,
+    "precioCentavos": 54328300,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A326",
@@ -5742,11 +6458,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 26500,
-    "precioCentavos": 46322000,
+    "precioCentavos": 48150500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A327",
@@ -5767,11 +6487,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 22500,
-    "precioCentavos": 39330000,
+    "precioCentavos": 40882500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A328",
@@ -5792,11 +6516,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 24200,
-    "precioCentavos": 42301600,
+    "precioCentavos": 43971400,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A329",
@@ -5817,19 +6546,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 22200,
-    "precioCentavos": 38805600,
+    "precioCentavos": 40337400,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin color declarado"
+    ]
   },
   {
     "ref": "A330",
-    "modelo": "Notebook Asus Vivobook Go 15.6\"",
-    "modeloSlug": "notebook-asus-vivobook-go-15-6",
+    "modelo": "Notebook Asus Vivobook Go 15.6\" 8 GB",
+    "modeloSlug": "notebook-asus-vivobook-go-15-6-8-gb",
     "config": "(Intel N150 | 8GB RAM | 128Gb UFS | Windows 11) (E1504TA-BQ027W)",
-    "nombre": "Notebook Asus Vivobook Go 15.6\"",
-    "nombreCompleto": "Notebook Asus Vivobook Go 15.6\" — Nuevo sellado",
+    "nombre": "Notebook Asus Vivobook Go 15.6\" 8 GB",
+    "nombreCompleto": "Notebook Asus Vivobook Go 15.6\" 8 GB — Nuevo sellado",
     "marca": "Asus",
     "categoria": "Notebooks",
     "arquetipo": "parlante",
@@ -5842,19 +6575,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 39000,
-    "precioCentavos": 68172000,
+    "precioCentavos": 70863000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A331",
-    "modelo": "Notebook Asus 14\"",
-    "modeloSlug": "notebook-asus-14",
+    "modelo": "Notebook Asus 14\" 8 GB",
+    "modeloSlug": "notebook-asus-14-8-gb",
     "config": null,
-    "nombre": "Notebook Asus 14\"",
-    "nombreCompleto": "Notebook Asus 14\" — Nuevo sellado",
+    "nombre": "Notebook Asus 14\" 8 GB",
+    "nombreCompleto": "Notebook Asus 14\" 8 GB — Nuevo sellado",
     "marca": "Asus",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -5867,19 +6604,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 44500,
-    "precioCentavos": 77786000,
+    "precioCentavos": 80856500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A332",
-    "modelo": "Notebook Asus Vivobook 16\"",
-    "modeloSlug": "notebook-asus-vivobook-16",
+    "modelo": "Notebook Asus Vivobook 16\" 16 GB",
+    "modeloSlug": "notebook-asus-vivobook-16-16-gb",
     "config": null,
-    "nombre": "Notebook Asus Vivobook 16\"",
-    "nombreCompleto": "Notebook Asus Vivobook 16\" — Nuevo sellado",
+    "nombre": "Notebook Asus Vivobook 16\" 16 GB",
+    "nombreCompleto": "Notebook Asus Vivobook 16\" 16 GB — Nuevo sellado",
     "marca": "Asus",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -5892,19 +6633,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 116000,
-    "precioCentavos": 202768000,
+    "precioCentavos": 210772000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A333",
-    "modelo": "Notebook Dell 15,6\"",
-    "modeloSlug": "notebook-dell-15-6",
+    "modelo": "Notebook Dell 15,6\" 8 GB",
+    "modeloSlug": "notebook-dell-15-6-8-gb",
     "config": null,
-    "nombre": "Notebook Dell 15,6\"",
-    "nombreCompleto": "Notebook Dell 15,6\" — Nuevo sellado",
+    "nombre": "Notebook Dell 15,6\" 8 GB",
+    "nombreCompleto": "Notebook Dell 15,6\" 8 GB — Nuevo sellado",
     "marca": "Dell",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -5917,19 +6662,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 74000,
-    "precioCentavos": 129352000,
+    "precioCentavos": 134458000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A334",
-    "modelo": "Notebook Dell 15.6\"",
-    "modeloSlug": "notebook-dell-15-6",
+    "modelo": "Notebook Dell 15.6\" 16 GB",
+    "modeloSlug": "notebook-dell-15-6-16-gb",
     "config": null,
-    "nombre": "Notebook Dell 15.6\"",
-    "nombreCompleto": "Notebook Dell 15.6\" — Nuevo sellado",
+    "nombre": "Notebook Dell 15.6\" 16 GB",
+    "nombreCompleto": "Notebook Dell 15.6\" 16 GB — Nuevo sellado",
     "marca": "Dell",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -5942,19 +6691,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 86000,
-    "precioCentavos": 150328000,
+    "precioCentavos": 156262000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A335",
-    "modelo": "Notebook Dell Inspiron 15.6\"",
-    "modeloSlug": "notebook-dell-inspiron-15-6",
+    "modelo": "Notebook Dell Inspiron 15.6\" 16 GB",
+    "modeloSlug": "notebook-dell-inspiron-15-6-16-gb",
     "config": null,
-    "nombre": "Notebook Dell Inspiron 15.6\"",
-    "nombreCompleto": "Notebook Dell Inspiron 15.6\" — Nuevo sellado",
+    "nombre": "Notebook Dell Inspiron 15.6\" 16 GB",
+    "nombreCompleto": "Notebook Dell Inspiron 15.6\" 16 GB — Nuevo sellado",
     "marca": "Dell",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -5967,19 +6720,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 94000,
-    "precioCentavos": 164312000,
+    "precioCentavos": 170798000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A336",
-    "modelo": "Notebook HP 17.3\"",
-    "modeloSlug": "notebook-hp-17-3",
+    "modelo": "Notebook HP 17.3\" 8 GB",
+    "modeloSlug": "notebook-hp-17-3-8-gb",
     "config": null,
-    "nombre": "Notebook HP 17.3\"",
-    "nombreCompleto": "Notebook HP 17.3\" — Nuevo sellado",
+    "nombre": "Notebook HP 17.3\" 8 GB",
+    "nombreCompleto": "Notebook HP 17.3\" 8 GB — Nuevo sellado",
     "marca": "HP",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -5992,19 +6749,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 66000,
-    "precioCentavos": 115368000,
+    "precioCentavos": 119922000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A337",
-    "modelo": "Notebook HP Victus Gaming 15.6\"",
-    "modeloSlug": "notebook-hp-victus-gaming-15-6",
+    "modelo": "Notebook HP Victus Gaming 15.6\" 8 GB",
+    "modeloSlug": "notebook-hp-victus-gaming-15-6-8-gb",
     "config": "(Intel Core I5-13420h | 8GB RAM | 512Gb SSD | Placa Video Rtx3050 6GB | Windows 11 ) (15-FA2013DX)",
-    "nombre": "Notebook HP Victus Gaming 15.6\"",
-    "nombreCompleto": "Notebook HP Victus Gaming 15.6\" — Nuevo sellado",
+    "nombre": "Notebook HP Victus Gaming 15.6\" 8 GB",
+    "nombreCompleto": "Notebook HP Victus Gaming 15.6\" 8 GB — Nuevo sellado",
     "marca": "HP",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -6017,19 +6778,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 101000,
-    "precioCentavos": 176548000,
+    "precioCentavos": 183517000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A338",
-    "modelo": "Notebook Lenovo Ideapad 1 15.6\"",
-    "modeloSlug": "notebook-lenovo-ideapad-1-15-6",
+    "modelo": "Notebook Lenovo Ideapad 1 15.6\" 8 GB",
+    "modeloSlug": "notebook-lenovo-ideapad-1-15-6-8-gb",
     "config": "(AMD Ryzen 5-7520u | 8GB RAM | 256Gb SSD | Windows 11) (15AMN7)",
-    "nombre": "Notebook Lenovo Ideapad 1 15.6\"",
-    "nombreCompleto": "Notebook Lenovo Ideapad 1 15.6\" — Nuevo sellado",
+    "nombre": "Notebook Lenovo Ideapad 1 15.6\" 8 GB",
+    "nombreCompleto": "Notebook Lenovo Ideapad 1 15.6\" 8 GB — Nuevo sellado",
     "marca": "Lenovo",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -6042,19 +6807,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 57500,
-    "precioCentavos": 100510000,
+    "precioCentavos": 104477500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A339",
-    "modelo": "Notebook Lenovo 15.6\"",
-    "modeloSlug": "notebook-lenovo-15-6",
+    "modelo": "Notebook Lenovo 15.6\" 8 GB",
+    "modeloSlug": "notebook-lenovo-15-6-8-gb",
     "config": null,
-    "nombre": "Notebook Lenovo 15.6\"",
-    "nombreCompleto": "Notebook Lenovo 15.6\" — Nuevo sellado",
+    "nombre": "Notebook Lenovo 15.6\" 8 GB",
+    "nombreCompleto": "Notebook Lenovo 15.6\" 8 GB — Nuevo sellado",
     "marca": "Lenovo",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -6067,19 +6836,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 66000,
-    "precioCentavos": 115368000,
+    "precioCentavos": 119922000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A340",
-    "modelo": "Notebook Lenovo 15.6\"",
-    "modeloSlug": "notebook-lenovo-15-6",
+    "modelo": "Notebook Lenovo 15.6\" 16 GB",
+    "modeloSlug": "notebook-lenovo-15-6-16-gb",
     "config": null,
-    "nombre": "Notebook Lenovo 15.6\"",
-    "nombreCompleto": "Notebook Lenovo 15.6\" — Nuevo sellado",
+    "nombre": "Notebook Lenovo 15.6\" 16 GB",
+    "nombreCompleto": "Notebook Lenovo 15.6\" 16 GB — Nuevo sellado",
     "marca": "Lenovo",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -6092,19 +6865,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 68900,
-    "precioCentavos": 120437200,
+    "precioCentavos": 125191300,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A341",
-    "modelo": "Notebook Lenovo 14\"",
-    "modeloSlug": "notebook-lenovo-14",
+    "modelo": "Notebook Lenovo 14\" 8 GB",
+    "modeloSlug": "notebook-lenovo-14-8-gb",
     "config": null,
-    "nombre": "Notebook Lenovo 14\"",
-    "nombreCompleto": "Notebook Lenovo 14\" — Nuevo sellado",
+    "nombre": "Notebook Lenovo 14\" 8 GB",
+    "nombreCompleto": "Notebook Lenovo 14\" 8 GB — Nuevo sellado",
     "marca": "Lenovo",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -6117,19 +6894,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 77500,
-    "precioCentavos": 135470000,
+    "precioCentavos": 140817500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A342",
-    "modelo": "Notebook Lenovo 15.6\"",
-    "modeloSlug": "notebook-lenovo-15-6",
+    "modelo": "Notebook Lenovo 15.6\" 16 GB",
+    "modeloSlug": "notebook-lenovo-15-6-16-gb",
     "config": null,
-    "nombre": "Notebook Lenovo 15.6\"",
-    "nombreCompleto": "Notebook Lenovo 15.6\" — Nuevo sellado",
+    "nombre": "Notebook Lenovo 15.6\" 16 GB",
+    "nombreCompleto": "Notebook Lenovo 15.6\" 16 GB — Nuevo sellado",
     "marca": "Lenovo",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -6142,19 +6923,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 84000,
-    "precioCentavos": 146832000,
+    "precioCentavos": 152628000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A343",
-    "modelo": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK",
+    "modelo": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK 16 GB",
     "modeloSlug": "samsung-galaxy-notebook-galaxy-book-4-15-6-intel-core-i7-150",
     "config": null,
-    "nombre": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK",
-    "nombreCompleto": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK — Nuevo sellado",
+    "nombre": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK 16 GB",
+    "nombreCompleto": "Samsung Galaxy Notebook Galaxy Book 4 15,6\" Intel Core I7-150u RAM SSD Windows 11 NP750XGK 16 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Notebooks",
     "arquetipo": "notebook",
@@ -6167,11 +6952,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 95000,
-    "precioCentavos": 166060000,
+    "precioCentavos": 172615000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia",
+      "nombre demasiado largo"
+    ]
   },
   {
     "ref": "A344",
@@ -6192,11 +6982,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 124000,
-    "precioCentavos": 216752000,
+    "precioCentavos": 225308000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A345",
@@ -6217,11 +7009,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 57000,
-    "precioCentavos": 99636000,
+    "precioCentavos": 103569000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A346",
@@ -6242,11 +7036,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 70000,
-    "precioCentavos": 122360000,
+    "precioCentavos": 127190000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A347",
@@ -6267,11 +7063,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 81000,
-    "precioCentavos": 141588000,
+    "precioCentavos": 147177000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A348",
@@ -6292,11 +7090,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 45500,
-    "precioCentavos": 79534000,
+    "precioCentavos": 82673500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A349",
@@ -6317,11 +7117,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 28000,
-    "precioCentavos": 48944000,
+    "precioCentavos": 50876000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A350",
@@ -6342,11 +7144,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 9500,
-    "precioCentavos": 16606000,
+    "precioCentavos": 17261500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A351",
@@ -6367,11 +7171,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 35000,
-    "precioCentavos": 61180000,
+    "precioCentavos": 63595000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A352",
@@ -6392,11 +7198,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 58000,
-    "precioCentavos": 101384000,
+    "precioCentavos": 105386000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A353",
@@ -6417,11 +7227,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 48000,
-    "precioCentavos": 83904000,
+    "precioCentavos": 87216000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A354",
@@ -6442,11 +7256,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 51000,
-    "precioCentavos": 89148000,
+    "precioCentavos": 92667000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A355",
@@ -6467,11 +7283,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 42000,
-    "precioCentavos": 73416000,
+    "precioCentavos": 76314000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A356",
@@ -6492,11 +7312,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 35000,
-    "precioCentavos": 61180000,
+    "precioCentavos": 63595000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A357",
@@ -6517,11 +7341,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 17000,
-    "precioCentavos": 29716000,
+    "precioCentavos": 30889000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A358",
@@ -6542,11 +7368,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 12000,
-    "precioCentavos": 20976000,
+    "precioCentavos": 21804000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A359",
@@ -6567,11 +7395,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 5900,
-    "precioCentavos": 10313200,
+    "precioCentavos": 10720300,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A360",
@@ -6592,11 +7424,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 4500,
-    "precioCentavos": 7866000,
+    "precioCentavos": 8176500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A361",
@@ -6617,11 +7451,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 8500,
-    "precioCentavos": 14858000,
+    "precioCentavos": 15444500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A362",
@@ -6642,11 +7478,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 300,
-    "precioCentavos": 524400,
+    "precioCentavos": 545100,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A363",
@@ -6667,11 +7505,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 1500,
-    "precioCentavos": 2622000,
+    "precioCentavos": 2725500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A364",
@@ -6692,11 +7532,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 3000,
-    "precioCentavos": 5244000,
+    "precioCentavos": 5451000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A365",
@@ -6717,11 +7559,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 2500,
-    "precioCentavos": 4370000,
+    "precioCentavos": 4542500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A366",
@@ -6742,11 +7588,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 2500,
-    "precioCentavos": 4370000,
+    "precioCentavos": 4542500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A367",
@@ -6767,11 +7615,13 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 2500,
-    "precioCentavos": 4370000,
+    "precioCentavos": 4542500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A368",
@@ -6792,19 +7642,21 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 44000,
-    "precioCentavos": 76912000,
+    "precioCentavos": 79948000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "completo",
+    "faltantes": []
   },
   {
     "ref": "A369",
-    "modelo": "Samsung Tab S11 Ultra 14.6\" + Pen",
-    "modeloSlug": "samsung-tab-s11-ultra-14-6-pen",
+    "modelo": "Samsung Tab S11 Ultra 14.6\" + Pen 256 GB",
+    "modeloSlug": "samsung-tab-s11-ultra-14-6-pen-256-gb",
     "config": null,
-    "nombre": "Samsung Tab S11 Ultra 14.6\" + Pen 256 GB",
-    "nombreCompleto": "Samsung Tab S11 Ultra 14.6\" + Pen 256 GB — Nuevo sellado",
+    "nombre": "Samsung Tab S11 Ultra 14.6\" + Pen 256 GB 256 GB",
+    "nombreCompleto": "Samsung Tab S11 Ultra 14.6\" + Pen 256 GB 256 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -6817,19 +7669,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 113000,
-    "precioCentavos": 197524000,
+    "precioCentavos": 205321000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A370",
-    "modelo": "Samsung Tab S11 11\" + Pen",
-    "modeloSlug": "samsung-tab-s11-11-pen",
+    "modelo": "Samsung Tab S11 11\" + Pen 128 GB",
+    "modeloSlug": "samsung-tab-s11-11-pen-128-gb",
     "config": null,
-    "nombre": "Samsung Tab S11 11\" + Pen 128 GB",
-    "nombreCompleto": "Samsung Tab S11 11\" + Pen 128 GB — Nuevo sellado",
+    "nombre": "Samsung Tab S11 11\" + Pen 128 GB 128 GB",
+    "nombreCompleto": "Samsung Tab S11 11\" + Pen 128 GB 128 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -6842,19 +7698,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 79900,
-    "precioCentavos": 139665200,
+    "precioCentavos": 145178300,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A371",
-    "modelo": "Samsung Tab S10 FE + Pen SM-X520",
-    "modeloSlug": "samsung-tab-s10-fe-pen-sm-x520",
+    "modelo": "Samsung Tab S10 FE + Pen SM-X520 256 GB",
+    "modeloSlug": "samsung-tab-s10-fe-pen-sm-x520-256-gb",
     "config": null,
-    "nombre": "Samsung Tab S10 FE + Pen SM-X520 256 GB",
-    "nombreCompleto": "Samsung Tab S10 FE + Pen SM-X520 256 GB — Nuevo sellado",
+    "nombre": "Samsung Tab S10 FE + Pen SM-X520 256 GB 256 GB",
+    "nombreCompleto": "Samsung Tab S10 FE + Pen SM-X520 256 GB 256 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -6867,19 +7727,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 58500,
-    "precioCentavos": 102258000,
+    "precioCentavos": 106294500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A372",
-    "modelo": "Samsung Tab S10 FE + Pen SM-X520",
-    "modeloSlug": "samsung-tab-s10-fe-pen-sm-x520",
+    "modelo": "Samsung Tab S10 FE + Pen SM-X520 128 GB",
+    "modeloSlug": "samsung-tab-s10-fe-pen-sm-x520-128-gb",
     "config": null,
-    "nombre": "Samsung Tab S10 FE + Pen SM-X520 128 GB",
-    "nombreCompleto": "Samsung Tab S10 FE + Pen SM-X520 128 GB — Nuevo sellado",
+    "nombre": "Samsung Tab S10 FE + Pen SM-X520 128 GB 128 GB",
+    "nombreCompleto": "Samsung Tab S10 FE + Pen SM-X520 128 GB 128 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -6892,19 +7756,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 52500,
-    "precioCentavos": 91770000,
+    "precioCentavos": 95392500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A373",
-    "modelo": "Samsung Tab S10 Lite + Pen SM-X400",
-    "modeloSlug": "samsung-tab-s10-lite-pen-sm-x400",
+    "modelo": "Samsung Tab S10 Lite + Pen SM-X400 128 GB",
+    "modeloSlug": "samsung-tab-s10-lite-pen-sm-x400-128-gb",
     "config": null,
-    "nombre": "Samsung Tab S10 Lite + Pen SM-X400 128 GB",
-    "nombreCompleto": "Samsung Tab S10 Lite + Pen SM-X400 128 GB — Nuevo sellado",
+    "nombre": "Samsung Tab S10 Lite + Pen SM-X400 128 GB 128 GB",
+    "nombreCompleto": "Samsung Tab S10 Lite + Pen SM-X400 128 GB 128 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -6917,19 +7785,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 40500,
-    "precioCentavos": 70794000,
+    "precioCentavos": 73588500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A374",
-    "modelo": "Samsung Tab A11+ 11\"",
-    "modeloSlug": "samsung-tab-a11-11",
+    "modelo": "Samsung Tab A11+ 11\" 256 GB",
+    "modeloSlug": "samsung-tab-a11-11-256-gb",
     "config": null,
-    "nombre": "Samsung Tab A11+ 11\" 256 GB",
-    "nombreCompleto": "Samsung Tab A11+ 11\" 256 GB — Nuevo sellado",
+    "nombre": "Samsung Tab A11+ 11\" 256 GB 256 GB",
+    "nombreCompleto": "Samsung Tab A11+ 11\" 256 GB 256 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -6942,19 +7814,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 35000,
-    "precioCentavos": 61180000,
+    "precioCentavos": 63595000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A375",
-    "modelo": "Samsung Tab A11+ 11\"",
-    "modeloSlug": "samsung-tab-a11-11",
+    "modelo": "Samsung Tab A11+ 11\" 128 GB",
+    "modeloSlug": "samsung-tab-a11-11-128-gb",
     "config": null,
-    "nombre": "Samsung Tab A11+ 11\" 128 GB",
-    "nombreCompleto": "Samsung Tab A11+ 11\" 128 GB — Nuevo sellado",
+    "nombre": "Samsung Tab A11+ 11\" 128 GB 128 GB",
+    "nombreCompleto": "Samsung Tab A11+ 11\" 128 GB 128 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -6967,19 +7843,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 29000,
-    "precioCentavos": 50692000,
+    "precioCentavos": 52693000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A376",
-    "modelo": "Samsung Tab A11 8.6\" LTE",
-    "modeloSlug": "samsung-tab-a11-8-6-lte",
+    "modelo": "Samsung Tab A11 8.6\" LTE 64 GB",
+    "modeloSlug": "samsung-tab-a11-8-6-lte-64-gb",
     "config": null,
-    "nombre": "Samsung Tab A11 8.6\" LTE 64 GB",
-    "nombreCompleto": "Samsung Tab A11 8.6\" LTE 64 GB — Nuevo sellado",
+    "nombre": "Samsung Tab A11 8.6\" LTE 64 GB 64 GB",
+    "nombreCompleto": "Samsung Tab A11 8.6\" LTE 64 GB 64 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -6992,19 +7872,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 21000,
-    "precioCentavos": 36708000,
+    "precioCentavos": 38157000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A377",
-    "modelo": "Samsung Tab A9+ 11\"",
-    "modeloSlug": "samsung-tab-a9-11",
+    "modelo": "Samsung Tab A9+ 11\" 64 GB",
+    "modeloSlug": "samsung-tab-a9-11-64-gb",
     "config": null,
-    "nombre": "Samsung Tab A9+ 11\" 64 GB",
-    "nombreCompleto": "Samsung Tab A9+ 11\" 64 GB — Nuevo sellado",
+    "nombre": "Samsung Tab A9+ 11\" 64 GB 64 GB",
+    "nombreCompleto": "Samsung Tab A9+ 11\" 64 GB 64 GB — Nuevo sellado",
     "marca": "Samsung",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -7017,19 +7901,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 21500,
-    "precioCentavos": 37582000,
+    "precioCentavos": 39065500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A378",
-    "modelo": "Xiaomi Redmi Pad 2 Pro 12.1\"",
-    "modeloSlug": "xiaomi-redmi-pad-2-pro-12-1",
+    "modelo": "Xiaomi Redmi Pad 2 Pro 12.1\" 256 GB",
+    "modeloSlug": "xiaomi-redmi-pad-2-pro-12-1-256-gb",
     "config": "WiFi",
-    "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 256 GB",
-    "nombreCompleto": "Xiaomi Redmi Pad 2 Pro 12.1\" 256 GB — Nuevo sellado",
+    "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 256 GB 256 GB",
+    "nombreCompleto": "Xiaomi Redmi Pad 2 Pro 12.1\" 256 GB 256 GB — Nuevo sellado",
     "marca": "Xiaomi",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -7042,19 +7930,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 39900,
-    "precioCentavos": 69745200,
+    "precioCentavos": 72498300,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A379",
-    "modelo": "Xiaomi Redmi Pad 2 Pro 12.1\"",
-    "modeloSlug": "xiaomi-redmi-pad-2-pro-12-1",
+    "modelo": "Xiaomi Redmi Pad 2 Pro 12.1\" 128 GB",
+    "modeloSlug": "xiaomi-redmi-pad-2-pro-12-1-128-gb",
     "config": "WiFi",
-    "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 128 GB",
-    "nombreCompleto": "Xiaomi Redmi Pad 2 Pro 12.1\" 128 GB — Nuevo sellado",
+    "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 128 GB 128 GB",
+    "nombreCompleto": "Xiaomi Redmi Pad 2 Pro 12.1\" 128 GB 128 GB — Nuevo sellado",
     "marca": "Xiaomi",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -7067,19 +7959,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 31500,
-    "precioCentavos": 55062000,
+    "precioCentavos": 57235500,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A380",
-    "modelo": "Xiaomi Redmi Pad 2 11\"",
-    "modeloSlug": "xiaomi-redmi-pad-2-11",
+    "modelo": "Xiaomi Redmi Pad 2 11\" 256 GB",
+    "modeloSlug": "xiaomi-redmi-pad-2-11-256-gb",
     "config": "WiFi",
-    "nombre": "Xiaomi Redmi Pad 2 11\" 256 GB",
-    "nombreCompleto": "Xiaomi Redmi Pad 2 11\" 256 GB — Nuevo sellado",
+    "nombre": "Xiaomi Redmi Pad 2 11\" 256 GB 256 GB",
+    "nombreCompleto": "Xiaomi Redmi Pad 2 11\" 256 GB 256 GB — Nuevo sellado",
     "marca": "Xiaomi",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -7092,19 +7988,23 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 27900,
-    "precioCentavos": 48769200,
+    "precioCentavos": 50694300,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A381",
-    "modelo": "Xiaomi Redmi Pad 2 11\"",
-    "modeloSlug": "xiaomi-redmi-pad-2-11",
+    "modelo": "Xiaomi Redmi Pad 2 11\" 128 GB",
+    "modeloSlug": "xiaomi-redmi-pad-2-11-128-gb",
     "config": "WiFi",
-    "nombre": "Xiaomi Redmi Pad 2 11\" 128 GB",
-    "nombreCompleto": "Xiaomi Redmi Pad 2 11\" 128 GB — Nuevo sellado",
+    "nombre": "Xiaomi Redmi Pad 2 11\" 128 GB 128 GB",
+    "nombreCompleto": "Xiaomi Redmi Pad 2 11\" 128 GB 128 GB — Nuevo sellado",
     "marca": "Xiaomi",
     "categoria": "Tablets",
     "arquetipo": "tablet",
@@ -7117,11 +8017,15 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 22200,
-    "precioCentavos": 38805600,
+    "precioCentavos": 40337400,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   },
   {
     "ref": "A382",
@@ -7142,11 +8046,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 65000,
-    "precioCentavos": 113620000,
+    "precioCentavos": 118105000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A383",
@@ -7167,11 +8076,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 53000,
-    "precioCentavos": 92644000,
+    "precioCentavos": 96301000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A384",
@@ -7192,11 +8106,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 47000,
-    "precioCentavos": 82156000,
+    "precioCentavos": 85399000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A385",
@@ -7217,11 +8136,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 38000,
-    "precioCentavos": 66424000,
+    "precioCentavos": 69046000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A386",
@@ -7242,11 +8166,16 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 9900,
-    "precioCentavos": 17305200,
+    "precioCentavos": 17988300,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "revisar",
+    "faltantes": [
+      "sin fotografía propia",
+      "sin marca"
+    ]
   },
   {
     "ref": "A387",
@@ -7267,10 +8196,14 @@
     "bateriaPosibleReemplazo": false,
     "defecto": null,
     "costoCentavos": 20000,
-    "precioCentavos": 34960000,
+    "precioCentavos": 36340000,
     "origen": "proveedor",
     "disponibilidad": "por_encargo",
     "publicado": true,
-    "actualizado": "2026-08-06"
+    "actualizado": "2026-08-06",
+    "calidad": "aceptable",
+    "faltantes": [
+      "sin fotografía propia"
+    ]
   }
 ]
