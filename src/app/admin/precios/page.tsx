@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import { todasLasUnidades } from "@/lib/catalogo";
-import EditarPrecios from "@/components/admin/EditarPrecios";
+import EditarPrecios, { type Ejemplo } from "@/components/admin/EditarPrecios";
 
 export const metadata = { title: "Precios", robots: { index: false } };
 export const dynamic = "force-dynamic";
@@ -8,11 +8,27 @@ export const dynamic = "force-dynamic";
 export default function Precios() {
   const cfg = JSON.parse(fs.readFileSync("data/precios.json", "utf8"));
   const local = process.env.VERCEL !== "1";
+  const unidades = todasLasUnidades();
 
-  // un producto de referencia para ver el efecto antes de guardar
-  const ejemplo =
-    todasLasUnidades().find((u) => u.costoCentavos && u.categoria === "iPhone") ??
-    todasLasUnidades().find((u) => u.costoCentavos);
+  // un producto real por categoría, el de precio medio: los extremos engañan
+  const porCat = new Map<string, typeof unidades>();
+  for (const u of unidades) {
+    if (!u.costoCentavos) continue;
+    porCat.set(u.categoria, [...(porCat.get(u.categoria) ?? []), u]);
+  }
+
+  const ejemplos: Ejemplo[] = [...porCat.entries()]
+    .sort((a, b) => b[1].length - a[1].length)
+    .map(([categoria, us]) => {
+      const ord = [...us].sort((a, b) => (a.costoCentavos ?? 0) - (b.costoCentavos ?? 0));
+      const medio = ord[Math.floor(ord.length / 2)];
+      return {
+        categoria,
+        nombre: medio.nombre,
+        costoUSD: Math.round((medio.costoCentavos ?? 0) / 100),
+        unidades: us.length,
+      };
+    });
 
   return (
     <div className="contenedor max-w-[720px] py-8">
@@ -23,21 +39,17 @@ export default function Precios() {
 
       <EditarPrecios
         tcInicial={cfg.tcRespaldo}
-        margenInicial={cfg.margen}
+        margenes={cfg.margenPorCategoria ?? {}}
+        porDefecto={cfg.margenPorDefecto ?? 50}
         redondeo={cfg.redondeoPesos}
-        ejemploCosto={ejemplo?.costoCentavos ? ejemplo.costoCentavos / 100 : 100}
-        ejemploNombre={ejemplo?.nombre ?? "—"}
+        ejemplos={ejemplos}
         local={local}
       />
 
       <div className="mt-4 rounded-lg border border-line p-5">
         <h2 className="text-[15px] font-semibold">Después de cambiarlos</h2>
-        <pre className="mt-3 overflow-x-auto rounded-md bg-surface p-4 font-data text-[12.5px] leading-relaxed">
-python3 scripts/verificar-precios.py{"\n"}git add -A && git commit -m &quot;precios&quot; && git push
-        </pre>
-        <p className="mt-3 text-[13px] leading-relaxed text-mute">
-          El verificador rehace la cuenta contra la planilla del proveedor y avisa
-          si algún precio quedó fuera de rango.
+        <p className="mt-1 text-[13.5px] leading-relaxed text-mute">
+          Los precios se recalculan al actualizar el catálogo desde el panel.
         </p>
       </div>
     </div>

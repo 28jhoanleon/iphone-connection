@@ -164,8 +164,9 @@ def main() -> None:
         cfg["filas_ultima_sync"] = len(filas)
         cfg["ultima_sync"] = resumen["fecha"]
         json.dump(cfg, open(CONFIG, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-        for s in ("aplicar-correcciones.py", "generar-productos.py",
-                  "imagenes-maestras.py", "clasificar-calidad.py"):
+        for s in ("aplicar-correcciones.py", "aplicar-descripciones.py",
+                  "generar-productos.py", "imagenes-maestras.py",
+                  "clasificar-calidad.py"):
             if os.path.exists(f"scripts/{s}"):
                 subprocess.run([_sys.executable, f"scripts/{s}"], capture_output=True)
         subprocess.run([_sys.executable, "scripts/auditar-imagenes.py", "--borrar"], capture_output=True)

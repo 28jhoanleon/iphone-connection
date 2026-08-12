@@ -32,16 +32,47 @@ export function unidadPorRef(ref: string): Unidad | undefined {
   return todasLasUnidades().find((u) => u.ref === ref);
 }
 
+/**
+ * Línea de producto: el modelo sin su configuración de disco, RAM ni GPU.
+ *
+ * El proveedor vende doce MacBook Pro M5 que sólo difieren en esos tres datos.
+ * Como cada uno era un "modelo" distinto, la vista de categoría mostraba doce
+ * tarjetas con la misma foto y el cliente no distinguía nada. Agrupando por
+ * línea quedan tres, y la configuración se elige adentro.
+ */
+export const slugDeLinea = (m: string) => slugLinea(m);
+
+export function lineaDe(modelo: string): string {
+  return modelo
+    // el orden importa: primero RAM, que contiene "GB", y después el disco
+    .replace(/\s+\d+\s?GB\s+RAM\b/gi, "")
+    .replace(/\s+GPU\s+\d+\s+n[úu]cleos?\b/gi, "")
+    .replace(/\s+\d+\s?(TB|GB)\b/gi, "")
+    .replace(/\s+RAM\b/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+function slugLinea(modelo: string): string {
+  return lineaDe(modelo)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 export function modelos(): Modelo[] {
   const mapa = new Map<string, Unidad[]>();
   for (const u of todasLasUnidades()) {
-    const l = mapa.get(u.modeloSlug) ?? [];
+    const clave = slugLinea(u.modelo);
+    const l = mapa.get(clave) ?? [];
     l.push(u);
-    mapa.set(u.modeloSlug, l);
+    mapa.set(clave, l);
   }
   return [...mapa.entries()].map(([slug, unidades]) => ({
     slug,
-    nombre: unidades[0].modelo,
+    nombre: lineaDe(unidades[0].modelo),
     categoria: unidades[0].categoria,
     marca: unidades[0].marca,
     unidades: unidades.sort((a, b) => a.precioCentavos - b.precioCentavos),
@@ -92,7 +123,7 @@ export function familiaPorSlug(slug: string): Familia | undefined {
 /** Destacados: uno por categoría, para que la Home muestre el ancho del catálogo. */
 /** Un modelo con 1 o 2 unidades justifica el aviso de últimas unidades. Nunca se inventa. */
 export function esUltimasUnidades(u: Unidad): boolean {
-  const m = modelos().find((x) => x.slug === u.modeloSlug);
+  const m = modelos().find((x) => x.slug === slugLinea(u.modelo));
   return !!m && m.unidades.length <= 2;
 }
 
@@ -125,7 +156,7 @@ export function marcasPrincipales(min = 3): string[] {
 /** Otras unidades del mismo modelo, para comparar sin volver atrás. */
 export function mismasUnidades(u: Unidad, n = 4): Unidad[] {
   return todasLasUnidades()
-    .filter((x) => x.modeloSlug === u.modeloSlug && x.ref !== u.ref)
+    .filter((x) => slugLinea(x.modelo) === slugLinea(u.modelo) && x.ref !== u.ref)
     .sort((a, b) => a.precioCentavos - b.precioCentavos)
     .slice(0, n);
 }
@@ -133,7 +164,7 @@ export function mismasUnidades(u: Unidad, n = 4): Unidad[] {
 /** Alternativas de la misma familia en un rango de precio parecido. */
 export function relacionados(u: Unidad, n = 4): Unidad[] {
   return todasLasUnidades()
-    .filter((x) => x.categoria === u.categoria && x.modeloSlug !== u.modeloSlug)
+    .filter((x) => x.categoria === u.categoria && slugLinea(x.modelo) !== slugLinea(u.modelo))
     .sort(
       (a, b) =>
         Math.abs(a.precioCentavos - u.precioCentavos) - Math.abs(b.precioCentavos - u.precioCentavos),

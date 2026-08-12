@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import {
   todasLasUnidades, unidadPorRef, slugFamilia,
   mismasUnidades, relacionados, accesoriosCompatibles, esUltimasUnidades,
+  lineaDe, slugDeLinea,
 } from "@/lib/catalogo";
 import { rutaImagenUnidad } from "@/lib/imagenes";
 import {
@@ -93,11 +94,11 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
         items={[
           ["INICIO", "/"],
           [u.categoria.toUpperCase(), `/catalogo/${slugFamilia(u.categoria)}`],
-          [u.modelo.toUpperCase(), `/modelo/${u.modeloSlug}`],
+          [lineaDe(u.modelo).toUpperCase(), `/modelo/${slugDeLinea(u.modelo)}`],
           [`#${u.ref}`, null],
         ]}
       />
-      <Volver href={`/modelo/${u.modeloSlug}`} texto={`Volver a ${u.modelo}`} />
+      <Volver href={`/modelo/${slugDeLinea(u.modelo)}`} texto={`Volver a ${lineaDe(u.modelo)}`} />
 
       <div className="grid gap-8 py-3 pb-14 sm:gap-10 sm:py-4 md:grid-cols-2 md:gap-14">
         <div className="grid grid-cols-2 gap-2">

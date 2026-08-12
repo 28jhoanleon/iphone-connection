@@ -31,7 +31,17 @@ ORIGEN = "datos/lista-completa.csv"
 _cfg = json.load(open("data/precios.json", encoding="utf-8"))
 _cfg = json.load(open("data/precios.json", encoding="utf-8"))
 TC_PLANILLA = _cfg["tcRespaldo"]
-MARGEN = _cfg["margen"]
+MARGEN_CAT = _cfg.get("margenPorCategoria", {})
+MARGEN_MODELO = _cfg.get("margenPorModelo", {})
+MARGEN_DEFECTO = _cfg.get("margenPorDefecto", 50)
+
+
+def margen_usd(categoria, modelo):
+    """Monto fijo en dólares. El modelo tiene prioridad sobre la categoría."""
+    for clave, usd in MARGEN_MODELO.items():
+        if clave.lower() in str(modelo).lower():
+            return usd
+    return MARGEN_CAT.get(categoria, MARGEN_DEFECTO)
 
 # sección de la planilla -> (categoría, arquetipo, marca por defecto)
 SECCIONES = {
@@ -470,14 +480,9 @@ def main():
             "bateriaPosibleReemplazo": bool(bateria == 100 and estado != "nuevo_sellado"),
             "defecto": detalle or None,
             "costoCentavos": costo_c,
-            "precioCentavos": int(round(costo_c * TC_PLANILLA * (1 + MARGEN))),
+            "precioCentavos": int(round((costo_c + margen_usd(categoria, modelo_base) * 100) * TC_PLANILLA)),
             "origen": "proveedor",
-            # Los iPhone usados son unidades únicas: si están en la planilla,
-            # existe una sola. Cuando se vende, el proveedor la saca y
-            # desaparece del sitio. El resto tiene reposición permanente.
-            "disponibilidad": ("ultima_unidad"
-                               if categoria == "iPhone" and estado != "nuevo_sellado"
-                               else "por_encargo"),
+            "disponibilidad": "por_encargo",
             "publicado": not sin_bateria,
             "actualizado": hoy,
         })

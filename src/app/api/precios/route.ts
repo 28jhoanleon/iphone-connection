@@ -29,18 +29,26 @@ export async function POST(req: NextRequest) {
     const cfg = JSON.parse(await readFile(ARCHIVO, "utf8"));
 
     const tc = Number(body.tcRespaldo);
-    const margen = Number(body.margen);
+    const margenes = body.margenPorCategoria as Record<string, number> | undefined;
 
     // Rangos de seguridad: un cero o un dedazo acá publica 285 precios rotos.
     if (!Number.isFinite(tc) || tc < 100 || tc > 100000) {
       return NextResponse.json({ error: "El tipo de cambio no parece válido." }, { status: 400 });
     }
-    if (!Number.isFinite(margen) || margen < 0 || margen > 2) {
-      return NextResponse.json({ error: "El margen debe estar entre 0 y 200%." }, { status: 400 });
+    if (margenes) {
+      for (const [cat, usd] of Object.entries(margenes)) {
+        // tope de seguridad: un dedazo acá cambia el precio de toda una categoría
+        if (!Number.isFinite(usd) || usd < 0 || usd > 2000) {
+          return NextResponse.json(
+            { error: `El margen de ${cat} no parece válido.` },
+            { status: 400 },
+          );
+        }
+      }
+      cfg.margenPorCategoria = { ...cfg.margenPorCategoria, ...margenes };
     }
 
     cfg.tcRespaldo = Math.round(tc);
-    cfg.margen = Math.round(margen * 1000) / 1000;
     await writeFile(ARCHIVO, JSON.stringify(cfg, null, 2), "utf8");
 
     return NextResponse.json({ ok: true, ...cfg });

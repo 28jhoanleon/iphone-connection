@@ -4,13 +4,35 @@ import cfg from "@/data/precios.json";
 
 /**
  * Precio en pesos a partir del costo en dólares.
- *   ARS = costo USD x tipo de cambio x (1 + margen), redondeado.
+ *   ARS = (costo USD + margen de la categoría) x tipo de cambio, redondeado.
+ *
+ * El margen es un monto fijo en dólares, no un porcentaje: el trabajo por venta
+ * —revisión, garantía, asesoramiento— no depende del precio del equipo. Un 15%
+ * deja 2 dólares en un cargador y 375 en una notebook.
  * El redondeo es intencional: $ 926.000 se lee como precio, $ 926.440 como resultado
  * de una cuenta. Si una unidad no tiene costo cargado se usa su precio almacenado.
  */
-export function precioARS(u: { costoCentavos: number | null; precioCentavos: number }, tc: number): number {
+/** Margen en centavos de dólar para esa unidad. El modelo pisa a la categoría. */
+type ConMargen = { modelo: string; categoria: string };
+
+export function margenCentavos(u: ConMargen): number {
+  const porModelo = (cfg.margenPorModelo ?? {}) as Record<string, number>;
+  for (const [clave, usd] of Object.entries(porModelo)) {
+    if (u.modelo.toLowerCase().includes(clave.toLowerCase())) return usd * 100;
+  }
+  const porCat = (cfg.margenPorCategoria ?? {}) as Record<string, number>;
+  const usd = porCat[u.categoria] ?? cfg.margenPorDefecto ?? 50;
+  return usd * 100;
+}
+
+export function precioARS(
+  u: { costoCentavos: number | null; precioCentavos: number; modelo?: string; categoria?: string },
+  tc: number,
+): number {
   if (!u.costoCentavos) return u.precioCentavos;
-  const bruto = u.costoCentavos * tc * (1 + cfg.margen);
+  const bruto =
+    (u.costoCentavos +
+      margenCentavos({ modelo: u.modelo ?? "", categoria: u.categoria ?? "" })) * tc;
   const paso = cfg.redondeoPesos * 100;
   return Math.round(bruto / paso) * paso;
 }
