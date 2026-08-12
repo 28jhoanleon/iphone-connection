@@ -3,6 +3,8 @@ import Link from "next/link";
 import { todasLasUnidades } from "@/lib/catalogo";
 import { fotografiasPropias } from "@/lib/imagenes";
 import { empresa, tiene } from "@/lib/empresa";
+import BotonSincronizar from "@/components/admin/BotonSincronizar";
+import BotonPublicar from "@/components/admin/BotonPublicar";
 
 export const metadata = { title: "Panel — iPhone Connection", robots: { index: false } };
 export const dynamic = "force-dynamic";
@@ -81,7 +83,11 @@ export default function Admin() {
         {unidades.length} productos publicados
       </p>
 
-      <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <div className="mt-8">
+        <BotonSincronizar local={process.env.VERCEL !== "1"} />
+      </div>
+
+      <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Metrica valor={conFoto} etiqueta="Con fotografía" detalle={`${sinFoto} SIN FOTO`} alerta={sinFoto > 0} />
         <Metrica valor={aRevisar} etiqueta="Para revisar" alerta={aRevisar > 0} />
         <Metrica valor={`$${cfg.tcRespaldo}`} etiqueta="Tipo de cambio" detalle="INTERNO · NO SE PUBLICA" />
@@ -94,6 +100,12 @@ export default function Admin() {
         <Metrica valor={pendientes.totales?.precios ?? 0} etiqueta="Precios por sincronizar" />
         <Metrica valor={faltanDatos} etiqueta="Datos de contacto sin cargar" alerta={faltanDatos > 0} />
       </div>
+
+      {process.env.VERCEL !== "1" && (
+        <div className="mt-3">
+          <BotonPublicar />
+        </div>
+      )}
 
       <h2 className="etiqueta mb-3 mt-10">Herramientas</h2>
       <div className="grid gap-3 sm:grid-cols-2">
