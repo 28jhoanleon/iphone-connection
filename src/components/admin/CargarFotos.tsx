@@ -84,6 +84,26 @@ export default function CargarFotos({
     }
   }, []);
 
+  /** Levanta la última imagen descargada y la sube a esa referencia. */
+  const tomarUltima = useCallback(async (ref: string) => {
+    setEstados((e) => ({ ...e, [ref]: "subiendo" }));
+    setMensajes((m) => ({ ...m, [ref]: "" }));
+    try {
+      const r = await fetch("/api/descarga");
+      const d = await r.json();
+      if (!r.ok) throw new Error(d.error ?? "No encontré ninguna descarga.");
+      const bin = Uint8Array.from(atob(d.base64), (c) => c.charCodeAt(0));
+      const archivo = new File([bin], d.nombre, { type: "image/*" });
+      await subir(ref, archivo);
+    } catch (err) {
+      setEstados((e) => ({ ...e, [ref]: "error" }));
+      setMensajes((m) => ({
+        ...m,
+        [ref]: err instanceof Error ? err.message : "Error inesperado.",
+      }));
+    }
+  }, [subir]);
+
   const chip = (activo: boolean) =>
     `inline-flex h-11 shrink-0 items-center rounded-full border px-4 text-[13.5px] leading-none transition ${
       activo ? "border-ink bg-ink text-paper" : "border-line text-mute hover:border-ink hover:text-ink"
@@ -171,6 +191,7 @@ export default function CargarFotos({
               encima={encima === i.ref}
               setEncima={setEncima}
               onArchivo={(f) => subir(i.ref, f)}
+              onUltima={() => tomarUltima(i.ref)}
             />
           ))}
         </div>
@@ -180,7 +201,7 @@ export default function CargarFotos({
 }
 
 function Tarjeta({
-  item, estado, mensaje, imagenNueva, encima, setEncima, onArchivo,
+  item, estado, mensaje, imagenNueva, encima, setEncima, onArchivo, onUltima,
 }: {
   item: ItemFoto;
   estado: Estado;
@@ -189,6 +210,7 @@ function Tarjeta({
   encima: boolean;
   setEncima: (r: string | null) => void;
   onArchivo: (f: File) => void;
+  onUltima: () => void;
 }) {
   const input = useRef<HTMLInputElement>(null);
   const src = imagenNueva ?? item.imagen;
@@ -263,6 +285,26 @@ function Tarjeta({
           e.target.value = "";
         }}
       />
+
+      <div className="mb-2 flex gap-1.5">
+        <a
+          href={`https://www.google.com/search?tbm=isch&q=${encodeURIComponent(
+            `${item.modelo} ${item.color === "sin color" ? "" : item.color} png fondo blanco`,
+          )}`}
+          target="_blank"
+          rel="noreferrer"
+          className="flex-1 rounded-full border border-line py-2 text-center text-[11.5px] font-medium text-mute transition hover:border-ink hover:text-ink"
+        >
+          Buscar
+        </a>
+        <button
+          onClick={onUltima}
+          disabled={estado === "subiendo"}
+          className="flex-1 rounded-full border border-line py-2 text-[11.5px] font-medium text-mute transition hover:border-ink hover:text-ink disabled:opacity-40"
+        >
+          Descarga
+        </button>
+      </div>
 
       <p className="line-clamp-2 min-h-[2.5em] text-[13px] font-medium leading-[1.3]">{item.nombre}</p>
       <p className="mt-1 font-data text-[10px] tracking-[.06em] text-mute-soft">
