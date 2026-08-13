@@ -1,7 +1,7 @@
 /** Contrato de datos del catálogo. Fuente única: data/catalogo.json */
 
 export type Estado = "nuevo_sellado" | "seleccionado_a" | "seleccionado_b" | "seleccionado_c";
-export type Disponibilidad = "disponible" | "por_encargo" | "sin_stock";
+export type Disponibilidad = "disponible" | "ultima_unidad" | "por_encargo" | "sin_stock";
 export type Origen = "propio" | "proveedor";
 
 export interface Unidad {

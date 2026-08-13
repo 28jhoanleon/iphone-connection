@@ -48,7 +48,8 @@ export function capacidad(gb: number | null): string {
 }
 
 export const ETIQUETA_DISPONIBILIDAD: Record<string, string> = {
-  disponible: "Disponible",
+  disponible: "Stock inmediato",
+  ultima_unidad: "Última unidad disponible",
   por_encargo: "Por encargo · 7 a 10 días",
   sin_stock: "Avisame cuando llegue",
 };

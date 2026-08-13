@@ -58,7 +58,12 @@ def precio_ars(p, tc, cfg):
     if not p["costoCentavos"]:
         return p["precioCentavos"]
     paso = cfg["redondeoPesos"] * 100
-    return round(p["costoCentavos"] * tc * (1 + cfg["margen"]) / paso) * paso
+    # margen fijo en dolares por categoria, igual que en el resto del sistema
+    m = cfg.get("margenPorModelo", {})
+    usd = next((v for k, v in m.items() if k.lower() in p["modelo"].lower()), None)
+    if usd is None:
+        usd = cfg.get("margenPorCategoria", {}).get(p["categoria"], cfg.get("margenPorDefecto", 50))
+    return round((p["costoCentavos"] + usd * 100) * tc / paso) * paso
 
 
 def fmt(centavos):
@@ -175,22 +180,57 @@ def placa_dato(titulo, bajada, destino):
 # ---------- textos ----------
 
 def copy_producto(p, tc, cfg):
-    bat = f"Batería al {p['bateria']}%. " if p["bateria"] else ""
-    gar = "12 meses" if p["estado"] == "nuevo_sellado" else "6 meses"
+    """
+    Texto de la publicación.
+
+    Un pie de foto que repite el nombre y el precio no da motivo para detenerse:
+    eso ya está en la imagen. Cada publicación arranca con una razón para mirar
+    —qué hay que saber antes de comprar, por qué este equipo y no otro— y recién
+    después dice qué es y cuánto sale.
+
+    El ángulo se elige por las características reales del producto: un usado con
+    batería alta y uno sellado no se cuentan igual.
+    """
+    bat = p.get("bateria")
+    sellado = p["estado"] == "nuevo_sellado"
+    unico = p.get("disponibilidad") == "ultima_unidad"
+    gar = "12 meses" if sellado else "6 meses"
     estado = {"nuevo_sellado": "Nuevo sellado", "seleccionado_a": "Seleccionado A",
               "seleccionado_b": "Seleccionado B", "seleccionado_c": "Seleccionado C"}[p["estado"]]
-    disp = ("Disponible para entrega inmediata."
-            if p["disponibilidad"] == "disponible"
-            else "Por encargo, entrega estimada de 7 a 10 días.")
-    return (
-        f"{p['nombre']}\n"
-        f"{fmt(precio_ars(p, tc, cfg))}\n\n"
-        f"{estado}. {bat}Garantía escrita de {gar}.\n"
-        f"{disp}\n\n"
-        f"Referencia #{p['ref']} — escribinos por WhatsApp y te pasamos todos los detalles.\n\n"
-        f"Sabés exactamente qué estás comprando.\n\n"
-        f"#iPhoneConnection #{p['marca'].replace(' ', '')} #Rosario #Tecnologia"
-    )
+
+    if unico and bat and bat >= 90:
+        gancho = (f"Un {p['modelo']} usado con la batería al {bat}% no aparece seguido.\n"
+                  "Este es uno, y es el único que tenemos.")
+    elif unico:
+        gancho = (f"Este {p['modelo']} es una unidad sola.\n"
+                  "En usados no hay dos iguales: cuando se va, se va.")
+    elif sellado and p["categoria"] == "iPhone":
+        gancho = (f"{p['modelo']}, sellado de fábrica.\n"
+                  "Caja cerrada, garantía de un año y la configuración inicial la hacemos con vos.")
+    elif p["categoria"] in ("Notebooks", "Tablets"):
+        gancho = (f"{p['nombre']}.\n"
+                  "La configuración exacta está en la ficha: disco, memoria y placa, sin letra chica.")
+    elif bat:
+        gancho = (f"{p['modelo']} en estado {estado.lower()}, con la batería al {bat}%.\n"
+                  "Ese número está publicado antes de que preguntes, porque es lo que "
+                  "determina cuánto te va a durar.")
+    else:
+        gancho = (f"{p['nombre']}.\n"
+                  "Revisado antes de publicarse, con garantía por escrito.")
+
+    cuerpo = f"{estado}. Garantía de {gar}."
+    if bat and not sellado:
+        cuerpo += f" Salud de batería {bat}%."
+
+    cierre = (f"Escribinos por WhatsApp con la referencia #{p['ref']} y te contamos "
+              "todo lo que necesites saber antes de decidir.")
+
+    return (f"{gancho}\n\n"
+            f"{fmt(precio_ars(p, tc, cfg))}\n"
+            f"{cuerpo}\n\n"
+            f"{cierre}\n\n"
+            "Sabés exactamente qué estás comprando.\n\n"
+            f"#iPhoneConnection #{p['marca'].replace(' ', '')} #Rosario")
 
 
 def main():
@@ -263,19 +303,25 @@ def main():
     # placas de dato: sostienen la promesa entre publicaciones de producto
     con_bateria = [p for p in catalogo if p["bateria"]]
     disponibles = [p for p in catalogo if p["disponibilidad"] == "disponible"]
+    # Las placas de dato defienden la promesa de la marca. Van entre las de
+    # producto para que el feed no sea una lista de precios.
     DATOS = [
-        ("Publicamos la salud de la batería de cada equipo.",
-         "No es un dato menor: es lo que determina cuánto te va a durar. "
-         "Está en la ficha antes de que preguntes.", "dato-bateria.jpg"),
-        ("Garantía escrita, no de palabra.",
-         "6 meses en equipos seleccionados, 12 en nuevos sellados. "
-         "Las condiciones se entregan por escrito con la compra.", "dato-garantia.jpg"),
-        ("No vendemos todo lo que se puede vender.",
-         "Un equipo entra al catálogo sólo si podemos asesorarte sobre él, "
-         "respaldarlo con garantía y responder por él después.", "dato-criterio.jpg"),
-        (f"{len(catalogo)} equipos con estado declarado.",
-         "Cada uno con su grado, su batería y su precio actualizado. "
-         "Mirá el catálogo completo en la web.", "dato-catalogo.jpg"),
+        ("¿Sabés al cuánto está la batería del usado que estás por comprar?",
+         "Si la respuesta es no, no lo compres todavia. Es el dato que decide cuánto "
+         "te va a durar, y el que casi nadie publica. Nosotros lo ponemos en cada "
+         "ficha, antes de que preguntes.", "dato-bateria.jpg"),
+        ("Garantía por escrito. No de palabra.",
+         "Seis meses en seleccionados, doce en sellados. Las condiciones se entregan "
+         "impresas el día de la compra, no se prometen por chat.", "dato-garantia.jpg"),
+        ("Los usados son de a uno.",
+         "No hay stock de un usado: hay ese equipo, con su batería y su estado. Por "
+         "eso cada uno tiene su ficha propia y su precio propio.", "dato-unicos.jpg"),
+        ("Hay equipos que no vendemos.",
+         "Si no podemos revisarlo, respaldarlo con garantía y responder por él "
+         "después, no entra al catálogo. Aunque se venda bien.", "dato-criterio.jpg"),
+        (f"{len(catalogo)} equipos, todos con su estado declarado.",
+         "Grado, salud de batería, garantía y precio actualizado. En la web, sin "
+         "tener que escribir para saber cuánto sale.", "dato-catalogo.jpg"),
     ]
     for titulo, bajada, archivo in (DATOS if todos else DATOS[:2]):
         placa_dato(titulo, bajada, os.path.join(SALIDA, archivo))

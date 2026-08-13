@@ -23,6 +23,15 @@ export default function EtiquetaEstado({
   if (unidad.disponibilidad === "disponible") {
     return <span className={`${base} bg-ink text-paper`}>Stock inmediato</span>;
   }
+  // Un usado es literalmente la única unidad: la urgencia es real, no inventada.
+  if (unidad.disponibilidad === "ultima_unidad") {
+    return (
+      <span className={`${base} border border-ink bg-paper text-ink`}>
+        <span className="h-1.5 w-1.5 rounded-full bg-ink" aria-hidden="true" />
+        Última unidad
+      </span>
+    );
+  }
   if (unidad.disponibilidad === "sin_stock") {
     return (
       <span className={`${base} border border-dashed border-line text-mute`}>

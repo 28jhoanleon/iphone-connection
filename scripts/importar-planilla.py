@@ -482,7 +482,11 @@ def main():
             "costoCentavos": costo_c,
             "precioCentavos": int(round((costo_c + margen_usd(categoria, modelo_base) * 100) * TC_PLANILLA)),
             "origen": "proveedor",
-            "disponibilidad": "por_encargo",
+            # Los usados son unidades únicas: el proveedor los saca de la
+            # planilla al venderlos, así que si figuran, hay exactamente uno.
+            # Los sellados y los accesorios tienen reposición permanente.
+            "disponibilidad": ("ultima_unidad" if estado != "nuevo_sellado"
+                               else "por_encargo"),
             "publicado": not sin_bateria,
             "actualizado": hoy,
         })
