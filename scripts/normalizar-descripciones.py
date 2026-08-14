@@ -23,6 +23,18 @@ FUERA = [
     (r"(?i)\bespectacular(es|mente)?\b", "de gran calidad"),
     (r"(?i)\bincreíbles?\b", "muy buenos"),
     (r"(?i)\bimperdible\b", ""),
+    (r"(?i)\s*(a|con)\s+un\s+precio\s+inigualable", ""),
+    (r"(?i)\binigualables?\b", "muy buena"),
+    (r"(?i)\bdisfrutá?\s+de\b", "disfrutá de"),
+    (r"(?i)\belig[ea]\b", "elegí"),
+    # lenguaje publicitario que la marca no usa: se informa, no se elogia
+    (r"(?i)\bel\s+\w+\s+definitivo\b", "una opción sólida"),
+    (r"(?i)\bpara los amantes de la m[úu]sica\b", ""),
+    (r"(?i)\bmantiene la fiesta encendida\b", "dura"),
+    (r"(?i)\bsin preocupaciones\b", ""),
+    (r"(?i)\bcalidad premium que s[óo]lo \w+ puede ofrecer\b", "calidad de la marca"),
+    (r"(?i)\bque solo \w+ puede ofrecer\b", ""),
+    (r"(?i)\bsonido masivo\b", "sonido potente"),
     # voseo argentino
     (r"(?i)\bhazte con\b", "Llevate"),
     (r"(?i)\bllévate\b", "Llevate"),
@@ -60,30 +72,29 @@ def limpiar(t) -> str:
 
 
 def main():
-    base = json.load(open("data/catalogo.json", encoding="utf-8"))
-    desc = {x["ref"]: x.get("descripcion", "") for x in
-            json.load(open("data/catalogo_con_descripciones.json", encoding="utf-8"))}
+    """Normaliza el archivo de descripciones, que es la fuente permanente."""
+    d = json.load(open("data/descripciones.json", encoding="utf-8"))
+    antes = " ".join(d.values()).lower()
 
-    n, saltadas = 0, 0
-    for p in base:
-        d = limpiar(desc.get(p["ref"], ""))
-        if len(d) < 60:
-            saltadas += 1
-            continue
-        p["descripcion"] = d
-        n += 1
+    for k in list(d):
+        t = limpiar(d[k])
+        if len(t) >= 60:
+            d[k] = t
 
-    json.dump(base, open("data/catalogo.json", "w", encoding="utf-8"),
+    json.dump(d, open("data/descripciones.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
 
-    texto = " ".join(p.get("descripcion", "") for p in base).lower()
+    texto = " ".join(d.values()).lower()
+    # se busca palabra completa: "elegí" contiene "elig" y daba falso positivo
+    import re as _re
     restos = [f for f in ("al mejor precio", "oportunidad perfecta", "espectacular",
-                          "hazte", "tienes", "puedes", "elige") if f in texto]
-    print(f"Descripciones normalizadas : {n}")
-    print(f"Descartadas (muy cortas)   : {saltadas}")
+                          "inigualable", "hazte", "tienes", "puedes", "elige",
+                          "disfruta de", "imperdible")
+              if _re.search(rf"\b{_re.escape(f)}\b", texto)]
+    print(f"Descripciones normalizadas : {len(d)}")
+    print(f"Léxico prohibido antes     : "
+          f"{sum(antes.count(f) for f in ('al mejor precio', 'oportunidad perfecta', 'espectacular'))}")
     print(f"Léxico prohibido restante  : {restos or 'ninguno'}")
-    largos = [len(p["descripcion"]) for p in base if p.get("descripcion")]
-    print(f"Largo medio                : {sum(largos)//len(largos)} caracteres")
 
 
 if __name__ == "__main__":
