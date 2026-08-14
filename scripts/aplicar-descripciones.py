@@ -45,9 +45,21 @@ def main():
     desc = json.load(open(ARCHIVO, encoding="utf-8"))
     catalogo = json.load(open("data/catalogo.json", encoding="utf-8"))
 
-    n = 0
+    # Índice por modelo, para cubrir configuraciones que no existían cuando se
+    # generaron las descripciones. El texto describe el modelo, no la variante:
+    # un iPhone 12 Pro de 256 GB se cuenta igual que uno de 128.
+    por_modelo = {}
+    for k, v in desc.items():
+        modelo = k.split("|")[0]
+        por_modelo.setdefault(modelo, v)
+
+    n, aprox = 0, 0
     for p in catalogo:
         d = desc.get(clave(p))
+        if not d:
+            d = por_modelo.get(clave(p).split("|")[0])
+            if d:
+                aprox += 1
         if d:
             p["descripcion"] = d
             n += 1
@@ -55,6 +67,8 @@ def main():
     json.dump(catalogo, open("data/catalogo.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
     print(f"Descripciones aplicadas: {n} / {len(catalogo)}")
+    if aprox:
+        print(f"  de las cuales {aprox} vienen de otra configuración del mismo modelo")
 
 
 if __name__ == "__main__":

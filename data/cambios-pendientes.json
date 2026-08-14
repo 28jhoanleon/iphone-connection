@@ -1,624 +1,227 @@
 {
-  "fecha": "2026-08-12T14:37",
-  "filas": 390,
+  "fecha": "2026-08-13T07:29",
+  "filas": 398,
   "totales": {
-    "precios": 15,
-    "nuevos": 36,
-    "salidos": 31,
-    "otros": 51
+    "precios": 10,
+    "nuevos": 13,
+    "salidos": 11,
+    "otros": 8
   },
   "precios": [
     {
-      "nombre": "iPhone 11 128 GB Blanco — Seleccionado A",
-      "antes": 38157000,
-      "despues": 34523000,
-      "variacion": -9.5
+      "nombre": "iPhone 13 Mini 128 GB Negro — Seleccionado A",
+      "antes": 48190000,
+      "despues": 50560000,
+      "variacion": 4.9
     },
     {
-      "nombre": "iPhone 11 64 GB Negro — Seleccionado A",
-      "antes": 34523000,
-      "despues": 32706000,
-      "variacion": -5.3
+      "nombre": "iPhone 13 128 GB — Seleccionado B",
+      "antes": 60040000,
+      "despues": 59250000,
+      "variacion": -1.3
     },
     {
-      "nombre": "iPhone 13 Pro 128 GB Azul — Seleccionado A",
-      "antes": 77222500,
-      "despues": 78131000,
-      "variacion": 1.2
-    },
-    {
-      "nombre": "iPhone 13 Pro Max 256 GB Negro — Seleccionado B",
-      "antes": 79948000,
-      "despues": 72680000,
-      "variacion": -9.1
-    },
-    {
-      "nombre": "iPhone 14 Pro Max 128 GB — Seleccionado A",
-      "antes": 103569000,
-      "despues": 100843500,
-      "variacion": -2.6
+      "nombre": "iPhone 13 Pro 128 GB — Seleccionado A",
+      "antes": 80580000,
+      "despues": 79790000,
+      "variacion": -1.0
     },
     {
       "nombre": "iPhone 15 128 GB — Seleccionado A",
-      "antes": 87216000,
-      "despues": 83582000,
-      "variacion": -4.2
+      "antes": 82160000,
+      "despues": 87690000,
+      "variacion": 6.7
     },
     {
-      "nombre": "iPhone 16 Pro 128 GB Titanio Desert — Seleccionado A",
-      "antes": 139909000,
-      "despues": 139000500,
-      "variacion": -0.6
+      "nombre": "iPhone 16 Pro 128 GB Negro — Seleccionado A",
+      "antes": 131140000,
+      "despues": 128770000,
+      "variacion": -1.8
     },
     {
-      "nombre": "iPhone 17 256 GB — Nuevo sellado",
-      "antes": 178066000,
-      "despues": 177157500,
-      "variacion": -0.5
+      "nombre": "iPhone 16 Pro 128 GB — Seleccionado A",
+      "antes": 129560000,
+      "despues": 131140000,
+      "variacion": 1.2
     },
     {
-      "nombre": "iPhone 17 Pro 512 GB — Nuevo sellado",
-      "antes": 263465000,
-      "despues": 261648000,
-      "variacion": -0.7
+      "nombre": "iPhone 16 Pro Max 256 GB Titanio Natural — Seleccionado A",
+      "antes": 154840000,
+      "despues": 150100000,
+      "variacion": -3.1
     },
     {
-      "nombre": "iPhone 17 Pro Max 1 TB — Nuevo sellado",
-      "antes": 317975000,
-      "despues": 319792000,
-      "variacion": 0.6
+      "nombre": "iPhone 16 Pro Max 256 GB — Seleccionado A",
+      "antes": 156420000,
+      "despues": 151680000,
+      "variacion": -3.0
     },
     {
-      "nombre": "Samsung Galaxy S26 Ultra 1 TB — Nuevo sellado",
-      "antes": 258014000,
-      "despues": 263465000,
-      "variacion": 2.1
+      "nombre": "iPhone 16 Pro Max 256 GB Titanio Desert — Seleccionado A",
+      "antes": 158000000,
+      "despues": 153260000,
+      "variacion": -3.0
     },
     {
-      "nombre": "Motorola Moto Edge 60 Fusion Ds 256 GB — Nuevo sellado",
-      "antes": 59052500,
-      "despues": 54328300,
-      "variacion": -8.0
-    },
-    {
-      "nombre": "PS5 Pro Digital — Nuevo sellado",
-      "antes": 225308000,
-      "despues": 228942000,
-      "variacion": 1.6
-    },
-    {
-      "nombre": "PS5 Digital — Nuevo sellado",
-      "antes": 127190000,
-      "despues": 130824000,
-      "variacion": 2.9
-    },
-    {
-      "nombre": "Samsung Tab S10 Lite + Pen SM-X400 128 GB 128 GB — Nuevo sellado",
-      "antes": 73588500,
-      "despues": 71771500,
+      "nombre": "iPhone 16 Pro Max 256 GB Negro — Seleccionado A",
+      "antes": 160370000,
+      "despues": 156420000,
       "variacion": -2.5
     }
   ],
   "nuevos": [
     {
-      "nombre": "iPhone Xs Max 256 GB Dorado — Seleccionado C",
-      "precio": 23621000,
+      "nombre": "iPhone X 64 GB Negro — Seleccionado A",
+      "precio": 28440000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 11 128 GB — Seleccionado C",
-      "precio": 32706000,
+      "nombre": "iPhone 12 64 GB Blanco — Seleccionado A",
+      "precio": 47400000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 11 128 GB Negro — Seleccionado A",
-      "precio": 38157000,
+      "nombre": "iPhone 12 Pro Max 128 GB Negro — Seleccionado A",
+      "precio": 63200000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 12 64 GB Negro — Seleccionado C",
-      "precio": 38157000,
+      "nombre": "iPhone 13 Pro 128 GB Negro — Seleccionado C",
+      "precio": 55300000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 12 128 GB Azul — Seleccionado C",
-      "precio": 43608000,
+      "nombre": "iPhone 14 Plus 256 GB Blanco — Seleccionado A",
+      "precio": 75840000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 12 128 GB Negro — Seleccionado A",
-      "precio": 47242000,
+      "nombre": "iPhone 14 128 GB Negro — Seleccionado C",
+      "precio": 48980000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 12 Pro 128 GB Azul — Seleccionado C",
-      "precio": 48150500,
+      "nombre": "iPhone 14 Pro 128 GB Lila — Seleccionado C",
+      "precio": 60040000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 12 Pro 128 GB Negro — Seleccionado A",
-      "precio": 49967500,
+      "nombre": "iPhone 14 Pro 128 GB Negro — Seleccionado A",
+      "precio": 88480000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 12 Pro Max 128 GB Negro — Seleccionado C",
-      "precio": 54510000,
+      "nombre": "iPhone 15 Pro 128 GB Negro — Seleccionado A",
+      "precio": 110600000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 13 Mini 128 GB Negro — Seleccionado C",
-      "precio": 41791000,
+      "nombre": "iPhone 15 Pro 256 GB — Seleccionado A",
+      "precio": 113760000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 13 Mini 256 GB — Seleccionado A",
-      "precio": 49967500,
+      "nombre": "iPhone 15 Pro Max 256 GB — Seleccionado A",
+      "precio": 126400000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 13 128 GB Azul — Seleccionado C",
-      "precio": 39974000,
+      "nombre": "iPhone 16 128 GB Negro — Seleccionado A",
+      "precio": 110600000,
       "categoria": "iPhone"
     },
     {
-      "nombre": "iPhone 13 Pro 128 GB — Seleccionado C",
-      "precio": 74497000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 13 Pro 128 GB — Seleccionado A",
-      "precio": 81765000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 13 Pro 256 GB — Seleccionado C",
-      "precio": 78131000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 13 Pro Max 128 GB — Seleccionado C",
-      "precio": 85399000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 13 Pro Max 128 GB — Seleccionado A",
-      "precio": 90850000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 14 Plus 256 GB Rojo — Seleccionado A",
-      "precio": 72680000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 14 Pro 128 GB Negro — Seleccionado B",
-      "precio": 58144000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 14 Pro 256 GB Lila — Seleccionado B",
-      "precio": 94484000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 14 Pro 256 GB Lila — Seleccionado A",
-      "precio": 98118000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 14 Pro Max 128 GB Lila — Seleccionado C",
-      "precio": 99026500,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 14 Pro Max 128 GB Lila — Seleccionado A",
-      "precio": 102660500,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 14 Pro Max 128 GB Dorado — Seleccionado A",
-      "precio": 105386000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 14 Pro Max 256 GB — Seleccionado B",
-      "precio": 99935000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 14 Pro Max 256 GB — Seleccionado A",
-      "precio": 108111500,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 15 128 GB Verde — Seleccionado B",
-      "precio": 81765000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 15 128 GB Negro — Seleccionado B",
-      "precio": 82673500,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 15 Pro 128 GB Titanio Natural — Seleccionado A",
-      "precio": 112654000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 16 128 GB — Seleccionado A",
-      "precio": 119922000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 16 Pro 128 GB Negro — Seleccionado A",
-      "precio": 139909000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 16 Pro 256 GB — Seleccionado B",
-      "precio": 118105000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 16 Pro 256 GB Titanio Natural — Seleccionado A",
-      "precio": 141726000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 17e 256 GB Rosa — Seleccionado B",
-      "precio": 127190000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 17 256 GB Blanco — Seleccionado A",
-      "precio": 154445000,
-      "categoria": "iPhone"
-    },
-    {
-      "nombre": "iPhone 17 Pro Max 256 GB Azul — Seleccionado A",
-      "precio": 225308000,
+      "nombre": "iPhone 17 Pro Max 256 GB — Seleccionado A",
+      "precio": 205400000,
       "categoria": "iPhone"
     }
   ],
   "salidos": [
     {
-      "nombre": "iPhone 11 64 GB Negro — Seleccionado C",
+      "nombre": "iPhone 11 128 GB — Seleccionado C",
       "ref": "A102"
     },
     {
-      "nombre": "iPhone 11 Pro 256 GB Dorado — Seleccionado C",
+      "nombre": "iPhone 11 128 GB Blanco — Seleccionado A",
+      "ref": "A103"
+    },
+    {
+      "nombre": "iPhone 11 128 GB Negro — Seleccionado A",
       "ref": "A104"
     },
     {
-      "nombre": "iPhone 11 Pro 256 GB Dorado — Seleccionado A",
-      "ref": "A105"
-    },
-    {
-      "nombre": "iPhone 11 Pro Max 256 GB Verde — Seleccionado C",
-      "ref": "A106"
-    },
-    {
-      "nombre": "iPhone 11 Pro Max 256 GB Verde — Seleccionado A",
-      "ref": "A107"
-    },
-    {
-      "nombre": "iPhone 12 Pro 128 GB Negro — Seleccionado C",
-      "ref": "A109"
-    },
-    {
-      "nombre": "iPhone 13 Mini 128 GB — Seleccionado C",
-      "ref": "A114"
-    },
-    {
-      "nombre": "iPhone 13 Mini 256 GB Blanco — Seleccionado A",
-      "ref": "A118"
-    },
-    {
-      "nombre": "iPhone 13 128 GB — Seleccionado C",
+      "nombre": "iPhone 13 Mini 128 GB — Seleccionado A",
       "ref": "A119"
     },
     {
-      "nombre": "iPhone 13 256 GB Rosa — Seleccionado A",
-      "ref": "A129"
+      "nombre": "iPhone 14 Pro 128 GB Negro — Seleccionado B",
+      "ref": "A149"
     },
     {
-      "nombre": "iPhone 13 Pro 128 GB Negro — Seleccionado B",
-      "ref": "A130"
+      "nombre": "iPhone 14 Pro 128 GB Lila — Seleccionado A",
+      "ref": "A154"
     },
     {
-      "nombre": "iPhone 13 Pro 128 GB Negro — Seleccionado A",
-      "ref": "A132"
+      "nombre": "iPhone 15 128 GB Rosa — Seleccionado A",
+      "ref": "A169"
     },
     {
-      "nombre": "iPhone 13 Pro 256 GB Negro — Seleccionado C",
-      "ref": "A133"
+      "nombre": "iPhone 15 Pro 128 GB — Seleccionado A",
+      "ref": "A172"
     },
     {
-      "nombre": "iPhone 13 Pro 256 GB Azul — Seleccionado C",
-      "ref": "A134"
+      "nombre": "iPhone 16 128 GB — Seleccionado A",
+      "ref": "A174"
     },
     {
-      "nombre": "iPhone 13 Pro Max 256 GB Negro — Seleccionado C",
-      "ref": "A136"
+      "nombre": "iPhone 16 Pro 128 GB Titanio Natural — Seleccionado A",
+      "ref": "A175"
     },
     {
-      "nombre": "iPhone 13 Pro Max 256 GB Negro — Seleccionado A",
-      "ref": "A138"
-    },
-    {
-      "nombre": "iPhone 14 128 GB Negro — Seleccionado C",
-      "ref": "A139"
-    },
-    {
-      "nombre": "iPhone 14 Pro 256 GB — Seleccionado A",
-      "ref": "A155"
-    },
-    {
-      "nombre": "iPhone 15 Pro 128 GB — Seleccionado B",
-      "ref": "A164"
-    },
-    {
-      "nombre": "iPhone 15 Pro 128 GB Negro — Seleccionado A",
-      "ref": "A165"
-    },
-    {
-      "nombre": "iPhone 15 Pro Max 256 GB Titanio Natural — Seleccionado B",
-      "ref": "A167"
-    },
-    {
-      "nombre": "iPhone 15 Pro Max 256 GB — Seleccionado A",
-      "ref": "A168"
-    },
-    {
-      "nombre": "iPhone 16 Pro 256 GB Titanio Desert — Seleccionado A",
-      "ref": "A173"
-    },
-    {
-      "nombre": "iPhone 17 256 GB Negro — Seleccionado A",
-      "ref": "A178"
-    },
-    {
-      "nombre": "iPhone 17 Pro 256 GB — Seleccionado B",
-      "ref": "A180"
-    },
-    {
-      "nombre": "iPhone 17 Pro Max 256 GB — Seleccionado A",
-      "ref": "A181"
-    },
-    {
-      "nombre": "iPhone Galasy S23 FE 128 GB Verde — Nuevo sellado",
-      "ref": "A182"
-    },
-    {
-      "nombre": "iPhone 13 128 GB — Nuevo sellado",
-      "ref": "A186"
-    },
-    {
-      "nombre": "iPhone 14 128 GB — Nuevo sellado",
-      "ref": "A187"
-    },
-    {
-      "nombre": "iPhone 14 Plus 128 GB — Nuevo sellado",
+      "nombre": "iPhone 17 Pro Max 256 GB Azul — Seleccionado A",
       "ref": "A188"
-    },
-    {
-      "nombre": "iPhone 17 512 GB — Nuevo sellado",
-      "ref": "A194"
     }
   ],
   "otros": [
     {
-      "nombre": "iPhone 11 128 GB Blanco — Seleccionado A",
-      "campo": "batería",
-      "detalle": "100% → 93%"
-    },
-    {
-      "nombre": "iPhone 11 128 GB Blanco — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 11 64 GB Negro — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 12 64 GB Negro — Seleccionado B",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 12 Pro 128 GB Azul — Seleccionado B",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 12 Pro 128 GB Azul — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 12 Pro 256 GB Azul — Seleccionado C",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 12 Pro 256 GB Azul — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
       "nombre": "iPhone 13 Mini 128 GB Negro — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 13 Mini 128 GB — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 13 Mini 256 GB Blanco — Seleccionado C",
       "campo": "batería",
-      "detalle": "76% → 77%"
-    },
-    {
-      "nombre": "iPhone 13 Mini 256 GB Blanco — Seleccionado C",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 13 128 GB Negro — Seleccionado B",
-      "campo": "disponibilidad"
+      "detalle": "96% → 100%"
     },
     {
       "nombre": "iPhone 13 128 GB Rojo — Seleccionado C",
-      "campo": "disponibilidad"
+      "campo": "batería",
+      "detalle": "71% → 75%"
     },
     {
       "nombre": "iPhone 13 128 GB — Seleccionado B",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 13 128 GB — Seleccionado A",
-      "campo": "disponibilidad"
+      "campo": "batería",
+      "detalle": "84% → 83%"
     },
     {
       "nombre": "iPhone 13 128 GB Negro — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 13 256 GB Negro — Seleccionado C",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 13 Pro 128 GB Azul — Seleccionado A",
       "campo": "batería",
-      "detalle": "86% → 90%"
-    },
-    {
-      "nombre": "iPhone 13 Pro 128 GB Azul — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 13 Pro 256 GB Azul — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 13 Pro Max 256 GB Negro — Seleccionado B",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 128 GB Negro — Seleccionado B",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 128 GB — Seleccionado B",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 128 GB Negro — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 128 GB — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 128 GB Rojo — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 Pro 128 GB — Seleccionado C",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 Pro 128 GB — Seleccionado B",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 Pro 128 GB — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 Pro 128 GB Lila — Seleccionado A",
-      "campo": "batería",
-      "detalle": "94% → 92%"
-    },
-    {
-      "nombre": "iPhone 14 Pro 128 GB Lila — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 14 Pro Max 128 GB — Seleccionado A",
-      "campo": "batería",
-      "detalle": "92% → 85%"
-    },
-    {
-      "nombre": "iPhone 14 Pro Max 128 GB — Seleccionado A",
-      "campo": "disponibilidad"
+      "detalle": "96% → 98%"
     },
     {
       "nombre": "iPhone 15 128 GB — Seleccionado A",
       "campo": "batería",
-      "detalle": "89% → 87%"
+      "detalle": "87% → 100%"
     },
     {
-      "nombre": "iPhone 15 128 GB — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 15 128 GB Celeste — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 15 128 GB Rosa — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 15 256 GB Rosa — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 15 Pro 128 GB — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 15 Pro Max 1 TB Titanio Natural — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 16 Pro 128 GB Titanio Natural — Seleccionado A",
+      "nombre": "iPhone 15 Pro 128 GB Titanio Natural — Seleccionado A",
       "campo": "batería",
-      "detalle": "87% → 85%"
+      "detalle": "86% → 87%"
     },
     {
-      "nombre": "iPhone 16 Pro 128 GB Titanio Natural — Seleccionado A",
-      "campo": "disponibilidad"
+      "nombre": "iPhone 16 Pro 128 GB Negro — Seleccionado A",
+      "campo": "batería",
+      "detalle": "94% → 89%"
     },
     {
       "nombre": "iPhone 16 Pro 128 GB — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 16 Pro 128 GB Titanio Desert — Seleccionado A",
       "campo": "batería",
-      "detalle": "90% → 91%"
-    },
-    {
-      "nombre": "iPhone 16 Pro 128 GB Titanio Desert — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 16 Pro Max 256 GB Titanio Natural — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 16 Pro Max 256 GB — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 16 Pro Max 256 GB Titanio Desert — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 16 Pro Max 256 GB Negro — Seleccionado A",
-      "campo": "disponibilidad"
-    },
-    {
-      "nombre": "iPhone 17 256 GB — Seleccionado B",
-      "campo": "disponibilidad"
+      "detalle": "88% → 94%"
     }
   ]
 }
