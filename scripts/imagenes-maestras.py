@@ -173,6 +173,10 @@ def main() -> None:
     # para esa referencia puntual es mas precisa que la del modelo.
     asignadas, modelos_ok = 0, 0
     def color_slug(p):
+        # Si la unidad declara varios colores, no se le asigna la foto de uno:
+        # mostraría un equipo rosa donde el título dice "Rosa / Verde".
+        if p.get("colores") and len(p["colores"]) > 1:
+            return None
         c = p.get("color") or (p.get("colores") or [None])[0]
         return slug(c) if c else None
 
@@ -204,20 +208,28 @@ def main() -> None:
             asignadas += 1
         modelos_ok += 1
 
-    # Último recurso: si una unidad quedó sin foto pero otra del mismo modelo
-    # sí tiene, se reutiliza. Preferible el modelo correcto en otro color que
-    # una silueta: el color se lee en la ficha, el modelo se reconoce de un vistazo.
+    # Último recurso: reutilizar la foto de otra unidad del MISMO modelo, pero
+    # sólo si el color coincide o si ninguna de las dos lo declara. Reutilizar
+    # sin mirar el color publicaba un iPhone Plata con la foto del Rosa, que es
+    # peor que no tener foto: el cliente compra por lo que ve.
     reales_ext = (".webp", ".jpg", ".jpeg", ".png")
+    def color_de(p):
+        c = p.get("color") or (p.get("colores") or [None])[0]
+        return slug(c) if c else None
+
     for modelo_slug, unidades in por_slug.items():
-        con = next((p for p in unidades
-                    if any(os.path.exists(f'{DESTINO}/{p["ref"]}{e}') for e in reales_ext)), None)
-        if not con:
+        con_foto = [p for p in unidades
+                    if any(os.path.exists(f'{DESTINO}/{p["ref"]}{e}') for e in reales_ext)]
+        if not con_foto:
             continue
-        origen = next(f'{DESTINO}/{con["ref"]}{e}' for e in reales_ext
-                      if os.path.exists(f'{DESTINO}/{con["ref"]}{e}'))
         for p in unidades:
             if any(os.path.exists(f'{DESTINO}/{p["ref"]}{e}') for e in reales_ext):
                 continue
+            mismo = next((q for q in con_foto if color_de(q) == color_de(p)), None)
+            if not mismo:
+                continue
+            origen = next(f'{DESTINO}/{mismo["ref"]}{e}' for e in reales_ext
+                          if os.path.exists(f'{DESTINO}/{mismo["ref"]}{e}'))
             shutil.copy(origen, os.path.join(DESTINO, f'{p["ref"]}.webp'))
             asignadas += 1
 

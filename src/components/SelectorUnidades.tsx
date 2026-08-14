@@ -29,7 +29,22 @@ export default function SelectorUnidades({
   // La foto sigue a la selección: al elegir un color se ve ese color, no la
   // del primer producto. El cambio se hace con un fundido corto para que se
   // perciba como una transición y no como un salto.
-  const refFoto = visibles[0]?.ref ?? modelo.unidades[0].ref;
+  // Al elegir un color, se prefiere la foto de una unidad que declare ESE color
+  // solo. Las unidades con varios colores comparten una única foto, y tomar la
+  // primera visible mostraba un equipo de otro color que el seleccionado.
+  const refFoto = useMemo(() => {
+    if (color) {
+      const propia = visibles.find(
+        (u) => u.color === color && !(u.colores && u.colores.length > 1),
+      );
+      if (propia) return propia.ref;
+      const conColor = modelo.unidades.find(
+        (u) => u.color === color && !(u.colores && u.colores.length > 1),
+      );
+      if (conColor) return conColor.ref;
+    }
+    return visibles[0]?.ref ?? modelo.unidades[0].ref;
+  }, [color, visibles, modelo.unidades]);
 
   useEffect(() => {
     setEntrando(true);
