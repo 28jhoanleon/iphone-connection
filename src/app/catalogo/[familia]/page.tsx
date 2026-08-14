@@ -6,6 +6,7 @@ import { precio, precioARS } from "@/lib/formato";
 import { tipoCambio } from "@/lib/dolar";
 import { SITIO } from "@/lib/seo";
 import Migas from "@/components/Migas";
+import ExplorarCatalogo from "@/components/ExplorarCatalogo";
 import Revelar from "@/components/Revelar";
 import Volver from "@/components/Volver";
 
@@ -45,6 +46,34 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
         </p>
       </div>
       <div className="grid gap-3.5 pb-16 sm:gap-4 sm:pb-20 sm:grid-cols-2 lg:grid-cols-3">
+      </div>
+
+      {/* Mismos filtros que el catálogo completo, acotados a esta familia: con
+          87 iPhones en una sola lista no hay forma de encontrar nada. */}
+      <ExplorarCatalogo
+        items={f.modelos.flatMap((m) =>
+          m.unidades.map((u) => ({
+            ref: u.ref,
+            nombre: u.nombre,
+            modelo: u.modelo,
+            marca: u.marca,
+            categoria: u.categoria,
+            estado: u.estado,
+            estadoEtiqueta: u.estadoEtiqueta,
+            bateria: u.bateria,
+            disponibilidad: u.disponibilidad,
+            defecto: u.defecto,
+            precio: precioARS(u, tc.valor),
+            imagen: rutaImagenUnidad(u),
+            ultimas: u.disponibilidad === "ultima_unidad",
+            capacidadGb: u.capacidadGb,
+          })),
+        )}
+        categorias={[]}
+        marcas={[...new Set(f.modelos.map((m) => m.marca))].sort()}
+      />
+
+      <div className="hidden">
         {f.modelos.map((m) => (
           <Revelar key={m.slug} retraso={(f.modelos.indexOf(m) % 6) * 55} className="h-full">
           <Link
