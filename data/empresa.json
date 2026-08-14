@@ -1,7 +1,7 @@
 {
   "nombre": "iPhone Connection",
   "whatsapp": "5493413386047",
-  "instagram": "",
+  "instagram": "@iphone_connection",
   "email": "",
   "zona": "",
   "horarios": "",
@@ -18,8 +18,13 @@
     "plazo": ""
   },
   "pagos": {
-    "medios": [],
-    "nota": ""
+    "medios": [
+      "Efectivo",
+      "Dólares",
+      "Transferencia",
+      "Criptomonedas"
+    ],
+    "nota": "Se coordina al momento de la compra. Sin recargo por ningún medio."
   },
   "incluyeCaja": {
     "nuevo_sellado": [

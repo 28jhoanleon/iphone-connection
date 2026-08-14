@@ -3,6 +3,7 @@ import { empresa, tiene, hayEnvios, hayPagos } from "@/lib/empresa";
 import { familiasVisibles } from "@/lib/catalogo";
 import { tipoCambio, fechaLegible, MOSTRAR_COTIZACION } from "@/lib/dolar";
 import { linkWhatsApp } from "@/lib/formato";
+import MediosPago from "./MediosPago";
 
 export default async function Footer() {
   const tc = await tipoCambio();
@@ -72,8 +73,7 @@ export default async function Footer() {
             {hayPagos() && (
               <div>
                 <h2 className="mb-2 text-[13.5px] font-semibold text-ink">Formas de pago</h2>
-                <p>{empresa.pagos.medios.join(" · ")}</p>
-                {empresa.pagos.nota && <p className="mt-1 text-[12.5px]">{empresa.pagos.nota}</p>}
+                <MediosPago compacto />
               </div>
             )}
             {hayEnvios() && (

@@ -17,6 +17,7 @@ import Volver from "@/components/Volver";
 import TarjetaUnidad from "@/components/TarjetaUnidad";
 import EtiquetaEstado from "@/components/EtiquetaEstado";
 import BloqueFicha from "@/components/BloqueFicha";
+import MediosPago from "@/components/MediosPago";
 import FilaDato from "@/components/FilaDato";
 
 export function generateStaticParams() {
@@ -196,10 +197,7 @@ export default async function UnidadPage({ params }: { params: Promise<{ ref: st
 
             {hayPagos() && (
               <BloqueFicha titulo="Formas de pago">
-                <p className="text-[14.5px] text-mute">{empresa.pagos.medios.join(" · ")}</p>
-                {empresa.pagos.nota && (
-                  <p className="mt-1.5 text-[12.5px] text-mute-soft">{empresa.pagos.nota}</p>
-                )}
+                <MediosPago />
               </BloqueFicha>
             )}
 

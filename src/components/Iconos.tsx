@@ -46,3 +46,42 @@ export function IconoEnvio() {
     </svg>
   );
 }
+
+export function IconoEfectivo() {
+  return (
+    <svg {...base} aria-hidden="true">
+      <rect x="2.5" y="6" width="19" height="12" rx="2" />
+      <circle cx="12" cy="12" r="2.6" />
+      <path d="M6 9.5h.01M18 14.5h.01" />
+    </svg>
+  );
+}
+
+export function IconoDolar() {
+  return (
+    <svg {...base} aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 6.8v10.4" />
+      <path d="M14.6 9.4c0-1-1.2-1.7-2.6-1.7s-2.6.7-2.6 1.7 1.1 1.5 2.6 1.9 2.7.9 2.7 2-1.2 1.8-2.7 1.8-2.7-.8-2.7-1.8" />
+    </svg>
+  );
+}
+
+export function IconoTransferencia() {
+  return (
+    <svg {...base} aria-hidden="true">
+      <path d="M3.5 8.5h13M13 5l3.5 3.5L13 12" />
+      <path d="M20.5 15.5h-13M11 19l-3.5-3.5L11 12" />
+    </svg>
+  );
+}
+
+export function IconoCripto() {
+  return (
+    <svg {...base} aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M9.4 8.2h3.4c1.3 0 2.3.8 2.3 1.9s-1 1.9-2.3 1.9H9.4zM9.4 12h3.7c1.4 0 2.4.8 2.4 1.9s-1 1.9-2.4 1.9H9.4z" />
+      <path d="M11 6.5v1.7M13 6.5v1.7M11 15.8v1.7M13 15.8v1.7" />
+    </svg>
+  );
+}

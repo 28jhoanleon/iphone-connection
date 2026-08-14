@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
 import { SITIO } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 
@@ -55,6 +57,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <WhatsAppFab />
+        {/* Medición de tráfico y de rendimiento real. Sin cookies ni datos
+
+            personales: mide páginas vistas y velocidad, no personas. */}
+
+        <Analytics />
+
+        <SpeedInsights />
+
       </body>
     </html>
   );
