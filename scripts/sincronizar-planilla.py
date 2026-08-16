@@ -76,26 +76,35 @@ def comparar(viejo: list, nuevo: list) -> dict:
     for k, p in kb.items():
         if k not in ka:
             nuevos.append({"nombre": p["nombreCompleto"], "precio": p["precioCentavos"],
-                           "categoria": p["categoria"]})
+                           "categoria": p["categoria"], "ref": p["ref"],
+                           "estado": p["estadoEtiqueta"], "bateria": p.get("bateria")})
             continue
         v = ka[k]
         if v["precioCentavos"] != p["precioCentavos"]:
             precios.append({
                 "nombre": p["nombreCompleto"],
+                "ref": v["ref"],
+                "categoria": p["categoria"],
                 "antes": v["precioCentavos"], "despues": p["precioCentavos"],
                 "variacion": round((p["precioCentavos"] / max(v["precioCentavos"], 1) - 1) * 100, 1),
             })
         if v.get("bateria") != p.get("bateria"):
             otros.append({"nombre": p["nombreCompleto"], "campo": "batería",
+                          "ref": v["ref"], "categoria": p["categoria"],
                           "detalle": f'{v.get("bateria")}% → {p.get("bateria")}%'})
         if v.get("defecto") != p.get("defecto"):
-            otros.append({"nombre": p["nombreCompleto"], "campo": "detalle declarado"})
+            otros.append({"nombre": p["nombreCompleto"], "campo": "detalle declarado",
+                          "ref": v["ref"], "categoria": p["categoria"],
+                          "detalle": f'{v.get("defecto") or "sin detalle"} → {p.get("defecto") or "sin detalle"}'})
         if v["disponibilidad"] != p["disponibilidad"]:
-            otros.append({"nombre": p["nombreCompleto"], "campo": "disponibilidad"})
+            otros.append({"nombre": p["nombreCompleto"], "campo": "disponibilidad",
+                          "ref": v["ref"], "categoria": p["categoria"],
+                          "detalle": f'{v["disponibilidad"]} → {p["disponibilidad"]}'})
 
     for k, p in ka.items():
         if k not in kb:
-            salidos.append({"nombre": p["nombreCompleto"], "ref": p["ref"]})
+            salidos.append({"nombre": p["nombreCompleto"], "ref": p["ref"],
+                            "categoria": p["categoria"], "precio": p["precioCentavos"]})
 
     return {"precios": precios, "nuevos": nuevos, "salidos": salidos, "otros": otros}
 
