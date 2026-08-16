@@ -1,6 +1,8 @@
 {
   "_nota": "Planilla espejo propia con IMPORTRANGE del proveedor, publicada como CSV. Las columnas STOCK y OCULTAR son nuestras y no existen en la del proveedor.",
   "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS6Gc4luV0fTKeFVmrOkKJAgAwVeDLQbIlWE8MG3e-GL-ucguyylW4FXpGk02xGP1wROZcd3UnbxP_1/pub?gid=1069737797&single=true&output=csv",
-  "filas_ultima_sync": 383,
-  "ultima_sync": "2026-08-06T22:58"
+  "filas_ultima_sync": 395,
+  "ultima_sync": "2026-08-15T22:49",
+  "hash": "-346910676",
+  "filas": 517
 }
