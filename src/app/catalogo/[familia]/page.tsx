@@ -6,7 +6,7 @@ import { precio, precioARS } from "@/lib/formato";
 import { tipoCambio } from "@/lib/dolar";
 import { SITIO } from "@/lib/seo";
 import Migas from "@/components/Migas";
-import ExplorarCatalogo from "@/components/ExplorarCatalogo";
+import ExplorarModelos from "@/components/ExplorarModelos";
 import Revelar from "@/components/Revelar";
 import Volver from "@/components/Volver";
 
@@ -45,68 +45,27 @@ export default async function Familia({ params }: { params: Promise<{ familia: s
           {f.totalUnidades} {f.totalUnidades === 1 ? "UNIDAD" : "UNIDADES"} · {f.modelos.length} {f.modelos.length === 1 ? "MODELO" : "MODELOS"}
         </p>
       </div>
-      <div className="grid gap-3.5 pb-16 sm:gap-4 sm:pb-20 sm:grid-cols-2 lg:grid-cols-3">
-      </div>
-
-      {/* Mismos filtros que el catálogo completo, acotados a esta familia: con
-          87 iPhones en una sola lista no hay forma de encontrar nada. */}
-      <ExplorarCatalogo
-        items={f.modelos.flatMap((m) =>
-          m.unidades.map((u) => ({
-            ref: u.ref,
-            nombre: u.nombre,
-            modelo: u.modelo,
-            marca: u.marca,
-            categoria: u.categoria,
-            estado: u.estado,
-            estadoEtiqueta: u.estadoEtiqueta,
-            bateria: u.bateria,
-            disponibilidad: u.disponibilidad,
-            defecto: u.defecto,
-            precio: precioARS(u, tc.valor),
-            imagen: rutaImagenUnidad(u),
-            ultimas: u.disponibilidad === "ultima_unidad",
-            capacidadGb: u.capacidadGb,
-          })),
-        )}
-        categorias={[]}
+      <ExplorarModelos
+        items={f.modelos.map((m) => {
+          const precios = m.unidades.map((u) => precioARS(u, tc.valor));
+          return {
+            slug: m.slug,
+            nombre: m.nombre,
+            marca: m.marca,
+            imagen: rutaImagenUnidad(m.unidades[0]),
+            desde: Math.min(...precios),
+            unidades: m.unidades.length,
+            capacidades: m.capacidades,
+            colores: [...new Set(m.unidades.flatMap((u) =>
+              u.colores?.length ? u.colores : u.color ? [u.color] : []))],
+            hayNuevo: m.unidades.some((u) => u.estado === "nuevo_sellado"),
+            hayUsado: m.unidades.some((u) => u.estado !== "nuevo_sellado"),
+            hayUnicas: m.unidades.some((u) => u.disponibilidad === "ultima_unidad"),
+            bateriaMax: Math.max(0, ...m.unidades.map((u) => u.bateria ?? 0)) || null,
+          };
+        })}
         marcas={[...new Set(f.modelos.map((m) => m.marca))].sort()}
       />
-
-      <div className="hidden">
-        {f.modelos.map((m) => (
-          <Revelar key={m.slug} retraso={(f.modelos.indexOf(m) % 6) * 55} className="h-full">
-          <Link
-            href={`/modelo/${m.slug}`}
-            className="group flex h-full flex-col rounded-lg border border-line bg-paper p-3 transition duration-200 hover:-translate-y-0.5 hover:border-ink sm:p-4"
-          >
-            <div className="mb-3 aspect-square overflow-hidden rounded-md bg-white">
-              <img
-                src={rutaImagenUnidad(m.unidades[0])}
-                alt={m.nombre}
-                width={600}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                className="h-full w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.04]"
-              />
-            </div>
-            <p className="font-data text-[10.5px] uppercase tracking-[.1em] text-mute-soft">
-              {m.marca}
-            </p>
-            <h3 className="mt-1 line-clamp-2 min-h-[2.6em] text-[14.5px] font-medium leading-[1.3] tracking-[-.01em]">
-              {m.nombre}
-            </h3>
-            <p className="mt-auto pt-3 text-[21px] font-semibold leading-none tracking-[-.02em] sm:text-[22px]">
-              {precio(Math.min(...m.unidades.map((u) => precioARS(u, tc.valor))))}
-            </p>
-            <p className="mt-1.5 text-[12.5px] text-mute">
-              desde · {m.unidades.length} unidad{m.unidades.length > 1 ? "es" : ""}
-            </p>
-          </Link>
-          </Revelar>
-        ))}
-      </div>
     </div>
   );
 }
