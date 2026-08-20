@@ -1,103 +1,113 @@
-import { NextRequest, NextResponse } from "next/server";
-import { writeFile, unlink, readdir } from "node:fs/promises";
-import { existsSync } from "node:fs";
-import path from "node:path";
-import { execFile } from "node:child_process";
-import { promisify } from "node:util";
-
-const ejecutar = promisify(execFile);
-
 /**
- * Subida de fotos desde el panel.
+ * Tipo de cambio y márgenes.  src/app/api/precios/route.ts  (reemplaza al actual)
  *
- * Aplica la misma normalización que el pipeline de scripts, para que una foto
- * subida a mano quede indistinguible del resto del catálogo: recorte del fondo,
- * escala por superficie aparente, lienzo blanco de 1000x1000 y sombra de apoyo.
+ * Cambia respecto de la versión anterior:
+ *   - acepta margenPorRef y bandasPorCategoria además del margen por categoría
+ *   - escribe por la capa `escribir`, así que funciona en Vercel además de local
  *
- * Sólo funciona con el servidor de desarrollo corriendo en la máquina propia:
- * el sistema de archivos de Vercel es de sólo lectura. Es intencional — el
- * trabajo de carga se hace en local y se publica con git.
+ * Los topes de seguridad se mantienen y se amplían: este endpoint define el
+ * precio de todo el sitio de una sola vez, y ahora además se puede tocar desde
+ * un teléfono. Un cero de más acá se publica solo.
  */
+import { NextRequest, NextResponse } from "next/server";
+import { leer, guardar, puedeEscribir } from "@/lib/escribir";
 
-const DESTINO = "public/productos";
-const LADO = 1000;
-const OBJETIVO = 0.62;      // media geométrica del producto sobre el lienzo
-const TOPE = 0.86;          // ningún producto supera esto de alto o ancho
-const UMBRAL_FONDO = 244;
-
+const ARCHIVO = "data/precios.json";
 export const runtime = "nodejs";
 
-function esProduccion() {
-  return process.env.VERCEL === "1" || process.env.NODE_ENV === "production";
-}
+const MARGEN_MAX = 2000;
 
-/**
- * Normaliza con Python en lugar de sharp.
- *
- * sharp necesita binarios nativos que no existen para android-arm64, así que en
- * Termux no carga. Pillow ya está instalado y produce el mismo resultado, así
- * que la normalización se delega al script que el proyecto usa para el catálogo.
- */
-async function normalizar(buffer: Buffer, ref: string): Promise<void> {
-  const tmp = path.join(DESTINO, `_tmp_${ref}`);
-  await writeFile(tmp, buffer);
-  try {
-    await ejecutar("python3", ["scripts/normalizar-una.py", tmp, ref]);
-  } finally {
-    if (existsSync(tmp)) await unlink(tmp);
-  }
+export async function GET() {
+  return NextResponse.json(JSON.parse(await leer(ARCHIVO)));
 }
 
 export async function POST(req: NextRequest) {
-  if (esProduccion()) {
+  if (!puedeEscribir()) {
     return NextResponse.json(
-      { error: "La subida sólo funciona con el servidor local: npm run dev" },
+      { error: "Falta configurar GITHUB_TOKEN para guardar desde el sitio publicado." },
       { status: 400 },
     );
   }
 
   try {
-    const form = await req.formData();
-    const ref = String(form.get("ref") ?? "").trim().toUpperCase();
-    const archivo = form.get("archivo") as File | null;
+    const body = await req.json();
+    const cfg = JSON.parse(await leer(ARCHIVO));
+    const detalle: string[] = [];
 
-    if (!/^[A-Z]\d{3}$/.test(ref)) {
-      return NextResponse.json({ error: "Referencia inválida." }, { status: 400 });
-    }
-    if (!archivo) {
-      return NextResponse.json({ error: "No llegó ninguna imagen." }, { status: 400 });
-    }
-    if (archivo.size > 25 * 1024 * 1024) {
-      return NextResponse.json({ error: "La imagen supera los 25 MB." }, { status: 400 });
+    if (body.tcRespaldo !== undefined) {
+      const tc = Number(body.tcRespaldo);
+      if (!Number.isFinite(tc) || tc < 100 || tc > 100000) {
+        return NextResponse.json({ error: "El tipo de cambio no parece válido." }, { status: 400 });
+      }
+      if (Math.round(tc) !== cfg.tcRespaldo) {
+        detalle.push(`TC ${cfg.tcRespaldo} → ${Math.round(tc)}`);
+        cfg.tcRespaldo = Math.round(tc);
+      }
     }
 
-    const entrada = Buffer.from(await archivo.arrayBuffer());
-
-    // se borran las otras extensiones para que no queden dos fotos del mismo producto
-    for (const ext of [".jpg", ".jpeg", ".png"]) {
-      const viejo = path.join(DESTINO, ref + ext);
-      if (existsSync(viejo)) await unlink(viejo);
+    if (body.margenPorCategoria) {
+      for (const [cat, usd] of Object.entries(body.margenPorCategoria as Record<string, number>)) {
+        if (!Number.isFinite(usd) || usd < 0 || usd > MARGEN_MAX) {
+          return NextResponse.json({ error: `El margen de ${cat} no parece válido.` }, { status: 400 });
+        }
+      }
+      cfg.margenPorCategoria = { ...cfg.margenPorCategoria, ...body.margenPorCategoria };
+      detalle.push(`márgenes por categoría`);
     }
-    await normalizar(entrada, ref);
 
-    return NextResponse.json({ ok: true, ref });
+    // null borra el override y devuelve el producto a la regla general.
+    if (body.margenPorRef) {
+      const actual = { ...(cfg.margenPorRef ?? {}) };
+      for (const [ref, usd] of Object.entries(body.margenPorRef as Record<string, number | null>)) {
+        if (usd === null) {
+          delete actual[ref];
+          continue;
+        }
+        if (!Number.isFinite(usd) || usd < 0 || usd > MARGEN_MAX) {
+          return NextResponse.json({ error: `El margen de ${ref} no parece válido.` }, { status: 400 });
+        }
+        actual[ref] = usd;
+      }
+      cfg.margenPorRef = actual;
+      detalle.push(`${Object.keys(body.margenPorRef).length} producto(s)`);
+    }
+
+    if (body.bandasPorCategoria) {
+      for (const [cat, tramos] of Object.entries(
+        body.bandasPorCategoria as Record<string, { hasta: number | null; margen: number }[]>,
+      )) {
+        if (!Array.isArray(tramos) || tramos.length === 0) {
+          return NextResponse.json({ error: `Las bandas de ${cat} están vacías.` }, { status: 400 });
+        }
+        // El último tramo debe ser abierto, si no hay costos que caen fuera de
+        // toda banda y el producto se cobra con la regla de categoría sin aviso.
+        if (tramos[tramos.length - 1].hasta !== null) {
+          return NextResponse.json(
+            { error: `La última banda de ${cat} tiene que ser "en adelante".` },
+            { status: 400 },
+          );
+        }
+        for (const t of tramos) {
+          if (!Number.isFinite(t.margen) || t.margen < 0 || t.margen > MARGEN_MAX) {
+            return NextResponse.json({ error: `Una banda de ${cat} no parece válida.` }, { status: 400 });
+          }
+        }
+      }
+      cfg.bandasPorCategoria = { ...cfg.bandasPorCategoria, ...body.bandasPorCategoria };
+      detalle.push(`bandas`);
+    }
+
+    const { via } = await guardar(
+      ARCHIVO,
+      JSON.stringify(cfg, null, 2),
+      `precios: ${detalle.join(", ") || "ajuste"}`,
+    );
+
+    return NextResponse.json({ ok: true, via, ...cfg });
   } catch (e) {
     return NextResponse.json(
-      { error: e instanceof Error ? e.message : "No se pudo procesar la imagen." },
+      { error: e instanceof Error ? e.message : "No se pudo guardar." },
       { status: 500 },
     );
-  }
-}
-
-/** Devuelve qué referencias ya tienen fotografía real. */
-export async function GET() {
-  try {
-    const archivos = await readdir(DESTINO);
-    const conFoto = archivos
-      .filter((f) => /\.(webp|jpg|jpeg|png)$/i.test(f))
-      .map((f) => f.replace(/\.[^.]+$/, ""));
-    return NextResponse.json({ conFoto, local: !esProduccion() });
-  } catch {
-    return NextResponse.json({ conFoto: [], local: !esProduccion() });
   }
 }

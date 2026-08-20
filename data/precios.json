@@ -4,7 +4,7 @@
   "tcRespaldo": 1580,
   "revalidarSegundos": 21600,
   "mostrarCotizacion": false,
-  "_nota": "Margen en DOLARES FIJOS por categoria, no porcentaje. En un cargador de USD 15 un 15% son 2 dolares; en una notebook de 2500, 375. El monto fijo refleja mejor el trabajo real por venta, que no depende del precio del equipo.",
+  "_nota": "Margen en dolares fijos. Las bandas corrigen que un monto fijo sea regresivo en gama alta: 60 sobre un iPhone de 180 es 33%, sobre uno de 1200 es 5%. Prioridad: margenPorRef > margenPorModelo > bandasPorCategoria > margenPorCategoria.",
   "margenPorCategoria": {
     "iPhone": 60,
     "Android": 50,
@@ -20,5 +20,40 @@
   "margenPorModelo": {
     "Apple Watch Ultra 3 49mm": 80,
     "iPad": 65
-  }
+  },
+  "bandasPorCategoria": {
+    "iPhone": [
+      {
+        "hasta": 300,
+        "margen": 50
+      },
+      {
+        "hasta": 600,
+        "margen": 85
+      },
+      {
+        "hasta": 900,
+        "margen": 120
+      },
+      {
+        "hasta": null,
+        "margen": 170
+      }
+    ],
+    "Notebooks": [
+      {
+        "hasta": 600,
+        "margen": 90
+      },
+      {
+        "hasta": 1200,
+        "margen": 150
+      },
+      {
+        "hasta": null,
+        "margen": 220
+      }
+    ]
+  },
+  "margenPorRef": {}
 }
