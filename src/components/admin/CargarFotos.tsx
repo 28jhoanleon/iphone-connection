@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useRef, useCallback } from "react";
+import { useState, useMemo, useRef, useCallback, useEffect } from "react";
 
 export interface ItemFoto {
   ref: string;
@@ -70,13 +70,18 @@ export default function CargarFotos({
   const pendientes = items.filter((i) => i.tipo === "generada" && !nuevas[i.ref]).length;
   const conFoto = items.length - pendientes;
 
-  // La carpeta de Descargas que lee el chip es la del SERVIDOR. Con el servidor
-  // local es la del teléfono y sirve; desde el sitio publicado no existe.
-  // Se mira el host del navegador porque es lo único que distingue los dos casos:
-  // `local` ya no alcanza, ahora también es true en Vercel cuando hay token.
-  const enLocal =
-    typeof window !== "undefined" &&
-    ["localhost", "127.0.0.1"].includes(window.location.hostname);
+  // La carpeta de Descargas que lee el chip es la del SERVIDOR: con el servidor
+  // local es la del teléfono y sirve, desde el sitio publicado no existe.
+  // `local` ya no distingue los dos casos —también es true en Vercel cuando hay
+  // token—, así que hay que mirar el host del navegador.
+  //
+  // Se resuelve en un efecto y no en el render: leer window durante el render
+  // hace que el servidor dibuje una cosa y el cliente otra, y React lo rechaza
+  // como error de hidratación. Arranca en false y el chip aparece al montar.
+  const [enLocal, setEnLocal] = useState(false);
+  useEffect(() => {
+    setEnLocal(["localhost", "127.0.0.1"].includes(window.location.hostname));
+  }, []);
 
   const subir = useCallback(async (ref: string, archivo: File) => {
     if (!archivo.type.startsWith("image/")) {
