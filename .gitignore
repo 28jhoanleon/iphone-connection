@@ -17,3 +17,4 @@ generar_*.py
 .env
 contenido/
 public/contenido/
+public/productos-antes/

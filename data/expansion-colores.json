@@ -1,0 +1,370 @@
+[
+ {
+  "ref": "A121",
+  "colores": [
+   "Blanco",
+   "Rosa"
+  ],
+  "generadas": [
+   "A121",
+   "A121-2"
+  ]
+ },
+ {
+  "ref": "A124",
+  "colores": [
+   "Negro",
+   "Azul"
+  ],
+  "generadas": [
+   "A124",
+   "A124-2"
+  ]
+ },
+ {
+  "ref": "A125",
+  "colores": [
+   "Negro",
+   "Rojo",
+   "Blanco"
+  ],
+  "generadas": [
+   "A125",
+   "A125-2",
+   "A125-3"
+  ]
+ },
+ {
+  "ref": "A126",
+  "colores": [
+   "Verde",
+   "Negro"
+  ],
+  "generadas": [
+   "A126",
+   "A126-2"
+  ]
+ },
+ {
+  "ref": "A127",
+  "colores": [
+   "Blanco",
+   "Negro",
+   "Verde"
+  ],
+  "generadas": [
+   "A127",
+   "A127-2",
+   "A127-3"
+  ]
+ },
+ {
+  "ref": "A129",
+  "colores": [
+   "Blanco",
+   "Negro",
+   "Verde",
+   "Rojo"
+  ],
+  "generadas": [
+   "A129",
+   "A129-2",
+   "A129-3",
+   "A129-4"
+  ]
+ },
+ {
+  "ref": "A132",
+  "colores": [
+   "Azul",
+   "Dorado",
+   "Negro"
+  ],
+  "generadas": [
+   "A132",
+   "A132-2",
+   "A132-3"
+  ]
+ },
+ {
+  "ref": "A134",
+  "colores": [
+   "Azul",
+   "Dorado",
+   "Negro"
+  ],
+  "generadas": [
+   "A134",
+   "A134-2",
+   "A134-3"
+  ]
+ },
+ {
+  "ref": "A135",
+  "colores": [
+   "Azul",
+   "Blanco"
+  ],
+  "generadas": [
+   "A135",
+   "A135-2"
+  ]
+ },
+ {
+  "ref": "A137",
+  "colores": [
+   "Negro",
+   "Azul"
+  ],
+  "generadas": [
+   "A137",
+   "A137-2"
+  ]
+ },
+ {
+  "ref": "A138",
+  "colores": [
+   "Negro",
+   "Azul"
+  ],
+  "generadas": [
+   "A138",
+   "A138-2"
+  ]
+ },
+ {
+  "ref": "A144",
+  "colores": [
+   "Negro",
+   "Celeste",
+   "Lila"
+  ],
+  "generadas": [
+   "A144",
+   "A144-2",
+   "A144-3"
+  ]
+ },
+ {
+  "ref": "A145",
+  "colores": [
+   "Negro",
+   "Rojo"
+  ],
+  "generadas": [
+   "A145",
+   "A145-2"
+  ]
+ },
+ {
+  "ref": "A147",
+  "colores": [
+   "Rojo",
+   "Negro"
+  ],
+  "generadas": [
+   "A147",
+   "A147-2"
+  ]
+ },
+ {
+  "ref": "A149",
+  "colores": [
+   "Rojo",
+   "Negro"
+  ],
+  "generadas": [
+   "A149",
+   "A149-2"
+  ]
+ },
+ {
+  "ref": "A150",
+  "colores": [
+   "Celeste",
+   "Amarillo"
+  ],
+  "generadas": [
+   "A150",
+   "A150-2"
+  ]
+ },
+ {
+  "ref": "A152",
+  "colores": [
+   "Lila",
+   "Negro"
+  ],
+  "generadas": [
+   "A152",
+   "A152-2"
+  ]
+ },
+ {
+  "ref": "A153",
+  "colores": [
+   "Lila",
+   "Negro"
+  ],
+  "generadas": [
+   "A153",
+   "A153-2"
+  ]
+ },
+ {
+  "ref": "A154",
+  "colores": [
+   "Lila",
+   "Negro"
+  ],
+  "generadas": [
+   "A154",
+   "A154-2"
+  ]
+ },
+ {
+  "ref": "A155",
+  "colores": [
+   "Lila",
+   "Dorado",
+   "Blanco"
+  ],
+  "generadas": [
+   "A155",
+   "A155-2",
+   "A155-3"
+  ]
+ },
+ {
+  "ref": "A157",
+  "colores": [
+   "Lila",
+   "Negro"
+  ],
+  "generadas": [
+   "A157",
+   "A157-2"
+  ]
+ },
+ {
+  "ref": "A161",
+  "colores": [
+   "Lila",
+   "Dorado"
+  ],
+  "generadas": [
+   "A161",
+   "A161-2"
+  ]
+ },
+ {
+  "ref": "A164",
+  "colores": [
+   "Lila",
+   "Negro"
+  ],
+  "generadas": [
+   "A164",
+   "A164-2"
+  ]
+ },
+ {
+  "ref": "A165",
+  "colores": [
+   "Lila",
+   "Negro"
+  ],
+  "generadas": [
+   "A165",
+   "A165-2"
+  ]
+ },
+ {
+  "ref": "A168",
+  "colores": [
+   "Rosa",
+   "Celeste"
+  ],
+  "generadas": [
+   "A168",
+   "A168-2"
+  ]
+ },
+ {
+  "ref": "A170",
+  "colores": [
+   "Rosa",
+   "Negro"
+  ],
+  "generadas": [
+   "A170",
+   "A170-2"
+  ]
+ },
+ {
+  "ref": "A175",
+  "colores": [
+   "Blanco",
+   "Azul"
+  ],
+  "generadas": [
+   "A175",
+   "A175-2"
+  ]
+ },
+ {
+  "ref": "A182",
+  "colores": [
+   "Negro",
+   "Blanco"
+  ],
+  "generadas": [
+   "A182",
+   "A182-2"
+  ]
+ },
+ {
+  "ref": "A183",
+  "colores": [
+   "Titanio Desert",
+   "Titanio Natural"
+  ],
+  "generadas": [
+   "A183",
+   "A183-2"
+  ]
+ },
+ {
+  "ref": "A186",
+  "colores": [
+   "Titanio Natural",
+   "Titanio Desert"
+  ],
+  "generadas": [
+   "A186",
+   "A186-2"
+  ]
+ },
+ {
+  "ref": "A191",
+  "colores": [
+   "Blanco",
+   "Negro"
+  ],
+  "generadas": [
+   "A191",
+   "A191-2"
+  ]
+ },
+ {
+  "ref": "A192",
+  "colores": [
+   "Azul",
+   "Naranja"
+  ],
+  "generadas": [
+   "A192",
+   "A192-2"
+  ]
+ }
+]
