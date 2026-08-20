@@ -70,6 +70,14 @@ export default function CargarFotos({
   const pendientes = items.filter((i) => i.tipo === "generada" && !nuevas[i.ref]).length;
   const conFoto = items.length - pendientes;
 
+  // La carpeta de Descargas que lee el chip es la del SERVIDOR. Con el servidor
+  // local es la del teléfono y sirve; desde el sitio publicado no existe.
+  // Se mira el host del navegador porque es lo único que distingue los dos casos:
+  // `local` ya no alcanza, ahora también es true en Vercel cuando hay token.
+  const enLocal =
+    typeof window !== "undefined" &&
+    ["localhost", "127.0.0.1"].includes(window.location.hostname);
+
   const subir = useCallback(async (ref: string, archivo: File) => {
     if (!archivo.type.startsWith("image/")) {
       setEstados((e) => ({ ...e, [ref]: "error" }));
@@ -208,6 +216,7 @@ export default function CargarFotos({
               setEncima={setEncima}
               onArchivo={(f) => subir(i.ref, f)}
               onUltima={() => tomarUltima(i.ref)}
+              conDescargas={enLocal}
             />
           ))}
         </div>
@@ -217,7 +226,7 @@ export default function CargarFotos({
 }
 
 function Tarjeta({
-  item, estado, mensaje, imagenNueva, encima, setEncima, onArchivo, onUltima,
+  item, estado, mensaje, imagenNueva, encima, setEncima, onArchivo, onUltima, conDescargas,
 }: {
   item: ItemFoto;
   estado: Estado;
@@ -226,6 +235,9 @@ function Tarjeta({
   encima: boolean;
   setEncima: (r: string | null) => void;
   onArchivo: (f: File) => void;
+  /** El chip "Descarga" lee la carpeta de Descargas DEL SERVIDOR. Desde el sitio
+   *  publicado esa carpeta no existe y el botón falla siempre, así que no se muestra. */
+  conDescargas: boolean;
   onUltima: () => void;
 }) {
   const input = useRef<HTMLInputElement>(null);
@@ -330,13 +342,15 @@ function Tarjeta({
         >
           Amplia
         </a>
-        <button
-          onClick={onUltima}
-          disabled={estado === "subiendo"}
-          className="flex-1 rounded-full border border-line py-2 text-[11.5px] font-medium text-mute transition hover:border-ink hover:text-ink disabled:opacity-40"
-        >
-          Descarga
-        </button>
+        {conDescargas && (
+          <button
+            onClick={onUltima}
+            disabled={estado === "subiendo"}
+            className="flex-1 rounded-full border border-line py-2 text-[11.5px] font-medium text-mute transition hover:border-ink hover:text-ink disabled:opacity-40"
+          >
+            Descarga
+          </button>
+        )}
       </div>
 
       <p className="line-clamp-2 min-h-[2.5em] text-[13px] font-medium leading-[1.3]">{item.nombre}</p>

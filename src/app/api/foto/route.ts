@@ -54,7 +54,16 @@ const enVercel = () => process.env.VERCEL === "1";
 
 /** Normaliza con sharp. Solo se usa en Vercel. */
 async function normalizarSharp(entrada: Buffer): Promise<Buffer> {
-  const sharp = requerirNativo("sharp");
+  // El módulo puede llegar como función (CommonJS) o envuelto en { default }
+  // según cómo lo empaquete el bundler de producción. Antes se asumía lo primero
+  // y en Vercel fallaba con "no es una función", que minificado no dice nada.
+  const mod = requerirNativo("sharp");
+  const sharp = (mod?.default ?? mod) as typeof import("sharp");
+  if (typeof sharp !== "function") {
+    throw new Error(
+      `sharp no se cargó como función (llegó ${typeof mod}). Revisar la instalación en Vercel.`,
+    );
+  }
 
   // Recorte del fondo: se busca la caja del producto ignorando el blanco.
   const gris = await sharp(entrada).greyscale().raw().toBuffer({ resolveWithObject: true });
