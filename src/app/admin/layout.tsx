@@ -10,6 +10,7 @@ const SECCIONES = [
   ["/admin/precios", "Precios"],
   ["/admin/productos", "Productos"],
   ["/admin/contenido", "Contenido"],
+  ["/admin/permisos", "Permisos"],
 ] as const;
 
 /**

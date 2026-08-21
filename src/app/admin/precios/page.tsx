@@ -72,6 +72,7 @@ export default function Precios() {
         redondeo={cfg.redondeoPesos}
         ejemplos={ejemplos}
         local={editable}
+        totalPublicados={filas.length}
       />
 
       <MargenProducto

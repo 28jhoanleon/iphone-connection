@@ -20,7 +20,7 @@ export interface Ejemplo {
  * que el efecto se vea antes de guardar y no después en el sitio.
  */
 export default function EditarPrecios({
-  tcInicial, margenes, porDefecto, redondeo, ejemplos, local,
+  tcInicial, margenes, porDefecto, redondeo, ejemplos, local, totalPublicados,
 }: {
   tcInicial: number;
   margenes: Record<string, number>;
@@ -28,6 +28,8 @@ export default function EditarPrecios({
   redondeo: number;
   ejemplos: Ejemplo[];
   local: boolean;
+  /** Cuántas unidades publicadas se recalculan. Va como dato, no estimado. */
+  totalPublicados: number;
 }) {
   const [tc, setTc] = useState(String(tcInicial));
   const [vals, setVals] = useState<Record<string, string>>(
@@ -35,8 +37,25 @@ export default function EditarPrecios({
   );
   const [estado, setEstado] = useState<"libre" | "guardando" | "listo" | "error">("libre");
   const [mensaje, setMensaje] = useState("");
+  const [confirmando, setConfirmando] = useState(false);
 
   const tcNum = Number(tc) || 0;
+
+  /**
+   * El tipo de cambio multiplica TODO el catálogo. Cambiarlo de 1580 a 15800 por
+   * un dedazo publica 334 precios mal, y como el panel guarda al toque, nadie se
+   * entera hasta que un cliente pregunta.
+   *
+   * Por eso el guardado pasa por una confirmación que dice cuántos precios se
+   * mueven y cuánto. No es burocracia: es la única acción del panel cuyo alcance
+   * no se ve en la pantalla donde se ejecuta.
+   */
+  const cambiaTC = Math.round(tcNum) !== tcInicial;
+  const cambianMargenes = ejemplos.some(
+    (e) => Number(vals[e.categoria]) !== (margenes[e.categoria] ?? porDefecto),
+  );
+  const hayCambios = cambiaTC || cambianMargenes;
+  const variacion = tcInicial ? Math.round(((tcNum - tcInicial) / tcInicial) * 100) : 0;
 
   function precioDe(e: Ejemplo) {
     const m = Number(vals[e.categoria]) || 0;
@@ -45,6 +64,7 @@ export default function EditarPrecios({
   }
 
   async function guardar() {
+    setConfirmando(false);
     setEstado("guardando");
     setMensaje("");
     try {
@@ -139,10 +159,42 @@ export default function EditarPrecios({
           ))}
         </div>
 
+        {confirmando && (
+          <div className="mt-5 rounded-lg border border-aviso-linea bg-aviso-fondo p-5">
+            <p className="text-[15px] font-semibold">
+              Esto cambia {totalPublicados} precios del sitio
+            </p>
+            <ul className="mt-2 space-y-1 text-[13.5px] text-mute">
+              {cambiaTC && (
+                <li>
+                  Tipo de cambio {tcInicial} → <strong className="text-ink">{Math.round(tcNum)}</strong>
+                  {variacion !== 0 && ` (${variacion > 0 ? "+" : ""}${variacion}%)`}
+                </li>
+              )}
+              {cambianMargenes && <li>Cambian márgenes por categoría.</li>}
+              <li>Se publica apenas confirmes. No hay deshacer desde acá.</li>
+            </ul>
+            <div className="mt-4 flex gap-2">
+              <button
+                onClick={guardar}
+                className="rounded-full bg-black px-5 py-2 text-[13.5px] font-medium text-white"
+              >
+                Sí, cambiar {totalPublicados} precios
+              </button>
+              <button
+                onClick={() => setConfirmando(false)}
+                className="rounded-full border border-black/15 px-5 py-2 text-[13.5px] font-medium"
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        )}
+
         {local ? (
           <div className="mt-5 flex flex-wrap items-center gap-3">
             <button
-              onClick={guardar}
+              onClick={() => (hayCambios ? setConfirmando(true) : guardar())}
               disabled={estado === "guardando"}
               className="inline-flex h-11 items-center rounded-full bg-ink px-6 text-[14px] font-medium text-paper transition hover:-translate-y-px disabled:opacity-40"
             >

@@ -1,0 +1,7 @@
+{
+  "precios": true,
+  "fotos": true,
+  "productos": true,
+  "contenido": true,
+  "publicar": true
+}
