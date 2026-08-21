@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import PanelCambios, { type Pendientes } from "@/components/admin/PanelCambios";
+import RevisarIncoherencias from "@/components/admin/RevisarIncoherencias";
 import BotonSincronizar from "@/components/admin/BotonSincronizar";
 
 export const metadata = { title: "Sincronización" };
@@ -46,7 +47,12 @@ export default function Sincronizar() {
           </p>
         </div>
       ) : (
-        <PanelCambios p={p} />
+        <>
+          {/* Va antes del detalle: lo que hay que decidir primero se lee
+              primero. Debajo de una lista de 35 productos, nadie lo ve. */}
+          <RevisarIncoherencias nuevos={p.nuevos} />
+          <PanelCambios p={p} />
+        </>
       )}
     </div>
   );
