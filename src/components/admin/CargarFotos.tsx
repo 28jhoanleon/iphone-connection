@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
+import { normalizarEnCanvas } from "@/lib/normalizar-canvas";
 
 export interface ItemFoto {
   ref: string;
@@ -93,11 +94,18 @@ export default function CargarFotos({
     setEstados((e) => ({ ...e, [ref]: "subiendo" }));
     setMensajes((m) => ({ ...m, [ref]: "" }));
 
-    const fd = new FormData();
-    fd.append("ref", ref);
-    fd.append("archivo", archivo);
-
     try {
+      // El recorte y la escala se hacen acá, en el navegador. Antes lo hacía el
+      // servidor con sharp, que es un módulo nativo y no había forma de que
+      // funcionara en Vercel ni en Termux. En canvas no hace falta instalar nada
+      // y el resultado es idéntico: mismas constantes, mismo webp.
+      const normalizada = await normalizarEnCanvas(archivo);
+
+      const fd = new FormData();
+      fd.append("ref", ref);
+      fd.append("archivo", normalizada, `${ref}.webp`);
+      fd.append("yaNormalizada", "1");
+
       const r = await fetch("/api/foto", { method: "POST", body: fd });
       const d = await r.json();
       if (!r.ok) throw new Error(d.error ?? "No se pudo procesar.");
