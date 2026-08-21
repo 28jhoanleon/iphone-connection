@@ -21,12 +21,13 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { guardar, puedeEscribir } from "@/lib/escribir";
+import { leer, guardar, puedeEscribir } from "@/lib/escribir";
 
 
 const ejecutar = promisify(execFile);
 
 const DESTINO = "public/productos";
+const VALIDADAS = "data/imagenes-validadas.json";
 const LADO = 1000;
 const OBJETIVO = 0.62;      // media geométrica del producto sobre el lienzo
 const TOPE = 0.86;          // ningún producto supera esto de alto o ancho
@@ -83,6 +84,29 @@ export async function POST(req: NextRequest) {
 
     if (yaNormalizada) {
       await guardar(`${DESTINO}/${ref}.webp`, entrada, `foto ${ref} (${quien})`);
+
+      // Se registra la firma en el índice de validadas. Sin esto la foto queda
+      // publicada pero sin validar, que es justo lo que el proyecto no permite:
+      // verificar-imagenes falla y clasificar-calidad la sigue contando como
+      // "sin fotografía propia".
+      const firma = String(form.get("firma") ?? "");
+      if (/^[0-9a-f]{16}$/.test(firma)) {
+        try {
+          const validadas = JSON.parse(await leer(VALIDADAS)) as Record<string, string>;
+          if (validadas[ref] !== firma) {
+            validadas[ref] = firma;
+            await guardar(
+              VALIDADAS,
+              JSON.stringify(validadas, null, 2),
+              `validar foto ${ref} (${quien})`,
+            );
+          }
+        } catch {
+          // Si el índice no se puede leer o escribir, la foto ya quedó guardada.
+          // Se prefiere avisar en el próximo `npm run datos` antes que perderla.
+        }
+      }
+
       // en local pueden haber quedado otras extensiones de una carga anterior
       for (const ext of [".jpg", ".jpeg", ".png"]) {
         const viejo = path.join(DESTINO, ref + ext);

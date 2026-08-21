@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
-import { normalizarEnCanvas } from "@/lib/normalizar-canvas";
+import { normalizarEnCanvas, firmar } from "@/lib/normalizar-canvas";
 
 export interface ItemFoto {
   ref: string;
@@ -101,17 +101,28 @@ export default function CargarFotos({
       // y el resultado es idéntico: mismas constantes, mismo webp.
       const normalizada = await normalizarEnCanvas(archivo);
 
+      // Vista previa inmediata: la foto ya está en el teléfono, así que se
+      // muestra desde memoria. Pedírsela al servidor mostraba un ícono roto
+      // hasta que Vercel terminaba de desplegar, y parecía que había fallado.
+      setNuevas((n) => ({ ...n, [ref]: URL.createObjectURL(normalizada) }));
+
       const fd = new FormData();
       fd.append("ref", ref);
       fd.append("archivo", normalizada, `${ref}.webp`);
       fd.append("yaNormalizada", "1");
+      fd.append("firma", await firmar(normalizada));
 
       const r = await fetch("/api/foto", { method: "POST", body: fd });
       const d = await r.json();
       if (!r.ok) throw new Error(d.error ?? "No se pudo procesar.");
       setEstados((e) => ({ ...e, [ref]: "listo" }));
-      // el parámetro fuerza a recargar la miniatura, que quedó cacheada
-      setNuevas((n) => ({ ...n, [ref]: `/productos/${ref}.webp?v=${Date.now()}` }));
+      setMensajes((m) => ({
+        ...m,
+        [ref]:
+          d.via === "github"
+            ? "Guardada. Aparece en el sitio en un minuto."
+            : "Guardada.",
+      }));
     } catch (err) {
       setEstados((e) => ({ ...e, [ref]: "error" }));
       setMensajes((m) => ({
@@ -374,7 +385,17 @@ function Tarjeta({
         #{item.ref} · {item.color.toUpperCase()}
       </p>
 
-      {mensaje && <p className="mt-1.5 text-[11.5px] text-aviso-texto">{mensaje}</p>}
+      {/* El mismo hueco sirve para confirmar y para avisar de un error, pero el
+          color no puede ser el mismo: un "Guardada" en rojo se lee como falla. */}
+      {mensaje && (
+        <p
+          className={`mt-1.5 text-[11.5px] ${
+            estado === "error" ? "text-aviso-texto" : "text-mute"
+          }`}
+        >
+          {mensaje}
+        </p>
+      )}
     </div>
   );
 }

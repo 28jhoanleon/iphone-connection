@@ -137,3 +137,17 @@ export async function normalizarEnCanvas(archivo: File): Promise<Blob> {
 
   return blob;
 }
+
+/**
+ * Firma de la imagen, igual que scripts/auditar-imagenes.py: sha1 del archivo
+ * truncado a 16. Va a data/imagenes-validadas.json, que es lo que marca a una
+ * foto como publicable. Dos fotos idénticas dan la misma firma, y así se siguen
+ * detectando las repetidas entre referencias distintas.
+ */
+export async function firmar(blob: Blob): Promise<string> {
+  const buf = await crypto.subtle.digest("SHA-1", await blob.arrayBuffer());
+  return Array.from(new Uint8Array(buf))
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("")
+    .slice(0, 16);
+}
