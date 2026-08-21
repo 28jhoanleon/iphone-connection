@@ -18,6 +18,18 @@ export interface ItemFoto {
 type Estado = "libre" | "subiendo" | "listo" | "error";
 
 /**
+ * Estado de publicación de una foto ya guardada.
+ *
+ * Guardar y publicar no son lo mismo: la foto se commitea al repo enseguida,
+ * pero recién se ve en el sitio cuando Vercel termina de desplegar. Y puede no
+ * verse nunca —el prebuild borra las imágenes sin firmar—, así que mirar el
+ * estado del deploy no alcanza: hay que pedirle la foto al sitio publicado.
+ */
+type Publicacion = "esperando" | "publicada" | "demorada";
+const ESPERA_MAX = 4 * 60 * 1000;   // pasado esto, algo salió mal
+const CADA = 5000;
+
+/**
  * Consultas de búsqueda de imágenes.
  *
  * Tres botones con criterios distintos porque ninguno funciona siempre:
@@ -56,6 +68,7 @@ export default function CargarFotos({
   const [estados, setEstados] = useState<Record<string, Estado>>({});
   const [mensajes, setMensajes] = useState<Record<string, string>>({});
   const [nuevas, setNuevas] = useState<Record<string, string>>({});
+  const [publicacion, setPublicacion] = useState<Record<string, Publicacion>>({});
   const [encima, setEncima] = useState<string | null>(null);
 
   const visibles = useMemo(() => {
@@ -82,6 +95,36 @@ export default function CargarFotos({
   const [enLocal, setEnLocal] = useState(false);
   useEffect(() => {
     setEnLocal(["localhost", "127.0.0.1"].includes(window.location.hostname));
+  }, []);
+
+  /**
+   * Le pide la foto al sitio hasta que aparece. Es la única comprobación que
+   * sirve: responde "¿está publicada?" en vez de "¿el deploy terminó?", que son
+   * cosas distintas y ya nos mordió una vez.
+   */
+  const vigilar = useCallback((ref: string) => {
+    const desde = Date.now();
+    const tic = setInterval(async () => {
+      if (Date.now() - desde > ESPERA_MAX) {
+        clearInterval(tic);
+        setPublicacion((p) => ({ ...p, [ref]: "demorada" }));
+        return;
+      }
+      try {
+        // no-store y el parámetro: sin los dos, el navegador repite el 404 que
+        // cacheó en el primer intento y la foto "nunca" aparece.
+        const r = await fetch(`/productos/${ref}.webp?v=${Date.now()}`, {
+          method: "HEAD",
+          cache: "no-store",
+        });
+        if (r.ok) {
+          clearInterval(tic);
+          setPublicacion((p) => ({ ...p, [ref]: "publicada" }));
+        }
+      } catch {
+        // sin red o el deploy reiniciando: se reintenta en el próximo tic
+      }
+    }, CADA);
   }, []);
 
   const subir = useCallback(async (ref: string, archivo: File) => {
@@ -116,13 +159,13 @@ export default function CargarFotos({
       const d = await r.json();
       if (!r.ok) throw new Error(d.error ?? "No se pudo procesar.");
       setEstados((e) => ({ ...e, [ref]: "listo" }));
-      setMensajes((m) => ({
-        ...m,
-        [ref]:
-          d.via === "github"
-            ? "Guardada. Aparece en el sitio en un minuto."
-            : "Guardada.",
-      }));
+
+      if (d.via === "github") {
+        setPublicacion((p) => ({ ...p, [ref]: "esperando" }));
+        vigilar(ref);
+      } else {
+        setMensajes((m) => ({ ...m, [ref]: "Guardada." }));
+      }
     } catch (err) {
       setEstados((e) => ({ ...e, [ref]: "error" }));
       setMensajes((m) => ({
@@ -176,8 +219,45 @@ export default function CargarFotos({
     );
   }
 
+  const subidas = Object.values(publicacion);
+  const publicadas = subidas.filter((p) => p === "publicada").length;
+  const demoradas = subidas.filter((p) => p === "demorada").length;
+  const pct = subidas.length ? Math.round((publicadas / subidas.length) * 100) : 0;
+
   return (
     <>
+      {/* Barra de publicación. Solo aparece cuando hay fotos subidas en esta
+          sesión: el resto del tiempo sería una franja vacía sin significado. */}
+      {subidas.length > 0 && (
+        <div className="sticky top-2 z-10 mt-6 rounded-lg border border-line bg-paper p-4">
+          <div className="mb-2 flex items-baseline justify-between gap-3">
+            <p className="text-[13.5px] font-medium">
+              {publicadas === subidas.length
+                ? subidas.length === 1
+                  ? "Publicada en el sitio"
+                  : `${subidas.length} fotos publicadas`
+                : `Publicando ${publicadas} de ${subidas.length}`}
+            </p>
+            <p className="font-data text-[11.5px] text-mute">{pct}%</p>
+          </div>
+
+          <div className="h-1.5 overflow-hidden rounded-full bg-line">
+            <div
+              className="h-full rounded-full bg-ink transition-[width] duration-500"
+              style={{ width: `${pct}%` }}
+            />
+          </div>
+
+          <p className="mt-2 text-[11.5px] text-mute">
+            {demoradas > 0
+              ? `${demoradas} no aparecieron todavía. Revisá que el deploy haya terminado.`
+              : publicadas === subidas.length
+                ? "Ya se ven en el sitio."
+                : "Guardadas. Esperando a que el sitio se actualice, suele tardar un minuto."}
+          </p>
+        </div>
+      )}
+
       <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <div className="rounded-lg border border-line p-4">
           <p className="text-[28px] font-semibold leading-none tracking-[-.03em]">{conFoto}</p>
@@ -235,6 +315,7 @@ export default function CargarFotos({
               item={i}
               estado={estados[i.ref] ?? "libre"}
               mensaje={mensajes[i.ref]}
+              publicacion={publicacion[i.ref]}
               imagenNueva={nuevas[i.ref]}
               encima={encima === i.ref}
               setEncima={setEncima}
@@ -250,11 +331,12 @@ export default function CargarFotos({
 }
 
 function Tarjeta({
-  item, estado, mensaje, imagenNueva, encima, setEncima, onArchivo, onUltima, conDescargas,
+  item, estado, mensaje, publicacion, imagenNueva, encima, setEncima, onArchivo, onUltima, conDescargas,
 }: {
   item: ItemFoto;
   estado: Estado;
   mensaje?: string;
+  publicacion?: Publicacion;
   imagenNueva?: string;
   encima: boolean;
   setEncima: (r: string | null) => void;
@@ -394,6 +476,20 @@ function Tarjeta({
           }`}
         >
           {mensaje}
+        </p>
+      )}
+
+      {publicacion && (
+        <p
+          className={`mt-1.5 text-[11.5px] ${
+            publicacion === "demorada" ? "text-aviso-texto" : "text-mute"
+          }`}
+        >
+          {publicacion === "publicada"
+            ? "Ya se ve en el sitio."
+            : publicacion === "demorada"
+              ? "Todavía no aparece en el sitio."
+              : "Guardada. Publicándose…"}
         </p>
       )}
     </div>
