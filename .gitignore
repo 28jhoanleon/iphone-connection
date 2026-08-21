@@ -15,6 +15,10 @@ maestras/
 fotos-modelo/
 generar_*.py
 .env
-contenido/
-public/contenido/
+# Solo las carpetas de salida de la raíz, no cualquiera que se llame así.
+# Sin la barra inicial, `contenido/` excluía también src/app/admin/contenido/,
+# y la pestaña Contenido del panel quedó fuera del repo sin que nadie lo notara:
+# existía en local y daba 404 en el sitio publicado.
+/contenido/
+/public/contenido/
 public/productos-antes/

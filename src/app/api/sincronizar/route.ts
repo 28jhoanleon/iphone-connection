@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFile } from "node:fs/promises";
+import { leer } from "@/lib/escribir";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 
@@ -21,7 +21,12 @@ export const maxDuration = 300;
 
 async function huellaRemota(): Promise<{ filas: number; hash: string } | null> {
   try {
-    const cfg = JSON.parse(await readFile("data/sincronizacion.json", "utf8"));
+    // Por la capa `leer` y no por readFile: en Vercel la carpeta data/ no viaja
+    // con la función, así que leerla del disco fallaba siempre y el panel decía
+    // "No pude leer la planilla" desde el sitio publicado. Consultar si el
+    // proveedor cambió algo tiene que poder hacerse desde el teléfono; aplicar
+    // el cambio sigue siendo local a propósito.
+    const cfg = JSON.parse(await leer("data/sincronizacion.json"));
     const r = await fetch(cfg.url, { cache: "no-store" });
     if (!r.ok) return null;
     const texto = await r.text();
@@ -43,7 +48,7 @@ export async function GET() {
 
   let local: { hash?: string; filas?: number } = {};
   try {
-    local = JSON.parse(await readFile("data/sincronizacion.json", "utf8"));
+    local = JSON.parse(await leer("data/sincronizacion.json"));
   } catch {
     /* primera corrida */
   }
@@ -59,7 +64,11 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   if (process.env.VERCEL === "1") {
     return NextResponse.json(
-      { error: "Sólo funciona con el servidor local: npm run dev" },
+      {
+        error:
+          "La sincronización corre scripts de Python, así que se hace desde el " +
+          "servidor local. Desde acá podés ver si hay cambios, no aplicarlos.",
+      },
       { status: 400 },
     );
   }
@@ -75,6 +84,9 @@ export async function POST(req: NextRequest) {
     if (aplicar) {
       const remota = await huellaRemota();
       if (remota) {
+        // Acá sí el disco: este bloque solo corre en local, donde el archivo
+        // existe y se escribe en el acto.
+        const { readFile } = await import("node:fs/promises");
         const cfg = JSON.parse(await readFile("data/sincronizacion.json", "utf8"));
         cfg.hash = remota.hash;
         cfg.filas = remota.filas;
